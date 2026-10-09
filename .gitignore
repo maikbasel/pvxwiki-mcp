@@ -1,0 +1,21 @@
+# Cargo build output
+/target
+
+# rustfmt backup files
+**/*.rs.bk
+
+# MSVC debug symbols (Windows builds)
+*.pdb
+
+# Cargo.lock is committed: this is a binary, and Cargo recommends committing it.
+
+# Secrets and local config
+.env
+.env.*
+
+# Personal Claude Code files
+CLAUDE.local.md
+.claude/settings.local.json
+
+# JetBrains IDE settings
+.idea/
