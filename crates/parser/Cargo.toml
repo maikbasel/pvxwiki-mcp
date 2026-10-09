@@ -1,0 +1,19 @@
+[package]
+name = "pvxwiki-parser"
+version = "0.1.0"
+description = "Parses PvX wiki build pages from wikitext"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+parse-wiki-text-2.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+insta.workspace = true
+
+[lints]
+workspace = true

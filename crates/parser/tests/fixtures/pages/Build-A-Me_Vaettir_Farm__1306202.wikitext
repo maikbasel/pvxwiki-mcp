@@ -1,0 +1,74 @@
+{{Real-Vetting|status=meta|rating=Great|farming}}{{TOC|pos=r}}
+Designed to farm Vaettir in Hard Mode for [[gww:Glacial Stone|Glacial Stones]], mesmer tomes, golds, and event items during holiday events. This build is frequently used to attain the [[gww:Survivor|Legendary Survivor]] title.
+== Frequency ==
+*More common than the [[Build:E/Me Obsidian Flesh Vaettir Farmer|Elementalist]] farmer due to speed and ease of use.
+*Frequently seen during holiday events.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=assas/mesmer shadow=12+1+3 Domination=11 Inspiration=6 deadly=2+3 ][deadly paradox][shadow form][shroud of distress][Optional][Optional][Arcane Echo][Wastrel's Demise][Channeling][/build]
+</pvxbig>
+=== Optionals ===
+<pvxbig>
+*{{skill pvxicon|Mantra of Earth|6}} - If taken, remove Channeling and bring another of the below optionals.
+*{{skill pvxicon|Great Dwarf Armor}} - a decent armor bonus. Allows safe use of different weapon sets.
+*{{skill pvxicon|Way of the Master|0}} and/or {{skill pvxicon|Way of Perfection|16}} - building SF's damage reduction up. Cast on recharge. By stacking enough of these, you can reduce the amount of armor needed via equipment and still take 0 damage per hit.
+*{{skill pvxicon|Dark Escape|16}} - Useful for running through Bjora Marches and to speed up the pull. Can also be used to survive with alternative weapon sets (with HSR mod for example).
+*{{skill pvxicon|Shadow Sanctuary}} - Great alternative to Great Dwarf Armor, also provides more damage reduction from SF. Also, the hp regen can be a safety net for players who are new to the build.
+*{{skill pvxicon|"Finish Him!"}} + {{skill pvxicon|Epidemic}} - faster kills. 
+*{{skill pvxicon|Cry of Pain}} - some extra damage.
+*{{skill pvxicon|Heart of Shadow|16}} - to get unstuck if the vaettir surround you during the pull.
+*{{skill pvxicon|Mantra of Lightning|6}} - For Dragon Moss farming
+</pvxbig>
+
+== Equipment ==
+* Max armor, Blessed Insignas/Attunement Runes.
+* Sword, Spear, or Axe with +5e/+20% enchantments (for example: [[gww:Totem Axe|Totem Axe]]).
+* Any Shield with +10 AR vs. Earth Damage (Inscription: [[gww:Like a Rolling Stone|"Like a Rolling Stone"]]).
+** Additional defensive skills can replace the need for the shield, allowing the use of a different offhand or a Staff of Enchanting.
+
+== Usage ==
+* Equip your Norn title and make sure you are in [[gww:Hard Mode|Hard Mode]].
+* Start from [[gww:Longeye's Ledge|Longeye's Ledge]] to [[gww:Jaga Moraine|Jaga Moraine]] by way of [[gww:Bjora Marches|Bjora Marches]]. Don't aggro anything along the way. If a [[gww:Frost Wurm|Frost Wurm]] pops up and knocks you down, cast SF as soon as you get up and you should be able to get away before it can cast anything on you.
+* Take the bounty (if desired). If this is the first time you've encountered this shrine keeper, bring heroes along to quickly defeat him and flag them away from the farm afterwards. You will not need to bring them in future runs.
+* Maintain [[gww:Channeling|Channeling]], [[gww:Shadow Form|SF]] and [[gww:Shroud of Distress|SoD]] (cast both under [[gww:Deadly Paradox|Deadly Paradox]]), and your optional skill. (Note: When it says maintain SF you want to recast it before it expires. If you wait too long there is a chance that SF will be off for a split second before you get it back on and this will cause you to lose the damage reduction you've worked up.)
+* Recast Shroud of Distress (and any other Assassin enchantments you have) on recharge and under Deadly Paradox to maximize the damage reduction stack, as Shadow Form will count each enchantment cast (even for the same spell) separately. Each cast's duration is tracked separately and will add 5 DR until expired.
+* Group the vaettir up into a tight ball. You can do this in two separate pulls, or in one (see the videos).
+* Kill them with [[gww:Arcane Echo|Arcane Echo]]ed [[gww:Wastrel's Demise|Wastrel's Demise]] (tabbing to a new vaettir after hexing one).
+* Rezone via the portal to Bjora Marches to farm until you've filled your inventory or get bored.
+
+== Counters ==
+* Failure to maintain SF.
+* Taking too much damage (should only happen if you're not using the right equipment).
+
+== Videos ==
+<big>'''A/Me'''</big><br />
+{{YouTube|h_FVCJAduMI}}
+* [http://www.youtube.com/watch?v=fFHy2f-1vJE 60 in one pull]
+* [http://www.youtube.com/watch?v=Nn2Mj4KD9bo With Commentary]
+
+== Other Farms ==
+=== Dragon Moss Farming ===
+<pvxbig>
+* Requires the [[gww:A_New_Escort|A New Escort]] quest.
+* Run into [[gww:Drazach_Thicket|Drazach Thicket]] from [[gww:Saint_Anjeka%27s_Shrine|Saint Anjeka's Shrine]].
+* Maintain all enchantments and {{Skill icon|Mantra of Lightning}}.
+* Agro all of the Dragon Moss and run back towards the shrine along the ledge.  They should ball up on the ledge behind you.
+* Recast enchantments for a fresh set then cast {{Skill icon|Arcane Echo}} -> {{Skill icon|Wastrel's Demise}} -> and then keep spamming Wastrel's pressing <code>TAB</code> each time to switch to a different target.
+** If you brought other damage spells, you can cast those as well.
+</pvxbig>
+{|
+|-
+|<big>'''Video'''</big><br />
+{{YouTube|twMOIe27Gsg}}
+|}
+
+== See also ==
+* [[Build:A/E Perma Boss Farmer|A/any Perma Solo Farm]]
+* [[Build:D/N_Vaettir_Farmer|D/N Vaettir Farmer]]
+* [[Build:E/Me_Obsidian_Flesh_Vaettir_Farmer|E/Me Obsidian Flesh Vaettir Farmer]]
+* [[Build:Me/A_Vaettir_Farm|Me/A Vaettir Farm]]
+* [[Build:Mo/A_55hp_Vaettir_Farmer|Mo/A 55hp Vaettir Farmer]]
+* [[Build:R/Me Vaettir Farmer|R/Me Vaettir Farmer]]
+
+{{FarmCat|vaettir=yes|profa=yes|mesmer tomes=yes|xp=yes|unid=yes|event=yes}}

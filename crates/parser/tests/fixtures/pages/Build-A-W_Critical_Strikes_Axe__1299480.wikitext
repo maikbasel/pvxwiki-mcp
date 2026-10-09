@@ -1,0 +1,53 @@
+{{Real-Vetting|rating=good|status=provisional|general}}
+{{TOC|pos=r}}
+Assassin axe build that can apply Deep Wound and heavy damage from critical hits, both AoE and single-targeted.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Warrior Critical=12+1+3 AxeMastery=12 Tactics=3][Shadow Theft][Cyclone Axe@17][Whirlwind Attack][Dismember@17][Malicious Strike@20][Critical Eye@20][Critical Agility@20][Way Of The Master@20][/build]
+
+[[image:Optional.jpg|25px]] '''Variant skills'''
+* {{skill pvxicon|Critical Agility}} is the preferred attack speed increase, but can be swapped if encountering enchantment removal or needing a utility PvE skill.
+** {{skill pvxicon|Frenzy}} - Frees up a PvE skill slot but is best used with protective skills.
+** {{skill pvxicon|Flail}} - Can be used with an [[gww:of the Warrior|of the Warrior]] mod, in which case it ends fairly quickly even without a cancel stance.
+** {{skill pvxicon|Drunken Master|5}} - Powerful IAS/IMS, but requires alcohol for maximum effect.
+* {{skill pvxicon|Whirlwind Attack}} - Major source of AoE damage, but can be swapped for a PvE utility if enemy density is low (4-person areas) or adrenaline denial is expected. Otherwise, use the Variant section, or if using Frenzy as an IAS, swap {{skill pvxicon|Malicious Strike}} instead.
+** {{skill pvxicon|Asuran Scan}} - Against frequent blindness and blocking.
+** {{skill pvxicon|"I Am Unstoppable!"}} - Against frequent knockdowns
+* {{skill pvxicon|Wild Blow}} - Stance removal that costs all adrenaline. Always crits, but the relative benefit is small.
+</pvxbig>
+
+== Variant ==
+<pvxbig>
+{{Variantbar|name=A/W Triple Chop Asuran Scan|template=[build prof=Assassin/Warrior Critical=12+1+3 Axe Master=12][Triple Chop][Cyclone Axe][Dismember][Malicious Strike][Asuran Scan][Critical Eye][Critical Agility][Way Of The Master][/build]
+Preserves a comparable amount of AoE in areas where Frenzy is unsuitable and blind/block mitigation is required.
+}}
+</pvxbig>
+== Equipment (Both Builds) ==
+* 5x [[gww:Nightstalker's_Insignia|Nightstalker's Insignias]]
+* 1x [[gww:Rune of Critical Strikes|Rune of Superior Critical Strikes]]
+* 1x Superior [[gww:Rune_of_Vigor|Rune of Vigor]] 
+* 2x [[gww:Rune_of_Vitae|Runes of Vitae]] or [[gww:Rune_of_Attunement|Runes of Attunement]], up to player preference
+
+'''Weapons'''
+
+* Primary weapon: [[gww:Furious|Furious]] [[gww:"Guided by Fate"|"Guided by Fate"]] or [[gww:"I have the power!"|"I have the power!"]] Axe [[gww:Enchanting|Of Enchanting]]
+** If switching Critical Agility for a different IAS skill, use [[gww:of Defense|Of Defense]] instead
+* Secondary weapon: [[gww:Furious|Furious]] [[gww:"Guided by Fate"|"Guided by Fate"]] axe [[gww:Of The Necromancer|Of The Necromancer]]; swap to this axe when more energy is needed.
+* Tactics shield [[gww:of Devotion|of Devotion]] with [[gww:"Sheltered by Faith"|"Sheltered by Faith"]]
+
+== Usage ==
+<pvxbig>
+* Maintain {{skill pvxicon|Critical Eye}}, {{skill pvxicon|Critical Agility}} and {{skill pvxicon|Way of the Master}}.
+* Use {{skill pvxicon|Shadow Theft}} to engage. Use it immediately whenever it recharges to upgrade to +6 Axe Mastery.
+* Position yourself in melee range of several enemies and spam your AoE attacks: {{skill pvxicon|Triple Chop}}, {{skill pvxicon|Cyclone Axe}}, and {{skill pvxicon|Whirlwind Attack}}.
+* Apply {{skill pvxicon|Dismember}} as needed, using it to meet the condition of {{skill pvxicon|Malicious Strike}}.
+</pvxbig>
+
+== Counters ==
+* Adrenaline denial
+* Blind/block
+* Enchantment removal or stance removal (depending on IAS)
+
+== See also ==
+{{Section-stub}}

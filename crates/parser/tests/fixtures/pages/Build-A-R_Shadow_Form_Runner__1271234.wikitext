@@ -1,0 +1,67 @@
+{{Real-Vetting|status=meta|rating=Great|running|}}
+{{TOC|pos=r}}
+
+A flexible running build that works in all places.
+
+==Frequency==
+* Commonly used by Assassins in all areas.
+
+== Attributes and Skills==
+<pvxbig>
+[build prof=A/R Shadow=12+1+3 Wild=12][Dash][Natural Stride][Shadow Form][I Am Unstoppable][Dwarven Stability][Heart of Shadow][Death's Charge][optional]
+[/build]
+'''Optionals'''
+*{{skill pvxicon|Deadly Paradox|3}} for maintaining Shadow Form in areas such as Icedome. Useful with shadowsteps as well.
+*{{skill pvxicon|Dark Prison|3}} for a second shadowstep to speed up runs
+*{{skill pvxicon|Shadow Sanctuary}} for a panic button
+*{{skill pvxicon|Feigned Neutrality|16}} for a panic button
+*{{skill pvxicon|Shroud of Distress|16}} for less experienced runners or unfamiliar areas
+*{{skill pvxicon|"Don't Trip!"}} for secondary anti-kd. Commonly used in Droks run.
+*{{skill pvxicon|Dark Escape|16}} if you have issues maintaining energy
+</pvxbig>
+
+== Equipment==
+*Full Radiant/Survivor/Sentry/Blessed (Depending which is more necessary for an area).
+*Full Attunement/Vitae (Depending on which is more necessary for an area).
+**'''High Armor Set''' (useful if taking too much damage)
+***Spear.
+****"I Have the Power!" Inscription.
+****20% longer Enchantments.
+***Shield.
+**** -2 (while in stance) or -2 (while enchanted).
+****+45hp (while in stance) or +45hp (while enchanted).
+**'''High Energy Set'''  (Convenient to use as your idle set due to HSR and High Energy, in many areas it is not necessary to switch sets)).
+***Any staff with +10 energy and 20% halves skill recharge of spells.
+****Defensive, Hale, Swift, or Insightful Staff Head.
+****"Don't think twice", "Hale and Hearty" or "Seize the Day" Inscription.
+****Staff Wrapping of Enchanting (+20% useful for lengthening Shadow Form and for Perma when running Deadly Paradox).
+
+== Usage==
+
+*Chain your stances so that you get lowest Stride time and longest Dash time.(will depend on your delver rank)
+*Use IAU as your anti-kd's and DS if drunk depending on how many KD's/foes you're facing.
+*Shadow step to speed up the run. Chaining death's charge and Heart of Shadow on the same target not only teleports you a significant distance in a short time, but can completely bypass a group with zero damage incurred. (due to speed and heals from Heart of Shadow) <B>Do not use this technique on Avalanches in EoTN, as they will snare with Frozen Burst (regardless of Shadow Form).</b>
+*Use Shadow Form before aggroing spellcasting mobs.
+*Use "C" to target a nearby foe, then use Heart of Shadow when it is <B>behind</B> you to shadow step forward and heal. 
+*Death's charge can be effectively used to bypass body-blocking melee mobs, as it teleports you to a position just behind your target. Therefore, as the mobs are moving forwards to body block you, they will continue to run, eliminating any possibility of body-block.
+*<B>Remember that Heart of Shadow teleports you directly away from your target.</b>
+
+== Counters==
+* Cripple if "I am Unstoppable!" is recharging
+* Lack of Energy (which can be fixed with the right runes)
+* Body Block with both teleports recharging (rare)
+* Spells that hit through SF.
+
+==Videos==
+*A playlist to video guides on how to run certain areas with this build can be found [http://www.youtube.com/playlist?list=PL892EA7F719FD044C here.]
+
+== Notes ==
+*This build also works as R/A, although use of deadly paradox may cause energy issues due to the ranger's inherent +3 energy regeneration as opposed to the assassin's +4.
+*This build,with its combination of NS/Dash and Death's Charge, Heart of Shadow, and Dark Prison(if taken as optional8) is (statistically) the fastest running build an assassin is able to run, and the second fastest running build overall.
+*This build is capable of running through every non-elite explorable area in game, making it a superb choice for cartography.
+
+== See Also ==
+* [[Build:Any/A Wastrel's Collapse Runner]]
+* [[Build:Any/A General Shadow Form Runner]]
+* [[Build:W/A Shadow Form Runner]]
+* [[Build:D/A Outpost Runner]]

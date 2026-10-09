@@ -1,0 +1,35 @@
+{{Real-Vetting|rating=testing|HA}}
+{{flux|Hidden Talent|Increased secondary profession attributes slightly increase damage, deep wound likelihood and ims duration.}}
+{{TOCright}}
+
+This A/P Caller is designed to call ranged spikes and deprot targets at the same time.
+
+== Skills and Attributes ==
+<pvxbig>
+[build prof=Assassin/Paragon SpearMastery=10 Command=10 CriticalStrikes=11+1+1][Song of Concentration]["Make Haste!"][Vicious Attack]["Go for the Eyes!" (PvP)][Disrupting Throw][Dark Apostasy][Critical Eye][Way of the Master][/build]
+</pvxbig>
+== Equipment ==
+'''Runes and insignia'''
+*5 [[gww:Blessed Insignia|blessed insignias]].
+*Rune of [[gww:Rune of Vigor|superior vigor]].
+*3 runes of [[gww:Rune of Vitae|vitae]].
+
+'''Weapons'''
+*[[gww:Swift|Swift]] staff of [[gww:Of Enchanting|enchanting]], [[gww:Inscription#Combat enhancing|+5e^ench]].
+*[[gww:Vampiric|Vampiric]] spear of [[gww:Of Defense|defense]], [[gww:Inscription#Combat enhancing|15^50]] with
+**Command shield of [[gww:Of Fortitude|fortitude]], [[gww:Inscription#Combat_enhancing_2|-20% blind duration]].
+**Command shield of fortitude, -20% cripple duration.
+**Command shields of fortitude, +10 armor against each damage type.
+
+== Usage ==
+<pvxbig>
+*Maintain your enchantments and [[Critical Eye@13].
+*Call spikes. Prioritize balling targets, targets in their cast set, targets carrying a relic or suffering from death penalty.
+**Use [[Vicious Attack@10] first, then [["Go for the Eyes!" (PvP)@10] while your spear is mid-air. Use [[Disrupting Throw@10] for additional damage.
+*Use [[Song of Concentration] on king of the hill maps to make sure that your ghostly heroes can capture the altar.
+*Use [["Make Haste!"@10] on relic run maps to increase both your runners' movement speed.
+</pvxbig>
+
+== See also ==
+*[[Build:Rt/P HA Spirit's Strength Caller|Rt/P HA Caller]]
+*[[Build:A/P GvG Caller|A/P Caller for GvG]]

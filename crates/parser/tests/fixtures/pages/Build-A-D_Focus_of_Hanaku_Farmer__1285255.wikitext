@@ -1,0 +1,49 @@
+{{Real-Vetting|status=provisional|rating=Great|farming}}
+{{TOC|pos=r}}
+Use [[gww:Shadow Form|Shadow Form]] and scythe to farm [[gww:Focus_of_Hanaku|Focus of Hanaku]] in NM, to obtain [[gww:Hanaku%27s_Focus|Hanaku's Focus]], a nice 20/20 focus
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/D sha=12+1+3 crit=8 scy=9 wind=5 deadly=2][Deadly Paradox][Shadow Form][Shroud of Distress][Crippling Victory][Reap Impurities][Grenth's Aura][Optional][Critical Agility][/build]
+;Optional slot
+* {{skill pvxicon|"I Am Unstoppable!"}} when learning the farm. The warriors can only KD you while you are running. 
+* {{skill pvxicon|"Finish Him!"}} speeds up the kill a lot. Only for when you are confident that you won't get knocked on important moments (just before SF runs out), try some runs with {{skill pvxicon|"I Am Unstoppable!"}} first.
+</pvxbig>
+== Equipment ==
+;Armor
+* Insignia: [[gww:Blessed Insignia|Blessed Insignias]] 
+** Any insignia works, but armor insignias are the safest. [[gww:Blessed Insignia|Blessed Insignias]] is the least conditional.
+* Runes: Appropriate attribute runes, best [[gww:Rune of Vigor|Vigor]] you can afford, [[gww:Rune of Attunement|Attunement]]
+** Armor piece with Rune of Critical Strikes should be used if you have it, but it's optional
+;Weapons
+* (Customized) [[gww:Zealous|Zealous]] Scythe [[gww:Of_Enchanting|Of Enchanting]], ideally with [[gww:Inscription#Guided_by_Fate|"Guided by Fate"]] (15^50 also works)
+
+== Usage ==
+<pvxbig>
+* Grab a 7 hero team, preferably with a speed boost (to speed up the running)
+* Flag your heroes at the res shrine (so they don't leech loot)
+* Pull the group of Afflicted near the stairs, to the shrine
+* Optionally, micro the speedboost to speed up your running
+* Run towards the stairs 
+* Before you aggro the group, use {{skill pvxicon|Deadly Paradox|2}}, then cast {{skill pvxicon|Shroud of Distress|16}} and {{skill pvxicon|Shadow Form|16}}
+* Try to pull the caster mobs into a ball ([https://youtu.be/KBRa6K4PPbg?t=41 see video])
+** While cast IAU when there are warrior on you, to avoid getting KD while moving
+** Cast {{skill pvxicon|Grenth's Aura|5}} if your hp gets low
+* When the casters are nicely balled, run up to the boss and ball the melees aswel. Might need some repositioning.
+* Cast {{skill pvxicon|Critical Agility}}
+* Kill the group with {{skill pvxicon|Crippling Victory|9}} followed by {{skill pvxicon|Reap Impurities|9}}. Cast {{skill pvxicon|Grenth's Aura|5}} whenever you have enough energy available to keep up your defensive enchantments
+** Keep {{skill pvxicon|Shadow Form|16}}, {{skill pvxicon|Shroud of Distress|16}} and {{skill pvxicon|Critical Agility}} active. Remember to use {{skill pvxicon|Deadly Paradox|2}} before {{skill pvxicon|Shadow Form|16}}
+</pvxbig>
+== Counters ==
+<pvxbig>
+* [[gww:Afflicted_Ranger|Afflicted Rangers]]
+** They have {{skill pvxicon|Throw Dirt}} and {{skill pvxicon|Broad Head Arrow}}, which is really annoying to deal with. Better to just resign and go again when you notice there is one in the group
+* Not keeping up your enchantments
+</pvxbig>
+
+== Videos ==
+{{YouTube|KBRa6K4PPbg}}
+
+== See also ==
+* [[Build:D/any General Vow of Silence Farmer]] - Dervish alternative, uses Vow of Silence and so doesn't have Shadow Form's damage limit.
+
+{{FarmCat|profa=yes|boss=yes}}

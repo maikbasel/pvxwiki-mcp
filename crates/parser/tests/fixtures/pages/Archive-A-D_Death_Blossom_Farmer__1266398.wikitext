@@ -1,0 +1,107 @@
+{{Real-Vetting|rating=archived|date=15:39, June 25, 2010 (UTC)|reason1=Inferior to [[Build:A/any Flashing Blades Farmer|Build:A/Mo Flashing Blades Farmer]]|farming|category=great}}
+{{TOCright}}
+This build makes use of the incredible DPS of death blossom to farm various mobs.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish name="Death Blossom Farmer" dagger=11+1 cri=10+1+2 earthp=8 Sha=6+1][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Mystic Regeneration][Way of Perfection][/build]
+</pvxbig>
+
+== Equipment ==
+*Radiant armor is preferred. (Radiant Insignias and Runes of Attunement on all available pieces.)
+*15% while enchanted zealous daggers of enchanting or fortitude are preferred.
+**[http://wiki.guildwars.com/wiki/Pywatt%27s_Talons Pywatt's Talons] are ideal.
+**[http://wiki.guildwars.com/wiki/Ceremonial_Daggers Ceremonial Daggers] will work as well.
+**[http://wiki.guildwars.com/wiki/Chimor%27s_Daggers Chimor's Daggers] make a good switch-out weapon when zealous isn't desired.
+
+== Usage ==
+*Maintain [[gw:Critical Agility|Critical Agility]], [[gw:Mystic Regeneration|Mystic Regeneration]], [[gw:Critical Defenses|Critical Defenses]] and [[gw:Way of Perfection|Way of Perfection]].
+*Use [[gw:Golden Phoenix Strike|Golden Phoenix Strike]] -> [[gw:Critical Strike|Critical Strike]] -> [[gw:Moebius Strike|Moebius Strike]] -> [[gw:Death Blossom|Death Blossom]] then chain [[gw:Moebius Strike|Moebius Strike]] and [[gw:Death Blossom|Death Blossom]], using [[gw:Critical Strike|Critical Strike]] to maintain your energy and enchantments as necessary.
+
+==Counters==
+*General Anti-Melee
+*Enchantment Removal
+
+== Notes ==
+=== Farmable Areas ===
+==== Normal Mode ====
+* Minotaurs outside of [[gw:Ice Tooth Cave|Ice Tooth Cave]]. (Good learning spot for new people.)
+* Minotaurs inside of [[gw:Elona Reach|Elona Reach]].
+* [[gw:Desert Griffon|Desert Griffons]] outside of [[gw:Destiny's Gorge|Destiny's Gorge]].
+* [[gw:Mountain Trolls|Mountain Trolls]] outside of [[gw:Droknar's Forge|Droknar's Forge]].
+* Jade Brotherhood.
+* Fissure of Woe beach.
+* Can beat almost every boss in the Norn Fighting Tournament, as most of them are physical damage dealers. The only difficulties are [[gw:Empathy|Empathy]] and [[gw:Spiteful Spirit|Spiteful Spirit]] casters, yet replacing Moebius Strike with Ursan Blessing (Norn skill) you can get past the difficulties of blind, Empathy, and Spiteful Spirit. But doing this will mean you are less effective against some others, such as Argo and Mhenlo
+* Vermin at Xaquang Skyway.
+* Tengu at Nahpui Quarter mission; watch out for Sentinels as they are soloable but they use Lightning Reflexes.
+* [[gw:Jungle Troll|Jungle Trolls]] in [[gw:Tangle Root|Tangle Root]].
+* [[gw:Spectral Vaettir|Spectral Vaettir]] in [[gw:Jaga Moraine|Jaga Moraine]].
+
+==== Hard Mode ====
+* Mountain Trolls outside of Droknar's Forge (Make sure not to aggro the Avicara in HM).
+* Desert Griffons outside of Destiny's Gorge.
+* Elementals outside of [[gw:Sardelac Sanitarium|Sardelac Sanitarium]].
+* Can be used to solo the 5 Corsair Cutthroats in the beginning of Moddok Crevice Mission with only a little bit of difficulty to try for their drops of [[gw:Colossal Scimitar|Colossal Scimitars]]. (Need Dunkoro for mission)
+* Mantids outside Shing Jea.
+* Insects outside [[gw:Sunspear Great Hall|Sunspear Great Hall]].
+* The animals in [[gw:Minister Cho's Estate|Minister Cho's Estate]] explorable area.
+
+==== Bosses In Normal Mode ====
+*{{a}}[[gw:Lunto Sharpfoot|Lunto Sharpfoot]]
+*{{a}}[[gw:Chkkr Locust Lord|Chkkr Locust Lord]]
+*{{a}}[[gw:Xuekao, the Deceptive|Xuekao, the Deceptive]]
+*{{a}}[[gw:Achor the Bladed|Achor the Bladed]] (cast [[gw:Critical Defenses|Critical Defenses]] first otherwise he will remove it)
+*{{a}}[[gw:Shreader Sharptongue|Shreader Sharptongue]] (I advise to fight your way through all the vermin instead of running past them)
+*{{rt}}[[gw:Chkkr Brightclaw|Chkkr Brightclaw]] (leave from Jade Flats (Kurzick) and make your way to the boss, but don't run to him, because that will cause a group of mantis to spawn, instead you shoot at him with a longbow from the stairway, a group a foes, about 3, will most likely attack both you and Chkkr, take them down first, because the Dragon Moss uses Blurred Vision)
+*{{d}}[[gw:Bubahl Icehands|Bubahl Icehands]]
+*{{e}}[[gw:Lian, Dragon's Petal|Lian, Dragon's Petal]] (beat Rits first, then Mes, leave Lian the last for a safer farm)
+*{{mo}}[[gw:Chidehkir, Light of the Blind|Chidehkir, Light of the Blind]]
+*{{n}}[[gw:Terob Roundback|Terob Roundback]] (This is annoying, but doable with a little patience.)
+*{{n}}[[gw:Cultist Milthuran|Cultist Milthuran]] (This cannot be done with an outcast rit, as they use [[gw:Displacement|Displacement]], also use Critical Defenses before using Critical Agility and Vigorous Spirit, as {{skill icon|Chilblains}} removes 2 enchantments)
+*{{n}}[[gw:Tonfor Copperblood|Tonfor Copperblood]]
+*{{p}} [[gw:Jishol Darksong|Jishol Darksong]]
+*{{p}}[[gw:Pehnsed the Loudmouth|Pehnsed the Loudmouth]]
+*{{r}}[[gw:Salke Fur Friend|Salke Fur Friend]] (Kill the Rit warden first, as he might heal Salke; can't be done with a Warden of the Earth in his group))
+*{{r}}[[gw:Bolten Largebelly|Bolten Largebelly]] (don't let Bolten's team mob with the team VERY close to his, instead lure the one close to him and kill those first)
+*{{r}}[[gw:Zelnehlun Fastfoot|Zelnehlun Fastfoot]]
+*{{r}}[[gw:Tundoss the Destroyer|Tundoss the Destroyer]] (Kill his team first.)
+*{{r}}[[gw:Johon The Oxflinger|Johon The Oxflinger]]
+*{{r}}[[gw:Whuup Buumbuul|Whuup Buumbuul]] (don't use attack skills while he has Escape on. Maintain skills, and keep attack normally until you land hits, then continue with chain)
+*{{w}}[[gw:Reefclaw Ragebound|Reefclaw Ragebound]]
+*{{w}}[[gw:Mahto Sharptooth|Mahto Sharptooth]]
+*{{w}}[[gw:Chor the Bladed|Chor the Bladed]]
+*{{w}}[[gw:Riktund the Vicious|Riktund the Vicious]]
+*{{w}}[[gw:Wing, Three Blade|Wing, Three Blade]]
+*{{w}}[[gw:Sskai, Dragon's Birth|Sskai, Dragon's Birth]]
+*{{w}}[[gw:Krogg Shmush|Krogg Shmush]]
+*{{w}}[[gw:Arrahhsh Mountainclub|Arrahhsh Mountainclub]]
+
+==== Bosses In Hard Mode ====
+*{{a}}[[gww:Tahkayun Tsi|Tahkayun Tsi]] (You also get a few tomes from his friends around him.)
+*{{n}}[[gw:Yunlai Deathkeeper|Yunlai Deathkeeper]] (You first must kill the 2 groups of mantids that spawn in order to get him to spawn.)
+*{{p}} [[gw:Jishol Darksong|Jishol Darksong]] (First kill his mob, as this will weaken his Leader's Comfort.)
+*{{r}}[[gw:Chkkr Thousand Tail|Chkkr Thousand Tail]]
+*{{w}}[[gw:Krogg Shmush|Krogg Shmush]]
+*{{p}}[[gw:Hassin Softskin|Hassin Softskin]]
+*{{w}}[[gw:Chor the Bladed|Chor the Bladed]]
+
+==Variants==
+[[gw:Critical Eye|Critical Eye]] 
+*When using Critical Eye variation, replace Critical Strike with Critical Eye. (With the 13x% extra critical strikes, Critical Strike becomes useless.)
+[[gw:Vital Boon|Vital Boon]]
+
+===A/Mo Variant===
+<pvxbig>
+[build prof=A/Mo name="Death Blossom Farmer" dag=11+1 cri=10+1+2 healin=10][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Vigorous Spirit][Live Vicariously][/build]
+</pvxbig>
+
+== See Also ==
+*[[Archive:A/any PvE Moebius Sin|Build:A/any PvE Moebius Sin]] uses similar tactics for general usage.
+*[http://www.youtube.com/watch?v=ZiIWxVzxMjw Farming Plains of Jarin on Hard Mode].
+*('''Note''': These are for the old Mystic Regen Build)
+**[http://www.youtube.com/v/pjveUP7ykR8 Video].
+**[http://www.youtube.com/watch?v=rusDQOA7RBU Soloing Imperial Sanctum on Hard Mode].
+**[http://www.youtube.com/watch?v=ivpDfXxtlwo Boss Farming.]
+**[http://www.youtube.com/watch?v=-mQ3M6BLZzo Hard Mode Areas]
+**[http://www.wegame.com/watch/Farming_Celestials_with_Death_Blossom_Farmer_build/ Farming Nahpui Quarter Mission (NM)] & [http://www.youtube.com/watch?v=RnJxM8vCuIY HM]
+**[http://www.youtube.com/watch?v=HQO2V2bX9l4 Hard Mode Mantids outside Shing Jea]

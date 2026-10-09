@@ -1,0 +1,380 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Build-Team_-_2_Hero_CoF_600-Smite__1295534.wikitext\")"
+---
+ParsedPage {
+    vetting: Vetted(
+        Vetted {
+            rating: Some(
+                Great,
+            ),
+            status: Some(
+                Provisional,
+            ),
+            gameplay_types: [
+                "hero",
+                "PvE team",
+                "running",
+            ],
+            archive: None,
+        },
+    ),
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{Real-Vetting|status=provisional|rating=great|hero|PvE team|running}}\n{{TOC|pos=r}}\n\nRevamped version of the old 600/Smite team build used to farm [[gww:Cathedral of Flames|Cathedral of Flames]], using a [[gww:Hundred Blades|Hundred Blades]] spike to offset the loss of damage from the [[gww:Holy Wrath|Holy Wrath]] nerf.\n\n",
+            text: "provisional great hero PvE team running r Revamped version of the old 600/Smite team build used to farm Cathedral of Flames , using a Hundred Blades spike to offset the loss of damage from the Holy Wrath nerf.",
+        },
+        Section {
+            heading: Some(
+                "600 Monk",
+            ),
+            level: 2,
+            wikitext: "== 600 Monk ==\n<pvxbig>\n[build name=\"CoF Spirit Bonder\" prof=monk/war prot=12+1+3 div=3 sword=12][Protective Spirit][spirit bond][Shield of Absorption][Hundred Blades][ebon battle standard of honor][whirlwind attack][optional][Essence Bond][/build]\nOptional should be:\n* {{skill pvxicon|Light of Deldrimor|10}}\n* {{skill pvxicon|\"Finish Him!\"|10}}\n* {{skill pvxicon|\"I Am the Strongest!\"|10}}\n* {{skill pvxicon|Pain Inverter|10}}\n</pvxbig>\n\n",
+            text: "600 Monk [build name=\"CoF Spirit Bonder\" prof=monk/war prot=12+1+3 div=3 sword=12][Protective Spirit][spirit bond][Shield of Absorption][Hundred Blades][ebon battle standard of honor][whirlwind attack][optional][Essence Bond][/build] Optional should be: Light of Deldrimor 10 \"Finish Him!\" 10 \"I Am the Strongest!\" 10 Pain Inverter 10",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 3,
+            wikitext: "=== Equipment ===\n* Pre armor or 15ar armor\n* Full Survivor\n* Runes of Vitae\n* Max damage q9 Sword of Enchanting with +5 energy Inscription.\n* Protection Prayers focus.\n\n",
+            text: "Equipment Pre armor or 15ar armor Full Survivor Runes of Vitae Max damage q9 Sword of Enchanting with +5 energy Inscription. Protection Prayers focus.",
+        },
+        Section {
+            heading: Some(
+                "Bonder 1",
+            ),
+            level: 2,
+            wikitext: "== Bonder 1 ==\n<pvxbig>\n[build prof=Mo/any smitingprayers=12+1+3 divin=12+3][Holy Wrath][Judge's Insight][Shield of Judgment][Blessed Signet][Strength of Honor][Blessed Aura][Retribution][Optional][/build]\n'''Optional'''\n* {{skill pvxicon|Gaze of Fury|3}} to destroy leftover spirits from groups of Undead.\n* {{skill pvxicon|Rebirth}} as a resurrect in case the 600 dies.\n</pvxbig>\n\n",
+            text: "Bonder 1 [build prof=Mo/any smitingprayers=12+1+3 divin=12+3][Holy Wrath][Judge's Insight][Shield of Judgment][Blessed Signet][Strength of Honor][Blessed Aura][Retribution][Optional][/build] Optional Gaze of Fury 3 to destroy leftover spirits from groups of Undead. Rebirth as a resurrect in case the 600 dies.",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 3,
+            wikitext: "=== Equipment ===\n* Full Radiant\n* Runes of Attunement\n* +20% Enchanting Staff\n\n",
+            text: "Equipment Full Radiant Runes of Attunement +20% Enchanting Staff",
+        },
+        Section {
+            heading: Some(
+                "Bonder 2",
+            ),
+            level: 2,
+            wikitext: "== Bonder 2 ==\n<pvxbig>\n[build prof=Mo/Rt Divin=12+1+3 Channe=10 Heal=8+3][Splinter Weapon][Spell Breaker][Blessed Signet][Dwayna's Kiss][Essence Bond][Balthazar's Spirit][Blessed Aura][Life Attunement][/build]\n</pvxbig>\n\n",
+            text: "Bonder 2 [build prof=Mo/Rt Divin=12+1+3 Channe=10 Heal=8+3][Splinter Weapon][Spell Breaker][Blessed Signet][Dwayna's Kiss][Essence Bond][Balthazar's Spirit][Blessed Aura][Life Attunement][/build]",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 3,
+            wikitext: "=== Equipment ===\n* Full Radiant\n* Runes of Attunement\n* +20% Enchanting Staff\n\n",
+            text: "Equipment Full Radiant Runes of Attunement +20% Enchanting Staff",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 2,
+            wikitext: "== Usage ==\n* Maintain [[gww:Essence Bond|Essence Bond]].\n* Bonder 1 maintains [[gww:Blessed Aura|Blessed Aura]] on themselves, and [[gww:Retribution|Retribution]] and [[gww:Strength of Honor|Strength of Honor]] on you.\n* Bonder 2 maintains [[gww:Blessed Aura|Blessed Aura]] on themselves, [[gww:Life Attunement|Life Attunement]] on Bonder 1, and [[gww:Essence Bond|Essence Bond]] and [[gww:Balthazar's Spirit|Balthazar's Spirit]] on you.\n* Have your bonders cast [[gww:Holy Wrath|Holy Wrath]], [[gww:Judge's Insight|Judge's Insight]], [[gww:Shield of Judgment|Shield of Judgment]], [[gww:Splinter Weapon|Splinter Weapon]], and [[gww:Spell Breaker|Spell Breaker]] on you prior to engaging groups.\n* Maintain [[gww:Protective Spirit|Protective Spirit]] prior to engaging enemies.\n* Maintain [[gww:Spirit Bond|Spirit Bond]] to keep your health up.\n* Use [[gww:Shield of Absorption|Shield of Absorption]] to reduce damage to 0 when necessary.\n\n",
+            text: "Usage Maintain Essence Bond. Bonder 1 maintains Blessed Aura on themselves, and Retribution and Strength of Honor on you. Bonder 2 maintains Blessed Aura on themselves, Life Attunement on Bonder 1, and Essence Bond and Balthazar's Spirit on you. Have your bonders cast Holy Wrath, Judge's Insight, Shield of Judgment, Splinter Weapon, and Spell Breaker on you prior to engaging groups. Maintain Protective Spirit prior to engaging enemies. Maintain Spirit Bond to keep your health up. Use Shield of Absorption to reduce damage to 0 when necessary.",
+        },
+        Section {
+            heading: Some(
+                "Against Groups of Charr",
+            ),
+            level: 3,
+            wikitext: "=== Against Groups of Charr ===\n* Precast [[gww:Protective Spirit|Protective Spirit]] and [[gww:Spirit Bond|Spirit Bond]], then run up to the casters (Dominators/Flameshielders).\n* Charr Axemasters have [[gww:Bull's Strike|Bull's Strike]] so if there are any of those, let them hit you while stationary. The knockdown time from [[gww:Shield of Judgment|SoJ]] will be enough for you to run up to the casters without having to worry about getting KD'd.\n* Auto-attack to build up adrenaline. Use [[gww:Shield of Absorption|Shield of Absorption]] as necessary.\n* Use [[gww:Hundred Blades|100b]], [[gww:EBSoH|EBSoH]], and [[gww:Whirlwind Attack|Whirlwind Attack]] to spike.\n* [[gww:Splinter Weapon|SW]] + [[gww:Hundred Blades|100b]]/[[gww:Whirlwind Attack|Whirlwind Attack]] should to significant enough damage that [[gww:Shield of Judgment|SoJ]] and auto-attacking can clean up whatever is left.\n\n",
+            text: "Against Groups of Charr Precast Protective Spirit and Spirit Bond, then run up to the casters (Dominators/Flameshielders). Charr Axemasters have Bull's Strike so if there are any of those, let them hit you while stationary. The knockdown time from SoJ will be enough for you to run up to the casters without having to worry about getting KD'd. Auto-attack to build up adrenaline. Use Shield of Absorption as necessary. Use 100b, EBSoH, and Whirlwind Attack to spike. SW + 100b/Whirlwind Attack should to significant enough damage that SoJ and auto-attacking can clean up whatever is left.",
+        },
+        Section {
+            heading: Some(
+                "Against Groups of Undead",
+            ),
+            level: 3,
+            wikitext: "=== Against Groups of Undead ===\n* Precast [[gww:Protective Spirit|Protective Spirit]] and [[gww:Spirit Bond|Spirit Bond]], then aggro the group.\n* The casters (Ash Phantoms, Crypt Banshees, Shock Phantoms, Crypt Wraiths) will run away when you try and run up to them, so target the melee foes first (Crypt Slashers, Crypt Ghouls).\n* The Ghouls have [[gww:Savage Slash|Savage Slash]], so be wary of that. Try to cast important skills while foes are knocked down from [[gww:Shield of Judgment|SoJ]].\n* Auto-attack to build up adrenaline. Use [[gww:Shield of Absorption|Shield of Absorption]] as necessary.\n* Use [[gww:Hundred Blades|100b]], [[gww:EBSoH|EBSoH]], and [[gww:Whirlwind Attack|Whirlwind Attack]] to spike.\n* There will likely be one or two casters leftover from your spike. Auto-attacking with [[gww:Hundred Blades|100b]] will get rid of them easily.\n\n",
+            text: "Against Groups of Undead Precast Protective Spirit and Spirit Bond, then aggro the group. The casters (Ash Phantoms, Crypt Banshees, Shock Phantoms, Crypt Wraiths) will run away when you try and run up to them, so target the melee foes first (Crypt Slashers, Crypt Ghouls). The Ghouls have Savage Slash, so be wary of that. Try to cast important skills while foes are knocked down from SoJ. Auto-attack to build up adrenaline. Use Shield of Absorption as necessary. Use 100b, EBSoH, and Whirlwind Attack to spike. There will likely be one or two casters leftover from your spike. Auto-attacking with 100b will get rid of them easily.",
+        },
+        Section {
+            heading: Some(
+                "Against Groups of Enchanted",
+            ),
+            level: 3,
+            wikitext: "=== Against Groups of Enchanted ===\n* Precast [[gww:Protective Spirit|Protective Spirit]] and [[gww:Spirit Bond|Spirit Bond]].\n* Prior to engaging, make note of if there are any Enchanted Daggers, as they have [[gww:Disrupting Stab|Disrupting Stab]]. As with the Ghouls, cast important spells while they are knocked down and try to take them out first.\n* Auto-attack to build up adrenaline. Use [[gww:Shield of Absorption|Shield of Absorption]] as necessary.\n* Use [[gww:Hundred Blades|100b]], [[gww:EBSoH|EBSoH]], and [[gww:Whirlwind Attack|Whirlwind Attack]] to spike.\n* Take care of remaining enemies with [[gww:Hundred Blades|100b]] + [[gww:EBSoH|EBSoH]].\n\n",
+            text: "Against Groups of Enchanted Precast Protective Spirit and Spirit Bond. Prior to engaging, make note of if there are any Enchanted Daggers, as they have Disrupting Stab. As with the Ghouls, cast important spells while they are knocked down and try to take them out first. Auto-attack to build up adrenaline. Use Shield of Absorption as necessary. Use 100b, EBSoH, and Whirlwind Attack to spike. Take care of remaining enemies with 100b + EBSoH.",
+        },
+        Section {
+            heading: Some(
+                "Against Faze Magekiller",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:Faze Magekiller|Faze Magekiller]] ===\n* Have your bonders pre-cast their enchantments on you, then go directly up to Faze.\n* Auto-attack Faze while the melee enemies ball up around you.\n* [[gww:Hundred Blades|100b]] spike as usual then auto-attack Faze until he is dead.\n* If [[gww:Spell Breaker|Spell Breaker]] drops before Faze dies, make sure you are covering yourself with [[gww:Spirit Bond|Spirit Bond]] or [[gww:Shield of Absorption|Shield of Absorption]] to avoid your more important enchantments form being removed.\n\n",
+            text: "Against Faze Magekiller Have your bonders pre-cast their enchantments on you, then go directly up to Faze. Auto-attack Faze while the melee enemies ball up around you. 100b spike as usual then auto-attack Faze until he is dead. If Spell Breaker drops before Faze dies, make sure you are covering yourself with Spirit Bond or Shield of Absorption to avoid your more important enchantments form being removed.",
+        },
+        Section {
+            heading: Some(
+                "Against The Keeper",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:The Keeper|The Keeper]] ===\n* Have your bonders pre-cast their enchantments on you, then go directly up to Faze.\n* Auto-attack Faze while the melee enemies ball up around you.\n* [[gww:Hundred Blades|100b]] spike as usual then auto-attack Faze until he is dead.\n* If [[gww:Spell Breaker|Spell Breaker]] drops before Faze dies, make sure you are covering yourself with [[gww:Spirit Bond|Spirit Bond]] or [[gww:Shield of Absorption|Shield of Absorption]] to avoid your more important enchantments form being removed.\n\n",
+            text: "Against The Keeper Have your bonders pre-cast their enchantments on you, then go directly up to Faze. Auto-attack Faze while the melee enemies ball up around you. 100b spike as usual then auto-attack Faze until he is dead. If Spell Breaker drops before Faze dies, make sure you are covering yourself with Spirit Bond or Shield of Absorption to avoid your more important enchantments form being removed.",
+        },
+        Section {
+            heading: Some(
+                "Against Tyndir Flamecaller",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:Tyndir Flamecaller|Tyndir Flamecaller]] ===\n* Same deal as regular Charr groups.\n* Make sure to target [[gww:Tyndir Flamecaller|Tyndir Flamecaller]] first.\n\n",
+            text: "Against Tyndir Flamecaller Same deal as regular Charr groups. Make sure to target Tyndir Flamecaller first.",
+        },
+        Section {
+            heading: Some(
+                "Against Vraxx the Condemned",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:Vraxx the Condemned|Vraxx the Condemned]] ===\n* Precast all your regular enchantments, except for [[gww:Spell Breaker|Spell Breaker]], as his group is entirely melee.\n* Ball them against the wall, and spike as usual. Make sure to target [[gww:Vraxx the Condemned|Vraxx]] first, as he has [[gww:Signet of Return|Signet of Return]] and will resurrect his allies.\n* Clean up remainders by auto-attacking them.\n\n",
+            text: "Against Vraxx the Condemned Precast all your regular enchantments, except for Spell Breaker, as his group is entirely melee. Ball them against the wall, and spike as usual. Make sure to target Vraxx first, as he has Signet of Return and will resurrect his allies. Clean up remainders by auto-attacking them.",
+        },
+        Section {
+            heading: Some(
+                "Against The Master",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:The Master|The Master]] ===\n* Have your bonders pre-cast their enchantments on you. Precast [[gww:Protective Spirit|Protective Spirit]] and [[gww:Spirit Bond|Spirit Bond]].\n* Upon aggro, cast [[gww:Shield of Absorption|SoA]] and run directly up to [[gww:The Master|The Master]].\n* [[gww:Hundred Blades|100b]] spike as usual.\n* Be extra wary of when you have run out of hits for [[gww:Spirit Bond|Spirit Bond]], as [[gww:The Master|The Master]] is accompanied by a lot of enemies who will easily overwhelm you if you're not paying attention.\n\n",
+            text: "Against The Master Have your bonders pre-cast their enchantments on you. Precast Protective Spirit and Spirit Bond. Upon aggro, cast SoA and run directly up to The Master. 100b spike as usual. Be extra wary of when you have run out of hits for Spirit Bond, as The Master is accompanied by a lot of enemies who will easily overwhelm you if you're not paying attention.",
+        },
+        Section {
+            heading: Some(
+                "Against Murakai's Steward",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:Murakai's Steward|Murakai's Steward]] ===\n* Prior to entering the room, have your bonders pre-cast their enchantments on you.\n* When you run towards [[gww:Murakai's Steward|Murakai's Steward]], a dozen or so Undead enemies will pop up and attack you, so be sure to precast [[gww:Protective Spirit|Protective Spirit]] and [[gww:Spirit Bond|Spirit Bond]] before running up to him.\n* Ingore the popups and run directly to [[gww:Murakai's Steward|Murakai's Steward]].\n* Recast [[gww:Spirit Bond|Spirit Bond]] and cast [[gww:Shield of Absorption|SoA]].\n* [[gww:Hundred Blades|100b]] spike as usual.\n* Once [[gww:Murakai's Steward|Murakai's Steward]] is dead, grab the key and run back outside the chamber to lose extra aggro (or kill them if you want more Deldrimor points or loot).\n\n",
+            text: "Against Murakai's Steward Prior to entering the room, have your bonders pre-cast their enchantments on you. When you run towards Murakai's Steward, a dozen or so Undead enemies will pop up and attack you, so be sure to precast Protective Spirit and Spirit Bond before running up to him. Ingore the popups and run directly to Murakai's Steward. Recast Spirit Bond and cast SoA. 100b spike as usual. Once Murakai's Steward is dead, grab the key and run back outside the chamber to lose extra aggro (or kill them if you want more Deldrimor points or loot).",
+        },
+        Section {
+            heading: Some(
+                "Against Murakai, Lady of the Night",
+            ),
+            level: 3,
+            wikitext: "=== Against [[gww:Murakai, Lady of the Night|Murakai, Lady of the Night]] ===\n* Flag your heros far enough away to avoid aggro, but close enough that if you need them to recast enchantments on you they can do so.\n* Have your bonders pre-cast their enchantments on you, except for [[gww:Shield of Judgment|SoJ]].\n* Immediately when you aggro Murakai, she uses [[gww:Murakai's_Call|Murakai's Call]] which spawns a group of [[gww:Servant of Murakai|Servants of Murakai]]. Kill these, then pull Murakai onto a flame trap to help kill her faster.\n* Run up to Murakai after pulling her onto the flame trap and attack her, using your skills as necessary to survive and deal more damage.\n* Have your heros recast their enchantments on you to help you deal more damage. Be careful of when Murakai uses [[gww:Murakai's_Call|Murakai's Call]].\n* Rinse and repeat until Murakai is dead.\n\n",
+            text: "Against Murakai, Lady of the Night Flag your heros far enough away to avoid aggro, but close enough that if you need them to recast enchantments on you they can do so. Have your bonders pre-cast their enchantments on you, except for SoJ. Immediately when you aggro Murakai, she uses Murakai's Call which spawns a group of Servants of Murakai. Kill these, then pull Murakai onto a flame trap to help kill her faster. Run up to Murakai after pulling her onto the flame trap and attack her, using your skills as necessary to survive and deal more damage. Have your heros recast their enchantments on you to help you deal more damage. Be careful of when Murakai uses Murakai's Call. Rinse and repeat until Murakai is dead.",
+        },
+        Section {
+            heading: Some(
+                "Notes",
+            ),
+            level: 2,
+            wikitext: "== Notes ==\n* It is important to keep note of which enemies you are facing, and which ones have knockdowns and interrupts. These can both be avoided by casting important skills while dangerous enemies are knocked down.\n* Bonder 2 has [[gww:Dwayna's Kiss|Dwayna's Kiss]] and [[gww:Life Attunement|Life Attunement]] to keep Bonder 1 alive when facing [[gww:Crypt Banshee|Crypt Banshees]], which reflect damage with [[gww:Reversal of Damage|Reversal of Damage]].",
+            text: "Notes It is important to keep note of which enemies you are facing, and which ones have knockdowns and interrupts. These can both be avoided by casting important skills while dangerous enemies are knocked down. Bonder 2 has Dwayna's Kiss and Life Attunement to keep Bonder 1 alive when facing Crypt Banshees, which reflect damage with Reversal of Damage.",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 1,
+            raw: "[build name=\"CoF Spirit Bonder\" prof=monk/war prot=12+1+3 div=3 sword=12][Protective Spirit][spirit bond][Shield of Absorption][Hundred Blades][ebon battle standard of honor][whirlwind attack][optional][Essence Bond][/build]",
+            name: Some(
+                "CoF Spirit Bonder",
+            ),
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Warrior,
+            ),
+            professions_raw: Some(
+                "monk/war",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Protection Prayers",
+                    ),
+                    raw_name: "prot",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "div",
+                    value: "3",
+                },
+                Attribute {
+                    name: Some(
+                        "Swordsmanship",
+                    ),
+                    raw_name: "sword",
+                    value: "12",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Protective Spirit",
+                    raw: "[Protective Spirit]",
+                },
+                Skill {
+                    name: "spirit bond",
+                    raw: "[spirit bond]",
+                },
+                Skill {
+                    name: "Shield of Absorption",
+                    raw: "[Shield of Absorption]",
+                },
+                Skill {
+                    name: "Hundred Blades",
+                    raw: "[Hundred Blades]",
+                },
+                Skill {
+                    name: "ebon battle standard of honor",
+                    raw: "[ebon battle standard of honor]",
+                },
+                Skill {
+                    name: "whirlwind attack",
+                    raw: "[whirlwind attack]",
+                },
+                Optional,
+                Skill {
+                    name: "Essence Bond",
+                    raw: "[Essence Bond]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 3,
+            raw: "[build prof=Mo/any smitingprayers=12+1+3 divin=12+3][Holy Wrath][Judge's Insight][Shield of Judgment][Blessed Signet][Strength of Honor][Blessed Aura][Retribution][Optional][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: None,
+            professions_raw: Some(
+                "Mo/any",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Smiting Prayers",
+                    ),
+                    raw_name: "smitingprayers",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "divin",
+                    value: "12+3",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Holy Wrath",
+                    raw: "[Holy Wrath]",
+                },
+                Skill {
+                    name: "Judge's Insight",
+                    raw: "[Judge's Insight]",
+                },
+                Skill {
+                    name: "Shield of Judgment",
+                    raw: "[Shield of Judgment]",
+                },
+                Skill {
+                    name: "Blessed Signet",
+                    raw: "[Blessed Signet]",
+                },
+                Skill {
+                    name: "Strength of Honor",
+                    raw: "[Strength of Honor]",
+                },
+                Skill {
+                    name: "Blessed Aura",
+                    raw: "[Blessed Aura]",
+                },
+                Skill {
+                    name: "Retribution",
+                    raw: "[Retribution]",
+                },
+                Optional,
+            ],
+        },
+        SkillBar {
+            section: 5,
+            raw: "[build prof=Mo/Rt Divin=12+1+3 Channe=10 Heal=8+3][Splinter Weapon][Spell Breaker][Blessed Signet][Dwayna's Kiss][Essence Bond][Balthazar's Spirit][Blessed Aura][Life Attunement][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Ritualist,
+            ),
+            professions_raw: Some(
+                "Mo/Rt",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "Divin",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Channeling Magic",
+                    ),
+                    raw_name: "Channe",
+                    value: "10",
+                },
+                Attribute {
+                    name: Some(
+                        "Healing Prayers",
+                    ),
+                    raw_name: "Heal",
+                    value: "8+3",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Splinter Weapon",
+                    raw: "[Splinter Weapon]",
+                },
+                Skill {
+                    name: "Spell Breaker",
+                    raw: "[Spell Breaker]",
+                },
+                Skill {
+                    name: "Blessed Signet",
+                    raw: "[Blessed Signet]",
+                },
+                Skill {
+                    name: "Dwayna's Kiss",
+                    raw: "[Dwayna's Kiss]",
+                },
+                Skill {
+                    name: "Essence Bond",
+                    raw: "[Essence Bond]",
+                },
+                Skill {
+                    name: "Balthazar's Spirit",
+                    raw: "[Balthazar's Spirit]",
+                },
+                Skill {
+                    name: "Blessed Aura",
+                    raw: "[Blessed Aura]",
+                },
+                Skill {
+                    name: "Life Attunement",
+                    raw: "[Life Attunement]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}

@@ -1,0 +1,36 @@
+{{Real-Vetting|rating=good|status=meta|GvG|HA|AB|RA|}}
+{{flux|Hidden Talent|Slightly increased air magic.|positive}}
+{{flux|There Can Be Only One|Increased damage against other assassins. As this is a pressure build and most assassins play spikes, this puts you at a disadvantage.|negative}}
+{{flux|Jack of All Trades|
+*Attributes: 11 air magic, 10+1 critical strikes, 10+1 dagger mastery.
+*Slightly improved general performance.
+|positive}}
+{{flux|Minion Apocalypse|Killing targets will put you under pressure, which can be troublesome when no monk is in range.|negative}}
+{{TOC|pos=r}}
+Abuse quick-recharging attack skills with IAS/IMS and Conjure to pump massive damage.
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/E CriticalStrikes=12+1 DaggerMastery=11+1+2 AirMagic=6][Jagged Strike][Golden Fang Strike][Death Blossom (PvP)][Critical Strike][Way of the Assassin][Storm Djinn's Haste][Conjure Lightning][optional][/build]  
+'''Optional'''
+*{{skill pvxicon|Critical Eye|13}}: Extra energy management and dps in GvG
+*{{skill pvxicon|Resurrection Signet}}: for RA / HA.
+*{{skill pvxicon|Exhausting Assault|14}}: for an interrupt.
+*{{skill pvxicon|Fox Fangs (PvP)|14}} or {{skill pvxicon|Wild Strike (PvP)|14}} for more DPS.
+</pvxbig>
+
+== Equipment ==
+* Armor: 
+** Survivor/Blessed, a Rune of Superior Vigor, a Rune of Vitae and a Rune of Clarity.
+* Weapons:
+** Shocking Daggers of Fortitude (+15^50 or +15% while enchanted since you'll be maintaining conjure lightning most of the time).
+** Vampiric Daggers of Fortitude (15^50) if Conjure gets stripped.
+** 40/20/20 Air Staff for casting Conjure.
+** Defensive Sets.
+
+== Usage ==
+*Maintain Conjure & Storm Djinn's Haste.
+*Maintain Way of the Assassin while spamming 1-2-3-1-2-4
+
+== Counters ==
+*Enchantment Removal.
+*General Anti-Melee.

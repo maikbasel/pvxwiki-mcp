@@ -1,0 +1,47 @@
+{{Real-Vetting|rating=good|status=provisional|RA}}
+{{TOCright}}
+
+Knockdown spam assassin. Requires fast weapon switching.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Warrior DaggerMastery=12+1+1 CriticalStrikes=12+1 HammerMastery=3][Hammer Bash][Falling Spider][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Flurry][Flourish][Resurrection Signet][/build]
+</pvxbig>
+
+===Variant===
+<pvxbig>
+*Play as a warrior primary.
+**[[Flail@9] over [[Flurry].
+**[[Blades of Steel@12] over [[Twisting Fangs@0].
+**Use [[gww:Zealous|zealous]] daggers.
+</pvxbig>
+
+== Equipment ==
+'''Runes and insignia'''
+*5 [[gww:Nightstalker's Insignia|nightstalker's insignias]].
+*Rune of [[gww:Rune of Vigor|superior vigor]].
+*Rune of [[gww:Rune of Clarity|clarity]].
+*Rune of [[gww:Rune of Restoration|restoration]].
+
+'''Weapons'''
+*[[gww:Vampiric|Vampiric]] hammer of [[gww:Of Defense|defense]], ideally a 15-15.
+*Vampiric [[gww:Inscription#Combat enhancing|15^50]] daggers of defense.
+*Any staff in case you run out of energy but need to use [[gww:Flourish|Flourish]].
+*Shield set.
+
+== Usage ==
+<pvxbig>
+*Build up adrenaline.
+*Perform your combo of [[Flurry]↦[[Hammer Bash]→[[Falling Spider@14]→[[Horns of the Ox@14]→[[Falling Lotus Strike@14]→[[Twisting Fangs@13]⇥[[Flourish@0].
+*Repeat.
+</pvxbig>
+
+== Counters ==
+<pvxbig>
+* General anti physical.
+* Interruption of [[Flourish] or one of your attack skills.
+</pvxbig>
+== See also ==
+* [[Build:W/A PvP Backbreaker Daggers|Backbreaker Dagger Warrior]].
+* [[Build:W/A RA Enraged Smash Daggers|Enraged Smash Dagger Warrior]].
+* [[Build:W/A RA Dagger Devham|Devastating Hammer Dagger Warrior]].

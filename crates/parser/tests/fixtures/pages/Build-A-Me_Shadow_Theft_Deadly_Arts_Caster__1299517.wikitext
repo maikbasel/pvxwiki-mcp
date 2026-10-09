@@ -1,0 +1,74 @@
+{{Real-Vetting|rating=creative|status=provisional|general}}{{TOC|pos=r|limit=1}}<pvxbig>Use [[shadow theft@20] with [[deadly haste@20] and [[ebon battle standard of honor@10] to buff [[dancing daggers@20] and similar skills. Requires a weapon [[gww:Of the (Profession)|of the necromancer]] and external energy support via [[blood is power].</pvxbig>
+==Attributes and Skills==
+<pvxbig>[build prof=Assassin/Mesmer CriticalStrikes=12+1+3 DeadlyArts=12+3 InspirationMagic=3][Shadow Theft@20][deadly haste@20][Ebon Battle Standard of Honor@10][Dancing Daggers@20][Crippling Dagger@20][Disrupting Dagger@20][Augury of Death@20][Channeling@8][/build]
+*{{skill pvxicon|Shadow Theft|20}} – can be replaced if [[heroic refrain@20] is provided. Switch your rune setup to gain +4 deadly arts and +3 critical strikes.
+**{{skill pvxicon|Seeping Wound|19}}
+**{{skill pvxicon|Assassin's Promise|20}}
+**{{skill pvxicon|Mark of Insecurity|20}} – against protection prayers monks.<!--
+**{{skill pvxicon|Palm Strike|19}} – for hybrid caster/dagger builds.-->
+*{{skill pvxicon|Disrupting Dagger|20}} / {{skill pvxicon|Augury of Death|20}}
+**{{skill pvxicon|Power Drain|7}} – especially with [[seeping wound@19].
+**{{skill pvxicon|Ebon Vanguard Assassin Support|10}} – especially with [[assassin's promise@20].
+**{{skill pvxicon|Pain Inverter|10}} – especially with [[assassin's promise@20].
+**{{skill pvxicon|Mark of Death|20}} – against healers.<!--
+**With [[palm strike@19] for a hybrid caster/dagger build: [[vampiric assault@20] and [[impale@20].--></pvxbig>
+== Equipment ==
+'''Weapons''':
+* [[gww:Swift|Swift]] "''[[gww:Inscription#Spell enhancing|Don't Think Twice]]''" (envoy) staff [[gww:Of the (Profession)|of the necromancer]] as your main casting weapon.
+* [[gww:Swift|Swift]] "''[[gww:Inscription#Spell enhancing|Don't Think Twice]]''" (envoy) staff [[gww:Of Enchanting|of enchanting]] for enchantments.
+* [[gww:Caster weapon#High energy set|High energy set]]. Use when extra energy is needed.
+* Shield set: "''[[gww:Inscription#Spell enhancing|Let the Memory Live Again]]''" spear of [[gww:Of Defense|defense]] with a shield of [[gww:Of Fortitude|fortitude]].
+
+'''Armor'''
+* 5 [[gww:Blessed Insignia|blessed insignias]].
+* Rune of [[gww:Rune of Vigor|superior vigor]].
+* 2 runes of [[gww:Rune of Vitae|vitae]].
+== Usage ==
+*<pvxbig>Shadow step to priority target with [[shadow theft@16].
+* Cast [[deadly haste@20] and place an [[ebon battle standard of honor@10].
+* Wear down low-armour targets with [[dancing daggers@20] followed by either [[crippling dagger@20] for the most damage or [[disrupting dagger@20] for shutdown.
+* Apply deep wound condition with [[augury of death@20] against groups with healers.
+* Use [[channeling@8] if a fight might get long-drawn.</pvxbig>
+== Notes ==
+*<pvxbig>A trigger of [[augury of death@20] will interrupt your current action and dismiss any active aftercast delay.<!-- need to check whether it clears knock down, too, like Avatars ending-->
+*The recharge time of your half-range spells under the effect of [[deadly haste@20] is...
+**{{skill pvxicon|Dancing Daggers|20}} 1 second.
+**{{skill pvxicon|Crippling Dagger|20}} 1 second.
+**{{skill pvxicon|Disrupting Dagger|20}} 2 seconds.
+**{{skill pvxicon|Augury of Death|20}} 4 seconds.
+*[[Dancing daggers@20], creating three daggers, triggers [[ebon battle standard of honor@10] thrice per cast.
+*Damage under [[shadow theft@20] and [[ebon battle standard of honor@10] against 60 armour rating:
+**{{skill pvxicon|Dancing Daggers|20}} – 180 (60×3)
+**{{skill pvxicon|Crippling Dagger|20}} – 90
+**{{skill pvxicon|Disrupting Dagger|20}} – 58
+*Against 100 armour rating:
+**{{skill pvxicon|Dancing Daggers|20}} – 114 (38×3)
+**{{skill pvxicon|Crippling Dagger|20}} – 53
+**{{skill pvxicon|Disrupting Dagger|20}} – 37</pvxbig>
+== Synergies and Counters ==
+<pvxbig>;Performs well with/against:
+*With external energy support via [[blood is power] (required).
+*With additional external energy support like [[energizing finale], [[well of power], [[energy boon].
+*With additional sources of [[ebon battle standard of honor@10] for better area coverage.
+*With cracked armour.
+*With [[frustration], triggered via [[disrupting dagger@20].
+*Against single targets.
+*Against low armour ratings.
+;Performs poorly with/against:
+* Against groups of foes.
+* Against high armour ratings against elemental damage.
+* Against small prots (flat damage reduction like [[shielding hands], [[shield of absorption], [[union]).
+* Against frequent enchantment removal.
+* Against general anti-caster.</pvxbig>
+==Video Example==
+{|
+|-
+|valign=top|[[gww:Rescue at Minister Cho's Estate|Rescue at Minister Cho's Estate]]<br><small>(Captured prior to of the necromancer and deadly haste buff.)</small>
+|valign=top|Demonstration at Master of Damage
+|-
+|{{YouTube|lVvG4lg2r0k|urlargs=start=65}}
+|{{YouTube|l_iexI3sVW4}}
+|-
+|}<!--
+== See Also ==
+*[[Build:A/Me Assassin's Promise Caster|Assassin's Promise Caster]]-->

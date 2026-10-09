@@ -1,0 +1,44 @@
+{{Real-Vetting|rating=good|status=provisional|general}}{{TOC|pos=right|limit=1}}
+<pvxbig>Assassin build which uses critical strikes and [[Shadow Theft@20]'s attribute bonuses to deal area damage with a scythe.</pvxbig>
+== Skills and Attributes ==
+<pvxbig>
+[build prof=A/D CriticalStrikes=12+1+3 ScytheMastery=12 EarthPrayers=3][Shadow Theft@20][Critical Eye@20][Pious Assault@17][Reap Impurities@17][Staggering Force@8][Aura of Thorns@8][Way of the Master@20][Critical Agility][/build]
+;Variants
+*{{skill pvxicon|Drunken Master}} – use with [[gww:alcohol|alcohol]]. Replace [[Critical Agility].
+*{{skill pvxicon|Asuran Scan}} – bypass blocking and effects that cause your attacks to miss. Replace [[Critical Eye@20].
+*{{skill pvxicon|"I Am Unstoppable!"}} – improved survivability and knock down/cripple immunity. Replace [[Critical Eye@20].
+</pvxbig>
+
+== Equipment ==
+* [[gww:Vampiric|Vampiric]] scythe of [[gww:Of Fortitude|fortitude]] with "Strength and Honor!".
+* Vampiric [[gww:Anniversary Shortbow "Whispers"|Anniversary Shortbow "Whispers"]] of fortitude with "Strength and Honor!". Use when you're unable to reach your target due to snares or terrain.
+* Shield set for self-defense.
+
+== Usage ==
+<pvxbig>
+*Maintain [[Critical Agility].
+**When it self-renews it's placed on top of your enchantment stack, preventing effective covering.
+*Prepare your flash enchantments [[Staggering Force] and [[Aura of Thorns] before and renew them during combat.
+*Shadow step to a foe with [[Shadow Theft@16].
+**Use the improved [[Critical Eye@20] and [[Way of the Master@20] afterwards.
+**Keep using shadow theft on recharge so it self-buffes and improves your attributes by 6 instead of 5.
+*Tear down your flash enchantments with [[Pious Assault@17] for additional damage.
+*Against balling foes, use [[Reap Impurities@17] to translate the inflicted conditions into armour ignoring area damage.
+</pvxbig>
+== Counters ==
+*Standard anti-physical.
+*Standard anti-melee.
+*Frequent/deep enchantment removal.
+== Notes ==
+<pvxbig>
+*Under the effect of [[Shadow Theft@20] you'll gain 4 instead of 3 energy per critical hit. The break point for the additional energy gain is at 18 critical strikes.
+</pvxbig>
+== See also ==
+<pvxbig>
+*[[Build:A/D Wounding Strike|A/D Wounding Strike]]
+*[[Build:A/D Vow of Strength|A/D Vow of Strength]]
+*[[Build:A/any_Dagger_Spammer#Attributes_and_Skills|A/any Shadow Theft Daggers]]
+*[[Build:A/W Critical Hammer|A/W Shadow Theft Hammer]]
+*[[Build:A/W_Critical_Strikes_Axe|A/W Shadow Theft Axe]]
+*[[Build:D/any Pious Renewal|D/any Pious Renewal]]
+</pvxbig>

@@ -1,0 +1,33 @@
+{{Real-Vetting|status=provisional|rating=Good|running}}{{Build update|
+*Nerf to Wastrel's Demise.|Game updates/20260624|2026-06-24}}
+{{Dungeon Build}}{{Requires-Cons|bu=yes}}
+{{TOC|pos=r}}
+
+Run or solo SoO on your assassin using energy removal + wastrels spam tactics.
+
+== Attributes and Skills ==
+<pvxbig>[build prof=A/Me sha=12+1+3 dom=10 ill=8 ins=2][Shadow Form][Shroud of Distress][Dwarven Stability][Dark Escape][Ancestor's Visage][Sympathetic Visage][Wastrel's Demise][Channeling][/build]</pvxbig>
+== Equipment ==
+* Blessed insignias
+* Weapons of Enchanting
+* Flatbow
+
+== Usage ==
+'''Maintain [[gww:Dark Escape|Dark Escape]] at all times while being attacked on any level.'''
+;Level 1:
+*Run to opposite end of dungeon and lose all aggro past the res shrine near the [[gww:Cursed Brigand|Brigand]]. Pull out a bow and pull the Brigand. maintain [[gww:Dark Escape|DE]] & [[gww:Wastrel's Demise|Wastrel]] the Brigand to death. A summoning stone is recommended.
+*Run to level 2.
+;Level 2:
+*Pull the aggro in the water on the wall to the right until all are balled; synchronize the visages to keep their energy at 0 and maintain channeling for constant energy. Wastrels the group.
+*At the graveyard, pull the melees and mages into a ball along a wall, use visages again and wastrels them away.
+*Light the torches for the next Brigand, pull it with a bow, and then kill as you did on level 1.
+*Run to the gate to level 3.
+;Level 3:
+*Run with your torch and light all the braziers needed, kill the Brigand group that spawns by using a nearby pillar or table to block any from escaping. Kill as you did the first spawn on level 2. Grab the key and run in to Fendi.
+*[[gww:Fendi Nin|Fendi]] is not fun. Wastrel him to death along with using jets, avoid the [[gww:Skeleton Archers|rangers]] as much as possible! Once the [[gww:Soul of Fendi Nin|Soul]] spawns, run to it and wastrels it + any of the [[gww:Damned Crewman|Damned Crewmen]]. Rinse and repeat this until the Soul is finally dead.
+
+== Counters ==
+* [[gww:Skeleton Wizard|Skeleton Wizard]] spikes if you have no anti-knockdown active. (i.e. Dwarven Stability must be maintained with alcohol.)
+
+== Notes ==
+* Personal consumables are '''highly''' recommended, and Alcohol is required to avoid knockdowns.

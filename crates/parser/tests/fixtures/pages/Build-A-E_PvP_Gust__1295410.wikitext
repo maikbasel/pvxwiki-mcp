@@ -1,0 +1,40 @@
+{{Real-Vetting|rating=good|RA|AB}}
+{{flux|Amateur Hour|Additional damage against Elementalists when using shock and gust against them.|positive}}
+{{flux|Hidden Talent|Slightly increased air magic.|positive}}
+{{flux|There Can Be Only One|Additional damage against other assassins; with gust you're also relatively well-protected against other assassins.|positive}}
+{{flux|Jack of All Trades|
+*Attributes: 11 air magic, 10+1 critical strikes, 10+1 dagger mastery.
+*Fairly improved performance due to faster casting and eased energy management.
+|positive}}
+{{flux|Minion Apocalypse|Killing targets in point-blank range will pressure you, which is particularly dangerous when playing without a monk (in range).|negative}}
+{{TOC|pos=r}}
+
+Use Gust to open your dagger chain and assist your allies against enemy melee.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/E air=10 dag=12+1+1 cri=8+1][Shock][Falling Spider][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Gust][Conjure Lightning][Optional][/build]
+;Optional:
+*{{skill pvxicon|Resurrection Signet}} for RA
+*{{skill pvxicon|Death's Charge|2}} for AB.
+</pvxbig>
+== Equipment ==
+*Armor:
+** Survivor or Blessed sigs and a rune of Restoration.
+*Weapons:
+** Shocking daggers of Fortitude (Use most of the time)
+** Shocking daggers of Enchanting (Use when you're about to open your chain with Gust)
+** 40/20/20 Air staff (Use while casting enchantments)
+** Shield sets (+10 vs damage type)
+
+== Usage ==
+* Use Gust to start your chain if your target is moving or attacking. If not, use shock.
+* Use Gust on your allies being attacked in melee to lineback from afar and give them an IMS.
+* Alternatively use it offensively on one of your frontline.
+
+== Counters ==
+* Anti-melee.
+
+== Notes ==
+* The only time you should self cast Gust is if there isn't one of your allies in range. Spread the love.
+* Foes suffer two damage packets from Gust when targeting yourself.

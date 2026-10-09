@@ -1,0 +1,38 @@
+{{Real-Vetting|rating=good|running}}
+{{Requires-Cons|bu=yes}}
+{{TOC|pos=r}}
+
+Solo build for running Bloodstone Caves in HM.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/D sha=12+1+3 cri=3 earthp=12][Shroud of Distress][Shadow Form][Dwarven Stability][Dark Escape][Armor of Sanctity][Shadow Sanctuary (Luxon)][Feigned Neutrality][Unseen Fury][/build]
+</pvxbig>
+
+
+== Equipment ==
+* Full Blessed or Vanguard
+* Martial weapon of Enchanting
+* Shield of Valor (+10ar vs Blunt)
+* Long or Flat bow for pulling
+
+== Usage ==
+* Maintain Shadow Form, Shroud of Distress, Dwarven Stability, and Dark Escape. Alcohol and redrock usage is highly recommended.
+=== Level 1 ===
+Run to through door to the right then to the left to top of the stairs. Cover Shroud and SF  with all enchantments and rush past incubus spawn to the left rez shrine. Once you are able refresh enchantments recast sf and shroud dwarven stability and dark escape and run back to the boss ettien. Lure him to the fire trap and use amor of sanctity and unseen fury to tank him until he dies. Grab key and head back to rez shrine. Recover sf and shroud. Rush past incubus spawn, up the stairs and open the gate. Onward to lvl 2. 
+=== Level 2 ===
+Go left past the poison traps. At the top of the hill you will need to cover sf and shroud like lvl 1. Rush down the hill past incubus spawn to the next rez shrine. Repeat the same process using cover enchantments to rush right past the next incubus spawn popping a summon to lose aggro and continue to the last rez shrine. Go to the far right wall and use bow to pull the boss back into poison traps to kill. Remember to use armor of sanctity and unseen fury wisely...i.e. only when boss is close enough. Grab key and proceed to lvl 3.
+
+=== Level 3 ===
+If running a group you may use traps to clear the path or have them help you. Continue to the left towards the boss chamber. Use bow to pull boss back to poison traps and use skills to tank him there until he dies. Collect chest.
+
+== Counters ==
+* Rubberbanding
+* Soul Rending Shriek
+* Energy management
+
+== Videos ==
+*{{YouTube|lMBCxPgH1OA}}
+
+== Notes ==
+A decent luxon or kurzick rank help for shadow sanctuary.

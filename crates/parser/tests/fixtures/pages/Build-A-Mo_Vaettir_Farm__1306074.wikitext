@@ -1,0 +1,52 @@
+{{Real-Vetting|rating=Testing|farming}}{{TOC|pos=r}}
+Designed to farm Vaettir in Hard Mode for [[gww:Glacial Stone|Glacial Stones]], mesmer tomes, golds, and event items during holiday events. This build is frequently used to attain the [[gww:Survivor|Legendary Survivor]] title.
+
+== Frequency ==
+*More common than the [[Build:E/Me Obsidian Flesh Vaettir Farmer|Elementalist]] farmer due to speed and ease of use.
+*More reliable and less action-intensive than the [[Build:A/Me_Vaettir_Farm|A/Me]].
+*Frequently seen during holiday events.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=a/mo shadow=12+1+3 smit=12 dead=3][deadly paradox][shadow form][Optional][shroud of distress][heart of shadow][kirin's wrath][balthazar's aura][balthazar's spirit][/build]
+</pvxbig>
+=== Optionals ===
+<pvxbig>
+*{{skill pvxicon|Way of the Master|0}} or {{skill pvxicon|Way of Perfection|16}} - build SF's damage reduction up. Cast on recharge with SF.
+</pvxbig>
+== Equipment ==
+* Max armor, Blessed Insignas/Attunement Runes.
+* Sword, Spear, or Axe with +5e/+20% enchantments (for example: [[gww:Totem Axe|Totem Axe]]).
+* Any Shield with +10 AR vs. Earth Damage (Inscription: [[gww:Like a Rolling Stone|"Like a Rolling Stone"]]).
+
+== Usage ==
+* Equip your Norn title and make sure you are in [[gww:Hard Mode|Hard Mode]].
+* Start from [[gww:Longeye's Ledge|Longeye's Ledge]] to [[gww:Jaga Moraine|Jaga Moraine]] by way of [[gww:Bjora Marches|Bjora Marches]]. Don't aggro anything along the way. If a [[gww:Frost Wurm|Frost Wurm]] pops up and knocks you down, cast SF as soon as you get up and you should be able to get away before it can cast anything on you.
+* Take the bounty (if desired). If this is the first time you've encountered this shrine keeper, bring heroes along to quickly defeat him and flag them away from the farm afterwards. You will not need to bring them in future runs.
+* Maintain [[gww:Shadow Form|SF]], your [[gww:Way_of|Way of]] skill, and [[gww:Shroud of Distress|SoD]] (cast all 3 under [[gww:Deadly Paradox|Deadly Paradox]]). (Note: When it says maintain SF you want to recast it before it expires. If you wait too long there is a chance that SF will be off for a split second before you get it back on and this will cause you to lose the damage reduction you've worked up.)
+* Recast Shroud of Distress (and all other Assassin enchantments you have) on recharge and under Deadly Paradox to maximize the damage reduction stack, as Shadow Form will count each enchantment cast (even for the same spell) separately. Each cast's duration is tracked separately and will add 5 DR until expired.
+* Group the Vaettir up into a tight ball in one pull (see the videos).
+* Kill them with [[gww:Kirin's Wrath|Kirin's Wrath]] and [[gww:Balthazar's Aura|Balthazar's Aura]].
+* Rezone via the portal to Bjora Marches to farm until you've filled your inventory or get bored.
+
+== Counters ==
+* Failure to maintain SF.
+* Taking too much damage (should only happen if you're not using the right equipment or don't renew SF in time).
+
+== Videos ==
+These videos show the A/Me version, but the approach with A/Mo is exactly the same.
+{{YouTube|h_FVCJAduMI}}
+* [http://www.youtube.com/watch?v=fFHy2f-1vJE 60 in one pull]
+* [http://www.youtube.com/watch?v=Nn2Mj4KD9bo With Commentary]
+
+
+== See also ==
+* [[Build:A/Me_Vaettir_Farm|A/Me Vaettir Farm]]
+* [[Build:A/E Perma Boss Farmer|A/any Perma Solo Farm]]
+* [[Build:D/N_Vaettir_Farmer|D/N Vaettir Farmer]]
+* [[Build:E/Me_Obsidian_Flesh_Vaettir_Farmer|E/Me Obsidian Flesh Vaettir Farmer]]
+* [[Build:Me/A_Vaettir_Farm|Me/A Vaettir Farm]]
+* [[Build:Mo/A_55hp_Vaettir_Farmer|Mo/A 55hp Vaettir Farmer]]
+* [[Build:R/Me Vaettir Farmer|R/Me Vaettir Farmer]]
+
+{{FarmCat|vaettir=yes|profa=yes|mesmer tomes=yes|xp=yes|unid=yes|event=yes}}

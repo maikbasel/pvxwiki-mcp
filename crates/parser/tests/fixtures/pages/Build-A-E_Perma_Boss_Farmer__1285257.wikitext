@@ -1,0 +1,371 @@
+{{Real-Vetting|rating=good|farming}}
+{{TOC|pos=r}}
+
+This perma Shadow Form build uses Sliver Armor to farm a wide variety of '''bosses''' across all campaigns in '''Hard Mode'''.
+
+==Skills and Attributes ==
+<pvxbig>
+[build prof=A/E Sha=12+1+3 Ear=12 Air=3][Glyph of Swiftness][Shadow Form][Shroud of Distress][Optional][Optional][Optional][Ebon Battle Standard of Honor][Sliver Armor][/build]
+</pvxbig>
+
+==Equipment==
+'''Armor'''
+*Head: Blessed Shadow Arts Head Piece of Superior Shadow Arts.
+*Chest: Blessed Armor of Superior Vigor.
+*Arms: Blessed Armor of Attunement.
+*Legs: Blessed Armor of Attunement.
+*Boots: Blessed Armor of Attunement.
+
+
+'''Weapon'''
+* Insightful Staff of Enchanting with +5 Energy.
+* Martial weapon of Enchanting with +5 Energy and a Shield of Devotion with -2 physical damage while Enchanted.
+* Longbow of Enchanting.
+
+<h4>Different Weapon Sets</h4>
+*{{D}} Myish, Lady of the Lake: A Shield of Devotion with +10vs cold.
+
+==Usage==
+*Maintain Shadow Form with Glyph of Swiftness. The 2nd charge of Glyph of Swiftness should be used on Sliver Armor whenever possible.
+*Glyph of Lesser Energy is for Shroud of Distress/Ebon Battle Standard of Honor/Armor of Earth.
+*Spike targets with EBSoH -> Sliver Armor (ideally, EBSoH would go up before Shadow Form so that it doesn't interrupt your Glyph rotation).
+
+==Farmable Bosses==
+===Prophecies===
+{| cellpadding="3" cellspacing="0" class="collapsible collapsed" 
+! align=left |Farmable bosses
+|-
+| By profession
+{|style="margin: 0.25em; border: 1px solid #000;" cellpadding="3" cellspacing="0" rules="all" class="sortable" 
+|- style="background:#DDD;"
+! Name 
+! Profession
+! Area
+! class="unsortable" | Build
+! class="unsortable" | Template Code
+! Difficulty
+! Instructions
+|-
+| [[gww:Spasmo Thunderbolt|Spasmo Thunderbolt]]
+| {{e}}[[gww:Elementalist|Elementalist]]
+| [[gww:Diessa Lowlands|Diessa Lowlands]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|optional|optional|Ebon Battle Standard of Honor|Sliver Armor|Drunken Master}}
+| OwZTgmE/ZS6Tn5ACAAAIXkHSVEA
+| align=center | 1
+| Shares a spawn point with [[gww:Ignis Phanaura|Ignis Phanaura]] and [[gww:Rif Telourau|Rif Telourau]]. Maintain your enchants, run straight to the boss, bodyblock him at the bottom of the stairs then nuke.
+|-
+| [[gww:Ignis Phanaura|Ignis Phanaura]]
+| {{Me}}[[gww:Mesmer|Mesmer]]
+| [[gww:Diessa Lowlands|Diessa Lowlands]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|optional|optional|Ebon Battle Standard of Honor|Sliver Armor|Drunken Master}}
+| OwZTgmE/ZS6Tn5ACAAAIXkHSVEA
+| align=center | 1
+| Shares a spawn point with [[gww:Spasmo Thunderbolt|Spasmo Thunderbolt]] and [[gww:Rif Telourau|Rif Telourau]]. Maintain your enchants, run straight to the boss, bodyblock him at the bottom of the stairs then nuke.
+|-
+|  [[gww:Rif Telourau|Rif Telourau]]
+| {{Mo}}[[gww:Monk|Monk]]
+| [[gww:Diessa Lowlands|Diessa Lowlands]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|optional|optional|Ebon Battle Standard of Honor|Sliver Armor|Drunken Master}}
+| OwZTgmE/ZS6Tn5ACAAAIXkHSVEA
+| align=center | 1
+| Shares a spawn point with [[gww:Spasmo Thunderbolt|Spasmo Thunderbolt]] and [[gww:Ignis Phanaura|Ignis Phanaura]]. Maintain your enchants, run straight to the boss, bodyblock him at the bottom of the stairs then nuke.
+|-
+| [[gww:Felinam the Whip|Felinam the Whip]]
+| {{R}}[[gww:Ranger|Ranger]]
+| [[gww:Nolani Academy|Nolani Academy]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 2
+| Apply Armor of Earth, Shadow Form, and Shroud before pulling the lever. Start going outisde the building, apply Mental Block when you get to the Charr. Kill the boss outside the gate.
+|-
+| [[gww:Blaze Bloodbane|Blaze Bloodbane]]
+| {{Mo}}[[gww:Monk|Monk]]
+| [[gww:Nolani Academy|Nolani Academy]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 2
+| Apply Armor of Earth, Shadow Form, and Shroud before pulling the lever. Start going outisde the building, apply Mental Block when you get to the Charr. Kill the boss outside the gate.
+|-
+| [[gww:Red Eye the Unholy|Red Eye the Unholy]]
+| {{N}}[[gww:Necromancer|Necromancer]]
+| [[gww:Nolani Academy|Nolani Academy]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 2
+| Apply Armor of Earth, Shadow Form, and Shroud before pulling the lever. Start going outisde the building, apply Mental Block when you get to the Charr. Kill the boss outside the gate.
+|-
+| [[gww:Ghast Ashpyre|Ghast Ashpyre]]
+| {{Me}}[[gww:Mesmer|Mesmer]]
+| [[gww:Nolani Academy|Nolani Academy]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 2
+| Apply Armor of Earth, Shadow Form, and Shroud before pulling the lever. Start going outisde the building, apply Mental Block when you get to the Charr. Kill the boss outside the gate.
+|-
+| [[gww:Jaw Smokeskin|Jaw Smokeskin]]
+| {{E}}[[gww:Elementalist|Elementalist]]
+| [[gww:Nolani Academy|Nolani Academy]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 2
+| Apply Armor of Earth, Shadow Form, and Shroud before pulling the lever. Start going outisde the building, apply Mental Block when you get to the Charr. Kill the boss outside the gate.
+|-
+| [[gww:Skitt Skizzle|Skitt Skizzle]]
+| {{e}}[[gww:Elementalist|Elementalist]]
+| [[gww:Ice Floe|Ice Floe]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Ebon Battle Standard of Honor|Sliver Armor|"Finish Him!"|Dwarven Stability|Dark Escape}}
+| OwZjkwf84QSf6MHQ5i8Qxk3lNQA
+| align=center | 1
+| This boss shares a spawn point with [[gww:Gambol Headrainer|Gambol Headrainer]]. You have to walk along the small mountain, because he doesn't attack. Aggro as many Ice Imps as you want, you'll only need 1 additional group to kill the boss in 1 Sliver. You can kill the ice imps too.
+|-
+|}
+|}
+
+===Factions===
+{| cellpadding="3" cellspacing="0" class="collapsible collapsed" 
+! align=left |Farmable bosses
+|-
+| By profession
+{|style="margin: 0.25em; border: 1px solid #000;" cellpadding="3" cellspacing="0" rules="all" class="sortable" 
+|- style="background:#DDD;"
+! Name 
+! Profession
+! Area
+! class="unsortable" | Build
+! class="unsortable" | Template Code
+! Difficulty
+! Instructions
+|-
+| [[gww:Tahkayun Tsi|Tahkayun Tsi]]
+| {{a}} [[gww:Assassin|Assassin]]
+| [[gww:Kinya Province|Kinya Province]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|optional|optional|optional|Sliver Armor|Dark Escape}}
+| OwZTgmE/5R6rzOgAAAAAgH2ABA
+| align=center | 1
+| Just run straight to the boss and kill him in 1 sliver.
+|-
+| [[gww:Arrahhsh Mountainclub|Arrahhsh Mountainclub]]
+| {{w}}[[gww:Warrior|Warrior]]
+| [[gww:Pongmei Valley|Pongmei Valley]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 3
+| Kill warriors before pulling the boss with a bow. It is advised to aggro the 2 groups in front of the entrance. Do NOT stand too close to the rangers, they use traps.
+|-
+| [[gww:Chkkr Thousand Tail|Chkkr Thousand Tail]]
+| {{r}} [[gww:Ranger|Ranger]]
+| [[gww:Drazach Thicket|Drazach Thicket]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|"Finish Him!"}}
+| OwZTgmE/ZS6Tn5AKusBKXkHKmEA
+| align=center | 2
+| '''Required quest:''' [[gww:A New Escort|A New Escort]]. Take Dragon Moss aggro and kill him in 1 or 2 slivers.
+|-
+| [[gww:Chehbaba Roottripper|Chehbaba Roottripper]]
+| {{r}} [[gww:Ranger|Ranger]]
+| [[gww:Mount Qinkai|Mount Qinkai]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 3
+| Kill the warriors first away from the boss. Run to the boss with AoE on only. Run through to the rit boss for another profit.
+|-
+| [[gww:Tomton Spiriteater|Tomton Spiriteater]]
+| {{rt}} [[gww:Ritualist|Ritualist]]
+| [[gww:Mount Qinkai|Mount Qinkai]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 4
+| Kill the warriors first away from the boss. Run through to the monk boss for extra profit.
+|-
+| [[gww:Hukhrah Earthslove|Hukhrah Earthslove]]
+| {{mo}}[[gww:Monk|Monk]]
+| [[gww:Mount Qinkai|Mount Qinkai]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 5
+| '''Required quest:''' [[gww:Return of the Yeti|Return of the Yeti]]. Kill the warriors first away from the boss. Pull with a bow. It is much harder to kill this boss if you are being attacked by the quest related warrior boss, but he can be killed after. Ideally he rushes in to heal 1 warrior in melee, separating him from the other ranged mobs.
+|-
+| [[gww:Yingko the Skull Claw|Yingko the Skull Claw]]
+| {{n}} [[gww:Necromancer|Necromancer]]
+| [[gww:Sunqua Vale|Sunqua Vale]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|"Finish Him!"}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHKmEA
+| align=center | 5
+| Maintain your enchants while running. At the boss, dance around a bit after every skill you use to dodge Wanderlust. Pull 2 groups, then he should die in 1 sliver (stand still once sliver is up).
+|-
+| [[gww:Chan the Dragon's Blood|Chan the Dragon's Blood]]
+| {{n}} [[gww:Necromancer|Necromancer]]
+| [[gww:The Undercity|The Undercity]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|Dwarven Stability}}
+| OwZTgmE/ZS6Tn5AKusBKXkH6uEA
+| align=center | 4
+| '''Recommended quest:''' [[gww:Seek Out Brother Tosai|Seek Out Brother Tosai]]. Maintain your enchants while running. Pull him away from the Peasants. Kill him in 2-3 slivers else your energy won't be enough. Maintain Dark Escape at all times.
+|-
+| [[gww:Chung, the Attuned|Chung, the Attuned]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:The Undercity|The Undercity]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|Dwarven Stability}}
+| OwZTgmE/ZS6Tn5AKusBKXkH6uEA
+| align=center | 4
+| '''Recommended quest:''' [[gww:Seek Out Brother Tosai|Seek Out Brother Tosai]]. Maintain your enchants while running. Kill him in 2-3 slivers else your energy won't be enough. Maintain Dark Escape at all times.
+|-
+|}
+|}
+
+===Nightfall===
+{| cellpadding="3" cellspacing="0" class="collapsible collapsed" 
+! align=left |Farmable bosses
+|-
+| By profession
+{|style="margin: 0.25em; border: 1px solid #000;" cellpadding="3" cellspacing="0" rules="all" class="sortable" 
+|- style="background:#DDD;"
+! Name 
+! Profession
+! Area
+! class="unsortable" | Build
+! class="unsortable" | Template Code
+! Difficulty
+! Instructions
+|-
+| [[gww:Tarom Rockbreaker|Tarom Rockbreaker]]
+| {{W}}[[gww:Warrior|Warrior]]
+| [[gww:Plains of Jarin|Plains of Jarin]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 4
+| Grab the nearby Nephila aggro, use them to kill a Mandragor group that pops up on the way to the boss. Avoid going near the river, a second group could spawn.
+|-
+| [[gww:Eshim Mindclouder|Eshim Mindclouder]]
+| {{me}} [[gww:Mesmer|Mesmer]]
+| [[gww:Sunward Marches|Sunward Marches]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Dark Escape}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqBCA
+| align=center | 2
+| Position yourself in a way that only he's in range of Sliver.
+|-
+| [[gww:Suneh Stormbringer|Suneh Stormbringer]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:Plains of Jarin|Plains of Jarin]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Drunken Master}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHSVEA
+| align=center | 1
+| Start from Kamadan. Try to hit only the boss and he'll die in 1 sliver. Continue to Hassin.
+|-
+| [[gww:Hassin Softskin|Hassin Softskin]]
+| {{p}} [[gww:Paragon|Paragon]]
+| [[gww:Plains of Jarin|Plains of Jarin]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Drunken Master}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHSVEA
+| align=center | 2
+| Kill the Termites first.
+|-
+| [[gww:Birneh Skybringer|Birneh Skybringer]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:Sunward Marches|Sunward Marches]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Dark Escape}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqBCA
+| align=center | 2
+| Kill off the Termites first, they are nasty. Sometimes there are 3 healers, it is better to kill at least one of them.
+|-
+| [[gww:Korshek the Immolated|Korshek the Immolated]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:Forum Highlands|Forum Highlands]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Glyph of Lesser Energy|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZTgmE/ZS6Tn5AKuEZIXkHqUAA
+| align=center | 4
+| Avoid the Sapphire Djinn group. When going through the Harpies make sure you have all your defensives active except for Sliver.
+|-
+| [[gww:Yammiron, Ether Lord|Yammiron, Ether Lord]]
+| {{me}} [[gww:Mesmer|Mesmer]]
+| [[gww:The Mirror of Lyss|The Mirror of Lyss]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Shadow Refuge|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth}}
+| OwZjkwf84QSf6MHQxl5i8QlCuMA
+| align=center | 2
+| Kill the Sapphire Djinns and the melee Beetles you aggro first, then you kill Yammiron once only. No need to repeat the killing as further kills drop nothing.
+|-
+| [[gww:Terob Roundback|Terob Roundback]]
+| {{N}}[[gww:Necromancer|Necromancer]]
+| [[gww:The Floodplains of Mahnkelon|The Floodplains of Mahnkelon]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Dwarven Stability|Dark Escape|Way of the Master|Ebon Battle Standard of Honor|Sliver Armor}}
+| OwZTgmE/ZS6Tn5A6usBaRMXkHCA
+| align=center | 3
+| Run past the Ntouka until you lose their aggro. Sliver down the melee Heket, then kill the boss. Note: if a Monk heket spawns, you can't do the run.
+|-
+|}
+|}
+
+===EotN===
+{| cellpadding="3" cellspacing="0" class="collapsible collapsed" 
+! align=left |Farmable bosses
+|-
+| By profession
+{|style="margin: 0.25em; border: 1px solid #000;" cellpadding="3" cellspacing="0" rules="all" class="sortable" 
+|- style="background:#DDD;"
+! Name 
+! Profession
+! Area
+! class="unsortable" | Build
+! class="unsortable" | Template Code
+! Difficulty
+! Instructions
+|-
+| [[gww:Lord Glacius the Eternal|Lord Glacius the Eternal]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:Bjora Marches|Bjora Marches]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Dwarven Stability|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|"Finish Him!"}}
+| OwZTgmE/ZS6Tn5A6usBKXkHKmEA
+| align=center | 2
+| He's spawned by Stone Summit (look it up on the GW wiki). Waste no time, start running the moment you spawn into the zone (timing for patrols is very tight).  
+|-
+| [[gww:Myish, Lady of the Lake|Myish, Lady of the Lake]]
+| {{d}} [[gww:Dervish|Dervish]]
+| [[gww:Drakkar Lake|Drakkar Lake]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Ebon Battle Standard of Honor|Sliver Armor|Armor of Earth|Mental Block|"I Am Unstoppable!"}}
+| OwZjkwf84QSf6MHQ5i8QlCxl0kA
+| align=center | 5
+| You need to kill all wandering wisps first with the ultimate aggroes of frozen elementals. NOTE YOU DO NOT AGGRO MODNIIR. THEY KILL YOU!
+|-
+| [[gww:Elsnil Frigidheart|Elsnil Frigidheart]]
+| {{e}} [[gww:Elementalist|Elementalist]]
+| [[gww:Ice Cliff Chasms|Ice Cliff Chasms]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Mental Block|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|"Finish Him!"}}
+| OwZTgmE/ZS6Tn5AKuMmMXkHqBCA
+| align=center | 1
+| Grab 2 [[gww:Elemental|Elemental]] groups + the boss' and melt him with sliver.
+|-
+| [[gww:Avarr the Fallen|Avarr the Fallen]]
+| {{n}} [[gww:Necromancer|Necromancer]]
+| [[gww:Jaga Moraine|Jaga Moraine]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Dwarven Stability|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|Death's Charge}}
+| OwZTgmE/ZS6Tn5A6usBKXkHC3BA
+| align=center | 3
+| The running part is the only somewhat difficult one. Once at the boss, minions will bodyblock your way - use Death's Charge to get to him.  
+|-
+| [[gww:Veturni Mindsquall|Veturni Mindsquall]]
+| {{me}} [[gww:Mesmer|Mesmer]]
+| [[gww:Magus Stones|Magus Stones]]
+| {{mini skill bar|Glyph of Swiftness|Shadow Form|Shroud of Distress|Dwarven Stability|Dark Escape|Ebon Battle Standard of Honor|Sliver Armor|Way of the Master}}
+| OwZTgmE/ZS6Tn5A6usBKXkHaREA
+| align=center | 2
+| The running part is the only somewhat difficult one. Krait Warriors have interrupts, don't cast while they are on you. When you reach the boss try to position yourself in a way that only he's in Sliver's range.
+|-
+|}
+|}
+
+=== Note ===
+*Difficulty is written in range of 1-5, with 1 being easy and 5 being hard.
+*For difficulty 3 and above you may want to use a Shield set, although it's not always mandatory.
+
+==Videos==
+{|
+|-
+|<big>'''Yeti Boss Tour'''</big><br />
+{{YouTube|DeUYXvw00kg}}
+|<big>'''Eshim Mindclouder'''</big><br />
+{{YouTube|oPYKnQs17DY}}
+|}
+
+== See also ==
+*[[Build:R/A Whirling Defense Farmer]]
+*[[Build:A/any Flashing Blades Farmer]]
+
+{{FarmCat|elite assassin tomes=yes|elite dervish tomes=yes|elite elementalist tomes=yes|elite mesmer tomes=yes|elite monk tomes=yes|elite necromancer tomes=yes|elite paragon tomes=yes|elite ranger tomes=yes|elite ritualist tomes=yes|elite warrior tomes=yes|boss=yes|profa=yes}}

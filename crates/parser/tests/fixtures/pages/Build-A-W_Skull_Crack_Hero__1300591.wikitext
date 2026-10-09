@@ -1,0 +1,51 @@
+{{Real-Vetting|rating=testing|hero}}{{TOC|pos=r}}<pvxbig>This hero deals damage with a quick dagger attack combo and gains adrenaline for [[skull crack], a quick attack that can inflict [[gww:Dazed|dazed condition]], which is very effective against casters.</pvxbig>
+== Variants ==
+=== Any Suffix ===
+{{Variantbar|prof=A|expanded|name=A/W Skull Crack Hero|template=<pvxbig>[build prof=Assassin/Warrior DaggerMastery=12+1+1 CriticalStrikes=12+1 ShadowMagic=3][Death's Charge][Skull Crack][Golden Lotus Strike][Jagged Strike][Fox Fangs][Death Blossom][Critical Eye][Flurry][/build]
+*{{skill pvxicon|Golden Lotus Strike|14}} – replace if external energy support like {{Inlinepvx|weapon of fury}} is provided or the team lacks enchantments
+**{{skill pvxicon|"For Great Justice!"}}
+**{{skill pvxicon|Golden Phoenix Strike|14}}
+**{{skill pvxicon|Signet of Malice}}
+**{{skill pvxicon|"None Shall Pass!"|0}}
+**{{skill pvxicon|Resurrection Signet}}</pvxbig>}}
+=== Of the Warrior ===
+{{Variantbar|prof=W|name=A/W Skull Crack Hero (ofW)|template=<pvxbig>[build prof=Assassin/Warrior DaggerMastery=12+1+1 CriticalStrikes=12+1 ShadowMagic=3][Death's Charge][Skull Crack]["For Great Justice!"][Jagged Strike][Fox Fangs][Death Blossom][Critical Eye][Flail@5][/build]
+*{{skill pvxicon|"For Great Justice!"}}
+**{{skill pvxicon|Golden Phoenix Strike|14}}
+**{{skill pvxicon|Signet of Malice}}
+**{{skill pvxicon|"None Shall Pass!"|0}}
+**{{skill pvxicon|Resurrection Signet}}</pvxbig>}}
+== Equipment ==
+*<pvxbig>[[gww:Vampiric|Vampiric]] or [[gww:Zealous|zealous]] daggers, inscribed [[gww:Inscription#Combat enhancing|"Strength and Honor!"]], ...
+**{{skill pvxicon|Flail|5}}: [[gww:Of the (Profession)|of the warrior]];
+**otherwise, ideally: of the ranger/necromancer;
+**legacy options: [[gww:Of Defense|of defense]]/[[gww:Of Fortitude|of fortitude]].
+*5 [[gww:Blessed Insignia|blessed insignias]] if enchantments are readily available, else [[gww:Nightstalker Insignia|nightstalker]] provides a somewhat unreliable alternative.
+*Rune of superior [[gww:Rune of Vigor|vigor]].
+*Rune of [[gww:Rune of Clarity|clarity]].
+*Rune of [[gww:Rune of Restoration|restoration]].</pvxbig>
+
+== Usage ==
+*{{Hero Mode|fight}}
+== Synergies and Counters ==
+<pvxbig>;Performs well with/against:
+*With an enchantment for [[golden lotus strike@14].
+*With damage support such as [[splinter weapon@16], [[strength of honor], [[order of pain]/[[order of the vampire], [[ebon battle standard of honor@10], [[Great Dwarf weapon@10], [[gust] (or other speed boosts).
+*With adrenaline support such as [[weapon of fury], [[dark fury].
+*With party members that spread conditions via [[extend conditions], [[fevered dreams] or [[epidemic].
+*Against casters.
+*Against single targets and small groups of foes.
+;Performs poorly with/against:
+* Against large and very large groups of foes.
+* Against general anti-physical.
+* Against general anti-melee. 
+* Against kiting targets.
+* Against attack punishment like [[empathy] or [[insidious parasite].
+* Against action punishment like [[visions of regret] or [[spiteful spirit].
+* {{skill pvxicon|Plague Signet}}</pvxbig>
+== Notes ==
+*<pvxbig>Heroes use [[skull crack] as an interruption against skills, not just spells.
+*Heroes use skull cracks on targets already suffering from dazed condition.</pvxbig>
+== See Also ==
+*[[Build:A/any Dagger Spammer Hero|Way of the Assassin Hero]]
+*[[Build:A/E Conjure Way of the Assassin Hero|Conjure Way of the Assassin Hero]]

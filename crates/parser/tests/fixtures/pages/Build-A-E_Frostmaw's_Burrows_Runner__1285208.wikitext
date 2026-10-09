@@ -1,0 +1,87 @@
+{{Real-Vetting|rating=great|running|}}
+{{Dungeon Build}}{{Requires-Cons|bu=yes}}
+{{TOC|pos=r}}
+
+Solo build for running Frostmaw's Burrows in HM. Requires three [[gww:Essence of Celerity|Essences]].
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/E ear=12 sha=12+1+3 cri=3][Shroud of Distress][Shadow Form][Armor of Earth][Ebon Battle Standard of Honor][Sliver Armor][Dark Escape]["I Am Unstoppable!"][Death's Charge][/build]
+</pvxbig>
+
+== Equipment ==
+* Full Blessed
+* Martial weapon of Enchanting
+* Shield of Devotion with +10 AR vs Cold
+* Shield of Fortitude with +10 AR vs Lightning
+* Longbow or Flatbow of Enchanting
+* A second armor set with Sentry's Insignia is recommended.
+
+== Usage ==
+Maintain Shadow Form and Shroud of Distress. Personal consumables such as [[gww:Birthday Cupcake|Cupcakes]] and [[gww:Candy Apple|Candy Apples]] are recommended to make the run easier. Some general tips:
+* Wurms always surface directly in front of you.
+* All creatures except [[gww:Frostmaw's Burrows#Foes|Elementals]] die instantly if they touch one of the many snowballs in the dungeon. This includes you.
+* Using [[gww:"I Am Unstoppable!"|IAU]] and [[gww:Dark Escape|Dark Escape]] while under [[gww:Quickening Zephyr|Quickening Zephyr]] makes them maintainable.
+* The large groups of [[gww:Stormcloud Incubus|Stormcloud Incubus]] that come down from the ceiling on level 3 will sometimes be already spawned. If this happens, use your Death's Charge on the furthest one.
+* Running this dungeon includes using a trick to bypass closed gates. See [[gww:Minion trick|this wiki page]] and this youtube video https://www.youtube.com/watch?v=xOXvJMNTk0g for more info.
+
+=== Level 1 ===
+Hug the right wall and run to the gate. Pull the Wurm spawns to the nearest snowball. Pay attention to the Avalanche effect, which will interrupt you and slow your movement.
+
+=== Level 2 ===
+Go left and glitch the first gate. Stay on the left path and exit the tunnel. Pull the first group of elementals from the cave and use them to kill the Frostmaw Spawn group on the left side. Now you have two options:
+* Go back to the cave and kill the Frostmaw Spawn group there. Then pull aggro from the cave to the last gate.
+* Head trough the Stormcloud Incubus spawn using IAU and Dark Escape. Equip your lightning shield for this.
+The Siege Wurm and nearby Frozen Elementals need to be killed in order to open the door.
+
+=== Level 3 ===
+* This is the hardest level. Prepare for multiple deaths if this is your first attempt.
+* A summoning stone helps to break aggro from Stormclouds.
+* Always use IAU and Dark Escape when going trough the groups of Incubus.
+* There are small groups of patrolling Incubus throughout this level.
+Use the snowball to kill the Frostmaw Spawn by standing next to ball and facing it. Watch out for Incubus patrols.
+
+The next room has a long corridor to the right, with a patrolling group of two or three Incubus followed by a Wurm, a group of Elementals and a large group of Incubus. The easiest way to get past them is to pull the elementals out of the corridor and killing them while avoiding the Incubus patrol.
+
+When making your way trough the large Incubus group, use Death's Charge on the Wurm to the left to heal and break aggro. There will be a res shrine to your left.
+Now kill Frostmaw Spawn in the same manner as the previous one.
+
+Going trough the cracked open wall, take the left path and break all aggro. Be careful as to not trigger the Incubus before you are ready. Cover Shadow Form and use Death's Charge on the nearest foe. Snowball the last two Frostmaw Spawns.
+
+=== Level 4 ===
+* This level can be done without an Essence. Always use Shadow Form in range of a QZ spirit.
+Immediately run right hugging the wall. Once past the doorway cast your spells under QZ. Dodge the Incubus patrol and run to other side of chamber. Cross the bridge and take right up past res shrine.
+
+Follow the path and use Death's Charge on the second Wurm on left. Avoid the Incubus patrol and head to the door. Use the nearby Jotuns to pass the gate.
+
+=== Level 5 ===
+* This level can be done without an Essence.
+Run to right past all Jotuns to boss chamber. Kill the three groups of Frost Wurm Young and Larvae (a summoning stone speeds this up). Once the Siege Wurms spawn, ping one of them to kill the Norn npcs.
+
+Pull the Kinslayer and the two Frostmaw Spawns back the way you came from. Kill them using the rolling snowball.
+
+== Variants ==
+<pvxbig>{{Variantbar|prof=R|name=R/A Frostmaw's Burrows Runner|template=[build prof=R/A exp=12+1+3 sha=12 mar=3][Shadow Form][Death's Charge]["I Am Unstoppable!"][Dark Escape][Dwarven Stability][Whirling Defense][Shroud of Distress][Optional][/build]
+* [[gww:Heart of Shadow|Heart of Shadow]]
+* [[gww:Ebon Battle Standard of Honor|Ebon Battle Standard of Honor]]
+* [[gww:Light of Deldrimor|Light of Deldrimor]]
+* '''This build requires personal consumables to boost your Shadow Arts.'''}}
+</pvxbig>
+
+== Counters ==
+* Whirling Wisps have [[gww:Lyssa's Assault|Lyssa's Assault]], which they tend to use randomly. Use your blocking skills to counter this.
+* Jotun Skullsmashers have [[gww:Skull Crack|Skull Crack]]. Kill them as fast as possible and use your blocking skills to prevent them from building adrenaline.
+* Rubberbanding.
+* Soul Rending Shriek.
+* Improper energy management.
+
+== Videos ==
+* A/E build with declaration.
+{{YouTube|Kp_IRFshwFE}}
+
+* Video of the R/A build.
+{{YouTube|cm-in-FFWaE}}
+
+== Notes ==
+* A decent Norn rank for maintaining IAU and decent Vanguard rank for Honor is required.
+* This dungeon is rich in Light of Deldrimor treasures, especially the last level. See map http://wiki.guildwars.com/images/7/70/Frostmaw's-Burrow.jpg for more details.

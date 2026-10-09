@@ -1,0 +1,45 @@
+{{Real-Vetting|rating=testing|RA|HA|AB|GvG}}
+{{TOC|pos=r}}
+
+
+Assassin build that abuses the synergy between Nightmare Weapon and Vampiric Assault to provide high armor-ignoring damage spike with strong self-healing capabilities.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Ritualist DeadlyArts=12+1+3 ChannelingMagic=12 DaggerMastery=3][Nightmare Weapon][Wastrel's Collapse][Black Spider Strike][Vampiric Assault][Impale][Signet of Toxic Shock][Renewing Surge][Optional][/build]
+
+
+Optionals:
+*{{skill pvxicon|Resurrection Signet}} for RA/HA;
+*{{skill pvxicon|Mark of Instability}} for quarterknocking.
+*{{skill pvxicon|Dash}}
+</pvxbig>
+== Equipment ==
+* Weapons
+** Set 1: Vampiric Dagggers w/ +30 Health and +5 energy inscription.
+** Set 2: Zealous Spear w/ +30 Health and +5 energy inscription; Shield w/ +30 health and -20% Cripple duration;
+** Set 3 (optional): [https://wiki.guildwars.com/wiki/40/40 40/40] Channeling set for prebuffing Nightmare Weapon
+** Set 4 (optional): Any longbow
+*Armor
+**1 x Rune of Restoration
+**1 x Rune of Superior Vigor
+** Runes of Vitae and Survivor insignia on all other slots.
+
+== Usage ==
+*<pvxbig> Stay in Spear set between fights, switch to Daggers as you are about to spike
+* Prebuff yourself with {{skill pvxicon|Nightmare Weapon|12}}
+* Use {{skill pvxicon|Renewing Surge|12}} → {{skill pvxicon|Black Spider Strike|3}} → {{skill pvxicon|Vampiric Assault|16}} → {{skill pvxicon|Impale|16}} → {{skill pvxicon|Signet of Toxic Shock|16}} for the spike.
+** Use Signet of Toxic Shock right after Black Spider Strike/Vampiric Assault when fearing condition removal or lacking energy. 
+* Close distance with {{skill pvxicon|Wastrel's Collapse}}. Use it after enemy finishes an ability for guaranteed knockdown
+* Use {{skill pvxicon|Mark of Instability}} before {{skill pvxicon|Wastrel's Collapse}} for quarter knocking. 
+* Between spikes, use {{skill pvxicon|Nightmare Weapon|12}} + Spear autoattack for small poke damage and sustain.
+* Use {{skill pvxicon|Nightmare Weapon|12}} + longbow for slow but safe lifesteal against stationary NPCs or when at high-ground advantage.</pvxbig>
+* Dash to move around and get out of sticky scenarios.
+
+== Counters ==
+* Anti-melee early in the combo
+* Well-timed condition and hex removal
+* Interrupting Impale/SoTS
+
+== Variants ==
+*<pvxbig> {{skill pvxicon|Shadow Prison|16}} over {{skill pvxicon|Wastrel's Collapse}} against heavy hex removal. Be aware of the higher energy cost.</pvxbig>

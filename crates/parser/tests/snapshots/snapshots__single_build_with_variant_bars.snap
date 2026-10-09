@@ -1,0 +1,431 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Build-A-Me_Margonite_Gemstone_Farm__1295862.wikitext\")"
+---
+ParsedPage {
+    vetting: Vetted(
+        Vetted {
+            rating: Some(
+                Great,
+            ),
+            status: Some(
+                Provisional,
+            ),
+            gameplay_types: [
+                "farming",
+                "PvE team",
+                "hero",
+            ],
+            archive: None,
+        },
+    ),
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{Real-Vetting|status=provisional|rating=great|farming|PvE team|hero}}\n{{TOC|pos=r}}\n\nThis build uses a Perma Tank and a Life Barrier Bonder to tank and kill [[gww:Margonite|Margonites]] in the [[gww:City_of_Torc%27qua|City of Torc'qua]] in normal or hard mode through the use of visage spells and the Anur Tuk's [[gww:Famine|Famine]] spirits.  This can be done with either another player, or using a hero bonder.\n\n",
+            text: "provisional great farming PvE team hero r This build uses a Perma Tank and a Life Barrier Bonder to tank and kill Margonites in the City of Torc'qua in normal or hard mode through the use of visage spells and the Anur Tuk's Famine spirits. This can be done with either another player, or using a hero bonder.",
+        },
+        Section {
+            heading: Some(
+                "Perma Tank",
+            ),
+            level: 2,
+            wikitext: "== Perma Tank ==\n<pvxbig>\n[build prof=A/Me Shadow=12+1+3 Illusion=12 Deadly_Arts=3][Deadly Paradox][Shadow Form][Shroud of Distress][Great Dwarf Armor][\"I am unstoppable!\"][Ancestor's Visage][Sympathetic Visage][Death's Charge][/build]\n\n{{Variantbar|prof=Me|name=Me/A Mesmer Tank|position=1|template=[build prof=Me/A Shadow_Arts=12 Illusion_Magic=8 Fast_Casting=10][Deadly Paradox][Shadow Form][Shroud of Distress][Way of the Master][Way of Perfection][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build]}}\n\n{{Variantbar|prof=E|name=E/Me Elementalist Tank|position=1|template=[build prof=E/Me Earth_Magic=12+1+3 Illusion_Magic=8 Energy_Storage=10 air_magic=2][Glyph of Swiftness][Obsidian Flesh][Stoneflesh Aura][Elemental Lord][Aura of Restoration][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build]}}\n</pvxbig>\n\n",
+            text: "Perma Tank [build prof=A/Me Shadow=12+1+3 Illusion=12 Deadly_Arts=3][Deadly Paradox][Shadow Form][Shroud of Distress][Great Dwarf Armor][\"I am unstoppable!\"][Ancestor's Visage][Sympathetic Visage][Death's Charge][/build] Me Me/A Mesmer Tank 1 [build prof=Me/A Shadow_Arts=12 Illusion_Magic=8 Fast_Casting=10][Deadly Paradox][Shadow Form][Shroud of Distress][Way of the Master][Way of Perfection][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build] E E/Me Elementalist Tank 1 [build prof=E/Me Earth_Magic=12+1+3 Illusion_Magic=8 Energy_Storage=10 air_magic=2][Glyph of Swiftness][Obsidian Flesh][Stoneflesh Aura][Elemental Lord][Aura of Restoration][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build]",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 3,
+            wikitext: "=== Equipment ===\n* Full Blessed Armor\n* Spear/Sword/Axe of Enchanting with +5 energy\n* Shield of Fortitude with +10 Vs Demons - such as the [[gww:Aegis_of_Aaaaarrrrrrggghhh|Aegis of Aaaaarrrrrrggghhh]] or [[gww:Aegis_of_Terror|Aegis of Terror]].\n* Enchanting staff of enchanting.  Preferably illusion for wanding down survivors.\n\n",
+            text: "Equipment Full Blessed Armor Spear/Sword/Axe of Enchanting with +5 energy Shield of Fortitude with +10 Vs Demons - such as the Aegis of Aaaaarrrrrrggghhh or Aegis of Terror. Enchanting staff of enchanting. Preferably illusion for wanding down survivors.",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 3,
+            wikitext: "=== Usage ===\n* Maintain all enchantments (except for the Visage skills) and \"I am unstoppable!\".\n* Group casters and paragons in a tight ball along the wall.\n* Drag melee to the ball and start maintaining your visages.  Only have one active at a time otherwise the enemies might break.\n* Pick up drops\n\n",
+            text: "Usage Maintain all enchantments (except for the Visage skills) and \"I am unstoppable!\". Group casters and paragons in a tight ball along the wall. Drag melee to the ball and start maintaining your visages. Only have one active at a time otherwise the enemies might break. Pick up drops",
+        },
+        Section {
+            heading: Some(
+                "Life Barrier Bonder (Hero or Player)",
+            ),
+            level: 2,
+            wikitext: "== {{Mo}}{{R}} Life Barrier Bonder (Hero or Player)==\n<pvxbig>\n[build prof=Monk/Ranger Protection=12+1+3 Divine=3+3 Beast=12][Balthazar's Spirit][Watchful Spirit][Life Barrier][Life Bond][optional][Blessed Signet][Edge of Extinction][Rebirth][/build]\n* If you are bringing a hero, do not bring any other skills that [[gww:Target|Target]].  The hero might walk away from your flag and try to cast it on the tank and grab agro.\n* {{skill pvxicon|Optional}}:\n** {{skill pvxicon|Vital Blessing|16}}\n** {{skill pvxicon|Strength of Honor|8}} (For killing left-overs.)\n** {{skill pvxicon|Heal Party|8}}\n** {{skill pvxicon|Mindbender|10}} (For quicker placement of bonds.)\n</pvxbig>\n\n",
+            text: "Life Barrier Bonder (Hero or Player) [build prof=Monk/Ranger Protection=12+1+3 Divine=3+3 Beast=12][Balthazar's Spirit][Watchful Spirit][Life Barrier][Life Bond][optional][Blessed Signet][Edge of Extinction][Rebirth][/build] If you are bringing a hero, do not bring any other skills that Target. The hero might walk away from your flag and try to cast it on the tank and grab agro. Optional Vital Blessing 16 Strength of Honor 8 (For killing left-overs.) Heal Party 8 Mindbender 10 (For quicker placement of bonds.)",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 3,
+            wikitext: "=== Equipment ===\n* Max energy armor\n* High energy staff\n\n",
+            text: "Equipment Max energy armor High energy staff",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 3,
+            wikitext: "=== Usage ===\n",
+            text: "Usage",
+        },
+        Section {
+            heading: Some(
+                "Player",
+            ),
+            level: 4,
+            wikitext: "==== Player ====\n* Place all of your bonds on the tank and then cast balthazar's spirit on yourself.  Be sure to use Life Barrier before Life Bond. \n* When the tank pings come into spirit range of the mob and lay down Edge of Extinction.  Do not agro anything or attack any spirits.\n* Pick up loot.\n\n",
+            text: "Player Place all of your bonds on the tank and then cast balthazar's spirit on yourself. Be sure to use Life Barrier before Life Bond. When the tank pings come into spirit range of the mob and lay down Edge of Extinction. Do not agro anything or attack any spirits. Pick up loot.",
+        },
+        Section {
+            heading: Some(
+                "Hero",
+            ),
+            level: 4,
+            wikitext: "==== Hero ====\n* IMPORTANT: Set hero to [[gww:Hero_behavior#Avoid_Combat|Avoid Combat]]. \n* Cast Balthazar's Spirit on the hero and then cast all bonds on the tank.  Be sure to use Life Barrier before Life Bond.\n* When you walk forward and the hero is on the edge of the map, flag the hero inwards along the wall. (See Videos)\n* After the group is balled, flag the hero slightly closer so it is in spirit range but not agro range and cast Edge of Extinction. \n\n",
+            text: "Hero IMPORTANT: Set hero to Avoid Combat. Cast Balthazar's Spirit on the hero and then cast all bonds on the tank. Be sure to use Life Barrier before Life Bond. When you walk forward and the hero is on the edge of the map, flag the hero inwards along the wall. (See Videos) After the group is balled, flag the hero slightly closer so it is in spirit range but not agro range and cast Edge of Extinction.",
+        },
+        Section {
+            heading: Some(
+                "Counters",
+            ),
+            level: 2,
+            wikitext: "== Counters ==\n* In Hard mode finding proper placement for the spirit is key due to melee scatter.\n* Player or Hero bonder gets agro.\n* Tank gets KD while casting Shadow Form.\n\n",
+            text: "Counters In Hard mode finding proper placement for the spirit is key due to melee scatter. Player or Hero bonder gets agro. Tank gets KD while casting Shadow Form.",
+        },
+        Section {
+            heading: Some(
+                "Videos",
+            ),
+            level: 2,
+            wikitext: "== Videos ==\n{|\n|-\n|<big>'''A/Me with a Hero'''</big><br />\n{{YouTube|H0xtR9D6Ltw}}\n|<big>'''Me/A with a Hero'''</big><br />\n{{YouTube|_VFVpoqbBw8}}\n|<big>'''E/Me with a Hero'''</big><br />\n{{YouTube|6pMXqujJqRY}}\n|}\n{|\n|-\n|<big>'''The first group with another player'''</big><br />\n{{YouTube|pliFXXsYpHM}}\n|}\n\n",
+            text: "Videos <big>A/Me with a Hero</big> H0xtR9D6Ltw <big>Me/A with a Hero</big> _VFVpoqbBw8 <big>E/Me with a Hero</big> 6pMXqujJqRY <big>The first group with another player</big> pliFXXsYpHM",
+        },
+        Section {
+            heading: Some(
+                "See also",
+            ),
+            level: 2,
+            wikitext: "== See also ==\n* [[Build:R/A_Whirling_Defense_City_Farmer|R/A Whirling Defense City Farmer]]\n\n{{FarmCat|profa=yes|profme=yes|profe=yes|margonite gemstones=yes}}",
+            text: "See also R/A Whirling Defense City Farmer yes yes yes yes",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 1,
+            raw: "[build prof=A/Me Shadow=12+1+3 Illusion=12 Deadly_Arts=3][Deadly Paradox][Shadow Form][Shroud of Distress][Great Dwarf Armor][\"I am unstoppable!\"][Ancestor's Visage][Sympathetic Visage][Death's Charge][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Assassin,
+            ),
+            secondary: Some(
+                Mesmer,
+            ),
+            professions_raw: Some(
+                "A/Me",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Shadow Arts",
+                    ),
+                    raw_name: "Shadow",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Illusion Magic",
+                    ),
+                    raw_name: "Illusion",
+                    value: "12",
+                },
+                Attribute {
+                    name: Some(
+                        "Deadly Arts",
+                    ),
+                    raw_name: "Deadly_Arts",
+                    value: "3",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Deadly Paradox",
+                    raw: "[Deadly Paradox]",
+                },
+                Skill {
+                    name: "Shadow Form",
+                    raw: "[Shadow Form]",
+                },
+                Skill {
+                    name: "Shroud of Distress",
+                    raw: "[Shroud of Distress]",
+                },
+                Skill {
+                    name: "Great Dwarf Armor",
+                    raw: "[Great Dwarf Armor]",
+                },
+                Skill {
+                    name: "\"I am unstoppable!\"",
+                    raw: "[\"I am unstoppable!\"]",
+                },
+                Skill {
+                    name: "Ancestor's Visage",
+                    raw: "[Ancestor's Visage]",
+                },
+                Skill {
+                    name: "Sympathetic Visage",
+                    raw: "[Sympathetic Visage]",
+                },
+                Skill {
+                    name: "Death's Charge",
+                    raw: "[Death's Charge]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 1,
+            raw: "[build prof=Me/A Shadow_Arts=12 Illusion_Magic=8 Fast_Casting=10][Deadly Paradox][Shadow Form][Shroud of Distress][Way of the Master][Way of Perfection][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build]",
+            name: None,
+            variant: Some(
+                Variant {
+                    name: Some(
+                        "Me/A Mesmer Tank",
+                    ),
+                    position: Some(
+                        "1",
+                    ),
+                },
+            ),
+            primary: Some(
+                Mesmer,
+            ),
+            secondary: Some(
+                Assassin,
+            ),
+            professions_raw: Some(
+                "Me/A",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Shadow Arts",
+                    ),
+                    raw_name: "Shadow_Arts",
+                    value: "12",
+                },
+                Attribute {
+                    name: Some(
+                        "Illusion Magic",
+                    ),
+                    raw_name: "Illusion_Magic",
+                    value: "8",
+                },
+                Attribute {
+                    name: Some(
+                        "Fast Casting",
+                    ),
+                    raw_name: "Fast_Casting",
+                    value: "10",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Deadly Paradox",
+                    raw: "[Deadly Paradox]",
+                },
+                Skill {
+                    name: "Shadow Form",
+                    raw: "[Shadow Form]",
+                },
+                Skill {
+                    name: "Shroud of Distress",
+                    raw: "[Shroud of Distress]",
+                },
+                Skill {
+                    name: "Way of the Master",
+                    raw: "[Way of the Master]",
+                },
+                Skill {
+                    name: "Way of Perfection",
+                    raw: "[Way of Perfection]",
+                },
+                Skill {
+                    name: "\"I Am Unstoppable!\"",
+                    raw: "[\"I Am Unstoppable!\"]",
+                },
+                Skill {
+                    name: "Ancestor's Visage",
+                    raw: "[Ancestor's Visage]",
+                },
+                Skill {
+                    name: "Sympathetic Visage",
+                    raw: "[Sympathetic Visage]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 1,
+            raw: "[build prof=E/Me Earth_Magic=12+1+3 Illusion_Magic=8 Energy_Storage=10 air_magic=2][Glyph of Swiftness][Obsidian Flesh][Stoneflesh Aura][Elemental Lord][Aura of Restoration][\"I Am Unstoppable!\"][Ancestor's Visage][Sympathetic Visage][/build]",
+            name: None,
+            variant: Some(
+                Variant {
+                    name: Some(
+                        "E/Me Elementalist Tank",
+                    ),
+                    position: Some(
+                        "1",
+                    ),
+                },
+            ),
+            primary: Some(
+                Elementalist,
+            ),
+            secondary: Some(
+                Mesmer,
+            ),
+            professions_raw: Some(
+                "E/Me",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Earth Magic",
+                    ),
+                    raw_name: "Earth_Magic",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Illusion Magic",
+                    ),
+                    raw_name: "Illusion_Magic",
+                    value: "8",
+                },
+                Attribute {
+                    name: Some(
+                        "Energy Storage",
+                    ),
+                    raw_name: "Energy_Storage",
+                    value: "10",
+                },
+                Attribute {
+                    name: Some(
+                        "Air Magic",
+                    ),
+                    raw_name: "air_magic",
+                    value: "2",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Glyph of Swiftness",
+                    raw: "[Glyph of Swiftness]",
+                },
+                Skill {
+                    name: "Obsidian Flesh",
+                    raw: "[Obsidian Flesh]",
+                },
+                Skill {
+                    name: "Stoneflesh Aura",
+                    raw: "[Stoneflesh Aura]",
+                },
+                Skill {
+                    name: "Elemental Lord",
+                    raw: "[Elemental Lord]",
+                },
+                Skill {
+                    name: "Aura of Restoration",
+                    raw: "[Aura of Restoration]",
+                },
+                Skill {
+                    name: "\"I Am Unstoppable!\"",
+                    raw: "[\"I Am Unstoppable!\"]",
+                },
+                Skill {
+                    name: "Ancestor's Visage",
+                    raw: "[Ancestor's Visage]",
+                },
+                Skill {
+                    name: "Sympathetic Visage",
+                    raw: "[Sympathetic Visage]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 4,
+            raw: "[build prof=Monk/Ranger Protection=12+1+3 Divine=3+3 Beast=12][Balthazar's Spirit][Watchful Spirit][Life Barrier][Life Bond][optional][Blessed Signet][Edge of Extinction][Rebirth][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Ranger,
+            ),
+            professions_raw: Some(
+                "Monk/Ranger",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Protection Prayers",
+                    ),
+                    raw_name: "Protection",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "Divine",
+                    value: "3+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Beast Mastery",
+                    ),
+                    raw_name: "Beast",
+                    value: "12",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Balthazar's Spirit",
+                    raw: "[Balthazar's Spirit]",
+                },
+                Skill {
+                    name: "Watchful Spirit",
+                    raw: "[Watchful Spirit]",
+                },
+                Skill {
+                    name: "Life Barrier",
+                    raw: "[Life Barrier]",
+                },
+                Skill {
+                    name: "Life Bond",
+                    raw: "[Life Bond]",
+                },
+                Optional,
+                Skill {
+                    name: "Blessed Signet",
+                    raw: "[Blessed Signet]",
+                },
+                Skill {
+                    name: "Edge of Extinction",
+                    raw: "[Edge of Extinction]",
+                },
+                Skill {
+                    name: "Rebirth",
+                    raw: "[Rebirth]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}

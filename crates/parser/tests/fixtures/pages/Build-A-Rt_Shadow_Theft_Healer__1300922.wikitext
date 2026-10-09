@@ -1,0 +1,66 @@
+{{Real-Vetting|rating=creative|status=provisional|general}}
+{{TOC|pos=r}}
+
+<pvxbig>This build enhances its healing capabilities with [[Shadow Theft@14], while also having access to a powerful [[Splinter Weapon@15].</pvxbig>
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Ritualist CriticalStrikes=10+1+3 RestorationMagic=11 ChannelingMagic=10][Shadow Theft][Ebon Escape][Mend Body and Soul@16][Spirit Light@16][Protective Was Kaolai@16][Life@11<!-- NOTE: Rank 11 since it's used before Shadow Theft -->][Splinter Weapon@15][Spirit Siphon@15][/build]
+'''Variants'''
+
+Replace Splinter Weapon with {{skill pvxicon|Spirit Transfer|17}} if you lack martial party members, or if more healing is desired. Lower Channeling Magic to 8, raise Restoration Magic to 12.
+
+Consider replacing other skills in the following situations:
+* Protective Was Kaolai – for party size 4 and 6.
+* Life – in a team with other spirits.
+* Spirit Siphon – with a [[Blood is Power] user.
+
+Variant skills:
+* {{skill pvxicon|Spirit Transfer|16}}
+* {{skill pvxicon|Ancestors' Rage|15}}
+* {{skill pvxicon|Great Dwarf Armor}} - In PUGs without another source of bonus armor.
+* {{skill pvxicon|Great Dwarf Weapon}} - Supplement Splinter Weapon, with multiple martial party members.
+* {{skill pvxicon|"You Are All Weaklings!"}} - Use with a [[gww:Heavy|heavy]] weapon in your shield set.
+</pvxbig>
+
+== Equipment ==
+'''Armor'''
+* 5 [[gww:Survivor Insignia|survivor insignias]].
+* Rune of [[gww:Rune of Vigor|superior vigor]].
+* 3 runes of [[gww:Rune of Vitae|vitae]].
+
+'''Weapons'''
+* [[gww:40/40|40/40]] restoration magic.
+* 40/40 channeling magic if using Splinter Weapon.
+* [[gww:Caster_weapon#High_energy_set|High energy set]] restoration magic.
+* Shield set: [[gww:Inscription#Spell enhancing|"Don't Think Twice"]] martial weapon [[gww:of defense|of defense]] with a shield [[gww:Of Fortitude|of fortitude]].
+
+== Usage ==
+<pvxbig>
+'''Weapon set usage'''
+* Cast spells in the appropriate 40/40 set. [[Spirit Siphon@15] can be used in any weapon set.
+* Switch to your high energy set when needed.
+* Switch to your shield set when idle, under attack, or using [[Shadow Theft@14].
+
+'''Skill usage'''
+* Engage with [[Life@11] → Shadow Theft → [[Ebon Escape] back to safety.
+** Prefer a target heavily impaired by the attribute loss.
+** Ideally, let a tanking party member or [[gww:EVAS|EVAS]] take aggro first.
+* Spot heal and remove potent conditions with [[Spirit Light@16], [[Mend Body and Soul@16] and Ebon Escape.
+* Maintain [[Splinter Weapon@15] on martial party members.
+* Use Life on recharge.
+* Drain spirits high on energy with Spirit Siphon.
+* Party heal with [[Protective Was Kaolai@16]. Cast it preemptively when your other skills aren't needed and energy is plentiful.
+* Renew Shadow Theft as needed.
+** If possible, use it as the fight ends. This improves Splinter Weapon buffing outside of combat.
+</pvxbig>
+== Counters ==
+<pvxbig>
+* Standard anti-caster.
+** As a martial profession, you will not be targeted with [[Backfire] when in shield set or holding Protective Was Kaolai.
+* Spirit being killed with none other in earshot.
+</pvxbig>
+== Notes ==
+* Using Shadow Theft or Ebon Escape forces you to drop Protective Was Kaolai.
+
+== See also ==
+* [[Build:Rt/any Spirit Siphon Healer]]

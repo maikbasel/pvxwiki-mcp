@@ -1,0 +1,36 @@
+{{Real-Vetting|AB|JQ|rating=testing|category=PvP}}
+{{TOCright}}
+
+This build is an old and simple but fun little variation for a mid-range A/Mo from back in the day. It uses a combination of annoying knockdown and poisoning skills. It is meant for 1v1 PvP.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Monk ShadowArts=3 DeadlyArts=12+3 SmitingPrayers=12][Signet of Judgment][Iron Palm][Entangling Asp][Signet of Toxic Shock][Dancing Daggers][Stonesoul Strike][Shadow Refuge][Death's Charge][/build]
+</pvxbig>
+== Equipment ==
+
+* 5x [[gww:Blessed_Insignia|Blessed Insignia]]
+* [[gww:Rune_of_Vigor|Superior Vigor]]
+* 2x [[gww:Rune_of_Vitae|Vitae]]
+
+== Weapons ==
+
+* Smiting Prayers Staff [[gww:40/20/20|40/20/20]]
+* high energy set
+* defensive set:  spear of defense, with
+** Strength shield of fortitude, -20% cripple duration.
+** Strength shields of fortitude, +10 armor against each damage type.
+
+== Usage ==
+* Start the fight by '''pre-casting Shadow Refuge''' and '''knocking the enemy down''' with '''Signet of Judgment'''.
+* Use '''Death's Charge''' to jump onto the knocked-down target and begin a chain of '''Iron Palm''' into '''Entangling Asp'''.
+* Then use '''Stonesoul Strike''' and '''Signet of Toxic Shock'''.
+* Spam '''Dancing Daggers''' for additional damage, or use it as a ranged alternative over '''Iron Palm''' if the target is out of melee range.
+* You can effectively use both chains in any order, depending on your distance from the target.
+
+== Counters ==
+
+* Anti-Condition
+* Long distance builds
+* Knock down immunity
+* Chain interruption (medium)
