@@ -1,0 +1,59 @@
+# Git hooks, run by prek (https://prek.j178.dev). `pre-commit` reads the same file.
+# Install once per clone: prek install
+default_install_hook_types: [pre-commit, commit-msg, pre-push]
+# Recorded wiki pages and test snapshots must stay byte-exact.
+exclude: ^crates/[^/]+/tests/(fixtures|snapshots)/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: check-added-large-files
+      - id: detect-private-key
+
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args: [--force-scope]
+
+  # Fast checks on commit, slow ones on push. CI runs all of them again.
+  - repo: local
+    hooks:
+      - id: cargo-fmt
+        name: cargo fmt
+        entry: cargo fmt --all --check
+        language: system
+        types: [rust]
+        pass_filenames: false
+      - id: cargo-clippy
+        name: cargo clippy
+        entry: cargo clippy --locked --all-targets --all-features -- -D warnings
+        language: system
+        types_or: [rust, toml]
+        pass_filenames: false
+        stages: [pre-push]
+      - id: cargo-test
+        name: cargo test
+        entry: cargo test --locked --all-features
+        language: system
+        types_or: [rust, toml]
+        pass_filenames: false
+        stages: [pre-push]
+      - id: cargo-deny
+        name: cargo deny
+        entry: cargo deny check
+        language: system
+        files: ^(Cargo\.(toml|lock)|deny\.toml)$
+        pass_filenames: false
+        stages: [pre-push]

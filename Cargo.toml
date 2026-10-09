@@ -1,0 +1,26 @@
+[workspace]
+members = ["crates/*"]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.96"
+license = "MIT"
+repository = "https://github.com/maikbasel/pvxwiki-mcp"
+publish = false
+
+[workspace.dependencies]
+parse-wiki-text-2 = "0.2.0"
+tracing = "0.1.44"
+insta = "1.49"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+# Enforces .claude/rules/production-grade.md and logging.md at compile time.
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "deny"
+todo = "deny"
+print_stdout = "deny"
+print_stderr = "deny"
