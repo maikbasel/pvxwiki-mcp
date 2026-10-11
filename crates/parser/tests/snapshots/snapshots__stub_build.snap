@@ -1,0 +1,745 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Build-Team_-_NM_Cartographer_Skill-Capper__1306082.wikitext\")"
+---
+ParsedPage {
+    vetting: Stub,
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{build-stub}}\n{{TOC|pos=r}}\n\nThe '''NM Cartographer Skill-Capper''' is a low-micro PvE hero team for Normal Mode exploration, long-distance travel, and [[gww:Signet of Capture|elite-skill capture]] across all campaigns. A [[gww:Pious Renewal|Pious Renewal]] Dervish supplies mobile melee pressure while a P/Rt support hero maintains party speed and passive recovery. Three Air Elementalists provide armor-penetrating damage, Blind, Weakness, interrupts, and Cracked Armor; a smiting/channeling Monk amplifies the Dervish; and a two-Monk backline supplies healing, protection, party blocking, cleansing, and automatic resurrection.\n\nThe team deliberately trades the hard shutdown and energy battery of general-purpose Hard Mode meta teams for mobility, simple hero behavior, and a roster without primary Necromancer, Ritualist, or Mesmer heroes. It is intended for routine Normal Mode travel and short boss fights rather than difficult Hard Mode content.\n\n{{Clear}}\n\n",
+            text: "r The NM Cartographer Skill-Capper is a low-micro PvE hero team for Normal Mode exploration, long-distance travel, and elite-skill capture across all campaigns. A Pious Renewal Dervish supplies mobile melee pressure while a P/Rt support hero maintains party speed and passive recovery. Three Air Elementalists provide armor-penetrating damage, Blind, Weakness, interrupts, and Cracked Armor; a smiting/channeling Monk amplifies the Dervish; and a two-Monk backline supplies healing, protection, party blocking, cleansing, and automatic resurrection. The team deliberately trades the hard shutdown and energy battery of general-purpose Hard Mode meta teams for mobility, simple hero behavior, and a roster without primary Necromancer, Ritualist, or Mesmer heroes. It is intended for routine Normal Mode travel and short boss fights rather than difficult Hard Mode content.",
+        },
+        Section {
+            heading: Some(
+                "Team Composition",
+            ),
+            level: 2,
+            wikitext: "==Team Composition==\n{{{!}}\n{{!}}-\n{{!}} {{D}}/{{Mo}} &nbsp;\n{{!}} {{mini skill bar|Pious Renewal|Pious Assault|Twin Moon Sweep|Aura of Holy Might|Pious Fury|Pious Haste|Mirage Cloak|Signet of Capture}}\n{{!}}-\n{{!}} {{E}}/{{P}} &nbsp;\n{{!}} {{mini skill bar|Aura of Restoration|Air Attunement|Blinding Surge|Lightning Orb|Chain Lightning|Shock Arrow|Lightning Strike|Mending Refrain}}\n{{!}}-\n{{!}} {{E}}/{{P}} &nbsp;\n{{!}} {{mini skill bar|Aura of Restoration|Air Attunement|Invoke Lightning|Arc Lightning|Chain Lightning|Lightning Strike|Shock Arrow|Finale of Restoration}}\n{{!}}-\n{{!}} {{E}}/{{P}} &nbsp;\n{{!}} {{mini skill bar|Aura of Restoration|Air Attunement|Thunderclap|Chain Lightning|Lightning Strike|Shock Arrow|\"Fall Back!\"|Lightning Orb}}\n{{!}}-\n{{!}} {{Mo}}/{{Rt}} &nbsp;\n{{!}} {{mini skill bar|Ray of Judgment|Strength of Honor|Splinter Weapon|Ancestors' Rage|Castigation Signet|Bane Signet|Smite Condition|Smite Hex}}\n{{!}}-\n{{!}} {{Mo}}/{{Me}} &nbsp;\n{{!}} {{mini skill bar|Word of Healing|Patient Spirit|Dwayna's Kiss|Protective Spirit|Cure Hex|Dismiss Condition|Signet of Rejuvenation|Signet of Recall}}\n{{!}}-\n{{!}} {{Mo}}/{{E}} &nbsp;\n{{!}} {{mini skill bar|Dwayna's Kiss|Signet of Rejuvenation|Aegis|Protective Spirit|Shield of Absorption|Divine Healing|Glyph of Lesser Energy|Unyielding Aura}}\n{{!}}-\n{{!}} {{P}}/{{Rt}} &nbsp;\n{{!}} {{mini skill bar|\"Incoming!\"|\"Fall Back!\"|Vocal Was Sogolon|\"Never Surrender!\"|Weapon of Warding|Soothing Memories|\"Stand Your Ground!\"|Signet of Return}}\n{{!}}-\n{{!}}}\n\n",
+            text: "Team Composition { - / Pious Renewal Pious Assault Twin Moon Sweep Aura of Holy Might Pious Fury Pious Haste Mirage Cloak Signet of Capture - / Aura of Restoration Air Attunement Blinding Surge Lightning Orb Chain Lightning Shock Arrow Lightning Strike Mending Refrain - / Aura of Restoration Air Attunement Invoke Lightning Arc Lightning Chain Lightning Lightning Strike Shock Arrow Finale of Restoration - / Aura of Restoration Air Attunement Thunderclap Chain Lightning Lightning Strike Shock Arrow \"Fall Back!\" Lightning Orb - / Ray of Judgment Strength of Honor Splinter Weapon Ancestors' Rage Castigation Signet Bane Signet Smite Condition Smite Hex - / Word of Healing Patient Spirit Dwayna's Kiss Protective Spirit Cure Hex Dismiss Condition Signet of Rejuvenation Signet of Recall - / Dwayna's Kiss Signet of Rejuvenation Aegis Protective Spirit Shield of Absorption Divine Healing Glyph of Lesser Energy Unyielding Aura - / \"Incoming!\" \"Fall Back!\" Vocal Was Sogolon \"Never Surrender!\" Weapon of Warding Soothing Memories \"Stand Your Ground!\" Signet of Return - }",
+        },
+        Section {
+            heading: Some(
+                "Attributes and Skills",
+            ),
+            level: 2,
+            wikitext: "==Attributes and Skills==\n\n",
+            text: "Attributes and Skills",
+        },
+        Section {
+            heading: Some(
+                "Pious Renewal Player",
+            ),
+            level: 3,
+            wikitext: "===Pious Renewal Player===\n<pvxbig>[build prof=D/Mo scythe=12+1+3 mysticism=11+3 earthprayers=6+1][Pious Renewal@14][Pious Assault@16][Twin Moon Sweep@16][Aura of Holy Might][Pious Fury@14][Pious Haste@14][Mirage Cloak@7][Signet of Capture][/build]\n'''Armor'''\n* Scythe Mastery headpiece with a Superior Scythe Mastery rune\n* Superior Mysticism and Minor Earth Prayers runes on non-head armor pieces\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and a Rune of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Windwalker Insignia|Windwalker Insignias]]\n'''Weapons'''\n* [[gww:Zealous|Zealous]] \"''[[gww:Inscription#Combat_enhancing|Strength and Honor]]''\" scythe [[gww:Of Enchanting|of enchanting]]\n* Optional [[gww:Vampiric|Vampiric]] \"''Strength and Honor''\" scythe of enchanting for short fights where Zealous energy gain is unnecessary\n'''Main article'''\n* [[Build:D/any Pious Renewal|Pious Renewal (meta)]]\n</pvxbig>\n\nThis is the travel and skill-capping adaptation of the meta Pious Renewal bar. Pious Assault supplies the repeatable teardown, while Twin Moon Sweep supplies an unblockable double strike and self-heal. Aura of Holy Might remains a core part of the damage engine rather than an optional skill. Mirage Cloak adds blocking and nearby earth damage whenever a Dervish enchantment is removed; the linked meta bar's 6+1 Earth Prayers investment is retained for it. An of-enchanting scythe extends Mirage Cloak's 20-second duration to match its 24-second recharge when it is not removed.\n\nPious Haste is the default travel choice because its 50% removal-effect speed boost remains useful while leading the heroes, moving outside shout range, or crossing traps. Use Pious Haste between groups and Pious Fury after stopping to fight. Both are stances, so activating either one ends the other.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Damage Skills (when relying on hero speed)''' :\n*{{skill pvxicon|Irresistible Sweep|16}} over Pious Haste for the best general-purpose third attack: reliable bonus damage, an unblockable removal effect, and stance removal.\n*{{skill pvxicon|Wearying Strike|16}} over Pious Haste for Deep Wound against bosses and other high-Health targets; it is less useful against short-lived Normal Mode groups.\n\n[[image:Optional.jpg|25px]] '''Optional Buff/Utility Skills''' :\n*{{skill pvxicon|Death's Charge|3}} over Pious Haste after changing to D/A, for a shadow step and conditional heal when hero shouts already cover travel. It can place the player ahead of hero support; use it at 0 Shadow Arts, or reduce base Earth Prayers to 5 for 3 Shadow Arts and a stronger heal.\n*{{skill pvxicon|\"I Am Unstoppable!\"|5}} over Twin Moon Sweep for knock-down and Cripple protection on hazardous skill-capture routes, or over Signet of Capture when no elite is needed.\n*{{skill pvxicon|Fleeting Stability|7}} over Pious Haste for more frequent knock-down protection and a maintainable 25% speed boost. Cast it before Pious Renewal so the next teardown removes Renewal instead.\n*{{skill pvxicon|Signet of Capture}} over Twin Moon Sweep as a second copy when the route contains two desired elites; Pious Assault can operate the teardown engine alone.\n</pvxbig>\n\n",
+            text: "Pious Renewal Player [build prof=D/Mo scythe=12+1+3 mysticism=11+3 earthprayers=6+1][Pious Renewal@14][Pious Assault@16][Twin Moon Sweep@16][Aura of Holy Might][Pious Fury@14][Pious Haste@14][Mirage Cloak@7][Signet of Capture][/build] Armor Scythe Mastery headpiece with a Superior Scythe Mastery rune Superior Mysticism and Minor Earth Prayers runes on non-head armor pieces Rune of Superior Vigor and a Rune of Vitae on the remaining pieces 5 Windwalker Insignias Weapons Zealous \"Strength and Honor\" scythe of enchanting Optional Vampiric \"Strength and Honor\" scythe of enchanting for short fights where Zealous energy gain is unnecessary Main article Pious Renewal (meta) This is the travel and skill-capping adaptation of the meta Pious Renewal bar. Pious Assault supplies the repeatable teardown, while Twin Moon Sweep supplies an unblockable double strike and self-heal. Aura of Holy Might remains a core part of the damage engine rather than an optional skill. Mirage Cloak adds blocking and nearby earth damage whenever a Dervish enchantment is removed; the linked meta bar's 6+1 Earth Prayers investment is retained for it. An of-enchanting scythe extends Mirage Cloak's 20-second duration to match its 24-second recharge when it is not removed. Pious Haste is the default travel choice because its 50% removal-effect speed boost remains useful while leading the heroes, moving outside shout range, or crossing traps. Use Pious Haste between groups and Pious Fury after stopping to fight. Both are stances, so activating either one ends the other. 25px Optional Damage Skills (when relying on hero speed) Irresistible Sweep 16 over Pious Haste for the best general-purpose third attack: reliable bonus damage, an unblockable removal effect, and stance removal. Wearying Strike 16 over Pious Haste for Deep Wound against bosses and other high-Health targets; it is less useful against short-lived Normal Mode groups. 25px Optional Buff/Utility Skills Death's Charge 3 over Pious Haste after changing to D/A, for a shadow step and conditional heal when hero shouts already cover travel. It can place the player ahead of hero support; use it at 0 Shadow Arts, or reduce base Earth Prayers to 5 for 3 Shadow Arts and a stronger heal. \"I Am Unstoppable!\" 5 over Twin Moon Sweep for knock-down and Cripple protection on hazardous skill-capture routes, or over Signet of Capture when no elite is needed. Fleeting Stability 7 over Pious Haste for more frequent knock-down protection and a maintainable 25% speed boost. Cast it before Pious Renewal so the next teardown removes Renewal instead. Signet of Capture over Twin Moon Sweep as a second copy when the route contains two desired elites; Pious Assault can operate the teardown engine alone.",
+        },
+        Section {
+            heading: Some(
+                "Blinding Air",
+            ),
+            level: 3,
+            wikitext: "===Blinding Air===\n'''Suggested hero:''' [[gww:Zhed Shadowhoof|Zhed Shadowhoof]]\n<pvxbig>[build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Blinding Surge@16][Lightning Orb@16][Chain Lightning@16][Shock Arrow@16][Lightning Strike@16][Mending Refrain@8][/build]\n'''Armor'''\n* Air Magic headpiece with a Superior Air Magic rune\n* Minor Energy Storage rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Blessed Insignia|Blessed Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Air Magic set\n'''Main article'''\n* [[Build:E/any Air Magic Hero|Air Magic Hero]]\n</pvxbig>\n\nMending Refrain supplies persistent regeneration while the party moves and is refreshed whenever a shout or chant ends.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Damage Skills''' :\n*{{skill pvxicon|Teinai's Wind|16}} over Lightning Orb when Ray of Judgment can keep clustered foes Burning; it trades Orb's armor-penetrating single-target damage for adjacent damage and interrupts against Burning foes, while retaining Lightning Strike as the bar's cheaper filler spell.\n\n;Variant :A [[Build:E/any Elemental Attunement Fire Magic Hero|Fire Magic damage hero]] can replace this role in low-armor areas with tightly packed groups. Blinding Surge remains the default because Blind is more broadly useful while traveling through physical groups.\n</pvxbig>\n\n",
+            text: "Blinding Air Suggested hero: Zhed Shadowhoof [build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Blinding Surge@16][Lightning Orb@16][Chain Lightning@16][Shock Arrow@16][Lightning Strike@16][Mending Refrain@8][/build] Armor Air Magic headpiece with a Superior Air Magic rune Minor Energy Storage rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Blessed Insignias Weapons 40/40 Air Magic set Main article Air Magic Hero Mending Refrain supplies persistent regeneration while the party moves and is refreshed whenever a shout or chant ends. 25px Optional Damage Skills Teinai's Wind 16 over Lightning Orb when Ray of Judgment can keep clustered foes Burning; it trades Orb's armor-penetrating single-target damage for adjacent damage and interrupts against Burning foes, while retaining Lightning Strike as the bar's cheaper filler spell. ;Variant :A Fire Magic damage hero can replace this role in low-armor areas with tightly packed groups. Blinding Surge remains the default because Blind is more broadly useful while traveling through physical groups.",
+        },
+        Section {
+            heading: Some(
+                "Invoke Air + Finale",
+            ),
+            level: 3,
+            wikitext: "===Invoke Air + Finale===\n'''Suggested hero:''' [[gww:Vekk|Vekk]]\n<pvxbig>[build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Invoke Lightning@16][Arc Lightning@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][Finale of Restoration@8][/build]\n'''Armor'''\n* Air Magic headpiece with a Superior Air Magic rune\n* Minor Energy Storage rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Blessed Insignia|Blessed Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Air Magic set\n'''Main article'''\n* [[Build:E/any Air Magic Hero|Air Magic Hero]]\n</pvxbig>\n\nFinale of Restoration supplies event-driven healing whenever the team's shouts end. At Motivation 8, it lasts 23 seconds and heals for 47; the updated hero AI prioritizes lower-Health allies and avoids overwriting an existing copy.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Utility Skills''' :\n*{{skill pvxicon|Shell Shock|16}} over Chain Lightning if Thunderclap is unavailable or repeatedly misses the priority target. Do not add several copies; the default team already obtains Cracked Armor from Thunderclap.\n</pvxbig>\n\n",
+            text: "Invoke Air + Finale Suggested hero: Vekk [build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Invoke Lightning@16][Arc Lightning@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][Finale of Restoration@8][/build] Armor Air Magic headpiece with a Superior Air Magic rune Minor Energy Storage rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Blessed Insignias Weapons 40/40 Air Magic set Main article Air Magic Hero Finale of Restoration supplies event-driven healing whenever the team's shouts end. At Motivation 8, it lasts 23 seconds and heals for 47; the updated hero AI prioritizes lower-Health allies and avoids overwriting an existing copy. 25px Optional Utility Skills Shell Shock 16 over Chain Lightning if Thunderclap is unavailable or repeatedly misses the priority target. Do not add several copies; the default team already obtains Cracked Armor from Thunderclap.",
+        },
+        Section {
+            heading: Some(
+                "Thunderclap Air",
+            ),
+            level: 3,
+            wikitext: "===Thunderclap Air===\n'''Suggested hero:''' [[gww:Acolyte Sousuke|Acolyte Sousuke]]\n<pvxbig>[build prof=E/P air=12+1+3 energy=9+1 command=9][Aura of Restoration@10][Air Attunement@16][Thunderclap@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][\"Fall Back!\"@9][Lightning Orb@16][/build]\n'''Armor'''\n* Air Magic headpiece with a Superior Air Magic rune\n* Minor Energy Storage rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Blessed Insignia|Blessed Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Air Magic set\n'''Main article'''\n* [[Build:E/any Air Magic Hero|Air Magic Hero]]\n</pvxbig>\n\nThunderclap is the primary source of Cracked Armor and Weakness. The second Fall Back! is deliberate failure tolerance when the Running Support hero is spread out, body-blocked, or defeated; when the shout ends, it also refreshes Mending Refrain and triggers Finale of Restoration. Lightning Orb replaces the former Resurrection Signet because Unyielding Aura and Signet of Return already provide two reusable resurrection sources.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Damage Skills''' :\n*{{skill pvxicon|Lightning Javelin|16}} over Fall Back! if the Running Support hero proves reliable enough to make the redundant speed shout unnecessary; it adds low-cost line damage and interruption against attacking foes.\n</pvxbig>\n\n",
+            text: "Thunderclap Air Suggested hero: Acolyte Sousuke [build prof=E/P air=12+1+3 energy=9+1 command=9][Aura of Restoration@10][Air Attunement@16][Thunderclap@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][\"Fall Back!\"@9][Lightning Orb@16][/build] Armor Air Magic headpiece with a Superior Air Magic rune Minor Energy Storage rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Blessed Insignias Weapons 40/40 Air Magic set Main article Air Magic Hero Thunderclap is the primary source of Cracked Armor and Weakness. The second Fall Back! is deliberate failure tolerance when the Running Support hero is spread out, body-blocked, or defeated; when the shout ends, it also refreshes Mending Refrain and triggers Finale of Restoration. Lightning Orb replaces the former Resurrection Signet because Unyielding Aura and Signet of Return already provide two reusable resurrection sources. 25px Optional Damage Skills Lightning Javelin 16 over Fall Back! if the Running Support hero proves reliable enough to make the redundant speed shout unnecessary; it adds low-cost line damage and interruption against attacking foes.",
+        },
+        Section {
+            heading: Some(
+                "Smiting Channel Support",
+            ),
+            level: 3,
+            wikitext: "===Smiting Channel Support===\n'''Suggested hero:''' [[gww:Ogden Stonehealer|Ogden Stonehealer]]\n<pvxbig>[build prof=Mo/Rt smiting=12+1+3 channeling=10 divine=8+1][Ray of Judgment@16][Strength of Honor@16][Splinter Weapon@10][Ancestors' Rage@10][Castigation Signet@16][Bane Signet@16][Smite Condition@16][Smite Hex@16][/build]\n'''Armor'''\n* Smiting Prayers headpiece with a Superior Smiting Prayers rune\n* Minor Divine Favor rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Survivor Insignia|Survivor Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Smiting Prayers set\n* Optional 40/40 Channeling Magic set if manually casting Splinter Weapon and Ancestors' Rage\n</pvxbig>\n\nStrength of Honor, Splinter Weapon, and Ancestors' Rage are the team's direct melee-support package. Strength of Honor benefits both hits from Twin Moon Sweep, while Splinter Weapon and Ancestors' Rage add nearby damage bursts around the melee ball. Castigation Signet and Bane Signet provide inexpensive filler damage between support casts.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Support Skills''' :\n*{{skill pvxicon|Judge's Insight|16}} over Bane Signet for additional melee armor penetration. Hero targeting is unreliable and the spell is comparatively Energy intensive, so it is not part of the default zero-micro bar.\n</pvxbig>\n\n",
+            text: "Smiting Channel Support Suggested hero: Ogden Stonehealer [build prof=Mo/Rt smiting=12+1+3 channeling=10 divine=8+1][Ray of Judgment@16][Strength of Honor@16][Splinter Weapon@10][Ancestors' Rage@10][Castigation Signet@16][Bane Signet@16][Smite Condition@16][Smite Hex@16][/build] Armor Smiting Prayers headpiece with a Superior Smiting Prayers rune Minor Divine Favor rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Survivor Insignias Weapons 40/40 Smiting Prayers set Optional 40/40 Channeling Magic set if manually casting Splinter Weapon and Ancestors' Rage Strength of Honor, Splinter Weapon, and Ancestors' Rage are the team's direct melee-support package. Strength of Honor benefits both hits from Twin Moon Sweep, while Splinter Weapon and Ancestors' Rage add nearby damage bursts around the melee ball. Castigation Signet and Bane Signet provide inexpensive filler damage between support casts. 25px Optional Support Skills Judge's Insight 16 over Bane Signet for additional melee armor penetration. Hero targeting is unreliable and the spell is comparatively Energy intensive, so it is not part of the default zero-micro bar.",
+        },
+        Section {
+            heading: Some(
+                "Word of Healing",
+            ),
+            level: 3,
+            wikitext: "===Word of Healing===\n'''Suggested hero:''' [[gww:Dunkoro|Dunkoro]]\n<pvxbig>[build prof=Mo/Me heal=12+1+3 divine=10+1 prot=7 insp=4][Word of Healing@16][Patient Spirit@16][Dwayna's Kiss@16][Protective Spirit@7][Cure Hex@16][Dismiss Condition@7][Signet of Rejuvenation@16][Signet of Recall@4][/build]\n'''Armor'''\n* Healing Prayers headpiece with a Superior Healing Prayers rune\n* Minor Divine Favor rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Survivor Insignia|Survivor Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Healing Prayers set\n* Optional 40/20/20 Protection Prayers staff for Protective Spirit\n</pvxbig>\n\nCure Hex is preferred to Inspired Hex because it recharges more quickly and cannot become locked behind a copied foe skill. Signet of Recall supplies energy without requiring the hero to target a foe.\n\n",
+            text: "Word of Healing Suggested hero: Dunkoro [build prof=Mo/Me heal=12+1+3 divine=10+1 prot=7 insp=4][Word of Healing@16][Patient Spirit@16][Dwayna's Kiss@16][Protective Spirit@7][Cure Hex@16][Dismiss Condition@7][Signet of Rejuvenation@16][Signet of Recall@4][/build] Armor Healing Prayers headpiece with a Superior Healing Prayers rune Minor Divine Favor rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Survivor Insignias Weapons 40/40 Healing Prayers set Optional 40/20/20 Protection Prayers staff for Protective Spirit Cure Hex is preferred to Inspired Hex because it recharges more quickly and cannot become locked behind a copied foe skill. Signet of Recall supplies energy without requiring the hero to target a foe.",
+        },
+        Section {
+            heading: Some(
+                "UA Heal-Prot",
+            ),
+            level: 3,
+            wikitext: "===UA Heal-Prot===\n'''Suggested hero:''' [[gww:Tahlkora|Tahlkora]]\n<pvxbig>[build prof=Mo/E heal=10+1 divine=11+1+1 prot=9+1][Dwayna's Kiss@11][Signet of Rejuvenation@11][Aegis@10][Protective Spirit@10][Shield of Absorption@10][Divine Healing@13][Glyph of Lesser Energy][Unyielding Aura@13][/build]\n'''Armor'''\n* Divine Favor headpiece with a Minor Divine Favor rune\n* Minor Healing Prayers and Minor Protection Prayers runes on non-head armor pieces\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and a Rune of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Survivor Insignia|Survivor Insignias]]\n'''Weapons'''\n* [[gww:40/40|40/40]] Divine Favor set\n* Optional 40/40 Healing Prayers set or 40/20/20 Protection Prayers staff\n'''Main article'''\n* [[Build:Mo/Me Unyielding Aura Hero|Unyielding Aura Hero]]\n</pvxbig>\n\nThis is a protection-biased adaptation of the published Mo/Me Unyielding Aura Hero. Dwayna's Kiss, Signet of Rejuvenation, Divine Healing, and Unyielding Aura form its healing core; Protective Spirit and Shield of Absorption come from the main article's protection variant. Aegis supplies the team's party-wide blocking. Glyph of Lesser Energy replaces the main bar's foe-targeted Inspiration interrupts so the hero remains functional in Avoid Combat without additional mode switching.\n\n<pvxbig>\n[[image:Optional.jpg|25px]] '''Optional Protection Skills''' :\n*{{skill pvxicon|Aura of Stability|10}} over Divine Healing in knock-down-heavy areas. It can protect the Dervish but not its caster, and gives up a party heal.\n</pvxbig>\n\n",
+            text: "UA Heal-Prot Suggested hero: Tahlkora [build prof=Mo/E heal=10+1 divine=11+1+1 prot=9+1][Dwayna's Kiss@11][Signet of Rejuvenation@11][Aegis@10][Protective Spirit@10][Shield of Absorption@10][Divine Healing@13][Glyph of Lesser Energy][Unyielding Aura@13][/build] Armor Divine Favor headpiece with a Minor Divine Favor rune Minor Healing Prayers and Minor Protection Prayers runes on non-head armor pieces Rune of Superior Vigor and a Rune of Vitae on the remaining pieces 5 Survivor Insignias Weapons 40/40 Divine Favor set Optional 40/40 Healing Prayers set or 40/20/20 Protection Prayers staff Main article Unyielding Aura Hero This is a protection-biased adaptation of the published Mo/Me Unyielding Aura Hero. Dwayna's Kiss, Signet of Rejuvenation, Divine Healing, and Unyielding Aura form its healing core; Protective Spirit and Shield of Absorption come from the main article's protection variant. Aegis supplies the team's party-wide blocking. Glyph of Lesser Energy replaces the main bar's foe-targeted Inspiration interrupts so the hero remains functional in Avoid Combat without additional mode switching. 25px Optional Protection Skills Aura of Stability 10 over Divine Healing in knock-down-heavy areas. It can protect the Dervish but not its caster, and gives up a party heal.",
+        },
+        Section {
+            heading: Some(
+                "Running Support",
+            ),
+            level: 3,
+            wikitext: "===Running Support===\n'''Suggested hero:''' [[gww:General Morgahn|General Morgahn]]\n<pvxbig>[build prof=P/Rt command=12+1+3 resto=12 leadership=3+1][\"Incoming!\"@16][\"Fall Back!\"@16][Vocal Was Sogolon@12][\"Never Surrender!\"@16][Weapon of Warding@12][Soothing Memories@12][\"Stand Your Ground!\"@16][Signet of Return@12][/build]\n'''Armor'''\n* Command headpiece with a Superior Command rune\n* Minor Leadership rune on a non-head armor piece\n* Rune of [[gww:Rune of Vigor|Superior Vigor]] and 2 Runes of [[gww:Rune of Vitae|Vitae]] on the remaining pieces\n* 5 [[gww:Centurion's Insignia|Centurion's Insignias]]\n'''Weapons'''\n* [[gww:Hale|Hale]] Restoration Magic staff of [[gww:Of Fortitude|fortitude]] with [[gww:Inscription#Spell_enhancing|\"''Aptitude not Attitude''\"]]\n</pvxbig>\n\nVocal Was Sogolon extends Incoming! and Fall Back! enough for the hero to alternate them with near-continuous coverage while the party remains in earshot. Never Surrender!, Weapon of Warding, and Soothing Memories add mobile sustain, while Signet of Return supplies the reusable backup resurrection.\n\n<pvxbig>\n;Variant :{{skill pvxicon|\"Charge!\"|16}} on a Warrior can replace one damage hero on routes with frequent party-wide Cripple. It removes Cripple before applying its speed boost, but costs a damage role and does not replace the Running Support bar's healing and defensive utility.\n</pvxbig>\n\nWhen a hero uses a superior main-attribute rune, it belongs on the head armor: hero headgear adds an extra +1 to the attribute of the rune placed there. The other rune locations are interchangeable. Secondary-profession attributes cannot be raised with runes, so the listed Motivation, Command, Channeling Magic, Restoration Magic, Protection Prayers, and Inspiration Magic values are base ranks where those attributes belong to the secondary profession.\n\n",
+            text: "Running Support Suggested hero: General Morgahn [build prof=P/Rt command=12+1+3 resto=12 leadership=3+1][\"Incoming!\"@16][\"Fall Back!\"@16][Vocal Was Sogolon@12][\"Never Surrender!\"@16][Weapon of Warding@12][Soothing Memories@12][\"Stand Your Ground!\"@16][Signet of Return@12][/build] Armor Command headpiece with a Superior Command rune Minor Leadership rune on a non-head armor piece Rune of Superior Vigor and 2 Runes of Vitae on the remaining pieces 5 Centurion's Insignias Weapons Hale Restoration Magic staff of fortitude with \"Aptitude not Attitude\" Vocal Was Sogolon extends Incoming! and Fall Back! enough for the hero to alternate them with near-continuous coverage while the party remains in earshot. Never Surrender!, Weapon of Warding, and Soothing Memories add mobile sustain, while Signet of Return supplies the reusable backup resurrection. ;Variant \"Charge!\" 16 on a Warrior can replace one damage hero on routes with frequent party-wide Cripple. It removes Cripple before applying its speed boost, but costs a damage role and does not replace the Running Support bar's healing and defensive utility. When a hero uses a superior main-attribute rune, it belongs on the head armor: hero headgear adds an extra +1 to the attribute of the rune placed there. The other rune locations are interchangeable. Secondary-profession attributes cannot be raised with runes, so the listed Motivation, Command, Channeling Magic, Restoration Magic, Protection Prayers, and Inspiration Magic values are base ranks where those attributes belong to the secondary profession.",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 2,
+            wikitext: "==Usage==\n\n",
+            text: "Usage",
+        },
+        Section {
+            heading: Some(
+                "Hero Behavior",
+            ),
+            level: 3,
+            wikitext: "===Hero Behavior===\n* Set every hero to Avoid Combat while running.\n* For a boss fight, change Blinding Air, Invoke Air, Thunderclap Air, and Smiting Channel Support to Guard. Call or attack the boss, then return those four heroes to Avoid Combat when moving on.\n* Leave Running Support, Word of Healing, and UA Heal-Prot on Avoid Combat. Their bars contain ally-, party-, or self-targeted skills that remain functional in that mode.\n* Avoid Combat heroes generally do not activate skills that directly target foes. This is why Power Drain is not used on either backline Monk.\n\n",
+            text: "Hero Behavior Set every hero to Avoid Combat while running. For a boss fight, change Blinding Air, Invoke Air, Thunderclap Air, and Smiting Channel Support to Guard. Call or attack the boss, then return those four heroes to Avoid Combat when moving on. Leave Running Support, Word of Healing, and UA Heal-Prot on Avoid Combat. Their bars contain ally-, party-, or self-targeted skills that remain functional in that mode. Avoid Combat heroes generally do not activate skills that directly target foes. This is why Power Drain is not used on either backline Monk.",
+        },
+        Section {
+            heading: Some(
+                "Running",
+            ),
+            level: 3,
+            wikitext: "===Running===\n* Incoming! and Fall Back! provide the party's baseline movement speed. Pious Haste gives the player faster independent movement when leading, leaving earshot, or crossing a dangerous gap in the shout cycle.\n* Use Pious Haste while traveling and switch to Pious Fury only after stopping to fight; because both are stances, they cannot run simultaneously.\n* The movement package also supplies passive or mobile recovery, allowing the team to cross routine Normal Mode areas without stopping to recast a conventional healing engine.\n\n",
+            text: "Running Incoming! and Fall Back! provide the party's baseline movement speed. Pious Haste gives the player faster independent movement when leading, leaving earshot, or crossing a dangerous gap in the shout cycle. Use Pious Haste while traveling and switch to Pious Fury only after stopping to fight; because both are stances, they cannot run simultaneously. The movement package also supplies passive or mobile recovery, allowing the team to cross routine Normal Mode areas without stopping to recast a conventional healing engine.",
+        },
+        Section {
+            heading: Some(
+                "Combat",
+            ),
+            level: 3,
+            wikitext: "===Combat===\n* Engage with the Dervish and let melee enemies gather around the player. Splinter Weapon and Ancestors' Rage convert that natural ball into armor-ignoring and area damage.\n* Strength of Honor is maintained on the scythe wielder. Ray of Judgment adds area pressure when enemies remain balled.\n* Maintain Aura of Holy Might and Mirage Cloak in combat. Cast Pious Renewal before Pious Fury and before each teardown attack; removing Pious Renewal triggers both damage enchantments while refunding energy and Health.\n* Thunderclap supplies nearby Cracked Armor and Weakness. Shock Arrow then becomes an energy-positive attack for Elementalists hitting affected foes.\n* Aegis is the primary party-wide attack defense. Blinding Surge and Thunderclap supplement it with Blind and Weakness; Protective Spirit and Shield of Absorption catch focused damage.\n* Unyielding Aura is maintained automatically and dismissed by the hero when a party member dies in range, providing low-micro recovery. Signet of Return gives the Running Support hero a second reusable resurrection.\n\n",
+            text: "Combat Engage with the Dervish and let melee enemies gather around the player. Splinter Weapon and Ancestors' Rage convert that natural ball into armor-ignoring and area damage. Strength of Honor is maintained on the scythe wielder. Ray of Judgment adds area pressure when enemies remain balled. Maintain Aura of Holy Might and Mirage Cloak in combat. Cast Pious Renewal before Pious Fury and before each teardown attack; removing Pious Renewal triggers both damage enchantments while refunding energy and Health. Thunderclap supplies nearby Cracked Armor and Weakness. Shock Arrow then becomes an energy-positive attack for Elementalists hitting affected foes. Aegis is the primary party-wide attack defense. Blinding Surge and Thunderclap supplement it with Blind and Weakness; Protective Spirit and Shield of Absorption catch focused damage. Unyielding Aura is maintained automatically and dismissed by the hero when a party member dies in range, providing low-micro recovery. Signet of Return gives the Running Support hero a second reusable resurrection.",
+        },
+        Section {
+            heading: Some(
+                "Skill Capture",
+            ),
+            level: 3,
+            wikitext: "===Skill Capture===\n* Check the destination area for capturable elites before leaving the outpost. When two desired elites are present, use the second-Signet option described under the player build.\n* The combat core continues to function with Twin Moon Sweep removed, but avoid replacing Pious Renewal, Pious Assault, Pious Fury, Mirage Cloak, or Aura of Holy Might.\n\n",
+            text: "Skill Capture Check the destination area for capturable elites before leaving the outpost. When two desired elites are present, use the second-Signet option described under the player build. The combat core continues to function with Twin Moon Sweep removed, but avoid replacing Pious Renewal, Pious Assault, Pious Fury, Mirage Cloak, or Aura of Holy Might.",
+        },
+        Section {
+            heading: Some(
+                "Party-Size Scaling",
+            ),
+            level: 3,
+            wikitext: "===Party-Size Scaling===\n* '''Four members:''' Player, Running Support, Word of Healing, and Thunderclap Air.\n* '''Six members:''' add UA Heal-Prot and Invoke Air.\n* '''Eight members:''' add Blinding Air and Smiting Channel Support.\n\n",
+            text: "Party-Size Scaling Four members: Player, Running Support, Word of Healing, and Thunderclap Air. Six members: add UA Heal-Prot and Invoke Air. Eight members: add Blinding Air and Smiting Channel Support.",
+        },
+        Section {
+            heading: Some(
+                "Counters",
+            ),
+            level: 2,
+            wikitext: "==Counters==\n* Heavy enchantment removal disrupts Pious Renewal, the Elementalist attunements, Strength of Honor, Unyielding Aura, and Aegis.\n* Caster-heavy bosses remain the team's largest combat weakness because the roster has no dedicated Domination shutdown or broad spell interruption.\n* Daze and energy denial can suppress the caster-heavy team, although Signet of Recall, Glyph of Lesser Energy, Elementalist attunements, and Shock Arrow reduce ordinary energy pressure.\n* Knock downs and Cripple can break running formation. Use \"I Am Unstoppable!\", Fleeting Stability, Aura of Stability, or the Charge! team change described beneath the relevant build when those effects are frequent.\n* Mobile or widely scattered enemies reduce the value of Ray of Judgment, Splinter Weapon, and Ancestors' Rage.\n\n",
+            text: "Counters Heavy enchantment removal disrupts Pious Renewal, the Elementalist attunements, Strength of Honor, Unyielding Aura, and Aegis. Caster-heavy bosses remain the team's largest combat weakness because the roster has no dedicated Domination shutdown or broad spell interruption. Daze and energy denial can suppress the caster-heavy team, although Signet of Recall, Glyph of Lesser Energy, Elementalist attunements, and Shock Arrow reduce ordinary energy pressure. Knock downs and Cripple can break running formation. Use \"I Am Unstoppable!\", Fleeting Stability, Aura of Stability, or the Charge! team change described beneath the relevant build when those effects are frequent. Mobile or widely scattered enemies reduce the value of Ray of Judgment, Splinter Weapon, and Ancestors' Rage.",
+        },
+        Section {
+            heading: Some(
+                "Notes",
+            ),
+            level: 2,
+            wikitext: "==Notes==\n* The composition is designed for low-micro Normal Mode travel and short skill-capture fights. It deliberately favors movement, passive recovery, and forgiving hero behavior over the shutdown and energy support of general Hard Mode meta teams.\n* The three Air roles share one Cracked Armor engine rather than duplicating Shell Shock. Blinding Surge, Thunderclap, Aegis, and the protection skills layer several forms of physical mitigation without requiring an ST Ritualist.\n* Unyielding Aura supplies automatic recovery from deaths and Signet of Return supplies a reusable backup, so additional resurrection slots usually contribute less than damage or route utility.\n* See [[gww:Hero behavior|Hero behavior]] and the [[Guide:PvE Equipment|PvE Equipment guide]] for additional mechanics and gearing information.",
+            text: "Notes The composition is designed for low-micro Normal Mode travel and short skill-capture fights. It deliberately favors movement, passive recovery, and forgiving hero behavior over the shutdown and energy support of general Hard Mode meta teams. The three Air roles share one Cracked Armor engine rather than duplicating Shell Shock. Blinding Surge, Thunderclap, Aegis, and the protection skills layer several forms of physical mitigation without requiring an ST Ritualist. Unyielding Aura supplies automatic recovery from deaths and Signet of Return supplies a reusable backup, so additional resurrection slots usually contribute less than damage or route utility. See Hero behavior and the PvE Equipment guide for additional mechanics and gearing information.",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 3,
+            raw: "[build prof=D/Mo scythe=12+1+3 mysticism=11+3 earthprayers=6+1][Pious Renewal@14][Pious Assault@16][Twin Moon Sweep@16][Aura of Holy Might][Pious Fury@14][Pious Haste@14][Mirage Cloak@7][Signet of Capture][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Dervish,
+            ),
+            secondary: Some(
+                Monk,
+            ),
+            professions_raw: Some(
+                "D/Mo",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Scythe Mastery",
+                    ),
+                    raw_name: "scythe",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Mysticism",
+                    ),
+                    raw_name: "mysticism",
+                    value: "11+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Earth Prayers",
+                    ),
+                    raw_name: "earthprayers",
+                    value: "6+1",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Pious Renewal",
+                    raw: "[Pious Renewal@14]",
+                },
+                Skill {
+                    name: "Pious Assault",
+                    raw: "[Pious Assault@16]",
+                },
+                Skill {
+                    name: "Twin Moon Sweep",
+                    raw: "[Twin Moon Sweep@16]",
+                },
+                Skill {
+                    name: "Aura of Holy Might",
+                    raw: "[Aura of Holy Might]",
+                },
+                Skill {
+                    name: "Pious Fury",
+                    raw: "[Pious Fury@14]",
+                },
+                Skill {
+                    name: "Pious Haste",
+                    raw: "[Pious Haste@14]",
+                },
+                Skill {
+                    name: "Mirage Cloak",
+                    raw: "[Mirage Cloak@7]",
+                },
+                Skill {
+                    name: "Signet of Capture",
+                    raw: "[Signet of Capture]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 4,
+            raw: "[build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Blinding Surge@16][Lightning Orb@16][Chain Lightning@16][Shock Arrow@16][Lightning Strike@16][Mending Refrain@8][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Elementalist,
+            ),
+            secondary: Some(
+                Paragon,
+            ),
+            professions_raw: Some(
+                "E/P",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Air Magic",
+                    ),
+                    raw_name: "air",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Energy Storage",
+                    ),
+                    raw_name: "energy",
+                    value: "10+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Motivation",
+                    ),
+                    raw_name: "motivation",
+                    value: "8",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Aura of Restoration",
+                    raw: "[Aura of Restoration@11]",
+                },
+                Skill {
+                    name: "Air Attunement",
+                    raw: "[Air Attunement@16]",
+                },
+                Skill {
+                    name: "Blinding Surge",
+                    raw: "[Blinding Surge@16]",
+                },
+                Skill {
+                    name: "Lightning Orb",
+                    raw: "[Lightning Orb@16]",
+                },
+                Skill {
+                    name: "Chain Lightning",
+                    raw: "[Chain Lightning@16]",
+                },
+                Skill {
+                    name: "Shock Arrow",
+                    raw: "[Shock Arrow@16]",
+                },
+                Skill {
+                    name: "Lightning Strike",
+                    raw: "[Lightning Strike@16]",
+                },
+                Skill {
+                    name: "Mending Refrain",
+                    raw: "[Mending Refrain@8]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 5,
+            raw: "[build prof=E/P air=12+1+3 energy=10+1 motivation=8][Aura of Restoration@11][Air Attunement@16][Invoke Lightning@16][Arc Lightning@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][Finale of Restoration@8][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Elementalist,
+            ),
+            secondary: Some(
+                Paragon,
+            ),
+            professions_raw: Some(
+                "E/P",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Air Magic",
+                    ),
+                    raw_name: "air",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Energy Storage",
+                    ),
+                    raw_name: "energy",
+                    value: "10+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Motivation",
+                    ),
+                    raw_name: "motivation",
+                    value: "8",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Aura of Restoration",
+                    raw: "[Aura of Restoration@11]",
+                },
+                Skill {
+                    name: "Air Attunement",
+                    raw: "[Air Attunement@16]",
+                },
+                Skill {
+                    name: "Invoke Lightning",
+                    raw: "[Invoke Lightning@16]",
+                },
+                Skill {
+                    name: "Arc Lightning",
+                    raw: "[Arc Lightning@16]",
+                },
+                Skill {
+                    name: "Chain Lightning",
+                    raw: "[Chain Lightning@16]",
+                },
+                Skill {
+                    name: "Lightning Strike",
+                    raw: "[Lightning Strike@16]",
+                },
+                Skill {
+                    name: "Shock Arrow",
+                    raw: "[Shock Arrow@16]",
+                },
+                Skill {
+                    name: "Finale of Restoration",
+                    raw: "[Finale of Restoration@8]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 6,
+            raw: "[build prof=E/P air=12+1+3 energy=9+1 command=9][Aura of Restoration@10][Air Attunement@16][Thunderclap@16][Chain Lightning@16][Lightning Strike@16][Shock Arrow@16][\"Fall Back!\"@9][Lightning Orb@16][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Elementalist,
+            ),
+            secondary: Some(
+                Paragon,
+            ),
+            professions_raw: Some(
+                "E/P",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Air Magic",
+                    ),
+                    raw_name: "air",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Energy Storage",
+                    ),
+                    raw_name: "energy",
+                    value: "9+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Command",
+                    ),
+                    raw_name: "command",
+                    value: "9",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Aura of Restoration",
+                    raw: "[Aura of Restoration@10]",
+                },
+                Skill {
+                    name: "Air Attunement",
+                    raw: "[Air Attunement@16]",
+                },
+                Skill {
+                    name: "Thunderclap",
+                    raw: "[Thunderclap@16]",
+                },
+                Skill {
+                    name: "Chain Lightning",
+                    raw: "[Chain Lightning@16]",
+                },
+                Skill {
+                    name: "Lightning Strike",
+                    raw: "[Lightning Strike@16]",
+                },
+                Skill {
+                    name: "Shock Arrow",
+                    raw: "[Shock Arrow@16]",
+                },
+                Skill {
+                    name: "\"Fall Back!\"",
+                    raw: "[\"Fall Back!\"@9]",
+                },
+                Skill {
+                    name: "Lightning Orb",
+                    raw: "[Lightning Orb@16]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 7,
+            raw: "[build prof=Mo/Rt smiting=12+1+3 channeling=10 divine=8+1][Ray of Judgment@16][Strength of Honor@16][Splinter Weapon@10][Ancestors' Rage@10][Castigation Signet@16][Bane Signet@16][Smite Condition@16][Smite Hex@16][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Ritualist,
+            ),
+            professions_raw: Some(
+                "Mo/Rt",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Smiting Prayers",
+                    ),
+                    raw_name: "smiting",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Channeling Magic",
+                    ),
+                    raw_name: "channeling",
+                    value: "10",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "divine",
+                    value: "8+1",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Ray of Judgment",
+                    raw: "[Ray of Judgment@16]",
+                },
+                Skill {
+                    name: "Strength of Honor",
+                    raw: "[Strength of Honor@16]",
+                },
+                Skill {
+                    name: "Splinter Weapon",
+                    raw: "[Splinter Weapon@10]",
+                },
+                Skill {
+                    name: "Ancestors' Rage",
+                    raw: "[Ancestors' Rage@10]",
+                },
+                Skill {
+                    name: "Castigation Signet",
+                    raw: "[Castigation Signet@16]",
+                },
+                Skill {
+                    name: "Bane Signet",
+                    raw: "[Bane Signet@16]",
+                },
+                Skill {
+                    name: "Smite Condition",
+                    raw: "[Smite Condition@16]",
+                },
+                Skill {
+                    name: "Smite Hex",
+                    raw: "[Smite Hex@16]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 8,
+            raw: "[build prof=Mo/Me heal=12+1+3 divine=10+1 prot=7 insp=4][Word of Healing@16][Patient Spirit@16][Dwayna's Kiss@16][Protective Spirit@7][Cure Hex@16][Dismiss Condition@7][Signet of Rejuvenation@16][Signet of Recall@4][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Mesmer,
+            ),
+            professions_raw: Some(
+                "Mo/Me",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Healing Prayers",
+                    ),
+                    raw_name: "heal",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "divine",
+                    value: "10+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Protection Prayers",
+                    ),
+                    raw_name: "prot",
+                    value: "7",
+                },
+                Attribute {
+                    name: Some(
+                        "Inspiration Magic",
+                    ),
+                    raw_name: "insp",
+                    value: "4",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Word of Healing",
+                    raw: "[Word of Healing@16]",
+                },
+                Skill {
+                    name: "Patient Spirit",
+                    raw: "[Patient Spirit@16]",
+                },
+                Skill {
+                    name: "Dwayna's Kiss",
+                    raw: "[Dwayna's Kiss@16]",
+                },
+                Skill {
+                    name: "Protective Spirit",
+                    raw: "[Protective Spirit@7]",
+                },
+                Skill {
+                    name: "Cure Hex",
+                    raw: "[Cure Hex@16]",
+                },
+                Skill {
+                    name: "Dismiss Condition",
+                    raw: "[Dismiss Condition@7]",
+                },
+                Skill {
+                    name: "Signet of Rejuvenation",
+                    raw: "[Signet of Rejuvenation@16]",
+                },
+                Skill {
+                    name: "Signet of Recall",
+                    raw: "[Signet of Recall@4]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 9,
+            raw: "[build prof=Mo/E heal=10+1 divine=11+1+1 prot=9+1][Dwayna's Kiss@11][Signet of Rejuvenation@11][Aegis@10][Protective Spirit@10][Shield of Absorption@10][Divine Healing@13][Glyph of Lesser Energy][Unyielding Aura@13][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Monk,
+            ),
+            secondary: Some(
+                Elementalist,
+            ),
+            professions_raw: Some(
+                "Mo/E",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Healing Prayers",
+                    ),
+                    raw_name: "heal",
+                    value: "10+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Divine Favor",
+                    ),
+                    raw_name: "divine",
+                    value: "11+1+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Protection Prayers",
+                    ),
+                    raw_name: "prot",
+                    value: "9+1",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Dwayna's Kiss",
+                    raw: "[Dwayna's Kiss@11]",
+                },
+                Skill {
+                    name: "Signet of Rejuvenation",
+                    raw: "[Signet of Rejuvenation@11]",
+                },
+                Skill {
+                    name: "Aegis",
+                    raw: "[Aegis@10]",
+                },
+                Skill {
+                    name: "Protective Spirit",
+                    raw: "[Protective Spirit@10]",
+                },
+                Skill {
+                    name: "Shield of Absorption",
+                    raw: "[Shield of Absorption@10]",
+                },
+                Skill {
+                    name: "Divine Healing",
+                    raw: "[Divine Healing@13]",
+                },
+                Skill {
+                    name: "Glyph of Lesser Energy",
+                    raw: "[Glyph of Lesser Energy]",
+                },
+                Skill {
+                    name: "Unyielding Aura",
+                    raw: "[Unyielding Aura@13]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 10,
+            raw: "[build prof=P/Rt command=12+1+3 resto=12 leadership=3+1][\"Incoming!\"@16][\"Fall Back!\"@16][Vocal Was Sogolon@12][\"Never Surrender!\"@16][Weapon of Warding@12][Soothing Memories@12][\"Stand Your Ground!\"@16][Signet of Return@12][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Paragon,
+            ),
+            secondary: Some(
+                Ritualist,
+            ),
+            professions_raw: Some(
+                "P/Rt",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Command",
+                    ),
+                    raw_name: "command",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Restoration Magic",
+                    ),
+                    raw_name: "resto",
+                    value: "12",
+                },
+                Attribute {
+                    name: Some(
+                        "Leadership",
+                    ),
+                    raw_name: "leadership",
+                    value: "3+1",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "\"Incoming!\"",
+                    raw: "[\"Incoming!\"@16]",
+                },
+                Skill {
+                    name: "\"Fall Back!\"",
+                    raw: "[\"Fall Back!\"@16]",
+                },
+                Skill {
+                    name: "Vocal Was Sogolon",
+                    raw: "[Vocal Was Sogolon@12]",
+                },
+                Skill {
+                    name: "\"Never Surrender!\"",
+                    raw: "[\"Never Surrender!\"@16]",
+                },
+                Skill {
+                    name: "Weapon of Warding",
+                    raw: "[Weapon of Warding@12]",
+                },
+                Skill {
+                    name: "Soothing Memories",
+                    raw: "[Soothing Memories@12]",
+                },
+                Skill {
+                    name: "\"Stand Your Ground!\"",
+                    raw: "[\"Stand Your Ground!\"@16]",
+                },
+                Skill {
+                    name: "Signet of Return",
+                    raw: "[Signet of Return@12]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}

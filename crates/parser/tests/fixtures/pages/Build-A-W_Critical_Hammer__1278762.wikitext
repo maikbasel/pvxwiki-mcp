@@ -1,0 +1,54 @@
+{{Real-Vetting|rating=good|status=provisional|general}}{{TOC|pos=r}}
+Assassin build utilizing the assassin primary attribute '''Critical Strikes''', and the high base damage of a hammer. The usage of quick activation time attack skills enables this bar to deals a large amount single target damage, and to trigger on hit effects quickly. 
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Warrior Critical=12+1+3 Hammer=12][Crude Swing][Yeti Smash][Renewing Smash][optional][Shadow Theft][optional][Critical Eye][Critical Agility][/build]
+;Variable skill slots
+*General
+** {{Skill pvxicon|Way of the Master|16}} - Increases your critical strike chance
+** {{skill pvxicon|Protector's Strike|0}} - To use as auto-attack reset
+** {{skill pvxicon|Malicious Strike|16}} - High single target damage
+** {{skill pvxicon|Critical Defenses|16}} - Provides 75% block chance, and can serve as a cover enchantment for {{skill pvxicon|Critical Agility}}
+
+* PvE skills
+** {{skill pvxicon|"Save Yourselves!"}} - Provides near immunity to armor respecting damage for the rest of the party.
+** {{skill pvxicon|"I Am Unstoppable!"}} - Counters [[gww:Crippled|Crippled]] and [[gww:Knock down|Knock Down]] and provides [[gww:Armor calculation#Categories|Special armor]], which ignores the bonus armor cap (which you hit due to {{skill pvxicon|Critical Agility}})
+** {{skill pvxicon|Asuran Scan}} - Counter [[gww:Blind|Blind]] and block, must take in areas which have lots of these
+** {{skill pvxicon|Whirlwind Attack}}
+** {{skill pvxicon|"You Move Like a Dwarf!"}}
+** {{skill pvxicon|"Finish Him!"}}
+
+'''Variants'''
+* Elite skills alternatives
+** {{skill pvxicon|Earth Shaker|12}} - Provides AoE [[gww:Knock down|Knock Down]] for [[Renewing Smash]. Replace [[Yeti Smash].
+** {{skill pvxicon|Magehunter Strike|0}} - To use as auto-attack reset
+
+* [[gww:Knock down|Knock Down]] skills, drop [[Yeti Smash]
+** {{skill pvxicon|Brawling Headbutt}} - Provides KD that can't be blocked or miss and allows to use three renewing smashes.
+</pvxbig>
+
+== Equipment ==
+* 5x [[gww:Nightstalker's_Insignia|Nightstalker's Insignias]]
+* 1x [[gww:Rune of Critical Strikes|Rune of Superior Critical Strikes]]
+* 1x Best [[gww:Rune_of_Vigor|Rune of Vigor]] you can afford
+* 2x [[gww:Rune_of_Vitae|Runes of Vitae]] or [[gww:Rune_of_Attunement|Runes of Attunement]], up to player preference
+
+'''Weapons'''
+* [[gww:Vampric|Vampiric]] Hammer [[gww:Of_Fortitude|of Fortitude]], with "''[[gww:Inscription#Combat enhancing|Guided by Fate]]''"
+
+== Usage ==
+<pvxbig>
+* Maintain {{skill pvxicon|Critical Agility}} and {{skill pvxicon|Critical Eye|16}}
+* Build up adrenaline for your [[gww:Knock down|Knock Down]] skill
+** Always try to hit as many foes as you can with {{skill pvxicon|Crude Swing|12}}, to quickly build adrenaline and to deal as much damage as you can
+* Use the prefered [[gww:Knock down|Knock Down]], followed by 2x{{skill pvxicon|Renewing Smash|12}}. Target a foe with high hp, to make the most out of your [[gww:Knock down|Knock Down]]
+* Use the rest of your skills as prefered.  
+</pvxbig>
+
+== Counters ==
+<pvxbig>
+* Enchantment removal
+* Heavy melee hate
+* Failing to hit with {{skill pvxicon|Renewing Smash|12}}, or not hitting a target with [[gww:Knock down|Knock Down]]
+</pvxbig>

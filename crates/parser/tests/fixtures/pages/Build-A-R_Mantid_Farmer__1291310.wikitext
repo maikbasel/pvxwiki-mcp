@@ -1,0 +1,56 @@
+{{Real-Vetting|rating=great|farming}}
+{{TOC|pos=r}}
+This is a build designed to farm [[gww:Mantid|Mantids]] outside [[gww:Nahpui Quarter|Nahpui Quarter]]. It is effective at killing Mantids even at rank 0 Expertise, as an Assassin.
+
+==Attributes and Skills==
+<pvxbig>
+[build prof=A/R sha=11+1+3 bea=10 wild=10][Deadly Paradox@0][Shadow Form][Shroud of Distress][Whirling Defense][Dwarven Stability][Natural Stride][Shadow of Haste][Edge of Extinction][/build]
+</pvxbig>
+
+==Equipment==
+* Weapons
+** A spear, axe, or sword (the requirement does not matter) with a 20% [[gww:Of_Enchanting|of Enchanting]] mods and an [[gww:Inscription#Combat_enhancing|"I have the power!"]] inscription. (The spearhead, haft, or hilt doesn't matter as long as it is not [[gww:Vampiric|Vampiric]] or [[gww:Zealous|Zealous]]).
+** A shield (the requirement does not matter) with a +45 [[gww:Of_Devotion|of Devotion]] shield handle and a +10 [[gww:Inscription#Through_Thick_and_Thin|"Through Thick and Thin"]] inscription.
+
+* Armor
+** A +3 [[gww:Rune_of_Shadow_Arts|Rune of Superior Shadow Arts]] on the +1 Shadow Arts headpiece.
+** [[gww:Rune_of_Vigor|Rune Of Superior Vigor]] with full [[gww:Rune_of_Attunement|Runes Of Attunement]].
+** Full [[gww:Infiltrator%27s_Insignia|Infiltrator's Insignias]]. Ranger variant should use full Survivior Insignias instead.
+
+==Usage==
+<pvxbig>
+*As soon as you zone in use {{skill pvxicon|Dwarven Stability}} and then {{skill pvxicon|Natural Stride}} and head towards the mantids. Use a second {{skill pvxicon|Natural Stride}} as soon as it is off cooldown. Before the second one ends you will be in range of the mantids. 
+*Stop before aggroing them and use {{skill pvxicon|Shroud of Distress}}, {{skill pvxicon|Deadly Paradox}}, and then {{skill pvxicon|Shadow Form}}.
+*Then recast {{skill pvxicon|Natural Stride}} and start grabbing the groups. 
+**You should have no problem getting there fast enough, but if you are too slow getting there (possible disconnect, maybe AFK, or if you died once already), the mantid groups could start getting [[scw:Aggro#Good_vs_Bad_Aggro|bad aggro]], making them unable to be balled, slowing the run down, or failing.
+**Do not stop and get a chest on the way, you can get it afterwards.
+*After you aggro the last group you want to place your {{skill pvxicon|Shadow of Haste}} as close to this spot as possible.
+**If you are slow getting to the SoH spot, go ahead and recast Deadly Paradox and Shadow Form before placing your SoH.
+[[Image:Mantidfarmsoh1.jpg| 600px]]
+*Keep running and turn right into the little cove (where [[gww:Wajjun_Bazaar#Collectors|Naiju]] can possibly be) and run to the far corner to pull the mantid monks around the corner. Then head back left until you get around this area or until the mantid monks ball up perfectly.
+**Recast {{skill pvxicon|Shadow Form}} whenever you need to, but try to do it as late as possible.
+**Do NOT use any stance during this, even to recast your SF as it will then cancel your SoH.
+[[Image:Mantidfarmsoh2.jpg| 600px]]
+*Once you have pulled to around this area and have made sure the mantid monks are balled. Go ahead and recast {{skill pvxicon|Dwarven Stability}} and then use {{skill pvxicon|Natural Stride}} to jump back to your SoH spot. Make adjustmants quickly to make sure the ball is good then wait until all of the mantid necromancers are settled, then run in and use {{skill pvxicon|Whirling Defense}} once you are in the middle of them all. 
+**If you are fast enough you can cast Deadly Paradox instead of Natural Stride to jump back and give your Shadow Form more time.
+*As soon as you use Whirling, go ahead and cast your {{skill pvxicon|Edge of Extinction}} exactly where you are standing. Wait until everything is dead, then pick up your drops and go get any chests that might have spawned.
+**Make sure not to cancel your Whirling stance or move around too much.
+</pvxbig>
+
+==Notes==
+* It is recommended that Lockpicks are taken as there is a chance chests will spawn in the area.  These chests have the ability to drop [[gww:Gallery_of_Celestial_weapons|Celestial Weapons]].
+* The Ranger variant will kill the Mantids faster, but requires more practice due to taking more damage and giving less leeway with Shadow Form casts.
+==Videos==
+{|
+|-
+|<big>'''A/R Mantid Farmer Guide'''</big><br />
+{{YouTube|y8CUgS7XgS8}}
+|<big>'''R/A Mantid Farmer Guide'''</big><br />
+{{YouTube|rIJh7I55FxI}}
+|}
+
+== See also ==
+* [[Build:R/A Mantid Farmer]]
+* [[Build:R/A Whirling Defense Farmer]]
+
+{{FarmCat|celestial=yes|amber=yes|monstrous eye=yes|profa=yes}}

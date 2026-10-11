@@ -1,0 +1,35 @@
+{{Real-Vetting|rating=good|general}}
+{{TOC|pos=r}}
+
+This build uses Critical Strikes to fuel the energy costs of Flash Enchantments and a Scythe for respectable AoE damage.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/D crit=11+1+1 Scythe=10 EarthPrayers=10][Staggering Force][Wounding Strike][Aura of Thorns][Twin Moon Sweep][Malicious Strike][Optional][Way of the Master][Critical Agility][/build]
+'''Optional:'''
+* {{skill pvxicon|Sand Shards|10}}: For a bigger spike
+* {{skill pvxicon|Radiant Scythe|10}}: For energy and damage
+* {{skill pvxicon|Reap Impurities|10}}: For armor-ignoring AoE damage. Deep Wound will be covered by Bleeding.
+* {{skill pvxicon|Asuran Scan}}
+* {{skill pvxicon|"I Am Unstoppable!"}}
+* Other PvE skills
+</pvxbig>
+
+== Equipment ==
+* Blessed or Nightstalker's Insignia
+* Vampiric/Zealous Scythe of Defense/Fortitude (15%>50 or 15% while enchanted inscription)
+* Defensive set
+
+== Usage ==
+* Maintain Way of the Master and Critical Agility during battle.
+* Use Staggering Force → Wounding Strike → Aura of Thorns → Twin Moon Sweep.
+* Spam Malicious Strike, and any other attacks you bring.
+
+== Counters ==
+* General anti-melee
+* Enchantment removal
+
+== See also ==
+*{{D}} [[Build:D/W Wounding Strike|Wounding Strike]]
+*{{D}} [[Build:D/A Wounding Strike Hero|Wounding Strike]] (Hero)
+*{{R}} [[Build:R/D Wounding Strike|Wounding Strike]] (with Pet)

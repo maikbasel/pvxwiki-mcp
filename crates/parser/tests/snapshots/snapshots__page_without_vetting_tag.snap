@@ -1,0 +1,128 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Build-A-any_Assassin_(Costume_Brawl_2007)__980585.wikitext\")"
+---
+ParsedPage {
+    vetting: Missing,
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{Costume Brawl build}}\n{{TOCright}}\nThe build used by [[gw:Assassin|Assassins]] in the form of [[gw:Anton|Anton]] or [[gw:Nika|Nika]] in [[gw:Costume Brawl|Costume Brawl]].\n\n",
+            text: "The build used by Assassins in the form of Anton or Nika in Costume Brawl .",
+        },
+        Section {
+            heading: Some(
+                "Skills and Attributes",
+            ),
+            level: 2,
+            wikitext: "==Skills and Attributes==\n<pvxbig>\n[build prof=assassin/any dag=12 cri=11 sha=9][Aura of Displacement][Golden Phoenix Strike][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Shadow Refuge][Dash][Signet of Malice][/build]\n</pvxbig>\n\n",
+            text: "Skills and Attributes [build prof=assassin/any dag=12 cri=11 sha=9][Aura of Displacement][Golden Phoenix Strike][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Shadow Refuge][Dash][Signet of Malice][/build]",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 2,
+            wikitext: "== Equipment ==\n* [[gw:Bronze Daggers|Bronze Daggers]]\n** Piercing Dmg: 7-17 (Requires 12 Dagger Mastery) \n** Damage +15% (while Health is above 50%) \n** Damage +20% \n\n",
+            text: "Equipment Bronze Daggers Piercing Dmg: 7-17 (Requires 12 Dagger Mastery) Damage +15% (while Health is above 50%) Damage +20%",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 2,
+            wikitext: "== Usage ==\n* Shadow Step with [[gw:Aura of Displacement|Aura of Displacement]].\n* [[gw:Golden Phoenix Strike|Golden Phoenix Strike]] → [[gw:Horns of the Ox|Horns of the Ox]] → [[gw:Falling Lotus Strike|Falling Lotus Strike]] → [[gw:Twisting Fangs|Twisting Fangs]]\n* Use [[gw:Dash|Dash]] to keep up with kiting foes or to move between shrines. \n* Use [[gw:Signet of Malice|Signet of Malice]] after your chain or on foes already suffering from conditions to remove conditions.\n* while [[gw:Aura of Displacement|Aura of Displacement]] is recharging, precast [[gw:Shadow Refuge|Shadow Refuge]] for [[gw:Golden Phoenix Strike|Golden Phoenix Strike]].\n\n",
+            text: "Usage Shadow Step with Aura of Displacement. Golden Phoenix Strike → Horns of the Ox → Falling Lotus Strike → Twisting Fangs Use Dash to keep up with kiting foes or to move between shrines. Use Signet of Malice after your chain or on foes already suffering from conditions to remove conditions. while Aura of Displacement is recharging, precast Shadow Refuge for Golden Phoenix Strike.",
+        },
+        Section {
+            heading: Some(
+                "Notes",
+            ),
+            level: 2,
+            wikitext: "== Notes ==\n* [[gw:Aura of Displacement|Aura of Displacement]] can be used for positioning or escaping from tight situations.\n\n",
+            text: "Notes Aura of Displacement can be used for positioning or escaping from tight situations.",
+        },
+        Section {
+            heading: Some(
+                "Source Documentation",
+            ),
+            level: 2,
+            wikitext: "== Source Documentation ==\n* [http://www.guildwars.com/events/ingame/halloween2k7/costumebrawl.php] - Costume Brawl event announced on [http://www.guildwars.com Guildwars.com].\n* [[gw:Costume Brawl|Costume Brawl]] on [[gw:Main Page|GuildWiki]], containing the builds and equipments.\n* [[gww:Costume Brawl|Costume Brawl]] on [[gww:Main Page|Official Wiki]], containing the builds.",
+            text: "Source Documentation http://www.guildwars.com/events/ingame/halloween2k7/costumebrawl.php - Costume Brawl event announced on http://www.guildwars.com Guildwars.com. Costume Brawl on GuildWiki, containing the builds and equipments. Costume Brawl on Official Wiki, containing the builds.",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 1,
+            raw: "[build prof=assassin/any dag=12 cri=11 sha=9][Aura of Displacement][Golden Phoenix Strike][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Shadow Refuge][Dash][Signet of Malice][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Assassin,
+            ),
+            secondary: None,
+            professions_raw: Some(
+                "assassin/any",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Dagger Mastery",
+                    ),
+                    raw_name: "dag",
+                    value: "12",
+                },
+                Attribute {
+                    name: Some(
+                        "Critical Strikes",
+                    ),
+                    raw_name: "cri",
+                    value: "11",
+                },
+                Attribute {
+                    name: Some(
+                        "Shadow Arts",
+                    ),
+                    raw_name: "sha",
+                    value: "9",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Aura of Displacement",
+                    raw: "[Aura of Displacement]",
+                },
+                Skill {
+                    name: "Golden Phoenix Strike",
+                    raw: "[Golden Phoenix Strike]",
+                },
+                Skill {
+                    name: "Horns of the Ox",
+                    raw: "[Horns of the Ox]",
+                },
+                Skill {
+                    name: "Falling Lotus Strike",
+                    raw: "[Falling Lotus Strike]",
+                },
+                Skill {
+                    name: "Twisting Fangs",
+                    raw: "[Twisting Fangs]",
+                },
+                Skill {
+                    name: "Shadow Refuge",
+                    raw: "[Shadow Refuge]",
+                },
+                Skill {
+                    name: "Dash",
+                    raw: "[Dash]",
+                },
+                Skill {
+                    name: "Signet of Malice",
+                    raw: "[Signet of Malice]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}

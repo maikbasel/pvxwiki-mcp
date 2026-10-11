@@ -1,0 +1,38 @@
+{{Real-Vetting|rating=testing|GvG|FA}}
+{{TOCright}}
+
+This assassin makes it barely worth using protection prayers on its target, allowing the team to train debuffed foes effectively. It also makes stances wear off quickly, rendering monks more vulnerable.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Paragon DeadlyArts=12+1+3 CriticalStrikes=12+1 SpearMastery=3][Deadly Paradox][Mark of Insecurity][Mark of Death][Augury of Death][Siphon Speed][Critical Eye][Way of the Master][Resurrection Signet][/build]
+*Replace [[Resurrection Signet] with [[Dash] in FA.
+</pvxbig>
+
+== Equipment ==
+'''Runes and insignia'''
+*5 [[gww:Blessed Insignia|blessed insignias]].
+*Rune of [[gww:Rune of Vigor|superior vigor]].
+*2 runes of [[gww:Rune of Vitae|vitae]].
+
+'''Weapons'''
+*[[gww:Swift|Swift]] staff of [[gww:Of Defense|defense]] with "''[[gww:Inscription#Spell_enhancing|Don't Think Twice]]''".
+*Any high energy staff.
+*[[gww:Cruel|Cruel]] spear of [[gww:Of Defense|defense]], [[gww:Inscription#Spell enhancing|10%hct]] with
+**Strength shield of [[gww:Of Fortitude|fortitude]], -20% cripple duration.
+**Strength shields of fortitude, +10 armor against each damage type.
+
+== Usage ==
+<pvxbig>
+*Apply [[Mark of Insecurity@16] on a target your team wants to train and cover it with another hex.
+**[[Siphon Speed@16] is ideal against flag running and kiting targets. The speed boost will help you with kiting.
+*Maintain [[Critical Eye@13] and [[Way of the Master@13]. Regain energy by attacking foes in your shield set whenever not casting hexes.
+**Spear attacks are slightly faster than staff attacks.
+**Target a foe hexed with mark of insecurity to avoid triggering [[Shield Guardian].
+*If you ever happen to hold your team's flag, don't use [[Augury of Death]. The shadow step will force you to drop it.
+</pvxbig>
+
+==See also==
+*[[Build:Me/any PvP Air of Disenchantment|AoD Mesmer]]
+*[[Build:Team - GvG Air of Disenchantment|GvG AoD Train]]
+*[[Build:Team - GvG June Migraine Monk Stomp|GvG June AoD Train]]

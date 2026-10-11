@@ -1,0 +1,43 @@
+{{Real-Vetting|rating=testing|RA|HA|AB|GvG}}
+{{TOC|pos=r}}
+
+
+Build inspired by old Backbreaker Sin, now with cripple, cracked armor, and great enchantment removal.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish DaggerMastery=12+1+1 CriticalStrikes=7+1 ScytheMastery=9 WindPrayers=6][Reaper's Sweep][Rending Aura][Heart of Fury][Falling Lotus Strike][Twisting Fangs][Falling Spider][Blades of Steel][Resurrection Signet][/build]
+</pvxbig>
+== Equipment ==
+* Weapons
+** Set 1: 
+***Scythe: +33% Cripple Duration, +5 armor; +15% damage while enchanted.
+** Set 2: 
+***Daggers: +10% extra adrenaline gain, +5 armor; +15% damage while above 50% HP.
+** Set 3: 
+***Spear: +10% extra adrenaline gain, +5 armor; 10% HRT; 
+***Shield: +30 health; -2dmg while enchanted;
+*Armor
+**1 x Rune of Restoration
+**1 x Rune of Superior Vigor
+** Runes of Vitae and Survivor insignia on all other slots.
+
+== Usage ==
+*<pvxbig> 
+* Build enough adrenaline with your Spear and keep {{skill pvxicon|Rending Aura|6}} active.
+* It is recommended to wait till Rending Aura is off cooldown for maximum effectiveness.
+* With {{skill pvxicon|Rending Aura|6}} active, spike with {{skill pvxicon|Reaper's Sweep|9}} → cancel action (default key: Escape) → switch to dagger set → {{skill pvxicon|Rending Aura|6}} + {{skill pvxicon|Heart of Fury|0}} + {{skill pvxicon|Falling Lotus Strike|14}} → {{skill pvxicon|Twisting Fangs|8}} → {{skill pvxicon|Falling Spider|14}} → {{skill pvxicon|Blades of Steel|14}}.
+** If fearing the combo will fail, skip one of the dual attacks.
+* Inbetween spikes, use {{skill pvxicon|Reaper's Sweep|9}} → cancel action (default key: Escape) → switch to dagger set → {{skill pvxicon|Rending Aura|6}} → {{skill pvxicon|Falling Spider|14}} → {{skill pvxicon|Blades of Steel|14}} for a mini-spike.
+
+== Counters ==
+* Anti-melee
+* Heavy enchantment removal;
+* Knock-down protection
+
+== Notes ==
+* The spike combo requires very tight timing
+** Heart of Fury cannot be pressed too early before Falling Lotus, otherwise Falling Spider won't benefit from the IAS and will miss the knockdown state
+** At the same time, Falling Lotus Strike cannot be activated too late after Reaper's Sweep, or Falling Spider will miss as well
+** It takes a good amount of time practicing to get the timing right.
+** As a result, the build is not recommended when playing with very high ping. </pvxbig>

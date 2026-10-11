@@ -1,0 +1,64 @@
+{{Real-Vetting|status=provisional|rating=Great|running}}
+{{Dungeon Build}}
+{{TOC|pos=r}}
+
+Run [[gww:Sepulchre of Dragrimmar|Sepulchre of Dragrimmar]] in Hard Mode with only a cupcake to beat the [[gww:Remnant_of_Antiquities|Remnant of Antiquities]].
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=a/e shadow=12+1+3 crit=2+1 earth=12 airmagic=2][glyph of swiftness][shadow form][shroud of distress][dwarven stability][dark escape][death's charge][optional][sliver armor][/build]
+'''Optionals:'''
+* {{Skill pvxicon|Ebon Battle Standard of Honor}}: faster killing.
+* {{Skill pvxicon|Mental Block}}: safer.
+* {{Skill pvxicon|Shadow Sanctuary}}: safer.
+* {{Skill pvxicon|Glyph of Lesser Energy}}: energy management.
+</pvxbig>
+== Equipment ==
+* Armor:
+** Full Blessed Insignias, Radiant insignias for second level.
+** Full Attunement or Vitae
+* Weapons:
+** Insightful Staff of Enchanting ("Have Faith" inscription; +5 energy) - for running and killing the Remnant of Antiquities
+** Spear of Enchanting (+5 energy inscription)
+** Shield of Fortitude (+10 AR vs. Cold)
+
+== Usage ==
+[[File:Sepulchre of Dragrimmar map getting there.jpg|thumb|Drakkar Lake route]]
+* Use alcohol avoid getting KDed by Irrestible Blow or run really fast to the entrance.
+* Avoid Ice Darts at all costs.
+* Use Death's Charge if you get bodyblocked, need healing, or to speed up the run.
+* Maintain Dark Escape with Dwarven Stability.
+* Maintain Shroud of Distress as needed.
+
+=== Level 1 ===
+[[File:Sepulchre of Dragrimmar map level 1.jpg|thumb|Level 1 route]]
+* Open the gate by stepping on the switch, avoid the Ice Darts.
+* Head through the door to the North and run to the next switch.
+* Try to avoid the [[gww:Whirling_Wisp|Whirling Wisps]] while running and casting spells.  They use [[gww:Lyssa%27s_Assault|Lyssa's Assault]] which will interrupt you.
+* Run through the Northeast opening and turn left at the split and head to the switch (at point 2 on the map).
+* Step on the switch.
+* Turn around and head back towards where you came from and continue straight through towards point 3 on the map.
+* Step on the switch then head back towards the second switch.
+* Continue past point 2 on the map to the gate to level 2.
+
+=== Level 2 ===
+[[File:Sepsafespot.jpg|thumb|The safe spot for avoiding Diamondshard Mist.]]
+* Make your way to the boss room.
+* Before going into the room, walk sideways or backwards to maintain the aggro of the Ice Imps and Dryders.  Pull them into the room.
+* Round up aggro and kill all the [[gww:Avalanche|Avalanches]] before continuing.  They use [[gww:Frozen_Burst|Frozen Burst]] which can hit you through Shadow Form.
+* Walking backwards or sideways, take your aggro and head to the right side of the boss. There is a bug where [[gww:Diamondshard_Mist|Diamondshard Mist]] won't take effect in that area.
+* Ebon Battle Standard of Honor -> Sliver Armor to kill the [[gww:Remnant_of_Antiquities|Remnant of Antiquities]].
+** If you can get the cycle, you can use Glyph of Swiftness -> Shadow Form -> Sliver Armor -> Ebon Battle Standard of Honor.  This will reduce the recharge time of Sliver Armor by 25% as well.
+* Stay on the very outside range of Sliver Armor.  The boss tends not to use Frozen Burst there.  Be sure to not leave the safe spot.
+* Collect chest and kill the remaining elementals if running people.
+
+== Counters ==
+* Rubberbanding
+* Being interrupted while casting Shadow Form or Shroud of Distress by Djinn. You don't need Shadow Form up unless there are Ice Elementals. Sliver Armor can help prevent interrupts.
+
+== Videos ==
+{|
+|-
+|<big>'''Sepulchre of Dragrimmar (cupcake only)'''</big><br />
+{{YouTube|sVkWd7PVGcc}}
+|}

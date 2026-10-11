@@ -1,0 +1,52 @@
+{{Real-Vetting|status=meta|rating=Great|running}}
+{{Requires-Cons|bu=yes}}
+{{TOC|pos=r}}
+Run Kathandrax completely solo without any need of group support. Able to kill the Djinn as well as Ilsundur.
+
+==Attributes and Skills==
+<pvxbig>
+[build prof=A/E ear=12 sha=12+1+3 dag=3][Shadow Form][Shroud of Distress][Stoneflesh Aura]["I Am Unstoppable!"][Dark Escape][Ebon Battle Standard of Honor][Sliver Armor][Ebon Vanguard Assassin Support][/build]
+</pvxbig>
+
+==Equipment==
+*Full Blessed armor.
+*Full Attunement/Vitae.
+*Martial weapon.
+**"I Have the Power!" Inscription.
+**20% longer Enchantments.
+*16 Armor Shield.
+**+45hp while enchanted.
+**+10 vs. Fire damage.
+*Staff with +10 energy and 20% half skill recharge of spells.
+**Insightful Staff Head.
+**"Have Faith" Inscription.
+**Staff Wrapping of Enchanting (+20%).
+*Daggers
+**20% longer Enchantments.
+
+==Usage==
+*Run to the dungeon.
+
+===Level 1===
+*Run to the Siege Wurm, using Dark Escape or IMS consumable to break aggro when entering the crater - then kill it.
+*Run and zone to level 2.
+
+===Level 2===
+*Run to the Regent of Flame.
+**Break aggro from the nearby group with Dark Escape. The regent has very low hp, give your EVAS the ward for a quick kill.
+*Run and zone to level 3.
+
+===Level 3===
+''Recommended: Pop a Cupcake and a Candy apple''
+*Using Stoneflesh Aura and Sliver Armor, clear the first room of any Deadly Lavastriders (Spider Assassins).
+**Once the assassins are dead, you can obstruct the rangers behind boulders if you need to drop your enchantments to regenerate energy.
+**Don't kill the Needling Lavastrider rangers.
+*Run through into the next room, activating IAU on the return journey from the Flame Djinn pop. Use Dark Escape and run all the way to the back of the first room. The djinn will break aggro and stand against the wall about 1/3 from the entrance side of the wall.
+*Grab all your Needling Lavastriders (using Stoneflesh Aura) and approach the Djinn. Use Sliver Armor from a safe distance, using the Needling Lavastriders as fuel for Sliver.
+*Run to the next room, open the gate, run through to the final room.
+**If you are running people, you can clear the room before Ilsundur of Imps and Djinn using the traps - and you can pull most of the aggro to one side in the second shrine room. Your customers should bring Shadow Form/sufficient protection to be able to run from shrine to shrine. Make them pay before you approach Ilsundur.
+*Run to Ilsundur, start killing him.
+**Drop Honor, pop a caster summoning stone if you have one, use EVAS, start daggering him.
+
+== Notes ==
+*An Essence is not required for level 2.

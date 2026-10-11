@@ -1,0 +1,30 @@
+{{Real-Vetting|rating=good|general}}
+{{TOC|pos=r}}
+This build uses Critical Eye and Way of the Master for IAS and higher crit chance while using Vow of Strength and Sand Shards for great AoE.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish Scythe=11 Critical=10+1+2 Earthp=10 ShadowArts=1][Death's Charge][Sand Shards][Vow of Strength][Staggering Force][Eremite's Attack][Optional][Critical Agility][Way of The Master][/build]
+
+'''{{skill icon|Optional}}''':
+*{{skill pvxicon|Malicious Strike|13}} damage and energy
+*{{skill pvxicon|Critical Eye|13}} only if not using zealous scythe (even then, energy should be fine)
+</pvxbig>
+
+== Equipment ==
+* [[gww:Nightstalker's Insignia|Nightstalker's Insignias]] or [[gww:Blessed Insignia|Blessed Insignias]].
+* [[gww:Rune of Attunement|Runes of Attunement]].
+* [[gww:Vampiric|Vampiric]] or [[gww:Zealous|Zealous]] Scythe [[gww:of Enchanting|of Enchanting]] with [[gww:Guided by Fate|"Guided by Fate"]].
+
+== Usage ==
+*Outside of an enemy group put all of your buffs up. Wait for the mob to reset, when they've all converged into a ball then death's charge in and spike.
+*On patrols get your party in front of the mob, then death's charge in ahead of your party and spike.
+*On single targets pull one by one with a bow if casters, pull martial enemies in large groups back to your party.
+
+== Counters ==
+* Anti Melee
+* Enchant Removal
+* Stripping Vow of Strength instead of your first optional.
+
+== See also ==
+*[[Build:D/any Vow of Strength]]

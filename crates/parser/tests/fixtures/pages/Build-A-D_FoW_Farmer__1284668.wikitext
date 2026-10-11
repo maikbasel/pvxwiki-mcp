@@ -1,0 +1,80 @@
+{{Real-Vetting|rating=good|farming}}
+{{TOC|pos=r}}
+
+
+This build uses [[gww:Shadow Form|Shadow Form]] and Scythe attacks to farm multiple zones of the [[gww:The Fissure of Woe|Fissure of Woe]] for [[gww:Obsidian Shard | Obsidian Shards]].
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish Shadow=12+1+3 crit=8+1 scythe=10 deadlyarts=2][Deadly Paradox][Shadow Form][Shroud of Distress][Critical Agility][Optional][Optional][Optional][Dash][/build]
+{{skill icon|Optional}} skills :
+
+-> '''Offensive options''' 
+* {{skill pvxicon|Chilling Victory}} - damage.
+* {{skill pvxicon|Victorious Sweep}} - damage and massive healing if condition is met.
+* {{skill pvxicon|Crippling Victory}} + {{skill pvxicon|Reap Impurities}} - big spike but suffers from SF damage cap.
+* {{skill pvxicon|Radiant Scythe}} - energy management.
+* {{skill pvxicon|Sand Shards|6}} - hits hard but energy intensive (drop one point of Critical Strikes and Scythe Mastery).
+-> '''Defensive options'''
+* {{skill pvxicon|"You Are All Weaklings!"}} - massively reduces enemy physical damage.
+* {{skill pvxicon|"I Am Unstoppable!"}} - armor boost stacking with Critical Agility, counters cripple and knockdowns.
+-> '''Utility'''
+* {{skill pvxicon|Asuran Scan}} - counters blindness.
+* {{skill pvxicon|Signet of Mystic Speed|4}} - counters interrupts (drop one point of either Critical Strikes or Scythe Mastery).
+</pvxbig>
+== Equipment ==
+===Armor===
+* Blessed Insignias.
+* Rune of Superior Vigor + Runes of either Vitae or Attunement.
+===Weapons===
+* A q9 +15% w/enchanted Zealous Scythe of Enchanting.
+* +5 energy Longbow of Enchanting (for pulling).
+* High energy Staff of Enchanting in case of emergency.
+== Usage ==
+* Enter FoW, don't take any quests.
+* To navigate the FoW, maintain Shadow Form and [[gww:Shroud of Distress|Shroud of Distress]]. Use [[gww:Dash|Dash]] to lose enemy aggro.
+
+===''Area-specific Tactics''===
+* You'll need to calibrate your build for the foes you're going to face. Choose your optional skills wisely.
+* Proceed slowly if not familiar with the FoW. Learning enemy patrols is important. 
+'''Shadow Army'''
+* You can't really kill Shadow Army mobs, except small ones without Monks, Rangers or Warriors. In practice you'll basically only kill the group guarding the pass to the battlefield. 
+'''Forest'''
+* Farming the whole Forest safely is possible. Main threat here is [[gww:Lightning Touch|Lightning Touch]], as it will go through Shadow Form, blinding you. You'll need Asuran Scan and some defensive optionals to survive. 
+* Enter by the very small entrance north of the Great Battle Field, don't overaggro, beware of [[gww:Rock Borer Worm|Rock Borer Worms]] and [[gww:Skeletal Impaler|Skeletal Impaler]] pops.
+* Do not try to kill the small mob of skeletons near the bridge, it's risky and not worth it. Once the first half of the Forest is cleared, just run through the skeletons guarding the bridge (do not cross it!) with all your defensive skills up to counter enemy traps.
+* Once on the other side of the Forest, pull and kill the Plants/Spiders, beware of overlapping [[gww:Spirit Shepherd|Spirit Shepherd]] patrols. The build plays exactly like the Dervish Vow of Silence farmer.
+* Here is an example of a Forest-capable build :
+{{mini skill bar|Deadly Paradox|Shadow Form|Shroud of Distress|Asuran Scan|Chilling Victory|Critical Agility|"I Am Unstoppable!"|Dash}} 
+'''Owpk4Jf8ImqEPiOzB0b5AWNIN5EE'''
+
+'''Battlefield'''
+* Farming Skeleton groups without Monks or Warriors is possible. Other groups are to be avoided.  
+* You'll have to look for groups composed of only [[gww:Skeletal Ether Breaker|Skeletal Ether Breakers]] and [[gww:Skeletal Icehand|Skeletal Icehands]]. There is one guarding the entrance from the starting area, one guarding the Forest of the Wailing Lord entrance, one guarding the Burning Forest entrance and one in the middle of the area.
+** Main threat here is also Lightning Touch so a build capable of farming the Forest will also be able to easily dispatch those four caster-only skeleton groups. In fact while going for a Forest run, it is pretty much always worth it to kill the group guarding the starting area's entrance and the group guarding the Forest of the Wailing Lord's entrance. 
+* Avoid Skeletal Impalers and their traps.
+'''Beach'''
+* Beach is an extremely easy zone to farm, with Shadow Form you're virtually impervious to any threat from Dryders or Skales.
+* Super offensive builds will work here, making Beach-only runs quite fast.
+** However those builds will not be able to farm anywhere else in the FoW. As such, you might prefer slower builds capable of farming elsewhere after the Beach is cleared.
+* Only [[gww:Snarling Driftwood|Snarling Driftwoods]] are worth killing, as they are the only ones dropping Shards on the Beach.
+'''Cave'''
+* Cave is tricky as [[gww:Armored Cave Spider|Armored Cave Spiders]] have [[gww:Savage Shot|Savage Shot]] and hit relatively hard. On the plus side, Shadow Form completely owns dryders.
+* [[gww:Signet of Mystic Speed|Signet of Mystic Speed]] is especially good here, as Armored Cave Spiders will not interrupt it.
+* Three dryders will be guarding the waterfall, aggro the one in the middle with your longbow so two of them will move towards you.
+* Kill those two dryders away from the waterfall. Walk in the third one's aggro range, back away. Lots of Spiders will spawn.
+* Pull Spiders away from the huge group, having them always pulled by groups of 3, on top of each other so your scythe attacks hit the three spiders at the same time (interrupting [[gww:Healing Spring|Healing Spring]] in the process).
+* Kill the last dryder, enter the cave proper.
+** Inside the Cave, kill a dryder, kill the two groups of three Spiders associated with it, repeat for the whole Cave.
+** It is possible to safely tank those six spiders while killing the dryders. 
+* Here is an example of a Cave-capable build :
+{{mini skill bar|Deadly Paradox|Shadow Form|Shroud of Distress|Signet of Mystic Speed|"You Are All Weaklings!"|Critical Agility|"I Am Unstoppable!"|Dash}} 
+'''Owpk8xjYaqSEPiOzBEm4NZNIN5EE'''
+
+== Notes ==
+* As the Beach has only very few foes dropping Shards (Snarling Driftwoods), if you go for Beach-only runs it is recommended to do so only during Pantheon Bonus Week.  
+
+== See also ==
+*[[Build:A/D_Plains_Farmer|A/D Plains Farmer]]
+
+{{FarmCat|shards=yes|profa=yes}}

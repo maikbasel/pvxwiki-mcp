@@ -1,0 +1,34 @@
+{{Real-Vetting|status=provisional|rating=good|running|quest}}
+{{TOC|pos=r}}
+
+This build is a variant for running the mission [[gww:Imperial Sanctum|Imperial Sanctum]] in both Normal Mode and Hard Mode using [[gww:Flashing_Blades|Flashing Blades]]. 
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/Mo name="Shiro" dag=12+1+3 cri=10+1 heal=8][jagged strike][fox fangs][Death Blossom][Critical Eye][Flashing Blades][Critical Defenses][Critical Agility][Vigorous Spirit][/build]</pvxbig>
+*
+== Equipment ==
+* Full Blessed Insignias
+*[[gww:Dagger Tang|Zealous]] Daggers [[gww:Dagger Handle|of Defense]] or [[gww:Dagger Handle|of Enchanting]] with an [[gww:Inscription#Combat enhancing|"I Have the Power!"]] (+5 energy) or [[gww:Inscription#Combat enhancing|"Dance with Death"]] (+15% dmg while in a stance) inscription.
+
+== Usage ==
+* Enter the mission.  If running other players, add Lukas into your party. You want him to get banished so that the Shiro'ken Warrior spawns.
+* Walk through the gate and trigger the cutscene. If running people, indicate where they should stand (usually at either of the two towers).
+* Stand just outside of aggro range and cast Critical Agility → Critical Defenses → Vigorous Spirit → Flashing Blades and then grab aggro and start attacking without using any skills to start gaining some energy back.  Then cast Critical Eye.
+* Once you have enough energy, start casting your dagger spamming skills.
+* Keep attacking until Shiro dies.
+** When Shiro uses [[gww:Meditation_of_the_Reaper|Meditation of the Reaper]], you can use this time as respite to regain some energy with your zealous daggers.
+
+== Counters ==
+* Mhenlo getting aggro.
+* One of the people you are running interfering.
+
+== Video ==
+{{YouTube|R1ikJi9JHl0|urlargs=start=11}}
+
+== Notes ==
+* AI will prioritize following players in motion over stationary players. Players being run can pull Mhenlo away to avoid aggroing Shiro or the Warrior construct this way.
+
+== See also ==
+*[[Build:E/Me Imperial Sanctum Runner|E/Me Imperial Sanctum Runner]]
+*[[Build:A/any Flashing Blades Farmer|A/any Flashing Blades Farmer]]

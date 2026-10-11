@@ -1,0 +1,184 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Build-A-Me_Vaettir_Farm__1306202.wikitext\")"
+---
+ParsedPage {
+    vetting: Vetted(
+        Vetted {
+            rating: Some(
+                Great,
+            ),
+            status: Some(
+                Meta,
+            ),
+            gameplay_types: [
+                "farming",
+            ],
+            archive: None,
+        },
+    ),
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{Real-Vetting|status=meta|rating=Great|farming}}{{TOC|pos=r}}\nDesigned to farm Vaettir in Hard Mode for [[gww:Glacial Stone|Glacial Stones]], mesmer tomes, golds, and event items during holiday events. This build is frequently used to attain the [[gww:Survivor|Legendary Survivor]] title.\n",
+            text: "meta Great farming r Designed to farm Vaettir in Hard Mode for Glacial Stones , mesmer tomes, golds, and event items during holiday events. This build is frequently used to attain the Legendary Survivor title.",
+        },
+        Section {
+            heading: Some(
+                "Frequency",
+            ),
+            level: 2,
+            wikitext: "== Frequency ==\n*More common than the [[Build:E/Me Obsidian Flesh Vaettir Farmer|Elementalist]] farmer due to speed and ease of use.\n*Frequently seen during holiday events.\n\n",
+            text: "Frequency More common than the Elementalist farmer due to speed and ease of use. Frequently seen during holiday events.",
+        },
+        Section {
+            heading: Some(
+                "Attributes and Skills",
+            ),
+            level: 2,
+            wikitext: "== Attributes and Skills ==\n<pvxbig>\n[build prof=assas/mesmer shadow=12+1+3 Domination=11 Inspiration=6 deadly=2+3 ][deadly paradox][shadow form][shroud of distress][Optional][Optional][Arcane Echo][Wastrel's Demise][Channeling][/build]\n</pvxbig>\n",
+            text: "Attributes and Skills [build prof=assas/mesmer shadow=12+1+3 Domination=11 Inspiration=6 deadly=2+3 ][deadly paradox][shadow form][shroud of distress][Optional][Optional][Arcane Echo][Wastrel's Demise][Channeling][/build]",
+        },
+        Section {
+            heading: Some(
+                "Optionals",
+            ),
+            level: 3,
+            wikitext: "=== Optionals ===\n<pvxbig>\n*{{skill pvxicon|Mantra of Earth|6}} - If taken, remove Channeling and bring another of the below optionals.\n*{{skill pvxicon|Great Dwarf Armor}} - a decent armor bonus. Allows safe use of different weapon sets.\n*{{skill pvxicon|Way of the Master|0}} and/or {{skill pvxicon|Way of Perfection|16}} - building SF's damage reduction up. Cast on recharge. By stacking enough of these, you can reduce the amount of armor needed via equipment and still take 0 damage per hit.\n*{{skill pvxicon|Dark Escape|16}} - Useful for running through Bjora Marches and to speed up the pull. Can also be used to survive with alternative weapon sets (with HSR mod for example).\n*{{skill pvxicon|Shadow Sanctuary}} - Great alternative to Great Dwarf Armor, also provides more damage reduction from SF. Also, the hp regen can be a safety net for players who are new to the build.\n*{{skill pvxicon|\"Finish Him!\"}} + {{skill pvxicon|Epidemic}} - faster kills. \n*{{skill pvxicon|Cry of Pain}} - some extra damage.\n*{{skill pvxicon|Heart of Shadow|16}} - to get unstuck if the vaettir surround you during the pull.\n*{{skill pvxicon|Mantra of Lightning|6}} - For Dragon Moss farming\n</pvxbig>\n\n",
+            text: "Optionals Mantra of Earth 6 - If taken, remove Channeling and bring another of the below optionals. Great Dwarf Armor - a decent armor bonus. Allows safe use of different weapon sets. Way of the Master 0 and/or Way of Perfection 16 - building SF's damage reduction up. Cast on recharge. By stacking enough of these, you can reduce the amount of armor needed via equipment and still take 0 damage per hit. Dark Escape 16 - Useful for running through Bjora Marches and to speed up the pull. Can also be used to survive with alternative weapon sets (with HSR mod for example). Shadow Sanctuary - Great alternative to Great Dwarf Armor, also provides more damage reduction from SF. Also, the hp regen can be a safety net for players who are new to the build. \"Finish Him!\" + Epidemic - faster kills. Cry of Pain - some extra damage. Heart of Shadow 16 - to get unstuck if the vaettir surround you during the pull. Mantra of Lightning 6 - For Dragon Moss farming",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 2,
+            wikitext: "== Equipment ==\n* Max armor, Blessed Insignas/Attunement Runes.\n* Sword, Spear, or Axe with +5e/+20% enchantments (for example: [[gww:Totem Axe|Totem Axe]]).\n* Any Shield with +10 AR vs. Earth Damage (Inscription: [[gww:Like a Rolling Stone|\"Like a Rolling Stone\"]]).\n** Additional defensive skills can replace the need for the shield, allowing the use of a different offhand or a Staff of Enchanting.\n\n",
+            text: "Equipment Max armor, Blessed Insignas/Attunement Runes. Sword, Spear, or Axe with +5e/+20% enchantments (for example: Totem Axe). Any Shield with +10 AR vs. Earth Damage (Inscription: \"Like a Rolling Stone\"). Additional defensive skills can replace the need for the shield, allowing the use of a different offhand or a Staff of Enchanting.",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 2,
+            wikitext: "== Usage ==\n* Equip your Norn title and make sure you are in [[gww:Hard Mode|Hard Mode]].\n* Start from [[gww:Longeye's Ledge|Longeye's Ledge]] to [[gww:Jaga Moraine|Jaga Moraine]] by way of [[gww:Bjora Marches|Bjora Marches]]. Don't aggro anything along the way. If a [[gww:Frost Wurm|Frost Wurm]] pops up and knocks you down, cast SF as soon as you get up and you should be able to get away before it can cast anything on you.\n* Take the bounty (if desired). If this is the first time you've encountered this shrine keeper, bring heroes along to quickly defeat him and flag them away from the farm afterwards. You will not need to bring them in future runs.\n* Maintain [[gww:Channeling|Channeling]], [[gww:Shadow Form|SF]] and [[gww:Shroud of Distress|SoD]] (cast both under [[gww:Deadly Paradox|Deadly Paradox]]), and your optional skill. (Note: When it says maintain SF you want to recast it before it expires. If you wait too long there is a chance that SF will be off for a split second before you get it back on and this will cause you to lose the damage reduction you've worked up.)\n* Recast Shroud of Distress (and any other Assassin enchantments you have) on recharge and under Deadly Paradox to maximize the damage reduction stack, as Shadow Form will count each enchantment cast (even for the same spell) separately. Each cast's duration is tracked separately and will add 5 DR until expired.\n* Group the vaettir up into a tight ball. You can do this in two separate pulls, or in one (see the videos).\n* Kill them with [[gww:Arcane Echo|Arcane Echo]]ed [[gww:Wastrel's Demise|Wastrel's Demise]] (tabbing to a new vaettir after hexing one).\n* Rezone via the portal to Bjora Marches to farm until you've filled your inventory or get bored.\n\n",
+            text: "Usage Equip your Norn title and make sure you are in Hard Mode. Start from Longeye's Ledge to Jaga Moraine by way of Bjora Marches. Don't aggro anything along the way. If a Frost Wurm pops up and knocks you down, cast SF as soon as you get up and you should be able to get away before it can cast anything on you. Take the bounty (if desired). If this is the first time you've encountered this shrine keeper, bring heroes along to quickly defeat him and flag them away from the farm afterwards. You will not need to bring them in future runs. Maintain Channeling, SF and SoD (cast both under Deadly Paradox), and your optional skill. (Note: When it says maintain SF you want to recast it before it expires. If you wait too long there is a chance that SF will be off for a split second before you get it back on and this will cause you to lose the damage reduction you've worked up.) Recast Shroud of Distress (and any other Assassin enchantments you have) on recharge and under Deadly Paradox to maximize the damage reduction stack, as Shadow Form will count each enchantment cast (even for the same spell) separately. Each cast's duration is tracked separately and will add 5 DR until expired. Group the vaettir up into a tight ball. You can do this in two separate pulls, or in one (see the videos). Kill them with Arcane Echoeded Wastrel's Demise (tabbing to a new vaettir after hexing one). Rezone via the portal to Bjora Marches to farm until you've filled your inventory or get bored.",
+        },
+        Section {
+            heading: Some(
+                "Counters",
+            ),
+            level: 2,
+            wikitext: "== Counters ==\n* Failure to maintain SF.\n* Taking too much damage (should only happen if you're not using the right equipment).\n\n",
+            text: "Counters Failure to maintain SF. Taking too much damage (should only happen if you're not using the right equipment).",
+        },
+        Section {
+            heading: Some(
+                "Videos",
+            ),
+            level: 2,
+            wikitext: "== Videos ==\n<big>'''A/Me'''</big><br />\n{{YouTube|h_FVCJAduMI}}\n* [http://www.youtube.com/watch?v=fFHy2f-1vJE 60 in one pull]\n* [http://www.youtube.com/watch?v=Nn2Mj4KD9bo With Commentary]\n\n",
+            text: "Videos <big> A/Me </big> h_FVCJAduMI http://www.youtube.com/watch?v=fFHy2f-1vJE 60 in one pull http://www.youtube.com/watch?v=Nn2Mj4KD9bo With Commentary",
+        },
+        Section {
+            heading: Some(
+                "Other Farms",
+            ),
+            level: 2,
+            wikitext: "== Other Farms ==\n",
+            text: "Other Farms",
+        },
+        Section {
+            heading: Some(
+                "Dragon Moss Farming",
+            ),
+            level: 3,
+            wikitext: "=== Dragon Moss Farming ===\n<pvxbig>\n* Requires the [[gww:A_New_Escort|A New Escort]] quest.\n* Run into [[gww:Drazach_Thicket|Drazach Thicket]] from [[gww:Saint_Anjeka%27s_Shrine|Saint Anjeka's Shrine]].\n* Maintain all enchantments and {{Skill icon|Mantra of Lightning}}.\n* Agro all of the Dragon Moss and run back towards the shrine along the ledge.  They should ball up on the ledge behind you.\n* Recast enchantments for a fresh set then cast {{Skill icon|Arcane Echo}} -> {{Skill icon|Wastrel's Demise}} -> and then keep spamming Wastrel's pressing <code>TAB</code> each time to switch to a different target.\n** If you brought other damage spells, you can cast those as well.\n</pvxbig>\n{|\n|-\n|<big>'''Video'''</big><br />\n{{YouTube|twMOIe27Gsg}}\n|}\n\n",
+            text: "Dragon Moss Farming Requires the A New Escort quest. Run into Drazach Thicket from Saint Anjeka's Shrine. Maintain all enchantments and Mantra of Lightning . Agro all of the Dragon Moss and run back towards the shrine along the ledge. They should ball up on the ledge behind you. Recast enchantments for a fresh set then cast Arcane Echo -> Wastrel's Demise -> and then keep spamming Wastrel's pressing TAB each time to switch to a different target. If you brought other damage spells, you can cast those as well. <big>Video</big> twMOIe27Gsg",
+        },
+        Section {
+            heading: Some(
+                "See also",
+            ),
+            level: 2,
+            wikitext: "== See also ==\n* [[Build:A/E Perma Boss Farmer|A/any Perma Solo Farm]]\n* [[Build:D/N_Vaettir_Farmer|D/N Vaettir Farmer]]\n* [[Build:E/Me_Obsidian_Flesh_Vaettir_Farmer|E/Me Obsidian Flesh Vaettir Farmer]]\n* [[Build:Me/A_Vaettir_Farm|Me/A Vaettir Farm]]\n* [[Build:Mo/A_55hp_Vaettir_Farmer|Mo/A 55hp Vaettir Farmer]]\n* [[Build:R/Me Vaettir Farmer|R/Me Vaettir Farmer]]\n\n{{FarmCat|vaettir=yes|profa=yes|mesmer tomes=yes|xp=yes|unid=yes|event=yes}}",
+            text: "See also A/any Perma Solo Farm D/N Vaettir Farmer E/Me Obsidian Flesh Vaettir Farmer Me/A Vaettir Farm Mo/A 55hp Vaettir Farmer R/Me Vaettir Farmer yes yes yes yes yes yes",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 2,
+            raw: "[build prof=assas/mesmer shadow=12+1+3 Domination=11 Inspiration=6 deadly=2+3 ][deadly paradox][shadow form][shroud of distress][Optional][Optional][Arcane Echo][Wastrel's Demise][Channeling][/build]",
+            name: None,
+            variant: None,
+            primary: Some(
+                Assassin,
+            ),
+            secondary: Some(
+                Mesmer,
+            ),
+            professions_raw: Some(
+                "assas/mesmer",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Shadow Arts",
+                    ),
+                    raw_name: "shadow",
+                    value: "12+1+3",
+                },
+                Attribute {
+                    name: Some(
+                        "Domination Magic",
+                    ),
+                    raw_name: "Domination",
+                    value: "11",
+                },
+                Attribute {
+                    name: Some(
+                        "Inspiration Magic",
+                    ),
+                    raw_name: "Inspiration",
+                    value: "6",
+                },
+                Attribute {
+                    name: Some(
+                        "Deadly Arts",
+                    ),
+                    raw_name: "deadly",
+                    value: "2+3",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "deadly paradox",
+                    raw: "[deadly paradox]",
+                },
+                Skill {
+                    name: "shadow form",
+                    raw: "[shadow form]",
+                },
+                Skill {
+                    name: "shroud of distress",
+                    raw: "[shroud of distress]",
+                },
+                Optional,
+                Optional,
+                Skill {
+                    name: "Arcane Echo",
+                    raw: "[Arcane Echo]",
+                },
+                Skill {
+                    name: "Wastrel's Demise",
+                    raw: "[Wastrel's Demise]",
+                },
+                Skill {
+                    name: "Channeling",
+                    raw: "[Channeling]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}

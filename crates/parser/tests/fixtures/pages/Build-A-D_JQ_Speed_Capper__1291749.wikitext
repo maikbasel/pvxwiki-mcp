@@ -1,0 +1,71 @@
+{{Real-Vetting|rating=testing|JQ}}
+{{TOC|pos=r}}
+
+
+Cap Jade quarries and shrines at mach speed thanks to Sin's incredible mobility options.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish ShadowArts=12+1+3 EarthPrayers=12 CriticalStrikes=3][Death's Charge][Aura of Displacement][Aura of Thorns (PvP)][Viper's Defense][Heart of Shadow][Optional][Shadow of Haste][Dash][/build]
+Optional slot:
+* {{skill pvxicon|Fleeting Stability|12}}
+* {{skill pvxicon|Caltrops|16}} 
+</pvxbig>
+== Equipment ==
+* Weapons
+** Set 1: 
+*** Spear: +5 Energy, +33% Bleeding duration, +20% enchantment duration (with Fleeting Stability) or +30 Health (with Caltrops),
+*** Shield: +30 health, +10 armor against lightning damage
+** Set 2: 
+*** Spear: +30 Health, +5 energy, +33% Poison duration
+*** Focus: +30 health, +10 energy, -1 energy regeneration
+** Set 3 (only if running Caltrops): 
+*** Spear: +30 Health, +5 energy, +33% Cripple duration
+*** Focus: +30 health, +10 energy, -1 energy regeneration
+
+*Armor
+**1 x Rune of Superior Vigor
+** Energy runes and insignias elsewhere.
+
+*WARNING:
+** Do NOT use any of the "{condition} applied to you lasts 20% shorter" rune. For whatever reason (bug) it causes your Bleeding to last shorter and make this build not deal enough damage.
+{{equipment|
+name1=Main equipment&nbsp;|code1=Pk5RRv8XCTaGqiW5rYl5IB7kl5IBLlo5IrVPl5IBrDl5I9E|
+name2=Poison set&nbsp;|code2=PkpQRfEoCTayoJVNKA|
+name3=Cripple set&nbsp;|code3=PkpQR3+nCTa8jGVNKA}}
+
+== Usage ==
+*<pvxbig> Start with Bleeding Spear set
+* To cap a shrine:
+#Create an anchor point with {{skill pvxicon|Shadow of Haste|16}} in a safe place. The earlier you activate it, the earlier you will get your Cooldown back.
+#Shadow step to a shrine with {{skill pvxicon|Aura of Displacement}} first to create a second anchor point for future use.
+##If low on health/already have {{skill pvxicon|Aura of Displacement}}'s anchor point, use {{skill pvxicon|Death's Charge|16}} instead.
+##For quarries, target NPC that's the furthest away from the centre NPC (usually the ranger). 
+#'''Move to the centre of the enemies''' - this is why you target that most faraway target, so you can get to the centre faster.[[File:SinRunning.png|thumb]] 
+##This is necessary to hit all enemies with {{skill pvxicon|Viper's Defense|16}}. Don't think about dying, you actually do have a lot of time before your health reaches 0. See image to the right for visualisation.
+#Press {{skill pvxicon|Aura of Thorns (PvP)|12}}
+#'''Switch to Poison set'''. This is necessary to deal 330 damage to kill enemies in the shrines
+#Use {{skill pvxicon|Viper's Defense|16}}.
+#If {{skill pvxicon|Shadow of Haste|16}} is active, press {{skill pvxicon|Dash}} to return to safety, switch to bleeding set and start seeking another shrine immediately. If not, cancel {{skill pvxicon|Aura of Displacement}} to achieve the same effect.
+* Use all of your shadowsteps and speedboosts to quickly move through the map and ignore all the danger.
+* Use {{skill pvxicon|Heart of Shadow|16}} to run away from sticky situation, heal when low on health, or to move upwards/downwards slopes.
+* Use {{skill pvxicon|Fleeting Stability|12}} to increase your movement speed during {{skill pvxicon|Shadow of Haste|16}} or interchange its use with {{skill pvxicon|Dash}} to move around map quickly.
+* Use {{skill pvxicon|Fleeting Stability|12}} to prevent dangerous knockdowns such as {{skill pvxicon|Lightning Surge|12}}, and use it at the same time as {{skill pvxicon|Dash}} to counter cripples.
+* {{skill pvxicon|Fleeting Stability|12}} can also be used before using {{skill pvxicon|Aura of Displacement}} for a cover enchantment.
+* Use {{skill pvxicon|Caltrops|16}} on Carriers, with Crippling set equipped.
+* Ignore shrines protected by healers, just focus on anything unprotected.
+* You are pretty much unable to kill anything that's not a shrine, so avoid fighting as much as possible. If all shrines are capped, you can support your team with bleeding and poison.
+
+* If you have the time, the most powerful thing you can do is create 2 anchor points on JQ highgrounds, with you staying on the 3rd one, like on this image: [[File:GW SIN JQ Positioning.png|thumb]]
+** Anchor yourself on highground 1 and then put another anchor on highground 2 or highground 3. Then, stay active in the leftover highground. This way, if any shrine on the map needs to be recapped, you can activate one of the anchors to teleport towards the location in an instant.
+*** Even if you are outside of compass range for one anchor (and thus unable to teleport to it), you can always teleport to the other anchor first, which will give you enough range to teleport to your main anchor, traveling the entire map in literal quarter of a second.
+== Counters ==
+* Healers protecting shrines.
+* Massive knockdowns, enchantment and stance removals.
+== Notes ==
+* The combo deals 333 damage, assuming Bleeding set is equipped while activating Aura of Thorns, and poison set while activating Viper's Defense. Even lowest amount of healing the NPCs will prevent you from capping a shrine
+* While killing enemies via bleeding and poison takes about 30 seconds of waiting, you can do your capping combo to 1 shrine every 10 seconds.
+* Do NOT use any of the "{condition} applied to you lasts 20% shorter" rune. For whatever reason (bug) it causes your Bleeding to last shorter and make this build not deal enough damage to cap the shrines. Unfortunate, as the reduced cripple duration would be insanely useful.
+== Variants ==
+* {{skill pvxicon|Wastrel's Collapse}} over {{skill pvxicon|Aura of Displacement}} and {{skill pvxicon|Dark Escape|16}} over {{skill pvxicon|Fleeting Stability|12}}. Loses an anchor and mobility, but has increased utility, energy economy, and direct-encounter survivability. To cap a shrine without Shadow of Haste, precast Dark Escape, and then retreat with Heart of Shadows after poisoning enemies.
+</pvxbig>

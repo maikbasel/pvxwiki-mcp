@@ -1,0 +1,35 @@
+{{Real-Vetting|rating=testing|hero}}{{TOC|pos=r}}Assassin Hero Build for balling and snaring foes to allow AoE Nuking. Micro required.
+==Attributes and Skills==
+<pvxbig>
+[build prof=A/E name="Build: Hero - A/E Suicide Grasp" ear=10 dead=8+1 sha=12+1+3][Death's Charge][Deadly Paradox][Shadow Form][Shroud of Distress][Armor of Earth][Disrupting Dagger][Signet of Deadly Corruption][Grasping Earth][/build]
+</pvxbig>
+==Equipment==
+*q9 Earth Staff of Enchanting
+===Runes and Insignia===
+*5x Radiant Insignia
+*Rune of Superior Shadow Arts
+*Highest Vigor Rune you can afford
+*Rune of Minor Deadly Arts
+*2x Rune Of Attunement
+==Usage==
+
+* Micro usage of Deadly Paradox -> Shadow Form -> Shroud of Distress -> Armor of Earth
+* Have the Hero initiate aggro by microing Death's Charge, preferably to a centrally-located foe
+* Micro Grasping Earth
+* Remainder of team can then nuke the snared enemies with AoE (ESurge, Fire Ele, RoJ Monk, etc.)
+
+==Counters==
+
+* Interrupts
+* Knockdown
+* Any Enchantment Removal that can remove Shadow Form
+
+== Notes ==
+
+* Suggest running with a [[Build:Me/any Psychic Instability Hero]] to keep foes knocked down after being snared and balled on the Shadow Form Tank, to allow AoE nukes to kill them without the foes fleeing the AoE damage
+* Works well using an [[gww:Assassin's_Promise|Assassin's Promise]] Caller player build once foes are balled on the Shadow Form Tank
+** '''Examples:'''
+*** [[Build:E/A Assassin's Promise]]
+*** [[Build:Me/A Assassin's Promise]]
+*** [[Build:N/A Assassin's Promise Death Magic]]
+* You can also use one or two [[Build:D/any Vow of Strength Hero]] for massive AoE damage on enemies. Just be sure to equip them with [[gww:Death's_Charge|Death's Charge]] so they can shadow step into the group of balled foes and prevent aggro from spreading.

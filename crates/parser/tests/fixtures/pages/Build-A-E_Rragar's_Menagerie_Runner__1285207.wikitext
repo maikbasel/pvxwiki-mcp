@@ -1,0 +1,94 @@
+{{Real-Vetting|rating=great|running|}}
+{{Dungeon Build}}{{Requires-Cons|bu=yes}}
+{{TOC|pos=r}}
+Solo [[gww:Rragar's Menagerie|Rragar's Menagerie]] in HM. 
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/E ear=12 sha=12+1+3 cri=3][Shroud of Distress][Shadow Form][Dwarven Stability][Dark Escape][Armor of Earth][Ebon Battle Standard of Honor][Sliver Armor][Ebon Vanguard Sniper Support][/build]
+{{Variantbar|prof=R|name=R/A Rragar's Menagerie Runner|template=[build prof=R/A exp=12+1+3 sha=12][Shroud of Distress][Shadow Form][Dwarven Stability][Whirling Defense][Ebon Vanguard Sniper Support]["Finish Him!"][Heart of Shadow][Death's Charge][/build]
+*<b>Note</b> The Ranger variant also requires a grail and egg+corn at all levels.}}
+</pvxbig>
+
+== Equipment ==
+* Armor Full Blessed or Full Vanguard
+* Martial Weapon of Enchanting
+* Shield of Fortitude (+10ar vs. Fire)
+* Staff of enchanting +20e 
+
+== Usage ==
+* Start from Doomlore with quest Veiled Threat. Run south through Dalada, Grothmar & Sacnoth to dungeon. Alcohol helps at Sacnoth for KD prevention.
+* Maintain [[gww:Shadow Form|Shadow Form]], [[gww:Shroud of Distress|Shroud of Distress]], [[gww:Dwarven Stability|Dwarven Stability]] and [[gww:Dark Escape|Dark Escape]] while running.
+=== Level 1 ===
+* Pop BU and other cons (cupcake or armor of salvation), cast shroud, sf, ds and de grab a keg and run it wall down the hill.
+* After the wall crumbles run to the Keg Station and keg spam the melee char.
+* After the melee are dead run into next room. Silver the melee with all enchants up then loose aggro. Snipe w/o sf the Prophet->Necro->Flameshielders. Then kill the Warden. A summon stone will help.
+* Aggro the melee in Rragars chamber and sliver them down. Sliver Rragar down and grab the key.
+* Run back to where wall crumbled and take a right then stay left until u get to another keg station.
+* Keg spam melee then take a keg to the cracked wall and drop it.
+* Once wall crumbles stay right until the last chamber then stay left til zone.
+
+=== Level 2 ===
+* Pop BU and run right.
+* Run down towards the water and take right followed by immediate left. Avoid the sewer and continue straight towards chamber with 2 bridges.
+* Take left bridge then stay right to Rragars' chamber.
+* Sliver melee in Rragars' chamber then sliver Rragar. Grab the Key.
+* Follow Rragar to the gate, making sure not to get body blocked. 
+* Open gate and proceed to lvl 3.
+
+=== Level 3 ===
+* Pop BU and run to the left.
+* In the chamber of the second rez shrine there is a Keg Station. Next to this station is a breakable wall.
+* Cast enchantments and dark escape and near the wall to the char pop. Then keg spam the melee.
+* After the melee are dead run past the wall to the Flesheater boss group.
+* Sliver the boss group hound 1st->harrows->bosses using the 1st group you come across as sliver fuel.
+:* Make sure to avoid standing near corpses as Bosses will use putrid explosion. 
+* Once boss group is dead, grab the key and run back past the keg station and north east through the firefly rooms.
+* Head north until you see the gate lock. Proceed through it and take a right into the boss chamber.
+* Kill Rragar 1st using sniper and sliver. (a summon stone speeds up the process.. ghastly is a good choice)
+* After Rragar is dead use alcohol with dwarven stability to avoid KD and kill Hidesplitter.
+
+==Ranger Usage==
+* Start from Doomlore with quest Veiled Threat. Run south through Dalada, Grothmar & Sacnoth to dungeon. Alcohol helps at Sacnoth for KD prevention.
+* Maintain [[gww:Shadow Form|Shadow Form]], [[gww:Shroud of Distress|Shroud of Distress]] and [[gww:Dwarven Stability|Dwarven Stability]] (with alcohol) while running.
+=== Level 1 ===
+* Pop cons, cast shroud, sf, ds and de grab a keg and run it to the wall down the hill.
+* After the wall crumbles run to Keg Station and keg spam the melee char.
+* After the melee are dead run into next room. Sniper the monk and the necromancer without SF. If you have a low ebon rank you might need FH to finish them off. After that whirl everything down and finish off the boss with EVSS.
+* Jump to Rragar and whirl him down.
+* Run back to where wall crumbled and take a right then stay left until you get to another keg station.
+* Keg spam the melee then take a keg to the wall and drop it.
+* Once wall crumbles stay right until the last chamber then stay left til zone.
+
+=== Level 2 ===
+* Pop cons and run right.
+* Run down towards water and take right followed by immediate left. Avoid the sewer and continue straight towards chamber with 2 bridges.
+* Take left bridge then stay right to Rragars' chamber.
+* Whirl Rragar.
+* Follow Rragar making sure not to get body blocked to the gate. 
+* Open gate and proceed to lvl 3.
+
+=== Level 3 ===
+* Pop Cons and run to the left.
+* In the chamber of the second rez shrine there is a Keg Station. Next to this station is a breakable wall.
+* A group breaks the wall, run past them.
+* Run to the Flesheater boss group.
+* Whirl the boss group hound 1st->harrows->bosses using the 1st group you come across as sliver fuel, make sure to HoS when health drops. 
+:* Make sure to avoid standing near corpses as Bosses will use putrid explosion. 
+* Once boss group is dead, grab the key and run back past the keg station and north east through the firefly rooms.
+* Head north until you see the gate lock. Proceed through it and take a right into the boss chamber.
+* Kill Rragar 1st using sniper.
+* After Rragar is dead use alcohol with dwarven stability to avoid KD and kill Hidesplitter, (a summon stone speeds up the process.. ghastly is a good choice)
+
+== Counters ==
+* Body blocking
+* KD
+* Interrupts
+
+== Variants ==
+=== Ranger build ===
+<pvxbig>
+* [[Heart of Shadow@15] and [["Finish Him!"] can be replaced with [[Feigned Neutrality@15] and [[Shadow Sanctuary (Kurzick)]/[[Shadow Sanctuary (Luxon)].</pvxbig>
+== External links ==
+* [http://www.guildwarsguru.com/forum/current-dungeon-guides-t10450293.html Guildguru thread containing dungeon]
+{{YouTube|mJYNxg_bnJM}}

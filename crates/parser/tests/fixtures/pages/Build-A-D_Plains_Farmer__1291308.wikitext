@@ -1,0 +1,57 @@
+{{Real-Vetting|rating=great|farming}}
+{{TOC|pos=r}}
+
+Use [[gww:Signet of Mystic Speed|Signet of Mystic Speed]] for [[gww:Shadow Form|Shadow Form]] to bypass the [[gww:Mindblade Spectre|Mindblade Spectre's]] [[gww:Leech Signet|Leech Signet]] and successfully farm them in NM.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/D sha=12+1+3 cri=6+1 scy=9 win=4 earthp=6][Deadly Paradox@0][Shadow Form][Shroud of Distress][Critical Agility][Signet of Mystic Speed][Optional][Optional][Optional][/build]
+* {{skill icon|Optional}}:
+** {{skill pvxicon|Sand Shards|6}} - recommended
+** {{skill pvxicon|Mystic Sandstorm|10}} - Note that they will flee once below 20% health when using this skill.
+** {{skill pvxicon|Grenth's Aura|9}} - Life steal
+** {{skill pvxicon|Dark Escape|16}} - If you don't wan't to use a personal [[gww:Birthday Cupcake|con]] 
+*** Dark Escape or pcons improve the run's stability, providing an anti-fail for triggering the traps or help lose aggro when doing a step wrong.
+** {{skill pvxicon|Great Dwarf Armor|10}} If you feel you won't survive, or want to aggro big piles of groups
+** {{skill pvxicon|Shadow Sanctuary|10}}/{{skill pvxicon|Shadow Refuge|16}} If again, you feel like you won't survive.
+** {{skill pvxicon|"I Am Unstoppable!"|10}} Anti trap (also useful at pools)
+</pvxbig>
+
+== Equipment ==
+;Armor
+* [[gww:Radiant Insignia|Radiant Insignias]], Superior Vigor & Attunement runes
+;Weapons
+* Martial Weapon of Enchanting with +5e and a Shield of Devotion with -2/ench or -5/20%
+* Zealous Scythe of Enchanting with +15^ench or +15^50 - e.g. [[gww:Scythe of Corruption|Scythe of Corruption]]
+
+== Usage ==
+* Grab a 7 hero team.
+* Clear the chamber and [[gww:Bladed Aatxe|Aatxes]].
+* Take the [[gww:Lost Soul (Underworld)|Lost Soul]]'s quest.
+* Aggro all enemies, let heroes come after bodyblock.
+* Clear the west passage of enemies and flag heroes back.
+* Run to the [[gww:Obsidian Behemoth|Behemoths]].
+* If it's not blocked, run past it and use a cupcake or candy for running. If it is blocked, use your heroes to clear the Behemoths.
+* Run to the plains.
+* Dodge the [[gww:Charged Blackness|Charged Blackness]].
+* At plains, kill the first group. You must use [[gww:Signet of Mystic Speed|Signet of Mystic Speed]] every time for Shadow Form and Shroud of Distress.
+* Aggro the Mindblades. Bodyblock them against the wall on your right. (See the video)
+* Kill them and rinse and repeat the usage.
+* Avoid Skeletons of Dhuum whenever possible.
+
+== Counters ==
+* Forgetting [[gww:Signet_of_Mystic_Speed|SoMS]]
+* Lagging out
+* Too much aggro without [[gww:Critical_Agility|Critical Agility]]
+* Not keeping up SF due to [[gww:Energy|energy problems]] or [[gww:Latency|lag]]
+
+== Videos ==
+{{YouTube|SXyBfW7Qtvk}}
+* [http://www.youtube.com/watch?v=70PhSJ7mei4 Video using heroes in labrinyth]
+* [http://www.youtube.com/watch?v=WNXKvcIFF0U Video of solo run]
+
+== See also ==
+* [[Build:D/any General Vow of Silence Farmer]] - Dervish alternative, uses Vow of Silence and so doesn't have Shadow Form's damage limit.
+* [[Build:A/D_FoW_Farmer|A/D FoW Farmer]]
+
+{{FarmCat|ecto=yes|profa=yes}}

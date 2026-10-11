@@ -1,0 +1,64 @@
+{{Real-Vetting|rating=good|running}}{{Build update|
+*A/Me variant: Nerf to Wastrel's Demise.|Game updates/20260624|2026-06-24}}
+{{Dungeon Build}}{{Requires-Cons|bu=yes}}{{TOC|pos=r}}
+
+Run the dungeon Heart of the Shiverpeaks for pleasure and profit.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/E ear=12 sha=12+3+1 cri=3][Shroud of Distress][Shadow Form][Dwarven Stability][Dark Escape][Ebon Battle Standard of Honor][Sliver Armor][Heart of Shadow][Death's Charge][/build]
+</pvxbig>
+
+== Equipment ==
+* Full Blessed
+* Martial weapon of Enchanting
+* Shield of Fortitude (+10ar vs Fire)
+
+== Usage ==
+* Start at Central Transfer Chamber.
+* Run to the dungeon with Dwarven Stability and Dark Escape. Shroud of Distress may be used if needed.
+* Maintain Shadow Form, Shroud of Distress, Dwarven Stability, and Dark Escape. Alcohol and candy/cupcake is suggested to make the run easier. Stop to recast in between enemy groups.
+
+=== Level 1 ===
+* Pop an essence of celerity.
+* Head down the stairs and straight ahead. Ignore the stairs to your left.
+* Take a right into a narrow corridor. Use shadowsteps if you get bodyblocked.
+* Make a U-turn and follow this path until you see Budger Blackpowder.
+* Grab a keg from him and head through the left corridor and blow up the nearby wall. Watch out for the Skelk here.
+* Follow the right wall to the gate. You need to kill the group of Skelk for the gate to open.
+* Run to the right corner of the gate. Use EBSoH and Sliver Armor to kill them. After the Skelk Corrupter dies, you can drop Shadow Form. A Summoning Stone can speed this part up tremendously since the Skelk Slashers heal themselves with Shadow Refuge and kite with Viper's Defense.
+
+=== Level 2 ===
+* Pop an essence of celerity and follow the left wall.
+* Use a keg to blow up the wall blocking you.
+* Run up near the res shrine until you break aggro with any enemies.
+* Kill the group of Skelk at the gate. There are no Skelk Slashers, so this part will go faster.
+
+=== Level 3 ===
+* Pop an essence of celerity.
+* Head down the left path and avoid the mobs.
+* The room will open it at a group of Flame Djinns and Flowstone Elementals. Use a keg to blow up the wall to your left and enter the boss room.
+* Maintain Dark Escape at all times. When you aggro Magmus, a few groups of Ooze will spawn. Pull 1-2 of these groups at a time into the vents and Sliver them to death. Be careful with Earthbound Oozes, Shockwave hurts.
+* Once you're clear, pull Magmus to a fire vent. He will spam Inferno and Flame Burst, both which hit pretty hard. Use Heart of Shadow and Death's Charge to keep your health up. Use Sliver Armor and kegs to speed up the killing.
+
+== Variants ==
+<pvxbig>{{Variantbar|prof=A|expanded|name=A/Me Heart of the Shiverpeaks Runner|template=[build prof=A/Me dom=12 sha=12+1+3 cri=3][Shadow Form][Shroud of Distress][Dwarven Stability][Dark Escape][Empathy][Wastrel's Demise][Optional][Death's Charge][/build]
+
+'''Optionals:'''
+* {{skill pvxicon|Ebon Vanguard Assassin Support}}
+* {{skill pvxicon|Viper's Defense|16}}
+* {{skill pvxicon|Shadow Sanctuary|10}}
+* {{skill pvxicon|Channeling|0}}
+* {{skill pvxicon|Heart of Shadow|16}}}}
+</pvxbig>
+
+== Counters ==
+* Rubberbanding
+* Knockdown
+* Energy management
+
+== Videos ==
+{{YouTube|n2boOZIpq-I}}
+
+== Notes ==
+* A decent Delver rank for maintaining Dark Escape

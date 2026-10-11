@@ -1,0 +1,39 @@
+{{Real-Vetting|rating=testing|farming}}{{Build update|wastrel's demise recharge +2|Game updates/20260624|2026-06-24}}{{TOC|pos=r}}
+
+This build is made to solo farm the [[gww:Greater Blood Drinker|Greater Blood Drinker]] groups in the first room of [[gww:Urgoz's Warren|Urgoz's Warren]], in [[gww:Hard Mode|Hard Mode]], for [[gww:Amber Chunk|Amber Chunks]], [[gww:Category:Zodiac_weapons|Zodiac Weapons]] and other Urgoz/Deep exclusive OS weapons (like the [[gww:Exalted Aegis|Exalted Aegis]]). It'll also generate 280 [[gww:Kurzick faction|Kurzick faction]] per run.
+
+== Attributes and Skills ==
+<pvxbig>[build prof=A/Me sha=12+1+3 dom=11 ins=6][Deadly Paradox][Shadow Form][Shroud of Distress][Channeling]["I Am Unstoppable!"][Optional][Wastrel's Demise][Dash][/build]</pvxbig>
+===Variants=== 
+<pvxbig>{{Variantbar|name=Me/A Urgoz's Warren Farmer|prof=Me|template=[build prof=Me/A dom=9+1+3 fas=8+1 ins=5+1 sha=12][Deadly Paradox][Shadow Form][Shroud of Distress][Mantra of Flame]["I Am Unstoppable!"][Optional][Wastrel's Demise][Dash][/build]}}</pvxbig>
+=== Optionals ===
+<pvxbig>
+*{{skill pvxicon|Arcane Echo}} - Significantly faster, but you'll need cons (Birthday Cupcake and/or War Supplies) for the build to reliably work.
+*{{skill pvxicon|Great Dwarf Armor}} - Extremely safe option, but slower.</pvxbig>
+== Equipment ==
+* Max armor, Blessed Insignas.
+* Spear with +5e/+20% enchantments.
+* A Shield with +10 AR vs. Fire Damage (Inscription: "Sleep Now in the Fire").
+* A Domination Magic Staff with +20e/+20 enchantment duration. Swap weapons if in need of energy.
+
+== Usage ==
+[[File:Urgoz farm groups.png|thumb|Map of the run with group locations.]]
+<pvxbig>''Using a [[Build:P/any Farming Speed Boost Hero|Paragon Speed boost hero]] at the start will speed up the run, though it is not mandatory.''
+* Enter Urgoz's Warren. Pop your cons if using them.
+* Cast [[Deadly Paradox], [[Shadow Form] then [[Dash] through the hopping critters, going to your right. You can either hug the wall to your right to avoid the [[gww:Dredge|Dredge]] or get through them with [[Shroud of Distress] and [["I am Unstoppable!"].
+* Get though the open door in front of you. Cast your defensive skills, then walk to the back of this room near the other door. Greater Blood Drinkers will pop and ball themselves.
+* If they are correctly balled, spike with [[Wastrel's Demise] (if using [[Arcane Echo], copy it).
+* Cast your enchantments, head through the second door, run through the Dredge group (avoid Cripple with "IaU!") then position yourself in the corner before the third door. Dredge will stop following you and the second Blood Drinker group will pop. Kill them.
+* Again with your enchantments on, get through the big open room by running forward to the door in front of you. Another Blood Drinker group will pop but ignore it and keep moving forward, running through another Dredge group.
+* Get inside the last room, Dredge will stop following and a Blood Drinker group will pop. Kill them.
+* Walk backwards, then kill the Blood Drinker group that popped during the run. Pull it with your spear or a longbow to separate it from the huge Dredge group in the main room. Slay this fourth group to end the run.
+</pvxbig>
+== Counters ==
+<pvxbig>
+* Getting bodyblocked by the Dredge.
+* [[Disenchantment|Spirit of Disenchantment] removing Shadow Form or Shroud of Distress. When running through Dredge, have [[Channeling] as your cover enchantment.
+</pvxbig>
+== Notes ==
+* There is sometimes a locked chest in the area so you can bring [[gww:Lockpick|lockpicks]]. Only open it once your farming run is over.
+
+{{FarmCat|os=yes|profa=yes|profme=yes|zodiac=yes|amber=yes|kurzick=yes}}

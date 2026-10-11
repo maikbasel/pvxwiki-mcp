@@ -1,0 +1,94 @@
+{{Real-Vetting|rating=great|running}}
+{{Dungeon Build}}
+{{Requires-Cons}}
+{{TOC|pos=r}}
+
+Run [[gww:Ooze Pit|Ooze Pit]] HM. The dungeon requires that you run past Ooze groups, kill [[gww:Gloop|Gloop]], and kill all three [[gww:Prismatic Ooze|Prismatic Oozes]] by avoiding [[gww:Gelatinous Absorption|Gelatinous Absorption]].
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=A/D sha=12+1+3 win=12 cri=3][Shroud of Distress][Shadow Form][Dwarven Stability][Dark Escape][Optional][Grenth's Aura][Ebon Vanguard Assassin Support][Optional][/build]
+'''Optionals:'''
+* {{skill pvxicon|Heart of Shadow|16}} or {{skill pvxicon|Death's Charge|16}} - Recommended.
+* {{skill pvxicon|Shadow Sanctuary}}
+* {{skill pvxicon|Radiation Field}}
+* {{skill pvxicon|Dash}} - Can be taken over Dark Escape
+{{Variantbar|name=A/N Ooze Pit Runner|template=[build prof=A/N sha=12+1+3 curse=12 cri=3][Shroud of Distress][Shadow Form][Dwarven Stability][Dark Escape][Optional][Insidious Parasite][Suffering][Radiation Field][/build]
+'''Optional:''' (in addition to the above optionals section)
+* {{skill pvxicon|Ebon Vanguard Assassin Support}}
+'''Specific Usage:'''
+* At Gloop, maintain Insidious Parasite and Dark Escape. Suffering/Radiation Field can be used if energy allows.
+** If you need to auto-attack with zealous to maintain energy, be aware that Dark Escape will end.
+* At the [[gww:Prismatic Ooze|Prismatic Oozes]], maintain Suffering and Radiation Field.
+}}
+{{Variantbar|name=A/D Low-Cons Ooze Pit Runner|template=[build prof=A/D sha=11+1+2 win=12 cri=6+2][Deadly Paradox][Shroud of Distress][Shadow Form][Dwarven Stability][Dash][Way of the Master][Critical Agility][Grenth's Aura][/build]
+* Requires only a Cupcake and Alcohol.
+* Getting stuck or hexed by Earthbound Oozes is guaranteed death.
+* Maintaining Critical Agility when fighting is critical to surviving at Gloop.
+}}
+</pvxbig>
+
+== Equipment ==
+* Blessed Armor
+* Vitae or Attunement runes
+* Zealous Scythe of Enchanting
+* High Energy Staff for running
+* Longbow
+* For A/N variant at Gloop:
+** Any Martial Weapon of Enchanting (containing +5 Energy)
+** Shield of Fortitude (+10 vs. Cold)
+
+=== Consumables ===
+* [[gww:Essence of Celerity|Essence of Celerity]]
+* [[gww:Armor of Salvation|Armor of Salvation]]
+* [[gww:Grail of Might|Grail of Might]]
+* [[gww:Birthday Cupcake|Birthday Cupcake]]s
+* [[gww:Alcohol|Alcohol]] for preventing knockdown via Dwarven Stability.
+
+== Usage ==
+[[File:Ooze Pit getting there.jpg|thumb|Right|Route to dungeon through [[gww:Grothmar Wardowns|Grothmar Wardowns]]]]
+[[File:Ooze Pit.jpg|thumb|Right|Route inside [[gww:Ooze Pit|Ooze Pit]]]]
+
+* Start at Longeye's Ledge.
+* Run to the dungeon with Dwarven Stability and Dark Escape.
+* Head south avoiding the mobs until the stone bridge. Put of Shroud of Distress if you need to run past the Charr Seekers.
+
+=== Dungeon ===
+* Use your consumables.
+* Avoid running near Earthbound Oozes, they will snare you with Grasping Earth, which will dramatically slow you down and will likely result in death.
+* Run past the first two groups of ooze and hug the right wall.
+* You can run past the third group without aggroing most of the time by hugging the right side. Keep heading north past the res shrine.
+* Step on the button to open the door and follow the right corridor past a three Ooze groups and some Volatile Ooze. Take the north path at the next res shrine.
+* Avoid the rolling boulders and Ooze groups as you continue northward.
+* At the next shrine, take a right into the a narrow passage and take care not to get snared or rubberband on the Ooze that spawn. Step on the button, you have two options to follow:
+#(recommended) Head back up the passage you came and take a right, heading east. Take a right into the large, open room filled with Oozes, follow the left corridor straight across from you.
+#Walk through the narrow path, not aggroing the Ancient Ooze in the next room. Keep running forward through the next narrow corridor. Avoid the boulder that spawns. There is a small place on the left where you are safe. Turn left and head through the passage. A couple Incubi will spawn here, cast Shadow Form and cover it with all your other enchantments before running through. Once you reach the large room, take a turn to the right and head into the adjacent passage.
+* Follow the right wall up an incline into a small split-off, there are some Volatile Ooze at this junction.
+* Use your longbow to pull Gloop. If you aggro an Aggressive Ooze, you can just run back and take it out first. Gloop will not follow as long as the Aggressive Ooze will.
+* Kill Gloop using your zealous scythe and Grenth's Aura with Ebon Vanguard Assassin Support when your energy allows.  Recast Grenth's Aura to steal health if needed.
+* Grab the boss key, then head back the way you came.
+* Run past the two Incubi (They are already spawned if you took this passage prior). Cover Shadow Form with your other enchantments to avoid getting stripped by Soulrending Shriek.
+* Open the door with the boss key while you avoid the group of Earthbound and Shimmering Oozes.
+* Pull the three Prismatic Oozes off the raised platform away from the entrance, typically the back wall. This will avoid the subsequent spawns after the chest spawns.
+* Once they are balled on you, use Grenth's Aura and your scythe to kill them.  They must all die at the exact same time.  When one dies, a horde of oozes will spawn and you will not be able to survive.
+* Die from the ooze spawns after killing the Prismatic Oozes, then grab your chest reward after you resurrect. Because you pulled the Prismatic Oozes from the center, the spawns should be out of the way of the chest.
+
+== Counters ==
+* Grasping Earth from Earthbound Oozes.
+* Rubberbanding
+* Knockdown
+* Frozen Burst without Dark Escape up.
+
+== Notes ==
+* r5 Delver rank for maintaining Dark Escape is preferred.
+* Dark Escape will be removed from attacks, avoid using daggers for energy against Gloop.
+
+== Videos ==
+{|
+|-
+|<big>'''A/D Full Cons'''</big><br />
+{{YouTube|hIW2nWrFFE4}}
+|-
+|<big>'''A/D Low Cons'''</big><br />
+{{YouTube|ozULU7M2liQ}}
+|}

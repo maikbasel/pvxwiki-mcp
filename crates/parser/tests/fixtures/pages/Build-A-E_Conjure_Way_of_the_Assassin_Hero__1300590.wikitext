@@ -1,0 +1,35 @@
+{{Real-Vetting|rating=testing|hero}}{{TOC|pos=r}}<pvxbig>This hero deals [[conjure lightning@6] improved damage with a quick dagger attack combo sped up by [[way of the assassin@13].</pvxbig>
+== Attributes and Skills ==
+{{Tabber|TitleOne=Conjure Lightning|TextOne=<pvxbig>[build prof=Assassin/Elementalist DaggerMastery=12+1+3 CriticalStrikes=11+2 ShadowMagic=2 AirMagic=6][Death's Charge][Way of the Assassin][Resurrection Signet][Jagged Strike][Fox Fangs][Death Blossom][Critical Eye][Conjure Lightning][/build]</pvxbig>|TitleTwo=Conjure Flame|TextTwo=<pvxbig>[build prof=Assassin/Elementalist DaggerMastery=12+1+3 CriticalStrikes=11+2 ShadowMagic=2 FireMagic=6][Death's Charge][Way of the Assassin][Resurrection Signet][Jagged Strike][Fox Fangs][Death Blossom][Critical Eye][Conjure Flame][/build]</pvxbig>|TitleThree=Conjure Frost|TextThree=<pvxbig>[build prof=Assassin/Elementalist DaggerMastery=12+1+3 CriticalStrikes=11+2 ShadowMagic=2 WaterMagic=6][Death's Charge][Way of the Assassin][Resurrection Signet][Jagged Strike][Fox Fangs][Death Blossom][Critical Eye][Conjure Frost][/build]</pvxbig>}}<pvxbig>
+*{{skill pvxicon|Resurrection Signet}}
+**{{skill pvxicon|Golden Phoenix Strike|16}}
+**{{skill pvxicon|Golden Fang Strike|16}}
+**{{skill pvxicon|Exhausting Assault|16}}
+**{{skill pvxicon|Signet of Malice}}</pvxbig>
+== Equipment ==
+*<pvxbig>[[gww:Shocking|Shocking]]/[[gww:Fiery|fiery]]/[[gww:Icy|icy]] daggers, inscribed [[gww:Inscription#Combat enhancing|"Strength and Honor!"]], ...
+**ideally: [[gww:Of the (Profession)|of the ranger]], of the necromancer;
+**next-best: of the warrior;
+**legacy options: [[gww:Of Defense|of defense]]/[[gww:Of Fortitude|of fortitude]].
+*5 [[gww:Blessed Insignia|blessed insignias]].
+*Rune of superior [[gww:Rune of Vigor|vigor]].
+*Rune of [[gww:Rune of Clarity|clarity]].
+*Rune of [[gww:Rune of Restoration|restoration]].</pvxbig>
+== Usage ==
+*{{Hero Mode|fight}}
+== Synergies and Counters ==
+<pvxbig>;Performs well with/against:
+*With standard support such as [[splinter weapon@16], [[strength of honor], [[ebon battle standard of honor@10], [[Great Dwarf weapon@10], [[gust] (or other speed boosts).
+*Against foes vulnerable to the selected damage type.
+*Against single targets and small groups of foes.
+;Performs poorly with/against:
+* Against frequent enchantment removal.
+* Against large and very large groups of foes.
+* Against general anti-physical.
+* Against general anti-melee. 
+* Against kiting targets.
+* Against attack punishment like [[empathy] or [[insidious parasite].
+* Against action punishment like [[visions of regret] or [[spiteful spirit].</pvxbig>
+== See Also ==
+*[[Build:A/any Dagger Spammer Hero|Way of the Assassin Hero]]
+*[[Build:A/W Skull Crack Hero|Skull Crack Hero]]

@@ -1,0 +1,74 @@
+{{Real-Vetting|rating=great|GvG|AB}}
+{{flux|Hidden Talent|Slight attribute bonus to air magic.|positive}}
+{{flux|There Can Be Only One|Easier spiking of other assassins in alliance battles.|positive}}
+{{flux|Xinrae's Revenge|Can be used to disable the skills of other assassins with a similar build with the risk of backfiring.}}
+{{flux|Minion Apocalypse|Killing targets will put you under pressure, which can be troublesome when no monk is in range.|negative}}
+{{flux|Parting Gift|Picking up the gift allows easier escaping after scoring a kill|positive}}
+{{TOC|pos=r}}
+
+A powerful spike sin using Wastrel's Collapse for shadowstepping and knock downs while improving its damage output with a Conjure.
+
+== Frequency ==
+Infrequently seen as a part of split builds, usually replacing a split elementalist, or in main team as a spike caller.
+
+== Attributes and Skills ==
+<pvxbig>[build prof=Assassin/Elementalist Dagger=12+1+1 WaterMagic=10 CriticalStrikes=8+1][Wastrel's Collapse][Leaping Mantis Sting][Fox Fangs (PvP)][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Conjure Frost][Dash][/build]
+</pvxbig>
+== Equipment ==
+'''Runes and insignia'''
+*5 [[gww:Blessed Insignia|blessed insignias]].
+*Rune of [[gww:Rune of Vigor|superior vigor]].
+*2 runes of [[gww:Rune of Vitae|vitae]].
+*Rune of [[gww:Rune of Restoration|restoration]].
+
+'''Weapons'''
+*[[gww:40/20/20|40/20/20]] water magic.
+*[[gww:Icy|Icy]] daggers of [[gww:Of Defense|defense]] with "''[[gww:Inscription#Combat enhancing|Guided by Fate]]''."
+*[[gww:Zealous|Zealous]] daggers as a backup when disenchanted.
+*Icy spear of defense, with
+**Strength shield of [[gww:Of Fortitude|fortitude]], -20% cripple duration.
+**Strength shields of fortitude, +10 armor against each damage type.
+
+{{equipment|
+name1=Main equipment&nbsp;|code1=PkpxFP1Fy2oQlpJ90UlpJDLfopJHVPlpJHrTlpJFF|
+name2=40/20/20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|code2=PgZwmne1SPF|
+name3=Zealous daggers|code3=PkZwFP9FykK|
+name4=First shield set&nbsp;&nbsp;&nbsp;|code4=PkpQRPfoBBZikpW5L}}
+
+== Usage ==
+<pvxbig>
+''Build''
+*Maintain [[Conjure Frost@10].
+**Whenever you are in main team let your monks know you're going to cast your conjure so they can cover it with a throwaway enchantment.
+*Use [[Wastrel's Collapse] to knock a target down and shadowstep to it.
+**The aftercast delay of skills counts as not using a skill and is a safe moment for a knock down.
+**You can immediately start your attack chain, but in some situations it's better to switch to a nearby target instead.
+*[[Dash] for a general IMS when splitting or collapsing. In main team you can use it for fast target switching.
+*Use the attack skills as you see fit:
+**{{skill pvxicon|Leaping Mantis Sting|14}}&rarr;{{skill pvxicon|Fox Fangs (PvP)|14}}&rarr;{{skill pvxicon|Horns of the Ox|14}}&rarr;{{skill pvxicon|Falling Lotus Strike|14}}&rarr;{{skill pvxicon|Twisting Fangs|9}} for a full chain when no prior knock down is available.
+**[[File:Leaping Mantis Sting.jpg|22px]]&rarr;[[File:Fox Fangs.jpg|22px]]&rarr;[[File:Twisting Fangs.jpg|22px]] for a quick deep wound without knock down.
+**[Knock down]&rarr;[[File:Falling Lotus Strike.jpg|22px]]&rarr;delay&rarr;[[File:Horns of the Ox.jpg|22px]] for quarter knocking.
+**[Knock down]&rarr;[[File:Leaping Mantis Sting.jpg|22px]]&rarr;[[File:Fox Fangs.jpg|22px]]&rarr;delay&rarr;[[File:Horns of the Ox.jpg|22px]] for quarter knocking.
+**[Knock down]&rarr;[[File:Leaping Mantis Sting.jpg|22px]]&rarr;[[File:Fox Fangs.jpg|22px]]&rarr;delay&rarr;[[File:Horns of the Ox.jpg|22px]]&rarr;[[File:Falling Lotus Strike.jpg|22px]]&rarr;[[File:Twisting Fangs.jpg|22px]] for a full chain with quarter knocking.
+**[Knock down]&rarr;[[File:Falling Lotus Strike.jpg|22px]]&rarr;[[File:Twisting Fangs.jpg|22px]] for a quick deep wound into another player's knockdown, i.e. [[Mind Shock], [[Lightning Surge] or [[Meteor].
+**[Knock down]&rarr;[[File:Falling Lotus Strike.jpg|22px]]&rarr;[[File:Twisting Fangs.jpg|22px]]&rarr;[[File:Leaping Mantis Sting.jpg|22px]]&rarr;[[File:Fox Fangs.jpg|22px]]&rarr;[[File:Horns of the Ox.jpg|22px]] for a full chain with delayed knock down and quick deep wound.
+**Spiking variant for extended main team fights: Mark a target fight fox fangs or falling lotus strike, switch to a different target without using attack skills, dash or shadow step back onto the marked target for an immediate deep wound with twisting fangs.
+**Don't use your skills predictably in skirmishes where rangers are involved.
+**When hexed with [[Diversion], use an attack skill other than falling lotus strike out of order. This will remove the hex but not divert the skill.
+</pvxbig>
+''Tactics''
+*When in main team, coordinate with your hammer warrior and mesmer: Each of you can take out one monk while the midline spikes into a deep wound.
+**By knocking down a monk with horns of the ox and then using wastrel's collapse on another you can disable two monks for a short period of time.
+*When splitting try to make the opponent do mistakes. Trick them into thinking you're somewhere else so you can either collapse onto the main team and perform a killing spike or sneak out an NPC in the opponent's base.
+**If your team successfully delays the runner or split defense character for a few seconds it will allow you to get an NPC easily. 
+
+== Counters ==
+*Enchantment removal.
+*Stronger split teams.
+*Knock down immunity.
+*Chain interruption.
+
+== See also ==
+*[[Guide:Spike Calling|Spike Calling Guide]]
+*[[Build:Team - GvG LaG Spike|GvG LaG Spike]]
+*[[Build:Team - AB April Dual Invoke|AB Dual Invoke Spike]] (April flux: [[gww:There Can Be Only One|There Can Be Only One]])

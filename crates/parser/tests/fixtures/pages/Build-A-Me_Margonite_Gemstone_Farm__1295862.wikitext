@@ -1,0 +1,78 @@
+{{Real-Vetting|status=provisional|rating=great|farming|PvE team|hero}}
+{{TOC|pos=r}}
+
+This build uses a Perma Tank and a Life Barrier Bonder to tank and kill [[gww:Margonite|Margonites]] in the [[gww:City_of_Torc%27qua|City of Torc'qua]] in normal or hard mode through the use of visage spells and the Anur Tuk's [[gww:Famine|Famine]] spirits.  This can be done with either another player, or using a hero bonder.
+
+== Perma Tank ==
+<pvxbig>
+[build prof=A/Me Shadow=12+1+3 Illusion=12 Deadly_Arts=3][Deadly Paradox][Shadow Form][Shroud of Distress][Great Dwarf Armor]["I am unstoppable!"][Ancestor's Visage][Sympathetic Visage][Death's Charge][/build]
+
+{{Variantbar|prof=Me|name=Me/A Mesmer Tank|position=1|template=[build prof=Me/A Shadow_Arts=12 Illusion_Magic=8 Fast_Casting=10][Deadly Paradox][Shadow Form][Shroud of Distress][Way of the Master][Way of Perfection]["I Am Unstoppable!"][Ancestor's Visage][Sympathetic Visage][/build]}}
+
+{{Variantbar|prof=E|name=E/Me Elementalist Tank|position=1|template=[build prof=E/Me Earth_Magic=12+1+3 Illusion_Magic=8 Energy_Storage=10 air_magic=2][Glyph of Swiftness][Obsidian Flesh][Stoneflesh Aura][Elemental Lord][Aura of Restoration]["I Am Unstoppable!"][Ancestor's Visage][Sympathetic Visage][/build]}}
+</pvxbig>
+
+=== Equipment ===
+* Full Blessed Armor
+* Spear/Sword/Axe of Enchanting with +5 energy
+* Shield of Fortitude with +10 Vs Demons - such as the [[gww:Aegis_of_Aaaaarrrrrrggghhh|Aegis of Aaaaarrrrrrggghhh]] or [[gww:Aegis_of_Terror|Aegis of Terror]].
+* Enchanting staff of enchanting.  Preferably illusion for wanding down survivors.
+
+=== Usage ===
+* Maintain all enchantments (except for the Visage skills) and "I am unstoppable!".
+* Group casters and paragons in a tight ball along the wall.
+* Drag melee to the ball and start maintaining your visages.  Only have one active at a time otherwise the enemies might break.
+* Pick up drops
+
+== {{Mo}}{{R}} Life Barrier Bonder (Hero or Player)==
+<pvxbig>
+[build prof=Monk/Ranger Protection=12+1+3 Divine=3+3 Beast=12][Balthazar's Spirit][Watchful Spirit][Life Barrier][Life Bond][optional][Blessed Signet][Edge of Extinction][Rebirth][/build]
+* If you are bringing a hero, do not bring any other skills that [[gww:Target|Target]].  The hero might walk away from your flag and try to cast it on the tank and grab agro.
+* {{skill pvxicon|Optional}}:
+** {{skill pvxicon|Vital Blessing|16}}
+** {{skill pvxicon|Strength of Honor|8}} (For killing left-overs.)
+** {{skill pvxicon|Heal Party|8}}
+** {{skill pvxicon|Mindbender|10}} (For quicker placement of bonds.)
+</pvxbig>
+
+=== Equipment ===
+* Max energy armor
+* High energy staff
+
+=== Usage ===
+==== Player ====
+* Place all of your bonds on the tank and then cast balthazar's spirit on yourself.  Be sure to use Life Barrier before Life Bond. 
+* When the tank pings come into spirit range of the mob and lay down Edge of Extinction.  Do not agro anything or attack any spirits.
+* Pick up loot.
+
+==== Hero ====
+* IMPORTANT: Set hero to [[gww:Hero_behavior#Avoid_Combat|Avoid Combat]]. 
+* Cast Balthazar's Spirit on the hero and then cast all bonds on the tank.  Be sure to use Life Barrier before Life Bond.
+* When you walk forward and the hero is on the edge of the map, flag the hero inwards along the wall. (See Videos)
+* After the group is balled, flag the hero slightly closer so it is in spirit range but not agro range and cast Edge of Extinction. 
+
+== Counters ==
+* In Hard mode finding proper placement for the spirit is key due to melee scatter.
+* Player or Hero bonder gets agro.
+* Tank gets KD while casting Shadow Form.
+
+== Videos ==
+{|
+|-
+|<big>'''A/Me with a Hero'''</big><br />
+{{YouTube|H0xtR9D6Ltw}}
+|<big>'''Me/A with a Hero'''</big><br />
+{{YouTube|_VFVpoqbBw8}}
+|<big>'''E/Me with a Hero'''</big><br />
+{{YouTube|6pMXqujJqRY}}
+|}
+{|
+|-
+|<big>'''The first group with another player'''</big><br />
+{{YouTube|pliFXXsYpHM}}
+|}
+
+== See also ==
+* [[Build:R/A_Whirling_Defense_City_Farmer|R/A Whirling Defense City Farmer]]
+
+{{FarmCat|profa=yes|profme=yes|profe=yes|margonite gemstones=yes}}

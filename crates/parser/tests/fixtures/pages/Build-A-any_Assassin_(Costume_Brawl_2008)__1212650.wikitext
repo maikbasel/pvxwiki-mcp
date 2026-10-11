@@ -1,0 +1,26 @@
+{{Costume Brawl build}}
+{{TOCright}}
+The build used by [[gw:Assassin|Assassin]] in the form of [[gw:Anton|Anton]] or [[gw:Nika|Nika]] in [[gw:Costume Brawl (2008)|Costume Brawl (2008)]].
+
+==Skills and Attributes==
+<pvxbig>
+[build prof=a/any Dagger=14 shadow=11 crit=9 deadly=4][Hidden Caltrops][Death's Charge][Iron Palm][Falling Lotus Strike][Twisting Fangs][Black Spider Strike][Blades of Steel][Heart of Shadow][/build]
+</pvxbig>
+
+== Equipment ==
+* [[gw:Bronze Daggers|Bronze Daggers]]
+** Piercing Dmg: 7-17 (Requires 12 Dagger Mastery) 
+** Damage +15% (while Health is above 50%) 
+** Damage +20%
+
+== Usage ==
+* Snare foes and set up your chain with [[gw:Hidden Caltrops|Hidden Caltrops]].
+* Use [[gw:Death's Charge|Death's Charge]] to get to your target quickly.
+* Spike with [[gw:Iron Palm|Iron Palm]] → [[gw:Falling Lotus Strike|Falling Lotus Strike]] → [[gw:Twisting Fangs|Twisting Fangs]] → [[gw:Black Spider Strike|Black Spider Strike]] → [[gw:Blades of Steel|Blades of Steel]].
+* Alternatively spike with [[gw:Black Spider Strike|Black Spider Strike]] → [[gw:Twisting Fangs|Twisting Fangs]] → [[gw:Iron Palm|Iron Palm]] → [[gw:Falling Lotus Strike|Falling Lotus Strike]] → [[gw:Blades of Steel|Blades of Steel]].
+* Use [[gw:Heart of Shadow|Heart of Shadow]] as a self heal and to get away from enemies.
+
+== Source Documentation ==
+* [http://www.guildwars.com/events/ingame/halloween2008/costumebrawl.php] - Costume Brawl event announced on [http://www.guildwars.com Guildwars.com].
+* [[gw:Costume Brawl (2008)|Costume Brawl (2008)]] on [[gw:Main Page|GuildWiki]], containing the builds and equipments.
+* [[gww:Costume Brawl|Costume Brawl]] on [[gww:Main Page|Official Wiki]], containing the builds.

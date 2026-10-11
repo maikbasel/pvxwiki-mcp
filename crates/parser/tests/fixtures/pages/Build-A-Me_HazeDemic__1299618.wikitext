@@ -1,0 +1,33 @@
+{{Real-Vetting|rating=good|status=provisional|general|}}{{TOC|pos=r|limit=1}}
+Off-meta Assassin Player build that provides AoE Daze, Blind, and Deep Wound. Facilitates complete shutdown of an enemy group for Hero Team cleanup and safety.
+== Attributes and Skills ==
+<pvxbig>
+ [build prof=Assassin/Mesmer CriticalStrikes=11+2 ShadowArts=10+1+1 DaggerMastery=10][Beguiling Haze][Unseen Fury][Golden Lotus Strike][Golden Fang Strike][Death Blossom][Epidemic][Critical Eye][Critical Agility][/build]
+ </pvxbig>
+== Equipment ==
+*'''Armor'''
+*5x Radiant Insignias
+*Largest Vigor Rune you can afford
+*2x Runes of Attunement
+
+*'''Weapons'''
+*Silencing Daggers of Defense with "I Have The Power!" Inscription (Silencing mod will extend Daze duration to 11 seconds)
+*Zealous Daggers of Defense with "I Have The Power!" Inscription
+== Usage ==
+*Wait for an enemy group to ball up
+*Apply {{skill icon|Critical Eye}} and {{skill icon|Critical Agility}}
+*Select your target - A central caster enemy is ideal, but you'll be spreading Daze & Blind to the whole group
+*Shadow Step to the enemy with {{skill icon|Beguiling Haze}}
+*As soon as you've Stepped, use {{skill icon|Unseen Fury}}
+*You can now choose to pop {{skill icon|Epidemic}} to spread Daze & Blind to the group of enemies
+-or-
+*You can use {{skill icon|Golden Lotus Strike}} followed by {{skill icon|Golden Fang Strike}} and then pop {{skill icon|Epidemic}} to spread Daze, Blind, and Deep Wound to the group
+*Auto-attacking an enemy that is Dazed will provide constant interrupts of spells
+*Blinded enemies cannot block your attacks, thanks to {{skill icon|Unseen Fury}}
+*Cycle through the Dagger Attack chain until enemies are dead
+
+== Counters ==
+General melee counters, such as being Blinded, {{skill icon|Clumsiness}} or {{skill icon|Ineptitude}} being cast on you before you can spread Daze to the casters
+== Notes ==
+*This build benefits from having a {{skill icon|Psychic Instability}} hero to provide extended Knockdown of the entire group, allowing you to very easily apply all 3 conditions to the group
+*This build also benefits from having an AoE snare provided by a hero, such as {{skill icon|Deep Freeze}}

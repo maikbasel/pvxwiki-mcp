@@ -1,0 +1,29 @@
+{{Costume Brawl build}}
+{{TOCright}}
+The build used by [[gw:Assassin|Assassins]] in the form of [[gw:Anton|Anton]] or [[gw:Nika|Nika]] in [[gw:Costume Brawl|Costume Brawl]].
+
+==Skills and Attributes==
+<pvxbig>
+[build prof=assassin/any dag=12 cri=11 sha=9][Aura of Displacement][Golden Phoenix Strike][Horns of the Ox][Falling Lotus Strike][Twisting Fangs][Shadow Refuge][Dash][Signet of Malice][/build]
+</pvxbig>
+
+== Equipment ==
+* [[gw:Bronze Daggers|Bronze Daggers]]
+** Piercing Dmg: 7-17 (Requires 12 Dagger Mastery) 
+** Damage +15% (while Health is above 50%) 
+** Damage +20% 
+
+== Usage ==
+* Shadow Step with [[gw:Aura of Displacement|Aura of Displacement]].
+* [[gw:Golden Phoenix Strike|Golden Phoenix Strike]] → [[gw:Horns of the Ox|Horns of the Ox]] → [[gw:Falling Lotus Strike|Falling Lotus Strike]] → [[gw:Twisting Fangs|Twisting Fangs]]
+* Use [[gw:Dash|Dash]] to keep up with kiting foes or to move between shrines. 
+* Use [[gw:Signet of Malice|Signet of Malice]] after your chain or on foes already suffering from conditions to remove conditions.
+* while [[gw:Aura of Displacement|Aura of Displacement]] is recharging, precast [[gw:Shadow Refuge|Shadow Refuge]] for [[gw:Golden Phoenix Strike|Golden Phoenix Strike]].
+
+== Notes ==
+* [[gw:Aura of Displacement|Aura of Displacement]] can be used for positioning or escaping from tight situations.
+
+== Source Documentation ==
+* [http://www.guildwars.com/events/ingame/halloween2k7/costumebrawl.php] - Costume Brawl event announced on [http://www.guildwars.com Guildwars.com].
+* [[gw:Costume Brawl|Costume Brawl]] on [[gw:Main Page|GuildWiki]], containing the builds and equipments.
+* [[gww:Costume Brawl|Costume Brawl]] on [[gww:Main Page|Official Wiki]], containing the builds.

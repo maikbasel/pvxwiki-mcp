@@ -1,0 +1,45 @@
+{{Real-Vetting|rating=testing|GvG}}
+{{flux|Hidden Talent|Increased secondary profession attributes slightly increase damage, deep wound likelihood and ims duration.}}
+{{flux|Meek Shall Inherit|Consider replacing "incoming!" with godspeed to benefit from the flux.}}
+{{TOC|pos=r}}
+
+This A/P Caller is designed to call ranged spikes and support the team with speed boosts.
+
+== Skills and Attributes ==
+<pvxbig>
+[build prof=Assassin/Paragon SpearMastery=10 Command=10 CriticalStrikes=11+1+1]["Incoming!" (PvP)]["Fall Back!" (PvP)][Vicious Attack]["Go for the Eyes!" (PvP)][Disrupting Throw][Optional][Critical Eye][Way of the Master][/build]
+'''Variable skill slot'''
+*{{skill pvxicon|Augury of Death|1}} – second source of deep wound.
+*{{skill pvxicon|Assassin's Remedy (PvP)|13}} – blind removal.
+</pvxbig>
+
+== Equipment ==
+'''Runes and insignia'''
+*5 [[gww:Blessed Insignia|blessed insignias]].
+*Rune of [[gww:Rune of Vigor|superior vigor]].
+*3 runes of [[gww:Rune of Vitae|vitae]].
+
+'''Weapons'''
+*[[gww:Swift|Swift]] staff of [[gww:Of Enchanting|enchanting]], [[gww:Inscription#Combat enhancing|+5e^ench]].
+*[[gww:Vampiric|Vampiric]] spear of [[gww:Of Defense|defense]], [[gww:Inscription#Combat enhancing|15^50]] with
+**Command shield of [[gww:Of Fortitude|fortitude]], [[gww:Inscription#Combat_enhancing_2|-20% blind duration]].
+**Command shield of fortitude, -20% cripple duration.
+**Command shields of fortitude, +10 armor against each damage type.
+
+== Usage ==
+<pvxbig>
+*Maintain your enchantments and [[Critical Eye@13].
+**Cover [[Way of the Master@13] with [[Assassin's Remedy (PvP)@13].
+*Call spikes. Prefer targets in their cast set, carrying a flag or suffering from death penalty.
+**Use [[Vicious Attack@10] first, then [["Go for the Eyes!"@10] while your spear is mid-air. Use [[Disrupting Throw@10] for additional damage.
+*Use your party-wide speed boosts to your advantage.
+**Call retreats if you have trouble surviving an 8v8 situation for an extended period of time. Run flags with the whole team, try a few spikes when the other team is in range.
+**Call collapses on snared or deeply commited splits.
+**Note that using both shouts in succession grants an average speed boost of 21%, whereas [[Dash] provides an average speed boost of almost 19% – this means that if the opposing runner already was pushed up when you started collapsing and he followed immediately you don't have a large time window to score a kill on collapsed targets. It also means that if you run flags with your entire team you won't ever noticeably outperform a standard midline runner.
+</pvxbig>
+
+==See also==
+*[[Build:Team - GvG A/P Spike|GvG A/P Spike]]
+*[[Build:A/P HA Caller|A/P Caller for Heroes' Ascent]]
+*[[Build:Rt/P HA Spirit's Strength Caller|Rt/P HA Caller]]
+*[[Guide:Spike Calling|Spike Calling Guide]]

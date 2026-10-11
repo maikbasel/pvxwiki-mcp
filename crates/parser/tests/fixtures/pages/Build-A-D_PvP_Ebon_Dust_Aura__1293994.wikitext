@@ -1,0 +1,32 @@
+{{Real-Vetting|rating=testing|RA|HA|AB|GvG}}
+{{TOC|pos=r}}
+
+
+Deal incredible amounts of damage while blinding nearby enemies with the newly buffed Ebon Dust Aura.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=Assassin/Dervish DaggerMastery=10+1 CriticalStrikes=11+1+1 EarthPrayers=10][Jagged Strike][Fox Fangs (PvP)][Critical Strike][Golden Fang Strike][Blades of Steel][Ebon Dust Aura][Fleeting Stability][Resurrection Signet][/build]
+</pvxbig>
+== Equipment ==
+* Weapons
+** Set 1:  
+***Daggers: Earth damage, +20% enchantment duration, +15% damage while Enchanted.
+** Set 2: 
+***Spear: +5 armor 
+***Shield: +30 health; -2dmg while enchanted;
+*Armor
+**1 x Rune of Restoration
+**1 x Rune of Superior Vigor
+** Runes of Vitae and Survivor/Blessed insignia on all other slots.
+
+== Usage ==
+*<pvxbig> 
+* Keep {{skill pvxicon|Ebon Dust Aura|10}} active. Can be reactivated mid-quarterknock to blind enemy warriors or assassins.
+* Use {{skill pvxicon|Fleeting Stability|10}} to cover Ebon Dust Aura, chase runners, or prevent quarterknocking.
+* Spike with {{skill pvxicon|Jagged Strike|11}} → {{skill pvxicon|Fox Fangs|11}} → {{skill pvxicon|Critical Strike|13}} → {{skill pvxicon|Jagged Strike|11}} → {{skill pvxicon|Golden Fang Strike|11}} → {{skill pvxicon|Blades of Steel|11}} → {{skill pvxicon|Jagged Strike|11}}.
+
+== Counters ==
+* Anti-melee
+* Heavy enchantment removal;
+</pvxbig>

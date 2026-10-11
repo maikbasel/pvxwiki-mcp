@@ -1,0 +1,41 @@
+{{Real-Vetting|rating=testing|hero}}{{TOC|pos=r}}
+
+Assassin hero that uses a bow to avoid melee AI problem while provides constant AOE interrupts.
+
+== Attributes and Skills ==
+<pvxbig>
+[build prof=assassin/ranger CriticalStrikes=12+1+3 BeastMastery=12][Incendiary Arrow][Optional][Tiger's Fury][Disrupting Accuracy][Way of the Master][Critical Eye][Call of Haste][Comfort Animal][/build]
+ 
+'''Alternative Elite Skills''': enables using {{Skill pvxicon|Heket's Rampage|12}} as a better IAS, just don't bring another attack skill.
+* {{Skill pvxicon|Dark Apostasy|16}}  - If you are playing in an off-meta team and lack an enchantment removal, or there are a lot of enchantments that need to be removed.
+* {{Skill pvxicon|Heal as One|12}}  - For bar compression and more damage from pet.
+* {{Skill pvxicon|Siphon Strength|4}} - When facing one important boss foe, i.e. Imperial Sanctum. Raise Deadly Arts to 3+1.
+* {{Skill pvxicon|Infuriating Heat|5}} - Requires an of Ranger bow grip. Feed the currently broken {{Skill pvxicon|Mighty Throw}}.
+'''Optional Non-elite Skills''': 
+* {{Skill pvxicon|Edge of Extinction|12}}
+* {{Skill pvxicon|Otyugh's Cry|12}} - Prevent pet from getting blocked.
+* {{Skill pvxicon|Call of Protection|12}} - Protection for pet.
+* {{Skill pvxicon|Critical Defenses|16}} - In areas with problematic melee foes.
+* {{Skill pvxicon|Signet of Malice}} or {{Skill pvxicon|Antidote Signet}} - Condition removal.
+* {{Skill pvxicon|Resurrection Signet}} - Soft res.
+
+</pvxbig>
+
+== Equipment ==
+''Weapon''
+* [[gww:Zealous|Zealous]] [[gww:Anniversary_Shortbow_"Whisper"|Anniversary Shortbow "Whisper"]] of the Ranger with the inscription "[[gww:Strength_and_Honor|Strength and Honor]]".
+
+''Armor''
+* 5 [[gww:Nightstalker's Insignia|Nightstalker's Insignias]].
+* Rune of [[gww:Rune of Vigor|superior vigor]].
+* Rune of [[gww:Rune of Clarity|clarity]].
+* Rune of [[gww:Rune of Vitae|vitae]].
+
+== Usage ==
+* {{Hero Mode|fight}}
+* Micro WotM and Disrupting Accuracy before combat.
+* Micro Critical Eye during combat if possible.
+
+== Counters ==
+* General anti-physical.
+* Enchantment removal.

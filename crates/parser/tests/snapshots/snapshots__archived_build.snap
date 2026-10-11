@@ -1,0 +1,300 @@
+---
+source: crates/parser/tests/snapshots.rs
+expression: "parse_fixture(\"Archive-A-D_Death_Blossom_Farmer__1266398.wikitext\")"
+---
+ParsedPage {
+    vetting: Vetted(
+        Vetted {
+            rating: Some(
+                Archived,
+            ),
+            status: None,
+            gameplay_types: [
+                "farming",
+            ],
+            archive: Some(
+                Archive {
+                    date: Some(
+                        "15:39, June 25, 2010 (UTC)",
+                    ),
+                    category: Some(
+                        "great",
+                    ),
+                    reasons: [
+                        "Inferior to [[Build:A/any Flashing Blades Farmer|Build:A/Mo Flashing Blades Farmer]]",
+                    ],
+                },
+            ),
+        },
+    ),
+    sections: [
+        Section {
+            heading: None,
+            level: 0,
+            wikitext: "{{Real-Vetting|rating=archived|date=15:39, June 25, 2010 (UTC)|reason1=Inferior to [[Build:A/any Flashing Blades Farmer|Build:A/Mo Flashing Blades Farmer]]|farming|category=great}}\n{{TOCright}}\nThis build makes use of the incredible DPS of death blossom to farm various mobs.\n\n",
+            text: "archived 15:39, June 25, 2010 (UTC) Inferior to Build:A/Mo Flashing Blades Farmer farming great This build makes use of the incredible DPS of death blossom to farm various mobs.",
+        },
+        Section {
+            heading: Some(
+                "Attributes and Skills",
+            ),
+            level: 2,
+            wikitext: "== Attributes and Skills ==\n<pvxbig>\n[build prof=Assassin/Dervish name=\"Death Blossom Farmer\" dagger=11+1 cri=10+1+2 earthp=8 Sha=6+1][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Mystic Regeneration][Way of Perfection][/build]\n</pvxbig>\n\n",
+            text: "Attributes and Skills [build prof=Assassin/Dervish name=\"Death Blossom Farmer\" dagger=11+1 cri=10+1+2 earthp=8 Sha=6+1][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Mystic Regeneration][Way of Perfection][/build]",
+        },
+        Section {
+            heading: Some(
+                "Equipment",
+            ),
+            level: 2,
+            wikitext: "== Equipment ==\n*Radiant armor is preferred. (Radiant Insignias and Runes of Attunement on all available pieces.)\n*15% while enchanted zealous daggers of enchanting or fortitude are preferred.\n**[http://wiki.guildwars.com/wiki/Pywatt%27s_Talons Pywatt's Talons] are ideal.\n**[http://wiki.guildwars.com/wiki/Ceremonial_Daggers Ceremonial Daggers] will work as well.\n**[http://wiki.guildwars.com/wiki/Chimor%27s_Daggers Chimor's Daggers] make a good switch-out weapon when zealous isn't desired.\n\n",
+            text: "Equipment Radiant armor is preferred. (Radiant Insignias and Runes of Attunement on all available pieces.) 15% while enchanted zealous daggers of enchanting or fortitude are preferred. http://wiki.guildwars.com/wiki/Pywatt%27s_Talons Pywatt's Talons are ideal. http://wiki.guildwars.com/wiki/Ceremonial_Daggers Ceremonial Daggers will work as well. http://wiki.guildwars.com/wiki/Chimor%27s_Daggers Chimor's Daggers make a good switch-out weapon when zealous isn't desired.",
+        },
+        Section {
+            heading: Some(
+                "Usage",
+            ),
+            level: 2,
+            wikitext: "== Usage ==\n*Maintain [[gw:Critical Agility|Critical Agility]], [[gw:Mystic Regeneration|Mystic Regeneration]], [[gw:Critical Defenses|Critical Defenses]] and [[gw:Way of Perfection|Way of Perfection]].\n*Use [[gw:Golden Phoenix Strike|Golden Phoenix Strike]] -> [[gw:Critical Strike|Critical Strike]] -> [[gw:Moebius Strike|Moebius Strike]] -> [[gw:Death Blossom|Death Blossom]] then chain [[gw:Moebius Strike|Moebius Strike]] and [[gw:Death Blossom|Death Blossom]], using [[gw:Critical Strike|Critical Strike]] to maintain your energy and enchantments as necessary.\n\n",
+            text: "Usage Maintain Critical Agility, Mystic Regeneration, Critical Defenses and Way of Perfection. Use Golden Phoenix Strike -> Critical Strike -> Moebius Strike -> Death Blossom then chain Moebius Strike and Death Blossom, using Critical Strike to maintain your energy and enchantments as necessary.",
+        },
+        Section {
+            heading: Some(
+                "Counters",
+            ),
+            level: 2,
+            wikitext: "==Counters==\n*General Anti-Melee\n*Enchantment Removal\n\n",
+            text: "Counters General Anti-Melee Enchantment Removal",
+        },
+        Section {
+            heading: Some(
+                "Notes",
+            ),
+            level: 2,
+            wikitext: "== Notes ==\n",
+            text: "Notes",
+        },
+        Section {
+            heading: Some(
+                "Farmable Areas",
+            ),
+            level: 3,
+            wikitext: "=== Farmable Areas ===\n",
+            text: "Farmable Areas",
+        },
+        Section {
+            heading: Some(
+                "Normal Mode",
+            ),
+            level: 4,
+            wikitext: "==== Normal Mode ====\n* Minotaurs outside of [[gw:Ice Tooth Cave|Ice Tooth Cave]]. (Good learning spot for new people.)\n* Minotaurs inside of [[gw:Elona Reach|Elona Reach]].\n* [[gw:Desert Griffon|Desert Griffons]] outside of [[gw:Destiny's Gorge|Destiny's Gorge]].\n* [[gw:Mountain Trolls|Mountain Trolls]] outside of [[gw:Droknar's Forge|Droknar's Forge]].\n* Jade Brotherhood.\n* Fissure of Woe beach.\n* Can beat almost every boss in the Norn Fighting Tournament, as most of them are physical damage dealers. The only difficulties are [[gw:Empathy|Empathy]] and [[gw:Spiteful Spirit|Spiteful Spirit]] casters, yet replacing Moebius Strike with Ursan Blessing (Norn skill) you can get past the difficulties of blind, Empathy, and Spiteful Spirit. But doing this will mean you are less effective against some others, such as Argo and Mhenlo\n* Vermin at Xaquang Skyway.\n* Tengu at Nahpui Quarter mission; watch out for Sentinels as they are soloable but they use Lightning Reflexes.\n* [[gw:Jungle Troll|Jungle Trolls]] in [[gw:Tangle Root|Tangle Root]].\n* [[gw:Spectral Vaettir|Spectral Vaettir]] in [[gw:Jaga Moraine|Jaga Moraine]].\n\n",
+            text: "Normal Mode Minotaurs outside of Ice Tooth Cave. (Good learning spot for new people.) Minotaurs inside of Elona Reach. Desert Griffons outside of Destiny's Gorge. Mountain Trolls outside of Droknar's Forge. Jade Brotherhood. Fissure of Woe beach. Can beat almost every boss in the Norn Fighting Tournament, as most of them are physical damage dealers. The only difficulties are Empathy and Spiteful Spirit casters, yet replacing Moebius Strike with Ursan Blessing (Norn skill) you can get past the difficulties of blind, Empathy, and Spiteful Spirit. But doing this will mean you are less effective against some others, such as Argo and Mhenlo Vermin at Xaquang Skyway. Tengu at Nahpui Quarter mission; watch out for Sentinels as they are soloable but they use Lightning Reflexes. Jungle Trolls in Tangle Root. Spectral Vaettir in Jaga Moraine.",
+        },
+        Section {
+            heading: Some(
+                "Hard Mode",
+            ),
+            level: 4,
+            wikitext: "==== Hard Mode ====\n* Mountain Trolls outside of Droknar's Forge (Make sure not to aggro the Avicara in HM).\n* Desert Griffons outside of Destiny's Gorge.\n* Elementals outside of [[gw:Sardelac Sanitarium|Sardelac Sanitarium]].\n* Can be used to solo the 5 Corsair Cutthroats in the beginning of Moddok Crevice Mission with only a little bit of difficulty to try for their drops of [[gw:Colossal Scimitar|Colossal Scimitars]]. (Need Dunkoro for mission)\n* Mantids outside Shing Jea.\n* Insects outside [[gw:Sunspear Great Hall|Sunspear Great Hall]].\n* The animals in [[gw:Minister Cho's Estate|Minister Cho's Estate]] explorable area.\n\n",
+            text: "Hard Mode Mountain Trolls outside of Droknar's Forge (Make sure not to aggro the Avicara in HM). Desert Griffons outside of Destiny's Gorge. Elementals outside of Sardelac Sanitarium. Can be used to solo the 5 Corsair Cutthroats in the beginning of Moddok Crevice Mission with only a little bit of difficulty to try for their drops of Colossal Scimitars. (Need Dunkoro for mission) Mantids outside Shing Jea. Insects outside Sunspear Great Hall. The animals in Minister Cho's Estate explorable area.",
+        },
+        Section {
+            heading: Some(
+                "Bosses In Normal Mode",
+            ),
+            level: 4,
+            wikitext: "==== Bosses In Normal Mode ====\n*{{a}}[[gw:Lunto Sharpfoot|Lunto Sharpfoot]]\n*{{a}}[[gw:Chkkr Locust Lord|Chkkr Locust Lord]]\n*{{a}}[[gw:Xuekao, the Deceptive|Xuekao, the Deceptive]]\n*{{a}}[[gw:Achor the Bladed|Achor the Bladed]] (cast [[gw:Critical Defenses|Critical Defenses]] first otherwise he will remove it)\n*{{a}}[[gw:Shreader Sharptongue|Shreader Sharptongue]] (I advise to fight your way through all the vermin instead of running past them)\n*{{rt}}[[gw:Chkkr Brightclaw|Chkkr Brightclaw]] (leave from Jade Flats (Kurzick) and make your way to the boss, but don't run to him, because that will cause a group of mantis to spawn, instead you shoot at him with a longbow from the stairway, a group a foes, about 3, will most likely attack both you and Chkkr, take them down first, because the Dragon Moss uses Blurred Vision)\n*{{d}}[[gw:Bubahl Icehands|Bubahl Icehands]]\n*{{e}}[[gw:Lian, Dragon's Petal|Lian, Dragon's Petal]] (beat Rits first, then Mes, leave Lian the last for a safer farm)\n*{{mo}}[[gw:Chidehkir, Light of the Blind|Chidehkir, Light of the Blind]]\n*{{n}}[[gw:Terob Roundback|Terob Roundback]] (This is annoying, but doable with a little patience.)\n*{{n}}[[gw:Cultist Milthuran|Cultist Milthuran]] (This cannot be done with an outcast rit, as they use [[gw:Displacement|Displacement]], also use Critical Defenses before using Critical Agility and Vigorous Spirit, as {{skill icon|Chilblains}} removes 2 enchantments)\n*{{n}}[[gw:Tonfor Copperblood|Tonfor Copperblood]]\n*{{p}} [[gw:Jishol Darksong|Jishol Darksong]]\n*{{p}}[[gw:Pehnsed the Loudmouth|Pehnsed the Loudmouth]]\n*{{r}}[[gw:Salke Fur Friend|Salke Fur Friend]] (Kill the Rit warden first, as he might heal Salke; can't be done with a Warden of the Earth in his group))\n*{{r}}[[gw:Bolten Largebelly|Bolten Largebelly]] (don't let Bolten's team mob with the team VERY close to his, instead lure the one close to him and kill those first)\n*{{r}}[[gw:Zelnehlun Fastfoot|Zelnehlun Fastfoot]]\n*{{r}}[[gw:Tundoss the Destroyer|Tundoss the Destroyer]] (Kill his team first.)\n*{{r}}[[gw:Johon The Oxflinger|Johon The Oxflinger]]\n*{{r}}[[gw:Whuup Buumbuul|Whuup Buumbuul]] (don't use attack skills while he has Escape on. Maintain skills, and keep attack normally until you land hits, then continue with chain)\n*{{w}}[[gw:Reefclaw Ragebound|Reefclaw Ragebound]]\n*{{w}}[[gw:Mahto Sharptooth|Mahto Sharptooth]]\n*{{w}}[[gw:Chor the Bladed|Chor the Bladed]]\n*{{w}}[[gw:Riktund the Vicious|Riktund the Vicious]]\n*{{w}}[[gw:Wing, Three Blade|Wing, Three Blade]]\n*{{w}}[[gw:Sskai, Dragon's Birth|Sskai, Dragon's Birth]]\n*{{w}}[[gw:Krogg Shmush|Krogg Shmush]]\n*{{w}}[[gw:Arrahhsh Mountainclub|Arrahhsh Mountainclub]]\n\n",
+            text: "Bosses In Normal Mode Lunto Sharpfoot Chkkr Locust Lord Xuekao, the Deceptive Achor the Bladed (cast Critical Defenses first otherwise he will remove it) Shreader Sharptongue (I advise to fight your way through all the vermin instead of running past them) Chkkr Brightclaw (leave from Jade Flats (Kurzick) and make your way to the boss, but don't run to him, because that will cause a group of mantis to spawn, instead you shoot at him with a longbow from the stairway, a group a foes, about 3, will most likely attack both you and Chkkr, take them down first, because the Dragon Moss uses Blurred Vision) Bubahl Icehands Lian, Dragon's Petal (beat Rits first, then Mes, leave Lian the last for a safer farm) Chidehkir, Light of the Blind Terob Roundback (This is annoying, but doable with a little patience.) Cultist Milthuran (This cannot be done with an outcast rit, as they use Displacement, also use Critical Defenses before using Critical Agility and Vigorous Spirit, as Chilblains removes 2 enchantments) Tonfor Copperblood Jishol Darksong Pehnsed the Loudmouth Salke Fur Friend (Kill the Rit warden first, as he might heal Salke; can't be done with a Warden of the Earth in his group)) Bolten Largebelly (don't let Bolten's team mob with the team VERY close to his, instead lure the one close to him and kill those first) Zelnehlun Fastfoot Tundoss the Destroyer (Kill his team first.) Johon The Oxflinger Whuup Buumbuul (don't use attack skills while he has Escape on. Maintain skills, and keep attack normally until you land hits, then continue with chain) Reefclaw Ragebound Mahto Sharptooth Chor the Bladed Riktund the Vicious Wing, Three Blade Sskai, Dragon's Birth Krogg Shmush Arrahhsh Mountainclub",
+        },
+        Section {
+            heading: Some(
+                "Bosses In Hard Mode",
+            ),
+            level: 4,
+            wikitext: "==== Bosses In Hard Mode ====\n*{{a}}[[gww:Tahkayun Tsi|Tahkayun Tsi]] (You also get a few tomes from his friends around him.)\n*{{n}}[[gw:Yunlai Deathkeeper|Yunlai Deathkeeper]] (You first must kill the 2 groups of mantids that spawn in order to get him to spawn.)\n*{{p}} [[gw:Jishol Darksong|Jishol Darksong]] (First kill his mob, as this will weaken his Leader's Comfort.)\n*{{r}}[[gw:Chkkr Thousand Tail|Chkkr Thousand Tail]]\n*{{w}}[[gw:Krogg Shmush|Krogg Shmush]]\n*{{p}}[[gw:Hassin Softskin|Hassin Softskin]]\n*{{w}}[[gw:Chor the Bladed|Chor the Bladed]]\n\n",
+            text: "Bosses In Hard Mode Tahkayun Tsi (You also get a few tomes from his friends around him.) Yunlai Deathkeeper (You first must kill the 2 groups of mantids that spawn in order to get him to spawn.) Jishol Darksong (First kill his mob, as this will weaken his Leader's Comfort.) Chkkr Thousand Tail Krogg Shmush Hassin Softskin Chor the Bladed",
+        },
+        Section {
+            heading: Some(
+                "Variants",
+            ),
+            level: 2,
+            wikitext: "==Variants==\n[[gw:Critical Eye|Critical Eye]] \n*When using Critical Eye variation, replace Critical Strike with Critical Eye. (With the 13x% extra critical strikes, Critical Strike becomes useless.)\n[[gw:Vital Boon|Vital Boon]]\n\n",
+            text: "Variants Critical Eye When using Critical Eye variation, replace Critical Strike with Critical Eye. (With the 13x% extra critical strikes, Critical Strike becomes useless.) Vital Boon",
+        },
+        Section {
+            heading: Some(
+                "A/Mo Variant",
+            ),
+            level: 3,
+            wikitext: "===A/Mo Variant===\n<pvxbig>\n[build prof=A/Mo name=\"Death Blossom Farmer\" dag=11+1 cri=10+1+2 healin=10][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Vigorous Spirit][Live Vicariously][/build]\n</pvxbig>\n\n",
+            text: "A/Mo Variant [build prof=A/Mo name=\"Death Blossom Farmer\" dag=11+1 cri=10+1+2 healin=10][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Vigorous Spirit][Live Vicariously][/build]",
+        },
+        Section {
+            heading: Some(
+                "See Also",
+            ),
+            level: 2,
+            wikitext: "== See Also ==\n*[[Archive:A/any PvE Moebius Sin|Build:A/any PvE Moebius Sin]] uses similar tactics for general usage.\n*[http://www.youtube.com/watch?v=ZiIWxVzxMjw Farming Plains of Jarin on Hard Mode].\n*('''Note''': These are for the old Mystic Regen Build)\n**[http://www.youtube.com/v/pjveUP7ykR8 Video].\n**[http://www.youtube.com/watch?v=rusDQOA7RBU Soloing Imperial Sanctum on Hard Mode].\n**[http://www.youtube.com/watch?v=ivpDfXxtlwo Boss Farming.]\n**[http://www.youtube.com/watch?v=-mQ3M6BLZzo Hard Mode Areas]\n**[http://www.wegame.com/watch/Farming_Celestials_with_Death_Blossom_Farmer_build/ Farming Nahpui Quarter Mission (NM)] & [http://www.youtube.com/watch?v=RnJxM8vCuIY HM]\n**[http://www.youtube.com/watch?v=HQO2V2bX9l4 Hard Mode Mantids outside Shing Jea]",
+            text: "See Also Build:A/any PvE Moebius Sin uses similar tactics for general usage. http://www.youtube.com/watch?v=ZiIWxVzxMjw Farming Plains of Jarin on Hard Mode. (Note: These are for the old Mystic Regen Build) http://www.youtube.com/v/pjveUP7ykR8 Video. http://www.youtube.com/watch?v=rusDQOA7RBU Soloing Imperial Sanctum on Hard Mode. http://www.youtube.com/watch?v=ivpDfXxtlwo Boss Farming. http://www.youtube.com/watch?v=-mQ3M6BLZzo Hard Mode Areas http://www.wegame.com/watch/Farming_Celestials_with_Death_Blossom_Farmer_build/ Farming Nahpui Quarter Mission (NM) & http://www.youtube.com/watch?v=RnJxM8vCuIY HM http://www.youtube.com/watch?v=HQO2V2bX9l4 Hard Mode Mantids outside Shing Jea",
+        },
+    ],
+    skill_bars: [
+        SkillBar {
+            section: 1,
+            raw: "[build prof=Assassin/Dervish name=\"Death Blossom Farmer\" dagger=11+1 cri=10+1+2 earthp=8 Sha=6+1][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Mystic Regeneration][Way of Perfection][/build]",
+            name: Some(
+                "Death Blossom Farmer",
+            ),
+            variant: None,
+            primary: Some(
+                Assassin,
+            ),
+            secondary: Some(
+                Dervish,
+            ),
+            professions_raw: Some(
+                "Assassin/Dervish",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Dagger Mastery",
+                    ),
+                    raw_name: "dagger",
+                    value: "11+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Critical Strikes",
+                    ),
+                    raw_name: "cri",
+                    value: "10+1+2",
+                },
+                Attribute {
+                    name: Some(
+                        "Earth Prayers",
+                    ),
+                    raw_name: "earthp",
+                    value: "8",
+                },
+                Attribute {
+                    name: Some(
+                        "Shadow Arts",
+                    ),
+                    raw_name: "Sha",
+                    value: "6+1",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Golden Phoenix Strike",
+                    raw: "[Golden Phoenix Strike]",
+                },
+                Skill {
+                    name: "Critical Strike",
+                    raw: "[Critical Strike]",
+                },
+                Skill {
+                    name: "Moebius Strike",
+                    raw: "[Moebius Strike]",
+                },
+                Skill {
+                    name: "Death Blossom",
+                    raw: "[Death Blossom]",
+                },
+                Skill {
+                    name: "Critical Defenses",
+                    raw: "[Critical Defenses]",
+                },
+                Skill {
+                    name: "Critical Agility",
+                    raw: "[Critical Agility]",
+                },
+                Skill {
+                    name: "Mystic Regeneration",
+                    raw: "[Mystic Regeneration]",
+                },
+                Skill {
+                    name: "Way of Perfection",
+                    raw: "[Way of Perfection]",
+                },
+            ],
+        },
+        SkillBar {
+            section: 12,
+            raw: "[build prof=A/Mo name=\"Death Blossom Farmer\" dag=11+1 cri=10+1+2 healin=10][Golden Phoenix Strike][Critical Strike][Moebius Strike][Death Blossom][Critical Defenses][Critical Agility][Vigorous Spirit][Live Vicariously][/build]",
+            name: Some(
+                "Death Blossom Farmer",
+            ),
+            variant: None,
+            primary: Some(
+                Assassin,
+            ),
+            secondary: Some(
+                Monk,
+            ),
+            professions_raw: Some(
+                "A/Mo",
+            ),
+            attributes: [
+                Attribute {
+                    name: Some(
+                        "Dagger Mastery",
+                    ),
+                    raw_name: "dag",
+                    value: "11+1",
+                },
+                Attribute {
+                    name: Some(
+                        "Critical Strikes",
+                    ),
+                    raw_name: "cri",
+                    value: "10+1+2",
+                },
+                Attribute {
+                    name: Some(
+                        "Healing Prayers",
+                    ),
+                    raw_name: "healin",
+                    value: "10",
+                },
+            ],
+            slots: [
+                Skill {
+                    name: "Golden Phoenix Strike",
+                    raw: "[Golden Phoenix Strike]",
+                },
+                Skill {
+                    name: "Critical Strike",
+                    raw: "[Critical Strike]",
+                },
+                Skill {
+                    name: "Moebius Strike",
+                    raw: "[Moebius Strike]",
+                },
+                Skill {
+                    name: "Death Blossom",
+                    raw: "[Death Blossom]",
+                },
+                Skill {
+                    name: "Critical Defenses",
+                    raw: "[Critical Defenses]",
+                },
+                Skill {
+                    name: "Critical Agility",
+                    raw: "[Critical Agility]",
+                },
+                Skill {
+                    name: "Vigorous Spirit",
+                    raw: "[Vigorous Spirit]",
+                },
+                Skill {
+                    name: "Live Vicariously",
+                    raw: "[Live Vicariously]",
+                },
+            ],
+        },
+    ],
+    issues: [],
+}
