@@ -26,5 +26,8 @@
         ]
       }
     ]
+  },
+  "enabledPlugins": {
+    "probity@probity": true
   }
 }
