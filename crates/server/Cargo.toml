@@ -1,0 +1,29 @@
+[package]
+name = "pvxwiki-server"
+version = "0.1.0"
+description = "MCP tools and HTTP router for the PvX build index"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[dependencies]
+pvxwiki-store.workspace = true
+rmcp = { workspace = true, features = ["server", "macros", "transport-streamable-http-server"] }
+schemars.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+axum.workspace = true
+tower.workspace = true
+tower-http.workspace = true
+governor.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+pvxwiki-store = { workspace = true, features = ["testing"] }
+pvxwiki-parser.workspace = true
+
+[lints]
+workspace = true

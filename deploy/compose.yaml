@@ -1,0 +1,71 @@
+# Run: cp .env.example .env, edit .env, then `docker compose up -d`.
+# HTTPS with Caddy: set PVXWIKI_DOMAIN and list the same name in PVXWIKI_ALLOWED_HOSTS (Caddy
+# forwards the public Host header), set PVXWIKI_TRUSTED_PROXIES=172.31.250.10/32 (Caddy only),
+# then `docker compose --profile https up -d`.
+# Without Caddy the port is published on 127.0.0.1 only. To serve it publicly without Caddy, set
+# PVXWIKI_PUBLISH_ADDR=0.0.0.0 and leave PVXWIKI_TRUSTED_PROXIES empty. Never trust the whole
+# subnet: Docker's userland proxy delivers outside traffic from the bridge gateway (172.31.250.1),
+# so trusting it would let any client set X-Forwarded-For and dodge the rate limit.
+
+# Every 429 logs a line; bound what the logs can take on disk.
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  pvxwiki-mcp:
+    image: ${PVXWIKI_IMAGE:-ghcr.io/maikbasel/pvxwiki-mcp:latest}
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    # The GHCR image is not published yet; build locally instead of pulling.
+    pull_policy: build
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "${PVXWIKI_PUBLISH_ADDR:-127.0.0.1}:8080:8080"
+    volumes:
+      - pvxwiki-data:/data
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/pvxwiki-mcp", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging: *logging
+    networks:
+      - pvxwiki
+
+  caddy:
+    image: caddy:2.10
+    profiles: ["https"]
+    restart: unless-stopped
+    environment:
+      PVXWIKI_DOMAIN: ${PVXWIKI_DOMAIN:-}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      - pvxwiki-mcp
+    logging: *logging
+    networks:
+      pvxwiki:
+        # Fixed so PVXWIKI_TRUSTED_PROXIES can trust exactly this address (/32).
+        ipv4_address: 172.31.250.10
+
+networks:
+  pvxwiki:
+    ipam:
+      config:
+        - subnet: 172.31.250.0/24
+
+volumes:
+  pvxwiki-data:
+  caddy-data:
+  caddy-config:

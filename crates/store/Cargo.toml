@@ -1,0 +1,32 @@
+[package]
+name = "pvxwiki-store"
+version = "0.1.0"
+description = "Build pages in SQLite: migrations, atomic page writes, full-text search"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish.workspace = true
+
+[features]
+# Exposes the in-memory fake and the contract suite to other crates' tests.
+testing = []
+
+[dependencies]
+pvxwiki-parser.workspace = true
+rusqlite.workspace = true
+deadpool-sqlite.workspace = true
+rusqlite_migration.workspace = true
+include_dir.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+schemars.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tokio.workspace = true
+tempfile.workspace = true
+
+[lints]
+workspace = true

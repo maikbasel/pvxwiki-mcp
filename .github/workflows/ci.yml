@@ -50,3 +50,19 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: EmbarkStudios/cargo-deny-action@3c6349835b2b7b196a839186cb8b78e02f7b5f25 # v2.1.1
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build image
+        run: docker build -f deploy/Dockerfile -t pvxwiki-mcp:ci .
+      - name: Start with compose and wait until healthy
+        run: |
+          printf 'PVXWIKI_ALLOWED_HOSTS=localhost\n' > deploy/.env
+          PVXWIKI_IMAGE=pvxwiki-mcp:ci docker compose -f deploy/compose.yaml up -d --wait --wait-timeout 90 pvxwiki-mcp
+      - name: Logs and teardown
+        if: always()
+        run: |
+          docker compose -f deploy/compose.yaml logs pvxwiki-mcp || true
+          docker compose -f deploy/compose.yaml down -v || true

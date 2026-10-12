@@ -14,7 +14,7 @@ reproducing the problem first.
 - Library crates emit spans and events only. The bin installs the subscriber, once.
 - The subscriber writes to stderr. Stdout is reserved for the MCP stdio transport if it is ever
   used, so nothing else writes there. No `println!` / `eprintln!`.
-- Level filter from `RUST_LOG` (`EnvFilter`). The default is a named const, `info`; set
+- Level filter from `RUST_LOG` (`EnvFilter`). The default is a named const, `info,rmcp=warn` (rmcp logs several `info` lines per request); set
   `RUST_LOG=pvxwiki=debug` (prefix match covers every `pvxwiki_*` crate) to get per-page detail.
   Output format is a named config value: JSON in production, human-readable in development.
 - Spans record their duration on close (`FmtSpan::CLOSE`), so slow runs, pages and requests show
