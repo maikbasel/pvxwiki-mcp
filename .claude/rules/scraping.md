@@ -10,7 +10,8 @@ this wrong gets the server's IP blocked and ends the project.
 - Send an honest, identifying User-Agent: tool name, version, repository URL and a contact address
   taken from `PVXWIKI_CONTACT`. Never a browser User-Agent. The contact is the GitHub repository URL once the
   repo exists; until then, the maintainer's email.
-- One request at a time, with a fixed minimum delay between requests (a named const).
+- One request at a time, with a fixed minimum delay between requests (a named const). Fandom's
+  condition is fewer than one request per second, retries included: the delay is 2 s.
 - Send `maxlag=5`. On a `maxlag` error, 429 or 503, honour `Retry-After`, back off exponentially
   with a cap, and abort the run after a bounded number of retries. The next scheduled run tries again.
 - Batch: request up to 50 titles per call (the non-bot limit).
@@ -21,6 +22,10 @@ this wrong gets the server's IP blocked and ends the project.
   only `/wiki/` HTML paths. Named AI crawlers (GPTBot, ClaudeBot, CCBot, xAI bots) are disallowed
   entirely; never send their User-Agents. The server cannot fetch `robots.txt` itself (Cloudflare
   challenge), so recheck it in a browser before calling any new path.
+- Fandom's Terms of Use forbid automated access without written permission. Fandom support granted
+  it on 2026-10-12 for this project's read-only API job, on condition that requests stay below one
+  per second. Self-hosted instances run from other IPs and are not covered; they need their own
+  permission.
 
 ## Forbidden
 
