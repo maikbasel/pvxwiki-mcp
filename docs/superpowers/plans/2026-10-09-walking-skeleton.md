@@ -20,7 +20,7 @@ Every API call in this plan was compiled and tested in a throwaway prototype at
 - No `unwrap`/`expect` outside tests; integration test files start with `#![allow(clippy::unwrap_used, reason = "test helpers outside #[test] fns")]`.
 - Every tuning value is a named const (limits, timeouts, sizes, budgets). Rate limits, timeouts and size caps are not env config.
 - SQL text is built only from fixed fragments; every value is a bound parameter. FTS5 input always goes through `fts::escape`.
-- Wiki text appears only in the output fields `snippet` and `wikitext`; server-written messages never contain wiki text.
+- Server-written messages never contain wiki text; wiki text reaches the client only inside page data fields (`snippet`, `wikitext`, and the structured bars/vetting copied from the page).
 - No auth code. No calls to the wiki anywhere (tests, CI, request path).
 - Logging per `.claude/rules/logging.md`: `tracing` only, constant messages, structured fields, client IPs hashed, never whole wikitext.
 - Commits: `CLAUDE.md` says do not commit unless the user asks. Each task ends with a commit step; stage with `git add` instead unless the user has said to commit.

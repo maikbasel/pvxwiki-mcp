@@ -16,7 +16,8 @@ arguments from any client, and wiki text that anyone can edit.
 - Per-client rate limit, a global concurrency cap, request body size limit, and request timeouts.
   Each value is a named const.
 - Every response has a size cap. Pagination instead of unbounded results.
-- If token auth is added: compare in constant time, never log the token, load it from env or a file.
+- No auth in the service. The public instance is open with these limits; private instances put
+  auth in their reverse proxy (Pangolin, Caddy, Cloudflare Access).
 
 ## Wiki content
 

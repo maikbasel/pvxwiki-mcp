@@ -11,9 +11,11 @@ Rules in `.claude/rules/`. Always loaded: `production-grade.md`, `scraping.md`, 
 
 ## Stack
 
-Rust (stable, edition 2024), Cargo workspace: `crates/parser` (`pvxwiki-parser`, pure wikitext
-parser on `parse-wiki-text-2`) and `crates/pvxwiki-mcp` (the bin). Storage engine, MCP crate and
-HTTP framework are not chosen yet. When one is chosen, record it here.
+Rust (stable, edition 2024), Cargo workspace: `crates/parser` (pure wikitext parser on
+`parse-wiki-text-2`), `crates/store` (SQLite with FTS5 via `rusqlite`, `deadpool-sqlite`,
+`rusqlite_migration`), `crates/server` (MCP tools on `rmcp` streamable HTTP, axum, tower,
+`governor`) and `crates/pvxwiki-mcp` (the bin). Deployed as a container with docker compose
+(`deploy/`).
 
 ## Commands
 

@@ -50,7 +50,8 @@ Stack (checked 2026-10-09; versions are what the plan pins):
 
 ### `search_builds`
 
-Input (every field optional; bounds are named consts and part of the JSON schema):
+Input (every field optional; bounds are named consts and part of the JSON schema; enum values are
+matched case-insensitively, so `Assassin` from an output is accepted as input):
 
 | Field | Type | Bound |
 |---|---|---|
@@ -70,6 +71,7 @@ Output:
     "title": "...", "url": "...", "revision": 1266398,
     "rating": "great", "status": "meta", "gameplay_types": ["farming"],
     "bars": [{ "name": null, "variant": null, "primary": "Assassin", "secondary": "Dervish" }],
+    "bars_truncated": false,
     "matches": [{ "section": "Equipment", "snippet": "... Zealous Dagger ..." }],
     "attribution": { "credit": "PvX wiki contributors", "licence": "CC BY-NC-SA 2.5",
                      "licence_url": "https://creativecommons.org/licenses/by-nc-sa/2.5/" } }],
@@ -79,11 +81,13 @@ Output:
 
 Ranking: with `query`, FTS5 BM25 with column weights title 10, heading 5, body 1; ties by rating
 (great, good, creative, then the rest), then title. Without `query`, by rating then title.
-`matches` is empty when there is no `query`.
+`matches` is empty when there is no `query`. `bars` holds at most 16 bars (`MAX_BARS_PER_RESULT`);
+`bars_truncated` is true when the page has more (call `get_build` for all). `next_cursor` is `null`
+on the last page.
 
 ### `get_build`
 
-Input: `title` (exact page title, or a `https://gwpvx.fandom.com/wiki/...` URL), max 300 chars.
+Input: `title` (exact page title, or a `https://gwpvx.fandom.com/wiki/...` URL), max 300 chars after percent-decoding; raw input max 1,024 chars.
 
 Output: title, url, revision, vetting (rating, status, gameplay types, archive date/category/
 reasons), every section in page order (heading, level, exact `wikitext`), every skill bar fully
@@ -100,7 +104,10 @@ raw name and value, slots), and attribution.
 | Query over its time budget, or database busy | Tool error: try again or narrow the search |
 | Bug or I/O failure | Generic tool error with a request ID; detail only in the `error` log |
 
-Wiki text appears only in the fields `snippet` and `wikitext`, never in server messages
+Unknown fields and wrong JSON types are rejected by the MCP layer as JSON-RPC invalid params.
+
+Server-written messages never contain wiki text; wiki text reaches the client only inside page data
+fields (`snippet`, `wikitext`, and the structured bars/vetting copied from the page)
 (`security.md`, prompt injection).
 
 ## Storage
@@ -184,25 +191,31 @@ startup with one log line naming the variable:
 | `PVXWIKI_DATA_DIR` | no | `/data` |
 | `PVXWIKI_LISTEN` | no | `0.0.0.0:8080` |
 | `PVXWIKI_LOG_FORMAT` | no | `json` |
-| `RUST_LOG` | no | `info` |
+| `RUST_LOG` | no | `info,rmcp=warn` |
 
 Rate limits, timeouts and size caps are consts, not config.
 
 ## Logging
 
-Per `.claude/rules/logging.md`. Subscriber on stderr, JSON or pretty, default filter `info`. Each
+Per `.claude/rules/logging.md`. Subscriber on stderr, JSON or pretty, default filter `info,rmcp=warn` (rmcp logs every request at `info`). Each
 MCP request is a span with request ID, tool name and a hashed client IP; spans log their duration
 on close. Rate-limit rejections are `warn`. Startup logs the effective config at `info`.
 
 ## Deploy
 
 - `deploy/Dockerfile`: multi-stage with `cargo-chef`; build on `rust:1.96.1-slim-trixie`, run on
-  `gcr.io/distroless/cc-debian13:nonroot`; amd64 and arm64.
+  `gcr.io/distroless/cc-debian13:nonroot`. The Dockerfile is arch-neutral; arm64 is built and checked
+  when images are published to GHCR (later spec). CI builds amd64 only.
 - `deploy/compose.yaml`: the service, named volume `pvxwiki-data` at `/data`, `env_file: .env`,
-  healthcheck via `healthcheck`, `restart: unless-stopped`. Caddy behind the `https` profile.
+  healthcheck via `healthcheck`, `restart: unless-stopped`, `pull_policy: build` until GHCR
+  publishing exists, json-file log rotation (10 MB x 3). The port is published on `127.0.0.1`
+  unless `PVXWIKI_PUBLISH_ADDR` says otherwise. Caddy behind the `https` profile at the fixed
+  address `172.31.250.10`, the only address `PVXWIKI_TRUSTED_PROXIES` should list (`/32`): the
+  bridge gateway carries outside traffic through Docker's userland proxy and must not be trusted.
+  The server stops on SIGTERM, finishing in-flight requests.
 - `deploy/.env.example`: every variable above, commented.
 - `deploy/Caddyfile`: reverse proxy to the service with automatic HTTPS for `PVXWIKI_DOMAIN`.
-- CI builds the image on every push (no publish until the GitHub repo exists) and runs it under
+- CI builds the image on pushes to `master` and on pull requests (no publish until the GitHub repo exists) and runs it under
   compose until the healthcheck passes.
 
 ## Testing

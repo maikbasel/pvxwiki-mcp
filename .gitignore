@@ -12,6 +12,7 @@
 # Secrets and local config
 .env
 .env.*
+!.env.example
 
 # Personal Claude Code files
 CLAUDE.local.md

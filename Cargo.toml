@@ -10,9 +10,29 @@ repository = "https://github.com/maikbasel/pvxwiki-mcp"
 publish = false
 
 [workspace.dependencies]
+pvxwiki-parser = { path = "crates/parser", version = "0.1.0" }
+pvxwiki-store = { path = "crates/store", version = "0.1.0" }
+pvxwiki-server = { path = "crates/server", version = "0.1.0" }
 parse-wiki-text-2 = "0.2.0"
 tracing = "0.1.44"
 insta = "1.49"
+# rmcp's 3.x line has frequent breaking changes: pinned exactly.
+rmcp = { version = "=3.5.1", default-features = false }
+schemars = "1"
+axum = "0.8"
+tower = { version = "0.5", features = ["limit", "load-shed", "timeout", "util"] }
+tower-http = { version = "0.7", features = ["limit", "timeout", "trace"] }
+governor = "0.10"
+rusqlite = { version = "0.40", features = ["bundled", "hooks"] }
+deadpool-sqlite = "0.14"
+rusqlite_migration = { version = "2.6", features = ["from-directory"] }
+include_dir = "0.7"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json", "fmt"] }
+tempfile = "3"
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
