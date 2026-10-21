@@ -155,3 +155,19 @@ async fn raw_slot_text_bar_source_and_parse_issues_survive() {
     assert_eq!(doc.issues[0].detail.as_deref(), Some("Zz"));
     assert_eq!(doc.issues[0].section, Some(1));
 }
+
+#[test]
+fn revisions_maps_each_stored_title_to_its_latest_revision() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = SqliteStore::open(dir.path()).unwrap();
+    assert!(store.revisions().unwrap().is_empty());
+
+    store.write_page(&page("Build:A", 1, "a")).unwrap();
+    store.write_page(&page("Build:B", 2, "b")).unwrap();
+    store.write_page(&page("Build:A", 3, "a2")).unwrap();
+
+    assert_eq!(
+        store.revisions().unwrap(),
+        std::collections::HashMap::from([("Build:A".into(), 3), ("Build:B".into(), 2)])
+    );
+}
