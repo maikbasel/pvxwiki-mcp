@@ -8,8 +8,8 @@ this wrong gets the server's IP blocked and ends the project.
 - Use the MediaWiki Action API only: `https://gwpvx.fandom.com/api.php`, with `format=json` and
   `formatversion=2`. Do not scrape rendered `/wiki/` HTML.
 - Send an honest, identifying User-Agent: tool name, version, repository URL and a contact address
-  taken from `PVXWIKI_CONTACT`. Never a browser User-Agent. The contact is the GitHub repository URL once the
-  repo exists; until then, the maintainer's email.
+  taken from `PVXWIKI_CONTACT`. Never a browser User-Agent. The contact is an email address of the
+  instance operator; the hosted instance uses the address Fandom's permission was granted to.
 - One request at a time, with a fixed minimum delay between requests (a named const). Fandom's
   condition is fewer than one request per second, retries included: the delay is 2 s.
 - Send `maxlag=5`. On a `maxlag` error, 429 or 503, honour `Retry-After`, back off exponentially

@@ -13,6 +13,7 @@ publish = false
 pvxwiki-parser = { path = "crates/parser", version = "0.1.0" }
 pvxwiki-store = { path = "crates/store", version = "0.1.0" }
 pvxwiki-server = { path = "crates/server", version = "0.1.0" }
+pvxwiki-scraper = { path = "crates/scraper", version = "0.1.0" }
 parse-wiki-text-2 = "0.2.0"
 tracing = "0.1.44"
 insta = "1.49"
@@ -33,6 +34,8 @@ serde_json = "1"
 thiserror = "2"
 tracing-subscriber = { version = "0.3", features = ["env-filter", "json", "fmt"] }
 tempfile = "3"
+reqwest = { version = "0.13", default-features = false, features = ["rustls", "gzip", "query"] }
+wiremock = "0.6"
 
 [workspace.lints.rust]
 unsafe_code = "forbid"

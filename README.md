@@ -113,7 +113,7 @@ one.
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `PVXWIKI_ALLOWED_HOSTS` | required | Comma-separated host names clients use to reach the server (the `Host` header). |
-| `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: your repository URL or email. |
+| `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. |
 | `PVXWIKI_TRUSTED_PROXIES` | empty | IPs or CIDR ranges whose `X-Forwarded-For` header is trusted. |
 | `PVXWIKI_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8080 is published on. |
 | `PVXWIKI_DOMAIN` | | Public domain for the `https` profile. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
@@ -133,14 +133,15 @@ cargo clippy --all-targets -- -D warnings
 cargo deny check
 ```
 
-The workspace has four crates:
+The workspace has five crates:
 
 - `crates/parser`: wikitext to typed builds, no I/O.
 - `crates/store`: SQLite with FTS5 search.
 - `crates/server`: the MCP tools and the HTTP layer.
+- `crates/scraper`: the paced, retrying client for the wiki's API.
 - `crates/pvxwiki-mcp`: the binary.
 
-Tests never call the wiki. They run against recorded fixtures.
+Tests never call the wiki. They run against recorded fixtures and a fake `api.php`.
 
 ## License
 
