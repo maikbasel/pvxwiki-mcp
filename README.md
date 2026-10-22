@@ -7,14 +7,13 @@
 An [MCP](https://modelcontextprotocol.io) server that lets AI agents search Guild Wars 1 builds
 from the [PvX wiki](https://gwpvx.fandom.com).
 
-A scheduled job copies build pages through the wiki's MediaWiki API into a local SQLite database.
+A scheduled job copies build pages through the wiki's MediaWiki API into a local SQLite database:
+once at startup, then every 6 hours, fetching only pages whose revision changed.
 The server answers only from that database and never calls the wiki while serving a request. Every
 answer credits the PvX wiki contributors and links the page revision it came from.
 
 > [!NOTE]
-> **Work in progress.** The server, search and container are done. The scraper that fills the
-> database is not built yet, so a fresh instance answers every request with "index not built yet".
-> There is no public instance yet.
+> **Work in progress.** There is no public instance yet.
 
 ## Tools
 
@@ -91,6 +90,11 @@ cp .env.example .env    # then edit .env
 docker compose up -d
 ```
 
+The first scrape starts right away. It sends one request every 2 seconds, so a fresh instance takes
+a few minutes before it has builds; until then the tools answer "index not built yet". If Fandom
+answers with a block (HTTP 403 or a challenge page), the scraper stops until you restart the
+container. Check the logs before restarting.
+
 The server listens on `127.0.0.1:8080`. To serve it publicly over HTTPS with automatic
 certificates, set `PVXWIKI_DOMAIN` in `.env` and start the bundled Caddy:
 
@@ -113,7 +117,7 @@ one.
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `PVXWIKI_ALLOWED_HOSTS` | required | Comma-separated host names clients use to reach the server (the `Host` header). |
-| `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. |
+| `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. Without it the scraper is off and the server only serves what the database already holds. |
 | `PVXWIKI_TRUSTED_PROXIES` | empty | IPs or CIDR ranges whose `X-Forwarded-For` header is trusted. |
 | `PVXWIKI_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8080 is published on. |
 | `PVXWIKI_DOMAIN` | | Public domain for the `https` profile. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |

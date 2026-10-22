@@ -24,7 +24,7 @@ pub struct Config {
     pub allowed_hosts: Vec<String>,
     pub trusted_proxies: ProxyList,
     pub log_format: LogFormat,
-    /// Operator contact for the scraper's User-Agent; required once the scraper exists.
+    /// Operator contact for the scraper's User-Agent. Unset turns the scraper off.
     pub contact: Option<String>,
 }
 
