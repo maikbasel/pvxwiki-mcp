@@ -169,6 +169,8 @@ impl Runner {
                     Trigger::Manual
                 }
             };
+            // Published before the run, so status never shows a time already past.
+            self.shared().next_run_at = Some(unix_now() + secs_until(next));
             if self.execute(&mut client, trigger).await == Outcome::Blocked {
                 return;
             }
@@ -217,18 +219,21 @@ impl Runner {
                 (Outcome::Failed, RunReport::default(), Some(chain(&err)))
             }
         };
+        // State first: whoever sees the closed row also sees the runner past it.
+        {
+            let mut shared = self.shared();
+            if outcome == Outcome::Blocked {
+                shared.state = ScraperState::Blocked { since: unix_now() };
+                shared.next_run_at = None;
+            } else {
+                shared.state = ScraperState::Idle;
+            }
+        }
         let finished = id.and_then(|id| {
             store.finish_run(id, outcome, unix_now(), counts(&report), error.as_deref())
         });
         if let Err(err) = finished {
             tracing::warn!(error = ?err, "could not record the run in the history");
-        }
-        let mut shared = self.shared();
-        if outcome == Outcome::Blocked {
-            shared.state = ScraperState::Blocked { since: unix_now() };
-            shared.next_run_at = None;
-        } else {
-            shared.state = ScraperState::Idle;
         }
         outcome
     }

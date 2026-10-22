@@ -229,3 +229,25 @@ async fn status_shows_the_progress_of_a_running_run() {
         }
     );
 }
+
+#[tokio::test]
+async fn a_running_scheduled_run_shows_the_next_run_in_the_future() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = Arc::new(SqliteStore::open(dir.path()).unwrap());
+    let wiki = MockServer::start().await;
+    fake_wiki(&wiki, &[("Build:A", 1, "a")], Duration::from_secs(2)).await;
+    let runner = Runner::new(store, Some(api(&wiki)), LONG);
+
+    tokio::spawn(runner.clone().run_forever());
+
+    let next = eventually(async || {
+        let status = runner.status();
+        matches!(status.state, ScraperState::Running { .. }).then_some(status.next_run_at)
+    })
+    .await;
+    let now = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .unwrap()
+        .as_secs();
+    assert!(next.unwrap() > i64::try_from(now).unwrap(), "{next:?}");
+}
