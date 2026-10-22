@@ -14,9 +14,9 @@ Rules in `.claude/rules/`. Always loaded: `production-grade.md`, `scraping.md`, 
 Rust (stable, edition 2024), Cargo workspace: `crates/parser` (pure wikitext parser on
 `parse-wiki-text-2`), `crates/store` (SQLite with FTS5 via `rusqlite`, `deadpool-sqlite`,
 `rusqlite_migration`), `crates/server` (MCP tools on `rmcp` streamable HTTP, axum, tower,
-`governor`), `crates/scraper` (paced MediaWiki API client on `reqwest`) and `crates/pvxwiki-mcp`
-(the bin). Deployed as a container with docker compose
-(`deploy/`).
+`governor`), `crates/scraper` (paced MediaWiki API client on `reqwest`, plus the scrape run that
+fills the store) and `crates/pvxwiki-mcp` (the bin, which serves and runs the scraper on a
+schedule). Deployed as a container with docker compose (`deploy/`).
 
 ## Commands
 

@@ -12,9 +12,6 @@ once at startup, then every 6 hours, fetching only pages whose revision changed.
 The server answers only from that database and never calls the wiki while serving a request. Every
 answer credits the PvX wiki contributors and links the page revision it came from.
 
-> [!NOTE]
-> **Work in progress.** There is no public instance yet.
-
 ## Tools
 
 | Tool | What it does |
@@ -142,7 +139,8 @@ The workspace has five crates:
 - `crates/parser`: wikitext to typed builds, no I/O.
 - `crates/store`: SQLite with FTS5 search.
 - `crates/server`: the MCP tools and the HTTP layer.
-- `crates/scraper`: the paced, retrying client for the wiki's API.
+- `crates/scraper`: copies changed build pages from the wiki's API into the store, paced and
+  retrying.
 - `crates/pvxwiki-mcp`: the binary.
 
 Tests never call the wiki. They run against recorded fixtures and a fake `api.php`.
