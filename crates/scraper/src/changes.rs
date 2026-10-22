@@ -2,8 +2,10 @@
 
 use std::collections::HashMap;
 
+use serde_json::Value;
+
 /// Titles per call: the API's limit for clients without the bot right.
-const BATCH_SIZE: &str = "50";
+pub(crate) const BATCH_SIZE: usize = 50;
 
 #[derive(Debug, Default, PartialEq, Eq)]
 pub struct Changes {
@@ -13,6 +15,15 @@ pub struct Changes {
     pub gone: Vec<String>,
 }
 
+/// One page's current revision, as fetched for parsing.
+#[derive(Debug, PartialEq, Eq)]
+pub struct FetchedPage {
+    pub title: String,
+    pub namespace: i64,
+    pub revision: i64,
+    pub wikitext: String,
+}
+
 impl crate::ApiClient {
     /// `title -> current revision` of every non-redirect page in `namespace`.
     pub async fn revisions(
@@ -20,19 +31,85 @@ impl crate::ApiClient {
         namespace: i64,
     ) -> Result<HashMap<String, i64>, crate::ScrapeError> {
         let namespace = namespace.to_string();
+        let batch = BATCH_SIZE.to_string();
+        let params = [
+            ("generator", "allpages"),
+            ("gapnamespace", namespace.as_str()),
+            ("gaplimit", batch.as_str()),
+            ("gapfilterredir", "nonredirects"),
+            ("prop", "info"),
+        ];
         let mut revisions = HashMap::new();
+        self.each_page(&params, |page| {
+            // A skipped entry would later read as a page gone from the wiki.
+            let (Some(title), Some(revision)) =
+                (page["title"].as_str(), page["lastrevid"].as_i64())
+            else {
+                return Err(crate::ScrapeError::Malformed {
+                    what: "a listed page's title or lastrevid",
+                });
+            };
+            revisions.insert(title.to_string(), revision);
+            Ok(())
+        })
+        .await?;
+        Ok(revisions)
+    }
+
+    /// Current wikitext of `titles` (at most `BATCH_SIZE`). Pages deleted since the listing are
+    /// left out; the next run sees them gone.
+    pub async fn contents(
+        &mut self,
+        titles: &[String],
+    ) -> Result<Vec<FetchedPage>, crate::ScrapeError> {
+        let titles = titles.join("|");
+        let params = [
+            ("prop", "revisions"),
+            ("rvprop", "ids|content"),
+            ("rvslots", "main"),
+            ("titles", titles.as_str()),
+        ];
+        let mut fetched = Vec::new();
+        self.each_page(&params, |page| {
+            // Missing pages were deleted after the listing. A page without `revisions` gets
+            // them in a later `continue` batch.
+            let Some(revision) = page["revisions"].get(0) else {
+                return Ok(());
+            };
+            let (Some(title), Some(namespace), Some(revision), Some(wikitext)) = (
+                page["title"].as_str(),
+                page["ns"].as_i64(),
+                revision["revid"].as_i64(),
+                revision["slots"]["main"]["content"].as_str(),
+            ) else {
+                return Err(crate::ScrapeError::Malformed {
+                    what: "a fetched page's title, ns, revid or content",
+                });
+            };
+            fetched.push(FetchedPage {
+                title: title.to_string(),
+                namespace,
+                revision,
+                wikitext: wikitext.to_string(),
+            });
+            Ok(())
+        })
+        .await?;
+        Ok(fetched)
+    }
+
+    /// Calls `f` on every entry of `query.pages`, following `continue` to the last batch.
+    async fn each_page(
+        &mut self,
+        params: &[(&str, &str)],
+        mut f: impl FnMut(&Value) -> Result<(), crate::ScrapeError>,
+    ) -> Result<(), crate::ScrapeError> {
         let mut continuation: Vec<(String, String)> = Vec::new();
         loop {
-            let mut params = vec![
-                ("generator", "allpages"),
-                ("gapnamespace", namespace.as_str()),
-                ("gaplimit", BATCH_SIZE),
-                ("gapfilterredir", "nonredirects"),
-                ("prop", "info"),
-            ];
-            params.extend(continuation.iter().map(|(k, v)| (k.as_str(), v.as_str())));
-            let value = self.query(&params).await?;
-            // An empty namespace answers with `batchcomplete` and no `query`.
+            let mut all = params.to_vec();
+            all.extend(continuation.iter().map(|(k, v)| (k.as_str(), v.as_str())));
+            let value = self.query(&all).await?;
+            // An empty result answers with `batchcomplete` and no `query`.
             let pages = match value["query"]["pages"].as_array() {
                 Some(pages) => pages.as_slice(),
                 None if value["batchcomplete"] == true && value.get("query").is_none() => &[],
@@ -42,19 +119,9 @@ impl crate::ApiClient {
                     });
                 }
             };
-            for page in pages {
-                // A skipped entry would later read as a page gone from the wiki.
-                let (Some(title), Some(revision)) =
-                    (page["title"].as_str(), page["lastrevid"].as_i64())
-                else {
-                    return Err(crate::ScrapeError::Malformed {
-                        what: "a listed page's title or lastrevid",
-                    });
-                };
-                revisions.insert(title.to_string(), revision);
-            }
+            pages.iter().try_for_each(&mut f)?;
             let Some(next) = value["continue"].as_object() else {
-                return Ok(revisions);
+                return Ok(());
             };
             continuation = next
                 .iter()

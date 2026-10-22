@@ -22,6 +22,8 @@ pvxwiki-parser.workspace = true
 rmcp = { workspace = true, features = ["client", "transport-streamable-http-client-reqwest"] }
 serde_json.workspace = true
 tempfile.workspace = true
+pvxwiki-scraper.workspace = true
+wiremock.workspace = true
 
 [lints]
 workspace = true
