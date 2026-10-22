@@ -1356,6 +1356,7 @@ dependencies = [
  "pvxwiki-scraper",
  "pvxwiki-server",
  "pvxwiki-store",
+ "reqwest",
  "rmcp",
  "serde_json",
  "tempfile",
