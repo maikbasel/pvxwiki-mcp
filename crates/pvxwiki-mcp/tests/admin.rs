@@ -111,10 +111,7 @@ async fn start_both(
 }
 
 async fn post_run(addr: SocketAddr, headers: &[(&str, &str)]) -> reqwest::Response {
-    let mut request = reqwest::Client::builder()
-        .build()
-        .unwrap()
-        .post(format!("http://{addr}/runs"));
+    let mut request = reqwest::Client::new().post(format!("http://{addr}/runs"));
     for (name, value) in headers {
         request = request.header(*name, *value);
     }
@@ -153,19 +150,19 @@ async fn wait_for(addr: SocketAddr, needle: &str) -> String {
 async fn history_shows_the_startup_run_once_it_finishes() {
     let wiki = fake_wiki().await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
-    let body = wait_for(admin, "finished").await;
-    assert!(body.contains("scheduled"), "{body}");
-    assert!(body.contains('1'), "{body}");
+    let body = wait_for(admin, "data-outcome=\"finished\"").await;
+    assert!(body.contains("data-trigger=\"scheduled\""), "{body}");
+    assert!(body.contains("data-checked=\"1\""), "{body}");
 }
 
 #[tokio::test]
 async fn run_now_starts_a_manual_run() {
     let wiki = fake_wiki().await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
-    wait_for(admin, "finished").await;
+    wait_for(admin, "data-outcome=\"finished\"").await;
     let response = post_run(admin, &SAME_ORIGIN_HTMX).await;
     assert_eq!(response.status(), 202);
-    wait_for(admin, "manual").await;
+    wait_for(admin, "data-trigger=\"manual\"").await;
 }
 
 #[tokio::test]
@@ -183,6 +180,7 @@ async fn run_now_while_running_is_refused() {
         .mount(&wiki)
         .await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
+    wait_for(admin, "data-state=\"running\"").await;
     let response = post_run(admin, &SAME_ORIGIN_HTMX).await;
     assert_eq!(response.status(), 409);
 }
@@ -191,7 +189,7 @@ async fn run_now_while_running_is_refused() {
 async fn cross_site_run_now_is_refused() {
     let wiki = fake_wiki().await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
-    wait_for(admin, "finished").await;
+    wait_for(admin, "data-outcome=\"finished\"").await;
     let cross_site = post_run(
         admin,
         &[("HX-Request", "true"), ("Sec-Fetch-Site", "cross-site")],
@@ -219,7 +217,7 @@ async fn run_now_after_a_block_is_refused() {
         .mount(&wiki)
         .await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
-    wait_for(admin, "blocked").await;
+    wait_for(admin, "data-state=\"blocked\"").await;
     let response = post_run(admin, &SAME_ORIGIN_HTMX).await;
     assert_eq!(response.status(), 409);
 }
@@ -228,9 +226,7 @@ async fn run_now_after_a_block_is_refused() {
 async fn unknown_host_is_refused() {
     let wiki = fake_wiki().await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
-    let response = reqwest::Client::builder()
-        .build()
-        .unwrap()
+    let response = reqwest::Client::new()
         .get(format!("http://{admin}/"))
         .header("Host", "evil.example")
         .send()
