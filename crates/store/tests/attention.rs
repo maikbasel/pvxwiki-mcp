@@ -1,7 +1,7 @@
 #![allow(clippy::unwrap_used, reason = "test helpers outside #[test] fns")]
 
 use pvxwiki_parser::parse;
-use pvxwiki_store::{NewPage, ParseFailure, SqliteStore};
+use pvxwiki_store::{ARCHIVE_NAMESPACE, NewPage, ParseFailure, SqliteStore};
 
 fn page(title: &str, namespace: i64, revision: i64, wikitext: &str) -> NewPage {
     NewPage {
@@ -57,10 +57,12 @@ async fn namespace_counts_split_build_and_archive() {
     let (_dir, store) = open();
     store.write_page(&page("A", 100, 1, "x")).unwrap();
     store.write_page(&page("B", 100, 1, "x")).unwrap();
-    store.write_page(&page("C", 104, 1, "x")).unwrap();
+    store
+        .write_page(&page("C", ARCHIVE_NAMESPACE, 1, "x"))
+        .unwrap();
     assert_eq!(
         store.namespace_counts().await.unwrap(),
-        [(100, 2), (104, 1)]
+        [(100, 2), (ARCHIVE_NAMESPACE, 1)]
     );
 }
 
@@ -87,4 +89,21 @@ async fn issue_counts_and_capped_issue_list() {
     assert_eq!((pages.len(), total), (50, 51));
     assert_eq!(pages[0].title, "Deep 00");
     assert_eq!(pages[49].title, "Deep 49");
+}
+
+#[tokio::test]
+async fn a_repeated_failure_keeps_first_seen_and_updates_the_revision() {
+    let (_dir, store) = open();
+    store.write_page(&page("A", 100, 1, "x")).unwrap();
+    store.record_parse_failure("A", 2, 50).unwrap();
+    store.record_parse_failure("A", 3, 99).unwrap();
+    assert_eq!(
+        store.parse_failures().await.unwrap(),
+        [ParseFailure {
+            title: "A".into(),
+            stored_revision: 1,
+            failed_revision: 3,
+            first_seen: 50
+        }]
+    );
 }
