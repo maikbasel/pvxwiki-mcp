@@ -10,13 +10,14 @@ use std::time::Duration;
 
 use axum::Router;
 use axum::extract::{Request, State};
-use axum::http::{StatusCode, header};
+use axum::http::{HeaderValue, StatusCode, header};
 use axum::middleware::{self, Next};
 use axum::response::{IntoResponse, Response};
 use axum::routing::{get, post};
 use pvxwiki_scraper::Runner;
 use pvxwiki_store::SqliteStore;
 use tower_http::limit::RequestBodyLimitLayer;
+use tower_http::set_header::SetResponseHeaderLayer;
 use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
 
@@ -56,6 +57,15 @@ pub fn router(state: AdminState) -> Router {
         .layer(TimeoutLayer::with_status_code(
             StatusCode::SERVICE_UNAVAILABLE,
             REQUEST_TIMEOUT,
+        ))
+        // Basic auth makes a framed page click with the operator's credentials: forbid framing.
+        .layer(SetResponseHeaderLayer::overriding(
+            header::X_FRAME_OPTIONS,
+            HeaderValue::from_static("DENY"),
+        ))
+        .layer(SetResponseHeaderLayer::overriding(
+            header::CONTENT_SECURITY_POLICY,
+            HeaderValue::from_static("frame-ancestors 'none'"),
         ))
         // Added last, so it runs first: a foreign Host never reaches a handler.
         .layer(middleware::from_fn_with_state(hosts, check_host))
@@ -217,5 +227,21 @@ mod tests {
             let body = String::from_utf8(body.to_vec()).unwrap();
             assert!(body.contains(needle), "{path}: {body}");
         }
+    }
+
+    #[tokio::test]
+    async fn the_page_cannot_be_framed() {
+        let dir = tempfile::tempdir().unwrap();
+
+        let res = router(state(&dir))
+            .oneshot(get("/", "localhost"))
+            .await
+            .unwrap();
+
+        assert_eq!(res.headers()["x-frame-options"], "DENY");
+        assert_eq!(
+            res.headers()[header::CONTENT_SECURITY_POLICY],
+            "frame-ancestors 'none'"
+        );
     }
 }

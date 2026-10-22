@@ -1,8 +1,10 @@
 //! The one place that starts scrape runs: on a schedule or on request, one at a time.
 
+use std::panic::AssertUnwindSafe;
 use std::sync::{Arc, Mutex, MutexGuard};
 use std::time::Duration;
 
+use futures_util::FutureExt;
 use pvxwiki_store::{Outcome, RunCounts, SqliteStore, Trigger};
 use tokio::sync::Notify;
 use tokio::time::Instant;
@@ -141,9 +143,7 @@ impl Runner {
             .map(|mut c| c.take())
             .ok()
             .flatten();
-        let Some(mut client) = client else {
-            return;
-        };
+        // Before the client check: a run killed before a restart without a contact still closes.
         match self.inner.store.interrupt_running_runs() {
             Ok(0) => {}
             Ok(closed) => tracing::warn!(
@@ -152,6 +152,9 @@ impl Runner {
             ),
             Err(err) => tracing::warn!(error = ?err, "could not close interrupted runs"),
         }
+        let Some(mut client) = client else {
+            return;
+        };
         let mut next = Instant::now();
         loop {
             self.shared().next_run_at = Some(unix_now() + secs_until(next));
@@ -195,28 +198,40 @@ impl Runner {
         }
         let store = &self.inner.store;
         let id = store.start_run(trigger, started_at);
-        let (outcome, report, error) = match crate::run(client, store, &|p| self.set_progress(p))
-            .instrument(tracing::info_span!(
-                "scrape_run",
-                trigger = trigger.as_str()
-            ))
-            .await
-        {
+        let progress = |p| self.set_progress(p);
+        let run = crate::run(client, store, &progress).instrument(tracing::info_span!(
+            "scrape_run",
+            trigger = trigger.as_str()
+        ));
+        let (outcome, report, error) = match guarded(run).await {
             Ok(report) => (Outcome::Finished, report, None),
-            Err(err @ (ScrapeError::Blocked { .. } | ScrapeError::NotJson { .. })) => {
+            Err(RunFailure::Scrape(
+                err @ (ScrapeError::Blocked { .. } | ScrapeError::NotJson { .. }),
+            )) => {
                 tracing::warn!(
                     error = ?err,
                     "the wiki blocked the scraper; no further runs until restart"
                 );
                 (Outcome::Blocked, RunReport::default(), Some(chain(&err)))
             }
-            Err(err) => {
+            Err(RunFailure::Scrape(err)) => {
                 tracing::warn!(
                     error = ?err,
                     next_run_in_s = self.inner.interval.as_secs(),
                     "scrape run failed; the stored index stays as it was"
                 );
                 (Outcome::Failed, RunReport::default(), Some(chain(&err)))
+            }
+            Err(RunFailure::Panicked(message)) => {
+                tracing::error!(
+                    panic = %message,
+                    "scrape run panicked; recorded as failed, the stored index stays as it was"
+                );
+                (
+                    Outcome::Failed,
+                    RunReport::default(),
+                    Some(format!("the run panicked: {message}")),
+                )
             }
         };
         // State first: whoever sees the closed row also sees the runner past it.
@@ -253,6 +268,32 @@ impl Runner {
     }
 }
 
+/// Why a run did not finish.
+#[derive(Debug)]
+enum RunFailure {
+    Scrape(ScrapeError),
+    /// A bug (most likely in the parser, on text anyone can edit); the message is the panic's.
+    Panicked(String),
+}
+
+/// Runs `fut`, turning a panic into `RunFailure::Panicked` so the runner can close the row and
+/// keep serving status.
+async fn guarded(
+    fut: impl Future<Output = Result<RunReport, ScrapeError>>,
+) -> Result<RunReport, RunFailure> {
+    match AssertUnwindSafe(fut).catch_unwind().await {
+        Ok(result) => result.map_err(RunFailure::Scrape),
+        Err(payload) => {
+            let message = payload
+                .downcast_ref::<&str>()
+                .map(ToString::to_string)
+                .or_else(|| payload.downcast_ref::<String>().cloned())
+                .unwrap_or_else(|| "a panic without a message".into());
+            Err(RunFailure::Panicked(message))
+        }
+    }
+}
+
 /// The error and its sources, for the history row.
 fn chain(err: &dyn std::error::Error) -> String {
     let mut text = err.to_string();
@@ -276,5 +317,20 @@ fn counts(report: &RunReport) -> RunCounts {
         updated: n(report.updated),
         kept: n(report.kept),
         removed: n(report.removed),
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[tokio::test]
+    async fn a_panicking_run_becomes_a_failure_with_its_message() {
+        let result = guarded(async { panic!("parser gave up on Build:X") }).await;
+
+        assert!(
+            matches!(&result, Err(RunFailure::Panicked(m)) if m.contains("Build:X")),
+            "{result:?}"
+        );
     }
 }

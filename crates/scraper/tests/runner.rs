@@ -251,3 +251,17 @@ async fn a_running_scheduled_run_shows_the_next_run_in_the_future() {
         .as_secs();
     assert!(next.unwrap() > i64::try_from(now).unwrap(), "{next:?}");
 }
+
+#[tokio::test]
+async fn interrupted_rows_are_closed_even_when_the_scraper_is_off() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = Arc::new(SqliteStore::open(dir.path()).unwrap());
+    let killed = store.start_run(Trigger::Scheduled, 1).unwrap();
+    let runner = Runner::new(store.clone(), None, LONG);
+
+    runner.run_forever().await;
+
+    let runs = store.recent_runs(10).await.unwrap();
+    let old = runs.iter().find(|r| r.id == killed).unwrap();
+    assert_eq!(old.outcome, Outcome::Interrupted);
+}

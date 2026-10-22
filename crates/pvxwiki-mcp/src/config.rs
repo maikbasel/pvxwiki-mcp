@@ -11,8 +11,10 @@ pub const DEFAULT_LISTEN: SocketAddr =
     SocketAddr::new(IpAddr::V4(Ipv4Addr::UNSPECIFIED), DEFAULT_PORT);
 /// The admin page's port; compose publishes it on 127.0.0.1 only by default.
 pub const DEFAULT_ADMIN_PORT: u16 = 8081;
+/// Loopback: the page has no login of its own. The image sets `PVXWIKI_ADMIN_LISTEN` to every
+/// interface so compose's port mapping reaches it.
 pub const DEFAULT_ADMIN_LISTEN: SocketAddr =
-    SocketAddr::new(IpAddr::V4(Ipv4Addr::UNSPECIFIED), DEFAULT_ADMIN_PORT);
+    SocketAddr::new(IpAddr::V4(Ipv4Addr::LOCALHOST), DEFAULT_ADMIN_PORT);
 pub const DEFAULT_DATA_DIR: &str = "/data";
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -146,7 +148,8 @@ mod tests {
         let config =
             Config::from_lookup(lookup(&[("PVXWIKI_ALLOWED_HOSTS", "mcp.example.org")])).unwrap();
         assert_eq!(config.listen.to_string(), "0.0.0.0:8080");
-        assert_eq!(config.admin_listen.to_string(), "0.0.0.0:8081");
+        // Loopback outside a container; the image sets 0.0.0.0:8081 for the port mapping.
+        assert_eq!(config.admin_listen.to_string(), "127.0.0.1:8081");
         assert_eq!(config.data_dir, std::path::PathBuf::from(DEFAULT_DATA_DIR));
         assert_eq!(config.allowed_hosts, ["mcp.example.org"]);
         assert!(config.trusted_proxies.is_empty());

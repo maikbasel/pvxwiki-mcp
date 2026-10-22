@@ -27,10 +27,16 @@ impl From<StoreError> for AdminError {
 
 impl IntoResponse for AdminError {
     fn into_response(self) -> Response {
-        tracing::warn!(error = ?self.0, "admin page could not read the database");
+        // Busy or slow is load (the environment); anything else is a bug here (`logging.md`).
         let status = match self.0 {
-            StoreError::Busy | StoreError::Timeout => StatusCode::SERVICE_UNAVAILABLE,
-            _ => StatusCode::INTERNAL_SERVER_ERROR,
+            StoreError::Busy | StoreError::Timeout => {
+                tracing::warn!(error = ?self.0, "admin page could not read the database in time");
+                StatusCode::SERVICE_UNAVAILABLE
+            }
+            _ => {
+                tracing::error!(error = ?self.0, "admin page could not read the database");
+                StatusCode::INTERNAL_SERVER_ERROR
+            }
         };
         (status, "the database is not available; try again shortly").into_response()
     }

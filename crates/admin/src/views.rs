@@ -75,7 +75,9 @@ pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64
                     p { "A " (trigger.as_str()) " run started " (ago(now - started_at)) "." }
                     @match progress {
                         Some(p) => {
-                            progress value=(p.done) max=(p.total) {}
+                            @if p.total > 0 {
+                                progress value=(p.done) max=(p.total) {}
+                            }
                             p { small {
                                 @match p.phase {
                                     Phase::Listing => "Listing namespaces: ",
@@ -406,5 +408,20 @@ mod tests {
         let html = attention(&[failure("Build:A")], 3, &[], "timed_out", &[], 0).into_string();
 
         assert!(html.contains("and 2 more"), "{html}");
+    }
+
+    #[test]
+    fn nothing_to_fetch_renders_no_empty_progress_bar() {
+        let html = render(ScraperState::Running {
+            trigger: Trigger::Scheduled,
+            started_at: 990,
+            progress: Some(Progress {
+                phase: Phase::Fetching,
+                done: 0,
+                total: 0,
+            }),
+        });
+
+        assert!(!html.contains(r#"max="0""#), "{html}");
     }
 }

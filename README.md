@@ -142,7 +142,7 @@ one.
 | `PVXWIKI_DOMAIN` | | Public domain for the `https` profile. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
 | `PVXWIKI_DATA_DIR` | `/data` | Where the SQLite database lives. |
 | `PVXWIKI_LISTEN` | `0.0.0.0:8080` | Address the server binds inside the container. |
-| `PVXWIKI_ADMIN_LISTEN` | `0.0.0.0:8081` | Address the admin page binds inside the container. |
+| `PVXWIKI_ADMIN_LISTEN` | `0.0.0.0:8081` | Address the admin page binds inside the container. Outside a container it defaults to `127.0.0.1:8081`. |
 | `PVXWIKI_ADMIN_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8081 is published on. Keep it on loopback unless a proxy with a login is in front. |
 | `PVXWIKI_CADDY_MCP` | `on` | `off` stops the bundled Caddy from serving the MCP site. |
 | `PVXWIKI_CADDY_ADMIN` | `off` | `on` makes the bundled Caddy serve the admin page with basic auth. |
