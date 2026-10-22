@@ -16,6 +16,9 @@ arguments from any client, and wiki text that anyone can edit.
 - Per-client rate limit, a global concurrency cap, request body size limit, and request timeouts.
   Each value is a named const.
 - Every response has a size cap. Pagination instead of unbounded results.
+- The admin page has its own listener, published on 127.0.0.1 by default. Its protection lives in
+  the reverse proxy (Caddy basic auth or the operator's SSO), never in the service. It refuses
+  unknown `Host` headers and cross-site `POST`s.
 - No auth in the service. The public instance is open with these limits; private instances put
   auth in their reverse proxy (Pangolin, Caddy, Cloudflare Access).
 

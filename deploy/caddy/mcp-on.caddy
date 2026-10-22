@@ -1,0 +1,3 @@
+{$PVXWIKI_DOMAIN} {
+	reverse_proxy pvxwiki-mcp:8080
+}

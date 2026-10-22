@@ -2,6 +2,9 @@
 # HTTPS with Caddy: set PVXWIKI_DOMAIN and list the same name in PVXWIKI_ALLOWED_HOSTS (Caddy
 # forwards the public Host header), set PVXWIKI_TRUSTED_PROXIES=172.31.250.10/32 (Caddy only),
 # then `docker compose --profile https up -d`.
+# Admin page behind Caddy basic auth: set PVXWIKI_CADDY_ADMIN=on, PVXWIKI_ADMIN_DOMAIN (also list it
+# in PVXWIKI_ALLOWED_HOSTS), PVXWIKI_ADMIN_USER and PVXWIKI_ADMIN_PASSWORD_HASH (from
+# `docker run --rm caddy:2.10 caddy hash-password`). For the admin page alone, set PVXWIKI_CADDY_MCP=off.
 # Without Caddy the port is published on 127.0.0.1 only. To serve it publicly without Caddy, set
 # PVXWIKI_PUBLISH_ADDR=0.0.0.0 and leave PVXWIKI_TRUSTED_PROXIES empty. Never trust the whole
 # subnet: Docker's userland proxy delivers outside traffic from the bridge gateway (172.31.250.1),
@@ -26,6 +29,8 @@ services:
     env_file: .env
     ports:
       - "${PVXWIKI_PUBLISH_ADDR:-127.0.0.1}:8080:8080"
+      # The admin page has no login of its own: published on loopback unless you say otherwise.
+      - "${PVXWIKI_ADMIN_PUBLISH_ADDR:-127.0.0.1}:8081:8081"
     volumes:
       - pvxwiki-data:/data
     healthcheck:
@@ -44,11 +49,17 @@ services:
     restart: unless-stopped
     environment:
       PVXWIKI_DOMAIN: ${PVXWIKI_DOMAIN:-}
+      PVXWIKI_CADDY_MCP: ${PVXWIKI_CADDY_MCP:-on}
+      PVXWIKI_CADDY_ADMIN: ${PVXWIKI_CADDY_ADMIN:-off}
+      PVXWIKI_ADMIN_DOMAIN: ${PVXWIKI_ADMIN_DOMAIN:-}
+      PVXWIKI_ADMIN_USER: ${PVXWIKI_ADMIN_USER:-}
+      PVXWIKI_ADMIN_PASSWORD_HASH: ${PVXWIKI_ADMIN_PASSWORD_HASH:-}
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./caddy:/etc/caddy/caddy:ro
       - caddy-data:/data
       - caddy-config:/config
     depends_on:

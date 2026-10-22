@@ -57,9 +57,11 @@ fn serve() -> ExitCode {
     };
     let result = runtime.block_on(async {
         let listener = tokio::net::TcpListener::bind(config.listen).await?;
+        let admin_listener = tokio::net::TcpListener::bind(config.admin_listen).await?;
         pvxwiki_mcp::run(
             config,
             listener,
+            admin_listener,
             Limits::default(),
             pvxwiki_mcp::Schedule::fandom(),
             pvxwiki_mcp::shutdown_signal(),

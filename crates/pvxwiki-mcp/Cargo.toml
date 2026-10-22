@@ -12,6 +12,7 @@ publish.workspace = true
 pvxwiki-store.workspace = true
 pvxwiki-server.workspace = true
 pvxwiki-scraper.workspace = true
+pvxwiki-admin.workspace = true
 axum.workspace = true
 tokio.workspace = true
 tracing.workspace = true

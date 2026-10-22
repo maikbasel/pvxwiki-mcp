@@ -1403,6 +1403,7 @@ name = "pvxwiki-mcp"
 version = "0.1.0"
 dependencies = [
  "axum",
+ "pvxwiki-admin",
  "pvxwiki-parser",
  "pvxwiki-scraper",
  "pvxwiki-server",
