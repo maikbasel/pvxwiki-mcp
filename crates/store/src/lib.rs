@@ -3,6 +3,7 @@
 mod document;
 mod fts;
 mod port;
+mod runs;
 mod search;
 mod sqlite;
 
@@ -17,6 +18,7 @@ pub use document::{
     status_name,
 };
 pub use port::{BuildStore, StoreFuture};
+pub use runs::{Outcome, RUN_HISTORY_LIMIT, RunCounts, RunRecord, Trigger};
 pub use search::{MAX_MATCHES_PER_HIT, SearchHit, SearchPage, SearchQuery, SectionMatch};
 pub use sqlite::SqliteStore;
 
@@ -47,6 +49,8 @@ pub enum StoreError {
     Document(#[from] serde_json::Error),
     #[error("writer lock poisoned by an earlier panic")]
     Poisoned,
+    #[error("stored run has an unknown {field}: {value:?}")]
+    UnknownRunValue { field: &'static str, value: String },
     #[error("query exceeded its time budget")]
     Timeout,
 }
