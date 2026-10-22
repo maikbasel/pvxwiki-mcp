@@ -58,17 +58,7 @@ impl SqliteStore {
         let json = serde_json::to_string(&doc)?;
         let mut writer = self.writer.lock().map_err(|_| StoreError::Poisoned)?;
         let tx = writer.transaction()?;
-        let old: Option<i64> = tx
-            .query_row(
-                "SELECT id FROM pages WHERE title = ?1",
-                [&page.title],
-                |r| r.get(0),
-            )
-            .optional()?;
-        if let Some(old) = old {
-            tx.execute("DELETE FROM sections_fts WHERE page_id = ?1", [old])?;
-            tx.execute("DELETE FROM pages WHERE id = ?1", [old])?;
-        }
+        remove(&tx, &page.title)?;
         let id: i64 = tx.query_row(
             "INSERT INTO pages (title, namespace, revision, fetched_at, vetting, rating, status, archived, document)
              VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9) RETURNING id",
@@ -125,6 +115,16 @@ impl SqliteStore {
         }
         tx.commit()?;
         tracing::debug!("page written");
+        Ok(())
+    }
+
+    /// Removes `title` and its search rows in one transaction. Unknown titles are a no-op.
+    #[tracing::instrument(skip_all, fields(title = ?title))]
+    pub fn delete_page(&self, title: &str) -> Result<(), StoreError> {
+        let mut writer = self.writer.lock().map_err(|_| StoreError::Poisoned)?;
+        let tx = writer.transaction()?;
+        remove(&tx, title)?;
+        tx.commit()?;
         Ok(())
     }
 
@@ -191,6 +191,20 @@ impl crate::BuildStore for SqliteStore {
             })
         }))
     }
+}
+
+/// Deletes `title`'s page row (child rows cascade) and its FTS rows, which cannot cascade.
+fn remove(tx: &rusqlite::Transaction<'_>, title: &str) -> Result<(), StoreError> {
+    let old: Option<i64> = tx
+        .query_row("SELECT id FROM pages WHERE title = ?1", [title], |r| {
+            r.get(0)
+        })
+        .optional()?;
+    if let Some(old) = old {
+        tx.execute("DELETE FROM sections_fts WHERE page_id = ?1", [old])?;
+        tx.execute("DELETE FROM pages WHERE id = ?1", [old])?;
+    }
+    Ok(())
 }
 
 pub(crate) fn load_by_id(conn: &Connection, id: i64) -> Result<BuildDocument, StoreError> {

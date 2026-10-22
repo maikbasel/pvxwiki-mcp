@@ -1353,6 +1353,7 @@ version = "0.1.0"
 dependencies = [
  "axum",
  "pvxwiki-parser",
+ "pvxwiki-scraper",
  "pvxwiki-server",
  "pvxwiki-store",
  "rmcp",
@@ -1362,6 +1363,7 @@ dependencies = [
  "tokio",
  "tracing",
  "tracing-subscriber",
+ "wiremock",
 ]
 
 [[package]]
@@ -1377,8 +1379,11 @@ dependencies = [
 name = "pvxwiki-scraper"
 version = "0.1.0"
 dependencies = [
+ "pvxwiki-parser",
+ "pvxwiki-store",
  "reqwest",
  "serde_json",
+ "tempfile",
  "thiserror",
  "tokio",
  "tracing",

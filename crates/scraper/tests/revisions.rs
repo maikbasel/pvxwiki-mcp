@@ -4,7 +4,7 @@
 use std::collections::HashMap;
 use std::time::Duration;
 
-use pvxwiki_scraper::{ApiClient, Pacing, ScrapeError};
+use pvxwiki_scraper::{ApiClient, FetchedPage, Pacing, ScrapeError};
 use serde_json::json;
 use wiremock::matchers::{method, query_param, query_param_is_missing};
 use wiremock::{Mock, MockServer, ResponseTemplate};
@@ -118,4 +118,40 @@ async fn an_empty_namespace_lists_nothing() {
     let revisions = client(&server).await.revisions(100).await.unwrap();
 
     assert!(revisions.is_empty());
+}
+
+#[tokio::test]
+async fn contents_returns_the_wikitext_of_each_existing_page() {
+    let server = MockServer::start().await;
+    Mock::given(method("GET"))
+        .and(query_param("prop", "revisions"))
+        .and(query_param("rvprop", "ids|content"))
+        .and(query_param("rvslots", "main"))
+        .and(query_param("titles", "Build:A|Build:Gone"))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({
+            "batchcomplete": true,
+            "query": { "pages": [
+                { "pageid": 1, "ns": 104, "title": "Build:A",
+                  "revisions": [{ "revid": 7, "slots": { "main": { "content": "== Usage ==" } } }] },
+                { "ns": 100, "title": "Build:Gone", "missing": true }
+            ] }
+        })))
+        .mount(&server)
+        .await;
+
+    let pages = client(&server)
+        .await
+        .contents(&["Build:A".into(), "Build:Gone".into()])
+        .await
+        .unwrap();
+
+    assert_eq!(
+        pages,
+        [FetchedPage {
+            title: "Build:A".into(),
+            namespace: 104,
+            revision: 7,
+            wikitext: "== Usage ==".into(),
+        }]
+    );
 }

@@ -6,8 +6,10 @@
 use std::net::SocketAddr;
 use std::num::NonZeroU32;
 use std::path::Path;
+use std::time::Duration;
 
 use pvxwiki_mcp::config::{Config, LogFormat};
+use pvxwiki_scraper::{ApiClient, Pacing};
 use pvxwiki_server::{Limits, ProxyList};
 use pvxwiki_store::{ARCHIVE_NAMESPACE, NewPage, SqliteStore};
 use rmcp::ServiceExt;
@@ -16,6 +18,8 @@ use rmcp::service::RunningService;
 use rmcp::transport::StreamableHttpClientTransport;
 use serde_json::{Value, json};
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
+use wiremock::matchers::{method, query_param};
+use wiremock::{Mock, MockServer, ResponseTemplate};
 
 const FIXTURES: &str = concat!(
     env!("CARGO_MANIFEST_DIR"),
@@ -81,15 +85,19 @@ async fn start(seeded: bool, limits: Limits) -> (SocketAddr, tempfile::TempDir) 
     if seeded {
         seed(dir.path());
     }
+    (serve(dir.path(), limits).await, dir)
+}
+
+async fn serve(dir: &Path, limits: Limits) -> SocketAddr {
     let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
     let addr = listener.local_addr().unwrap();
-    let config = config(addr, dir.path());
+    let config = config(addr, dir);
     tokio::spawn(async move {
         pvxwiki_mcp::run(config, listener, limits, std::future::pending())
             .await
             .unwrap();
     });
-    (addr, dir)
+    addr
 }
 
 async fn client(addr: SocketAddr) -> RunningService<rmcp::RoleClient, ()> {
@@ -349,4 +357,64 @@ async fn bursts_over_the_limit_get_429() {
         raw_ping(addr).await,
     ];
     assert_eq!(statuses, [200, 200, 429]);
+}
+
+#[tokio::test]
+async fn a_scrape_run_fills_the_index_from_the_wiki() {
+    let wiki = MockServer::start().await;
+    let title = "Build:A/Me Vaettir Farm";
+    Mock::given(method("GET"))
+        .and(query_param("generator", "allpages"))
+        .and(query_param("gapnamespace", BUILD_NAMESPACE.to_string()))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({
+            "batchcomplete": true,
+            "query": { "pages": [{ "pageid": 1, "ns": 100, "title": title, "lastrevid": 1306202 }] }
+        })))
+        .mount(&wiki)
+        .await;
+    Mock::given(method("GET"))
+        .and(query_param("generator", "allpages"))
+        .and(query_param("gapnamespace", ARCHIVE_NAMESPACE.to_string()))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({ "batchcomplete": true })))
+        .mount(&wiki)
+        .await;
+    let text = std::fs::read_to_string(
+        Path::new(FIXTURES).join("Build-A-Me_Vaettir_Farm__1306202.wikitext"),
+    )
+    .unwrap();
+    Mock::given(method("GET"))
+        .and(query_param("prop", "revisions"))
+        .and(query_param("titles", title))
+        .respond_with(ResponseTemplate::new(200).set_body_json(json!({
+            "batchcomplete": true,
+            "query": { "pages": [{
+                "pageid": 1, "ns": 100, "title": title,
+                "revisions": [{ "revid": 1306202, "slots": { "main": { "content": text } } }]
+            }] }
+        })))
+        .mount(&wiki)
+        .await;
+    let dir = tempfile::tempdir().unwrap();
+    let mut api = ApiClient::new(
+        &format!("{}/api.php", wiki.uri()),
+        "ops@example.org",
+        Pacing {
+            min_delay: Duration::from_millis(1),
+            max_retries: 0,
+            backoff_base: Duration::from_millis(1),
+            backoff_cap: Duration::from_secs(1),
+        },
+    )
+    .unwrap();
+
+    pvxwiki_scraper::run(&mut api, &SqliteStore::open(dir.path()).unwrap())
+        .await
+        .unwrap();
+
+    let c = client(serve(dir.path(), Limits::default()).await).await;
+    let out = call(&c, "get_build", json!({ "title": title })).await;
+    let body = ok(&out);
+    assert_eq!(body["build"]["revision"], 1306202);
+    assert_eq!(body["build"]["skill_bars"][0]["primary"], "Assassin");
+    assert_eq!(body["attribution"]["credit"], "PvX wiki contributors");
 }

@@ -171,3 +171,30 @@ fn revisions_maps_each_stored_title_to_its_latest_revision() {
         std::collections::HashMap::from([("Build:A".into(), 3), ("Build:B".into(), 2)])
     );
 }
+
+#[tokio::test]
+async fn deleted_page_is_gone_from_lookup_and_search() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = SqliteStore::open(dir.path()).unwrap();
+    store
+        .write_page(&page("Build:A", 1, "== Usage ==\nzebra"))
+        .unwrap();
+    store
+        .write_page(&page("Build:B", 2, "== Usage ==\nzebra"))
+        .unwrap();
+
+    store.delete_page("Build:A").unwrap();
+
+    assert!(store.get_page("Build:A").await.unwrap().is_none());
+    let hits = store
+        .search(&pvxwiki_store::SearchQuery {
+            text: Some("zebra".into()),
+            limit: 10,
+            ..Default::default()
+        })
+        .await
+        .unwrap()
+        .hits;
+    let titles: Vec<_> = hits.iter().map(|h| h.document.title.as_str()).collect();
+    assert_eq!(titles, ["Build:B"]);
+}
