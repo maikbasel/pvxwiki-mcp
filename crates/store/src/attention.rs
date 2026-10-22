@@ -39,14 +39,17 @@ impl SqliteStore {
         Ok(())
     }
 
-    /// Ordered by title, with the revision still being served.
-    pub async fn parse_failures(&self) -> Result<Vec<ParseFailure>, StoreError> {
-        self.read(|conn| {
+    /// At most `ISSUE_LIST_LIMIT`, ordered by title, with the revision still being served; the
+    /// second value is the total.
+    pub async fn parse_failures(&self) -> Result<(Vec<ParseFailure>, u64), StoreError> {
+        let limit = i64::try_from(ISSUE_LIST_LIMIT).unwrap_or(i64::MAX);
+        self.read(move |conn| {
             let mut stmt = conn.prepare(
                 "SELECT f.title, p.revision, f.failed_revision, f.first_seen
-                 FROM parse_failures f JOIN pages p ON p.title = f.title ORDER BY f.title",
+                 FROM parse_failures f JOIN pages p ON p.title = f.title
+                 ORDER BY f.title LIMIT ?1",
             )?;
-            let rows = stmt.query_map([], |r| {
+            let rows = stmt.query_map([limit], |r| {
                 Ok(ParseFailure {
                     title: r.get(0)?,
                     stored_revision: r.get(1)?,
@@ -54,7 +57,13 @@ impl SqliteStore {
                     first_seen: r.get(3)?,
                 })
             })?;
-            Ok(rows.collect::<Result<_, _>>()?)
+            let failures = rows.collect::<Result<_, _>>()?;
+            let total = conn.query_row(
+                "SELECT COUNT(*) FROM parse_failures f JOIN pages p ON p.title = f.title",
+                [],
+                |r| r.get(0),
+            )?;
+            Ok((failures, count(total)))
         })
         .await
     }

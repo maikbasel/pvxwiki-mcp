@@ -115,7 +115,9 @@ one in front before you expose it:
 
 - **Bundled Caddy:** set `PVXWIKI_CADDY_ADMIN=on`, `PVXWIKI_ADMIN_DOMAIN`, `PVXWIKI_ADMIN_USER` and
   `PVXWIKI_ADMIN_PASSWORD_HASH` (create it with `docker run --rm caddy:2.10 caddy hash-password`),
-  then start the `https` profile. Set `PVXWIKI_CADDY_MCP=off` if Caddy should serve only the admin
+  then start the `https` profile. Put the hash in single quotes in `.env`
+  (`PVXWIKI_ADMIN_PASSWORD_HASH='$2a$14$...'`): compose reads `$` in unquoted or double-quoted
+  values as a variable, and every login then fails. Set `PVXWIKI_CADDY_MCP=off` if Caddy should serve only the admin
   page.
 - **Your own proxy** (Pangolin, Authelia, Cloudflare Access): add a second resource for port 8081
   behind your SSO.

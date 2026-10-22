@@ -158,6 +158,16 @@ pub(crate) fn history(runs: &[RunRecord], now: i64) -> Markup {
     }
 }
 
+/// "and N more" when a capped list shows fewer than `total`.
+fn more(shown: usize, total: u64) -> Markup {
+    let hidden = total.saturating_sub(u64::try_from(shown).unwrap_or(u64::MAX));
+    html! {
+        @if hidden > 0 {
+            p { small { "and " (hidden) " more" } }
+        }
+    }
+}
+
 fn namespace_name(namespace: i64) -> String {
     match namespace {
         100 => "build pages".into(),
@@ -189,6 +199,7 @@ fn span(seconds: i64) -> String {
 /// Pages needing attention: failed parses, then pages with parse issues of one `kind`.
 pub(crate) fn attention(
     failures: &[ParseFailure],
+    failure_total: u64,
     issue_counts: &[(String, u64)],
     kind: &str,
     pages: &[IssuePage],
@@ -214,6 +225,7 @@ pub(crate) fn attention(
                         }
                     }
                 }
+                (more(failures.len(), failure_total))
             }
             h3 { "Stored with parse issues" }
             @if issue_counts.is_empty() {
@@ -240,7 +252,6 @@ pub(crate) fn attention(
 
 /// The capped list of pages with issues of `kind`.
 pub(crate) fn issues(kind: &str, pages: &[IssuePage], total: u64) -> Markup {
-    let more = total.saturating_sub(u64::try_from(pages.len()).unwrap_or(u64::MAX));
     html! {
         div #issues data-kind=(kind) {
             ul {
@@ -252,9 +263,7 @@ pub(crate) fn issues(kind: &str, pages: &[IssuePage], total: u64) -> Markup {
                     }
                 }
             }
-            @if more > 0 {
-                p { small { "and " (more) " more" } }
-            }
+            (more(pages.len(), total))
         }
     }
 }
@@ -289,7 +298,8 @@ mod tests {
 
     #[test]
     fn attention_escapes_titles_and_links_both_revisions() {
-        let html = attention(&[failure("Build:<script>")], &[], "timed_out", &[], 0).into_string();
+        let html =
+            attention(&[failure("Build:<script>")], 1, &[], "timed_out", &[], 0).into_string();
 
         assert!(html.contains("Build:&lt;script&gt;"), "{html}");
         assert!(!html.contains("<script>"), "{html}");
@@ -389,5 +399,12 @@ mod tests {
         assert!(html.contains("unexpected HTTP 404 from the wiki"), "{html}");
         assert!(html.contains(r#"data-outcome="interrupted""#), "{html}");
         assert!(html.contains("Run history"), "{html}");
+    }
+
+    #[test]
+    fn failure_list_says_how_many_more() {
+        let html = attention(&[failure("Build:A")], 3, &[], "timed_out", &[], 0).into_string();
+
+        assert!(html.contains("and 2 more"), "{html}");
     }
 }

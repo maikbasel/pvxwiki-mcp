@@ -16,7 +16,8 @@ Rust (stable, edition 2024), Cargo workspace: `crates/parser` (pure wikitext par
 `rusqlite_migration`), `crates/server` (MCP tools on `rmcp` streamable HTTP, axum, tower,
 `governor`), `crates/admin` (operator admin page: maud, htmx, Pico CSS), `crates/scraper`
 (paced MediaWiki API client on `reqwest`, plus the runner that fills the store on a schedule or on
-request) and `crates/pvxwiki-mcp` (the bin: wires the store, the runner and both listeners). Deployed as a container with docker compose (`deploy/`).
+request) and `crates/pvxwiki-mcp` (the bin: wires the store, the runner and both listeners).
+Deployed as a container with docker compose (`deploy/`).
 
 ## Commands
 

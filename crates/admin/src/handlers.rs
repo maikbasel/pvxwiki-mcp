@@ -100,7 +100,7 @@ async fn history_markup(state: &AdminState) -> Page {
 }
 
 async fn attention_markup(state: &AdminState, kind: Option<&str>) -> Page {
-    let failures = state.store.parse_failures().await?;
+    let (failures, failure_total) = state.store.parse_failures().await?;
     let counts = state.store.issue_counts().await?;
     let kind = kind
         .filter(|k| k.len() <= MAX_KIND_LEN)
@@ -112,7 +112,14 @@ async fn attention_markup(state: &AdminState, kind: Option<&str>) -> Page {
         .or_else(|| counts.first().map(|(name, _)| name.as_str()))
         .unwrap_or(SERIOUS_KINDS[0]);
     let (pages, total) = state.store.pages_with_issue(kind).await?;
-    Ok(views::attention(&failures, &counts, kind, &pages, total))
+    Ok(views::attention(
+        &failures,
+        failure_total,
+        &counts,
+        kind,
+        &pages,
+        total,
+    ))
 }
 
 fn now() -> i64 {

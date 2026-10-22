@@ -144,7 +144,7 @@ async fn a_revision_that_fails_to_parse_keeps_the_stored_copy() {
         store.revisions().unwrap(),
         HashMap::from([("Build:A".into(), 1)])
     );
-    let failures = store.parse_failures().await.unwrap();
+    let (failures, _) = store.parse_failures().await.unwrap();
     assert_eq!(
         failures
             .iter()

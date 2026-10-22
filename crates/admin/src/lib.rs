@@ -23,6 +23,8 @@ use tower_http::trace::TraceLayer;
 /// The admin page sends no request bodies; `POST /runs` is empty.
 pub const MAX_BODY_BYTES: usize = 1024;
 pub const REQUEST_TIMEOUT: Duration = Duration::from_secs(10);
+/// Longest prefix of a refused `Host` header that reaches the log (`logging.md`).
+const MAX_LOGGED_HOST: usize = 64;
 /// Vendored assets change only with a new binary.
 const ASSET_CACHE: &str = "public, max-age=86400";
 
@@ -50,8 +52,9 @@ pub fn router(state: AdminState) -> Router {
         .route("/assets/pico.min.css", get(pico))
         .with_state(state)
         .layer(RequestBodyLimitLayer::new(MAX_BODY_BYTES))
+        // 503, not 408: the server was slow, and 408 invites clients to resend a POST.
         .layer(TimeoutLayer::with_status_code(
-            StatusCode::REQUEST_TIMEOUT,
+            StatusCode::SERVICE_UNAVAILABLE,
             REQUEST_TIMEOUT,
         ))
         // Added last, so it runs first: a foreign Host never reaches a handler.
@@ -69,6 +72,7 @@ async fn check_host(State(allowed): State<Arc<Vec<String>>>, req: Request, next:
     if guard::host_allowed(host, &allowed) {
         next.run(req).await
     } else {
+        let host: String = host.chars().take(MAX_LOGGED_HOST).collect();
         tracing::warn!(host = ?host, "admin request for an unknown host; 421 returned");
         (StatusCode::MISDIRECTED_REQUEST, "unknown host").into_response()
     }
