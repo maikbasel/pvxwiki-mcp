@@ -1,5 +1,6 @@
 //! The SQLite implementation: one writer connection, a read-only pool for queries.
 
+use std::collections::HashMap;
 use std::path::Path;
 use std::sync::Mutex;
 use std::time::{Duration, Instant};
@@ -125,6 +126,14 @@ impl SqliteStore {
         tx.commit()?;
         tracing::debug!("page written");
         Ok(())
+    }
+
+    /// Title to stored revision for every page, so the scraper refetches only what changed.
+    pub fn revisions(&self) -> Result<HashMap<String, i64>, StoreError> {
+        let writer = self.writer.lock().map_err(|_| StoreError::Poisoned)?;
+        let mut stmt = writer.prepare("SELECT title, revision FROM pages")?;
+        let rows = stmt.query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?;
+        Ok(rows.collect::<Result<_, _>>()?)
     }
 
     /// The writer connection, for tests that inspect raw rows.

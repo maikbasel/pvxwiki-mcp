@@ -7,6 +7,9 @@ use reqwest::header::{CONTENT_TYPE, HeaderMap, RETRY_AFTER};
 use serde_json::Value;
 use tokio::time::Instant;
 
+mod changes;
+pub use changes::{Changes, diff};
+
 /// The only wiki this service copies from.
 pub const FANDOM_API: &str = "https://gwpvx.fandom.com/api.php";
 
@@ -65,6 +68,8 @@ pub enum ScrapeError {
     Status { status: u16 },
     #[error("the wiki rejected the query: {code}: {info}")]
     Api { code: String, info: String },
+    #[error("the wiki's answer lacks {what}; stopping the run")]
+    Malformed { what: &'static str },
     #[error("the wiki asked us to wait {seconds} s, longer than the backoff cap; ending the run")]
     RetryAfterTooLong { seconds: u64 },
     #[error("gave up after {attempts} attempts")]
