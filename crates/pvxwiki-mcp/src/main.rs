@@ -61,6 +61,7 @@ fn serve() -> ExitCode {
             config,
             listener,
             Limits::default(),
+            pvxwiki_mcp::Schedule::fandom(),
             pvxwiki_mcp::shutdown_signal(),
         )
         .await

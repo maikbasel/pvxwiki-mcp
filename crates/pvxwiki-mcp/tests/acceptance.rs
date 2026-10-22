@@ -8,8 +8,9 @@ use std::num::NonZeroU32;
 use std::path::Path;
 use std::time::Duration;
 
+use pvxwiki_mcp::Schedule;
 use pvxwiki_mcp::config::{Config, LogFormat};
-use pvxwiki_scraper::{ApiClient, Pacing};
+use pvxwiki_scraper::Pacing;
 use pvxwiki_server::{Limits, ProxyList};
 use pvxwiki_store::{ARCHIVE_NAMESPACE, NewPage, SqliteStore};
 use rmcp::ServiceExt;
@@ -80,6 +81,22 @@ fn config(addr: SocketAddr, dir: &Path) -> Config {
     }
 }
 
+const FAST: Pacing = Pacing {
+    min_delay: Duration::from_millis(1),
+    max_retries: 0,
+    backoff_base: Duration::from_millis(1),
+    backoff_cap: Duration::from_secs(1),
+};
+
+/// Scraping is off in these servers (no contact), so the schedule is never used.
+fn no_schedule() -> Schedule {
+    Schedule {
+        endpoint: "http://127.0.0.1:1/api.php".into(),
+        pacing: FAST,
+        interval: Duration::from_secs(3600),
+    }
+}
+
 async fn start(seeded: bool, limits: Limits) -> (SocketAddr, tempfile::TempDir) {
     let dir = tempfile::tempdir().unwrap();
     if seeded {
@@ -93,9 +110,15 @@ async fn serve(dir: &Path, limits: Limits) -> SocketAddr {
     let addr = listener.local_addr().unwrap();
     let config = config(addr, dir);
     tokio::spawn(async move {
-        pvxwiki_mcp::run(config, listener, limits, std::future::pending())
-            .await
-            .unwrap();
+        pvxwiki_mcp::run(
+            config,
+            listener,
+            limits,
+            no_schedule(),
+            std::future::pending(),
+        )
+        .await
+        .unwrap();
     });
     addr
 }
@@ -150,6 +173,7 @@ async fn shutdown_signal_stops_the_server_cleanly() {
         config(addr, dir.path()),
         listener,
         Limits::default(),
+        no_schedule(),
         async {
             let _ = stopped.await;
         },
@@ -359,16 +383,17 @@ async fn bursts_over_the_limit_get_429() {
     assert_eq!(statuses, [200, 200, 429]);
 }
 
-#[tokio::test]
-async fn a_scrape_run_fills_the_index_from_the_wiki() {
+const VAETTIR: &str = "Build:A/Me Vaettir Farm";
+
+/// A wiki with one build page, the Vaettir fixture at revision 1306202.
+async fn fake_wiki() -> MockServer {
     let wiki = MockServer::start().await;
-    let title = "Build:A/Me Vaettir Farm";
     Mock::given(method("GET"))
         .and(query_param("generator", "allpages"))
         .and(query_param("gapnamespace", BUILD_NAMESPACE.to_string()))
         .respond_with(ResponseTemplate::new(200).set_body_json(json!({
             "batchcomplete": true,
-            "query": { "pages": [{ "pageid": 1, "ns": 100, "title": title, "lastrevid": 1306202 }] }
+            "query": { "pages": [{ "pageid": 1, "ns": 100, "title": VAETTIR, "lastrevid": 1306202 }] }
         })))
         .mount(&wiki)
         .await;
@@ -384,35 +409,56 @@ async fn a_scrape_run_fills_the_index_from_the_wiki() {
     .unwrap();
     Mock::given(method("GET"))
         .and(query_param("prop", "revisions"))
-        .and(query_param("titles", title))
+        .and(query_param("titles", VAETTIR))
         .respond_with(ResponseTemplate::new(200).set_body_json(json!({
             "batchcomplete": true,
             "query": { "pages": [{
-                "pageid": 1, "ns": 100, "title": title,
+                "pageid": 1, "ns": 100, "title": VAETTIR,
                 "revisions": [{ "revid": 1306202, "slots": { "main": { "content": text } } }]
             }] }
         })))
         .mount(&wiki)
         .await;
+    wiki
+}
+
+#[tokio::test]
+async fn the_server_fills_its_index_from_the_wiki() {
+    let wiki = fake_wiki().await;
     let dir = tempfile::tempdir().unwrap();
-    let mut api = ApiClient::new(
-        &format!("{}/api.php", wiki.uri()),
-        "ops@example.org",
-        Pacing {
-            min_delay: Duration::from_millis(1),
-            max_retries: 0,
-            backoff_base: Duration::from_millis(1),
-            backoff_cap: Duration::from_secs(1),
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+    let addr = listener.local_addr().unwrap();
+    let config = Config {
+        contact: Some("ops@example.org".into()),
+        ..config(addr, dir.path())
+    };
+    let schedule = Schedule {
+        endpoint: format!("{}/api.php", wiki.uri()),
+        pacing: FAST,
+        interval: Duration::from_secs(3600),
+    };
+    tokio::spawn(pvxwiki_mcp::run(
+        config,
+        listener,
+        // The test polls until the first run lands; the rate limit is not under test here.
+        Limits {
+            per_second: NonZeroU32::new(1000).unwrap(),
+            burst: NonZeroU32::new(1000).unwrap(),
         },
-    )
-    .unwrap();
+        schedule,
+        std::future::pending(),
+    ));
+    let c = client(addr).await;
 
-    pvxwiki_scraper::run(&mut api, &SqliteStore::open(dir.path()).unwrap())
-        .await
-        .unwrap();
+    let deadline = tokio::time::Instant::now() + Duration::from_secs(5);
+    let out = loop {
+        let out = call(&c, "get_build", json!({ "title": VAETTIR })).await;
+        if out.is_error != Some(true) || tokio::time::Instant::now() > deadline {
+            break out;
+        }
+        tokio::time::sleep(Duration::from_millis(50)).await;
+    };
 
-    let c = client(serve(dir.path(), Limits::default()).await).await;
-    let out = call(&c, "get_build", json!({ "title": title })).await;
     let body = ok(&out);
     assert_eq!(body["build"]["revision"], 1306202);
     assert_eq!(body["build"]["skill_bars"][0]["primary"], "Assassin");
