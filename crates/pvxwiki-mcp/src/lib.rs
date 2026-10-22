@@ -120,7 +120,7 @@ async fn scrape_forever(store: Arc<SqliteStore>, mut client: ApiClient, interval
     ticker.set_missed_tick_behavior(MissedTickBehavior::Delay);
     loop {
         ticker.tick().await;
-        match pvxwiki_scraper::run(&mut client, &store).await {
+        match pvxwiki_scraper::run(&mut client, &store, &|_| {}).await {
             Ok(_) => {}
             // Retrying through a block is forbidden (`.claude/rules/scraping.md`).
             Err(err @ (ScrapeError::Blocked { .. } | ScrapeError::NotJson { .. })) => {

@@ -13,6 +13,9 @@ pub use changes::{Changes, FetchedPage, diff};
 mod run;
 pub use run::{RunReport, run};
 
+mod runner;
+pub use runner::{Phase, Progress, RunRefused, Runner, RunnerStatus, ScraperState};
+
 /// The only wiki this service copies from.
 pub const FANDOM_API: &str = "https://gwpvx.fandom.com/api.php";
 
