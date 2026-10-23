@@ -34,7 +34,7 @@ const MAX_LOGGED_HOST: usize = 64;
 const ASSET_CACHE: &str = "public, max-age=86400";
 
 const HTMX_JS: &[u8] = include_bytes!("../assets/htmx.min.js");
-const PICO_CSS: &[u8] = include_bytes!("../assets/pico.min.css");
+const ADMIN_CSS: &[u8] = include_bytes!("../assets/admin.css");
 
 /// What the admin handlers read and act on.
 #[derive(Clone)]
@@ -54,7 +54,7 @@ pub fn router(state: AdminState) -> Router {
         .route("/issues", get(handlers::issues))
         .route("/runs", post(handlers::run_now))
         .route("/assets/htmx.min.js", get(htmx))
-        .route("/assets/pico.min.css", get(pico));
+        .route("/assets/admin.css", get(css));
     Router::new()
         .nest(BASE_PATH, pages)
         // The bare port lands on the page too.
@@ -100,8 +100,8 @@ async fn htmx() -> impl IntoResponse {
     asset("text/javascript", HTMX_JS)
 }
 
-async fn pico() -> impl IntoResponse {
-    asset("text/css", PICO_CSS)
+async fn css() -> impl IntoResponse {
+    asset("text/css", ADMIN_CSS)
 }
 
 fn asset(content_type: &'static str, body: &'static [u8]) -> impl IntoResponse {
@@ -154,7 +154,7 @@ mod tests {
             .await
             .unwrap();
         let css = app
-            .oneshot(get("/admin/assets/pico.min.css", "localhost:8081"))
+            .oneshot(get("/admin/assets/admin.css", "localhost:8081"))
             .await
             .unwrap();
 

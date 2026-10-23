@@ -39,12 +39,15 @@ pub(crate) fn page(status: Markup, history: Markup, attention: Markup) -> Markup
                 meta name="viewport" content="width=device-width, initial-scale=1";
                 meta name="htmx-config" content=(HTMX_CONFIG);
                 title { "pvxwiki-mcp admin" }
-                link rel="stylesheet" href={ (BASE_PATH) "/assets/pico.min.css" };
+                link rel="stylesheet" href={ (BASE_PATH) "/assets/admin.css" };
                 script src={ (BASE_PATH) "/assets/htmx.min.js" } {}
             }
             body {
-                main.container {
-                    h1 { "pvxwiki-mcp admin" }
+                main.shell {
+                    header.top {
+                        div.brand { h1 { "pvxwiki-mcp" } span { "Admin" } }
+                        a href={ (WIKI) "/wiki/PvX_wiki" } { "PvX wiki" }
+                    }
                     (status)
                     (history)
                     (attention)
@@ -56,64 +59,93 @@ pub(crate) fn page(status: Markup, history: Markup, attention: Markup) -> Markup
 
 /// htmx trigger for the status refresh while the page is open.
 pub(crate) const PROGRESS_POLL: &str = "every 2s";
+/// Rows in the history table; the run strip above it shows every stored run.
+const HISTORY_ROWS: usize = 10;
 /// htmx trigger for the history refresh; a run takes minutes, so this can be slow.
 pub(crate) const HISTORY_POLL: &str = "every 10s";
 
-/// The scraper's state, progress, next run, index size and the run button. `now` in unix seconds.
-pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64) -> Markup {
-    let (name, refused) = match &status.state {
-        ScraperState::Off => ("off", Some(RunRefused::Off)),
-        ScraperState::Idle => ("idle", None),
-        ScraperState::Running { .. } => ("running", Some(RunRefused::Running)),
-        ScraperState::Blocked { .. } => ("blocked", Some(RunRefused::Blocked)),
+/// The scraper's state, progress, the run button, and the next run, index size and last run.
+/// `now` in unix seconds.
+pub(crate) fn status_view(
+    status: &RunnerStatus,
+    counts: &[(i64, u64)],
+    last: Option<&RunRecord>,
+    now: i64,
+) -> Markup {
+    let (name, label, refused) = match &status.state {
+        ScraperState::Off => ("off", "Off", Some(RunRefused::Off)),
+        ScraperState::Idle => ("idle", "Idle", None),
+        ScraperState::Running { .. } => ("running", "Running", Some(RunRefused::Running)),
+        ScraperState::Blocked { .. } => ("blocked", "Blocked", Some(RunRefused::Blocked)),
     };
     html! {
-        article #status data-state=(name) hx-get={ (BASE_PATH) "/status" } hx-trigger=(PROGRESS_POLL) hx-swap="outerHTML" {
-            header { strong { "Scraper: " (name) } }
-            @match &status.state {
-                ScraperState::Off => p { "The scraper is off because PVXWIKI_CONTACT is not set. The index is not updated." },
-                ScraperState::Idle => p { "Waiting for the next run." },
-                ScraperState::Running { trigger, started_at, progress } => {
-                    p { "A " (trigger.as_str()) " run started " (ago(now - started_at)) "." }
-                    @match progress {
-                        Some(p) => {
-                            @if p.total > 0 {
-                                progress value=(p.done) max=(p.total) {}
+        section #status .panel data-state=(name) hx-get={ (BASE_PATH) "/status" }
+            hx-trigger=(PROGRESS_POLL) hx-swap="outerHTML" {
+            div.panel-head {
+                div.state {
+                    span class={ "dot " (name) } aria-hidden="true" {}
+                    strong { (label) }
+                    p {
+                        @match &status.state {
+                            ScraperState::Off => "PVXWIKI_CONTACT is not set, so the index is not updated.",
+                            ScraperState::Idle => "Waiting for the next run.",
+                            ScraperState::Running { trigger, started_at, .. } => {
+                                "A " (trigger.as_str()) " run started " (ago(now - started_at)) "."
                             }
-                            p { small {
-                                @match p.phase {
-                                    Phase::Listing => "Listing namespaces: ",
-                                    Phase::Fetching => "Fetching changed pages: ",
-                                }
-                                (p.done) " of " (p.total)
-                            } }
+                            ScraperState::Blocked { since } => {
+                                "The wiki blocked the scraper " (ago(now - since))
+                                ". Check the logs and the wiki's terms, then restart the service."
+                            }
                         }
-                        None => progress {},
                     }
                 }
-                ScraperState::Blocked { since } => p {
-                    "The wiki blocked the scraper " (ago(now - since)) ". No runs until the service restarts. "
-                    "Check the logs and the wiki's terms before restarting."
-                },
-            }
-            @if let Some(next) = status.next_run_at {
-                p { "Next scheduled run in " (span(next - now)) "." }
-            }
-            p {
-                "Index: "
-                @for (i, (namespace, pages)) in counts.iter().enumerate() {
-                    @if i > 0 { ", " }
-                    (pages) " " (namespace_name(*namespace))
+                div.action {
+                    // The sentence beside the state already says why; the tooltip repeats it.
+                    button.btn hx-post={ (BASE_PATH) "/runs" } hx-target="#status" hx-swap="outerHTML"
+                        title=[refused.map(|r| r.to_string())] disabled[refused.is_some()] { "Run now" }
                 }
-                @if counts.is_empty() { "empty" }
-                "."
             }
-            footer {
-                button hx-post={ (BASE_PATH) "/runs" } hx-target="#status" hx-swap="outerHTML" disabled[refused.is_some()] {
-                    "Run now"
+            @if let ScraperState::Running { progress: Some(p), .. } = &status.state {
+                div.progress {
+                    @if p.total > 0 {
+                        progress value=(p.done) max=(p.total) {}
+                    }
+                    p.muted {
+                        @match p.phase {
+                            Phase::Listing => "Listing namespaces: ",
+                            Phase::Fetching => "Fetching changed pages: ",
+                        }
+                        (p.done) " of " (p.total)
+                    }
                 }
-                @if let Some(reason) = refused {
-                    " " small { (reason) }
+            }
+            dl.facts {
+                div {
+                    dt { "Next run" }
+                    dd { @match status.next_run_at {
+                        Some(next) => { "in " (span(next - now)) }
+                        None => "None scheduled",
+                    } }
+                }
+                div {
+                    dt { "Index" }
+                    dd {
+                        @if counts.is_empty() { "Empty" }
+                        @for (i, (namespace, pages)) in counts.iter().enumerate() {
+                            @if i > 0 { br; }
+                            (pages) " " (namespace_name(*namespace))
+                        }
+                    }
+                }
+                div {
+                    dt { "Last run" }
+                    dd { @match last {
+                        Some(run) => {
+                            span class={ "outcome " (run.outcome.as_str()) } { (run.outcome.as_str()) }
+                            " " (ago(now - run.started_at))
+                        }
+                        None => "None yet",
+                    } }
                 }
             }
         }
@@ -123,19 +155,33 @@ pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64
 /// Newest runs first. `now` in unix seconds.
 pub(crate) fn history(runs: &[RunRecord], now: i64) -> Markup {
     html! {
-        section #history hx-get={ (BASE_PATH) "/history" } hx-trigger=(HISTORY_POLL) hx-swap="outerHTML" {
-            h2 { "Run history" }
+        section #history .block hx-get={ (BASE_PATH) "/history" } hx-trigger=(HISTORY_POLL)
+            hx-swap="outerHTML" {
+            div.block-head {
+                h2 { "Run history" }
+                @if runs.len() > HISTORY_ROWS {
+                    span.muted { "Table shows the newest " (HISTORY_ROWS) " of " (runs.len()) }
+                }
+            }
             @if runs.is_empty() {
-                p { "No runs yet." }
+                p.empty { "No runs yet. The first starts with the service once PVXWIKI_CONTACT is set." }
             } @else {
-                figure {
+                ol.strip aria-label="Runs, oldest first" {
+                    @for run in runs.iter().rev() {
+                        li class=(run.outcome.as_str()) title={
+                            (run.outcome.as_str()) ", " (run.trigger.as_str()) " run, "
+                            (ago(now - run.started_at)) ", " (run.counts.updated) " updated"
+                        } {}
+                    }
+                }
+                div.table-wrap {
                     table {
                         thead { tr {
                             th { "Started" } th { "Took" } th { "Trigger" } th { "Outcome" }
-                            th { "Checked" } th { "Updated" } th { "Kept" } th { "Removed" }
+                            th.num { "Checked" } th.num { "Updated" } th.num { "Kept" } th.num { "Removed" }
                         } }
                         tbody {
-                            @for run in runs {
+                            @for run in runs.iter().take(HISTORY_ROWS) {
                                 tr data-trigger=(run.trigger.as_str()) data-outcome=(run.outcome.as_str())
                                     data-checked=(run.counts.checked) {
                                     td { (ago(now - run.started_at)) }
@@ -145,13 +191,13 @@ pub(crate) fn history(runs: &[RunRecord], now: i64) -> Markup {
                                     } }
                                     td { (run.trigger.as_str()) }
                                     td {
-                                        (run.outcome.as_str())
-                                        @if let Some(error) = &run.error { br; small { (error) } }
+                                        span class={ "outcome " (run.outcome.as_str()) } { (run.outcome.as_str()) }
+                                        @if let Some(error) = &run.error { span.error { (error) } }
                                     }
-                                    td { (run.counts.checked) }
-                                    td { (run.counts.updated) }
-                                    td { (run.counts.kept) }
-                                    td { (run.counts.removed) }
+                                    td.num { (run.counts.checked) }
+                                    td.num { (run.counts.updated) }
+                                    td.num { (run.counts.kept) }
+                                    td.num { (run.counts.removed) }
                                 }
                             }
                         }
@@ -167,7 +213,7 @@ fn more(shown: usize, total: u64) -> Markup {
     let hidden = total.saturating_sub(u64::try_from(shown).unwrap_or(u64::MAX));
     html! {
         @if hidden > 0 {
-            p { small { "and " (hidden) " more" } }
+            p.more { "and " (hidden) " more" }
         }
     }
 }
@@ -210,45 +256,51 @@ pub(crate) fn attention(
     total: u64,
 ) -> Markup {
     html! {
-        section {
-            h2 { "Pages needing attention" }
-            h3 { "Newest revision failed to parse" }
-            @if failures.is_empty() {
-                p { "None. Every stored page is at its newest revision." }
-            } @else {
-                p { "The stored copy is older than the wiki's. Fix the parser for the failed revision." }
-                table {
-                    thead { tr { th { "Page" } th { "Stored" } th { "Failed" } } }
-                    tbody {
-                        @for f in failures {
-                            tr {
-                                td { a href=(wiki_url(&f.title)) { (f.title) } }
-                                td { a href=(revision_url(f.stored_revision)) { (f.stored_revision) } }
-                                td { a href=(revision_url(f.failed_revision)) { (f.failed_revision) } }
-                            }
-                        }
-                    }
-                }
-                (more(failures.len(), failure_total))
-            }
-            h3 { "Stored with parse issues" }
-            @if issue_counts.is_empty() {
-                p { "None." }
-            } @else {
-                nav {
-                    ul {
-                        @for (name, count) in issue_counts {
-                            li {
-                                a href={ "?kind=" (name) } hx-get={ (BASE_PATH) "/issues?kind=" (name) }
-                                    hx-target="#issues" hx-swap="outerHTML"
-                                    aria-current=[(name == kind).then_some("true")] {
-                                    (name) " (" (count) ")"
+        section.block {
+            div.block-head { h2 { "Pages needing attention" } }
+            div.columns {
+                div {
+                    h3 { "Newest revision failed to parse" }
+                    @if failures.is_empty() {
+                        p.empty { "None. Every stored page is at its newest revision." }
+                    } @else {
+                        p { "The stored copy is older than the wiki's. The failed revision is the one to fix the parser for." }
+                        div.table-wrap {
+                            table {
+                                thead { tr { th { "Page" } th.num { "Stored" } th.num { "Failed" } } }
+                                tbody {
+                                    @for f in failures {
+                                        tr {
+                                            td { a href=(wiki_url(&f.title)) { (f.title) } }
+                                            td.num { a href=(revision_url(f.stored_revision)) { (f.stored_revision) } }
+                                            td.num { a href=(revision_url(f.failed_revision)) { (f.failed_revision) } }
+                                        }
+                                    }
                                 }
                             }
                         }
+                        (more(failures.len(), failure_total))
                     }
                 }
-                (issues(kind, pages, total))
+                div {
+                    h3 { "Stored with parse issues" }
+                    @if issue_counts.is_empty() {
+                        p.empty { "None." }
+                    } @else {
+                        ul.chips {
+                            @for (name, count) in issue_counts {
+                                li {
+                                    a href={ "?kind=" (name) } hx-get={ (BASE_PATH) "/issues?kind=" (name) }
+                                        hx-target="#issues" hx-swap="outerHTML"
+                                        aria-current=[(name == kind).then_some("true")] {
+                                        (name) " " (count)
+                                    }
+                                }
+                            }
+                        }
+                        (issues(kind, pages, total))
+                    }
+                }
             }
         }
     }
@@ -258,12 +310,11 @@ pub(crate) fn attention(
 pub(crate) fn issues(kind: &str, pages: &[IssuePage], total: u64) -> Markup {
     html! {
         div #issues data-kind=(kind) {
-            ul {
+            ul.pages {
                 @for page in pages {
                     li {
                         a href=(wiki_url(&page.title)) { (page.title) }
-                        " at "
-                        a href=(revision_url(page.revision)) { (page.revision) }
+                        a.muted href=(revision_url(page.revision)) { "rev " (page.revision) }
                     }
                 }
             }
@@ -335,7 +386,7 @@ mod tests {
             state,
             next_run_at: None,
         };
-        status_view(&status, &[(100, 3), (104, 1)], 1_000).into_string()
+        status_view(&status, &[(100, 3), (104, 1)], None, 1_000).into_string()
     }
 
     #[test]

@@ -81,9 +81,9 @@ The page shows:
   (`PVXWIKI_ADMIN_USER`, `PVXWIKI_ADMIN_PASSWORD_HASH`; the hash from `caddy hash-password`).
 - **Technology:** HTML rendered by the existing Rust binary with `maud` (markup written in Rust,
   returned straight from axum handlers, no template files); `htmx` for the progress refresh and the
-  run button; Pico CSS (MIT) for styling, which makes semantic HTML look finished without utility
-  classes and follows the browser's light or dark mode. The htmx and Pico files are vendored and
-  embedded in the binary, no CDN. No Node, no build step, same distroless image. Chosen over the
+  run button; one small stylesheet of its own (`crates/admin/assets/admin.css`) that follows the
+  browser's light or dark mode. Pico CSS was tried first and replaced: its defaults read as a
+  document, not a dashboard. htmx and the stylesheet are embedded in the binary, no CDN. No Node, no build step, same distroless image. Chosen over the
   more common Askama + Tailwind: three small views do not justify template files and a CSS build
   stage.
 - **Project structure follows the existing crates:**
@@ -132,4 +132,4 @@ The page shows:
 - How the scraper reports progress to the runner (a callback, a `watch` channel, shared state).
 - How the compose profile is named or split, as long as the MCP-only HTTPS setup still works
   without admin credentials and an operator can run Caddy for the admin page alone.
-- `maud`, `htmx` and Pico versions, within the licence policy (`cargo deny`); htmx is 0BSD.
+- `maud` and `htmx` versions, within the licence policy (`cargo deny`); htmx is 0BSD.

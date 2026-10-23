@@ -97,7 +97,13 @@ pub(crate) async fn run_now(
 
 async fn status_markup(state: &AdminState) -> Page {
     let counts = state.store.namespace_counts().await?;
-    Ok(views::status_view(&state.runner.status(), &counts, now()))
+    let last = state.store.recent_runs(1).await?;
+    Ok(views::status_view(
+        &state.runner.status(),
+        &counts,
+        last.first(),
+        now(),
+    ))
 }
 
 async fn history_markup(state: &AdminState) -> Page {

@@ -190,7 +190,7 @@ The workspace has six crates:
 - `crates/parser`: wikitext to typed builds, no I/O.
 - `crates/store`: SQLite with FTS5 search.
 - `crates/server`: the MCP tools and the HTTP layer.
-- `crates/admin`: the admin page (maud, htmx and Pico CSS, served from the binary).
+- `crates/admin`: the admin page (maud and htmx, served from the binary).
 - `crates/scraper`: copies changed build pages from the wiki's API into the store, paced and
   retrying.
 - `crates/pvxwiki-mcp`: the binary.
