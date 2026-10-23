@@ -49,18 +49,17 @@ next to the page `url` and `revision`.
 
 ## Connect a client
 
-The server speaks MCP over streamable HTTP at `/mcp`. There is no public instance yet, so connect
-to one you run.
+The server speaks MCP over streamable HTTP at `/mcp`. A public instance runs at
+`https://pvx-mcp.maikbasel.com/mcp`. It has no login; each client is rate limited, and the index is
+refreshed from the wiki every 6 hours.
 
-> [!IMPORTANT]
-> Replace `<your-instance>` in the examples below with your server's address: your domain behind a
-> proxy (`https://pvxwiki.example.org/mcp`), or `http://localhost:8080/mcp` for a server on the
-> same machine ([Run it locally](#run-it-locally)).
+To use your own instance instead, replace the URL with its address: your domain behind a proxy, or
+`http://localhost:8080/mcp` for a server on the same machine ([Run it locally](#run-it-locally)).
 
 **Claude Code**
 
 ```bash
-claude mcp add --transport http pvxwiki https://<your-instance>/mcp
+claude mcp add --transport http pvxwiki https://pvx-mcp.maikbasel.com/mcp
 ```
 
 **Clients with a JSON config** (Claude Desktop, Cursor, VS Code and others; the key names vary
@@ -71,7 +70,7 @@ slightly between clients)
   "mcpServers": {
     "pvxwiki": {
       "type": "http",
-      "url": "https://<your-instance>/mcp"
+      "url": "https://pvx-mcp.maikbasel.com/mcp"
     }
   }
 }
@@ -116,6 +115,18 @@ proxy does TLS and routing. Set `PVXWIKI_ALLOWED_HOSTS`, `PVXWIKI_CONTACT` and
 `https://<your domain>:8080` for MCP. Add `https://<your domain>:8081/admin` for the admin page only
 once a login is in front of it. The port tells Coolify which container port each path goes to.
 
+For `PVXWIKI_TRUSTED_PROXIES`, list the subnet of the app's network (Coolify's proxy reaches the app
+from there) and the address your traffic reaches Coolify's proxy from: with a tunnel client such as
+Pangolin's newt on the host, the gateway of the `coolify` network. On the server:
+
+```bash
+docker network inspect coolify <app uuid> -f '{{.Name}} {{range .IPAM.Config}}{{.Subnet}} gw {{.Gateway}}{{end}}'
+```
+
+Coolify's proxy must also pass the client IP on: in Servers, Proxy, add
+`--entrypoints.http.forwardedHeaders.trustedIPs=<that address>` (and the same for `https`) to the
+Traefik command, then restart the proxy.
+
 ### Admin page
 
 The admin page shows the scraper's state and live progress, when the next run starts, the run
@@ -147,7 +158,7 @@ one.
 |----------|---------|-------------|
 | `PVXWIKI_ALLOWED_HOSTS` | required | Comma-separated host names clients use to reach the server (the `Host` header). |
 | `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. Without it the scraper is off and the server only serves what the database already holds. |
-| `PVXWIKI_TRUSTED_PROXIES` | empty | IPs or CIDR ranges whose `X-Forwarded-For` header is trusted. |
+| `PVXWIKI_TRUSTED_PROXIES` | empty | The proxies in front of the server, as IPs or CIDR ranges. The rate limit is per client IP; behind a proxy the server only sees the proxy, so without this every user shares one limit. From the listed addresses it reads the client IP out of `X-Forwarded-For`; from anyone else it ignores that header. List every hop between the internet and the server. |
 | `PVXWIKI_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8080 is published on. |
 | `PVXWIKI_MCP_DOMAIN` | | Public domain of your instance (MCP at `/mcp`, admin page at `/admin`). Read only by the bundled Caddy. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
 | `PVXWIKI_DATA_DIR` | `/data` | Where the SQLite database lives. |
