@@ -14,7 +14,9 @@ x-logging: &logging
 services:
   pvxwiki-mcp:
     build:
-      context: ..
+      # Coolify runs compose with the repository root as project directory, so paths are relative
+      # to the root, not to this file.
+      context: .
       dockerfile: deploy/Dockerfile
     restart: unless-stopped
     environment:
