@@ -1,5 +1,5 @@
 # One site: the admin page under /admin, MCP everything else. Each part is switched in .env.
-{$PVXWIKI_DOMAIN} {
+{$PVXWIKI_MCP_DOMAIN} {
 	import caddy/admin-{$PVXWIKI_CADDY_ADMIN:off}.caddy
 	import caddy/mcp-{$PVXWIKI_CADDY_MCP:on}.caddy
 }

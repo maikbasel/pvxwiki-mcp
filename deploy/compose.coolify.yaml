@@ -1,0 +1,42 @@
+# For Coolify (Docker Compose build pack): set "Docker Compose Location" to /deploy/compose.coolify.yaml.
+# Coolify's Traefik does TLS and routing, so there is no Caddy here. In "Domains for pvxwiki-mcp":
+#   https://<your domain>:8080                    MCP (port 8080 in the container)
+#   https://<your domain>:8081/admin              admin page; add it only once a login is in front
+# Set the variables below in Coolify's "Environment Variables"; the required ones block the deploy
+# until they are set. The admin port is published on the host's loopback only, for an SSH tunnel.
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+  pvxwiki-mcp:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    environment:
+      # Your domain, as clients type it (the Host header). Comma-separate several.
+      PVXWIKI_ALLOWED_HOSTS: ${PVXWIKI_ALLOWED_HOSTS:?set it to your domain}
+      # The email address Fandom's permission was granted to; sent in the scraper's User-Agent.
+      PVXWIKI_CONTACT: ${PVXWIKI_CONTACT:?set it to your contact email}
+      # Subnet of Coolify's proxy network, so the rate limit sees real client IPs:
+      # docker network inspect coolify -f '{{range .IPAM.Config}}{{.Subnet}}{{end}}'
+      PVXWIKI_TRUSTED_PROXIES: ${PVXWIKI_TRUSTED_PROXIES:-}
+      RUST_LOG: ${RUST_LOG:-info,rmcp=warn}
+    ports:
+      - "127.0.0.1:8081:8081"
+    volumes:
+      - pvxwiki-data:/data
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/pvxwiki-mcp", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging: *logging
+
+volumes:
+  pvxwiki-data:
