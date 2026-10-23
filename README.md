@@ -165,18 +165,23 @@ cargo deny check
 
 ### Run it locally
 
+Run the same container you would deploy, built from your checkout:
+
 ```bash
-cp deploy/.env.example deploy/.env    # then edit; the same file docker compose reads
-mkdir -p data
-set -a; . deploy/.env; set +a         # the binary reads the environment, not the file
-PVXWIKI_DATA_DIR=./data PVXWIKI_LOG_FORMAT=pretty cargo run -p pvxwiki-mcp
+cd deploy
+cp .env.example .env    # then edit: PVXWIKI_ALLOWED_HOSTS must include localhost
+docker compose up -d --build
 ```
 
-`PVXWIKI_ALLOWED_HOSTS` must include `localhost`. The MCP server listens on `http://localhost:8080/mcp` and the admin page on
-`http://localhost:8081`. Without `PVXWIKI_CONTACT` the scraper stays off and nothing calls the
-wiki: the admin page says so, and the tools answer "index not built yet". Setting
-`PVXWIKI_CONTACT` starts a real run against Fandom at once, so only do that from a machine your
-permission covers (see [Self-hosting](#self-hosting)).
+The MCP server is at `http://localhost:8080/mcp` and the admin page at `http://localhost:8081`.
+Without `PVXWIKI_CONTACT` the scraper stays off and nothing calls the wiki: the admin page says so,
+and the tools answer "index not built yet". Setting `PVXWIKI_CONTACT` starts a real run against
+Fandom at once, so only do that from a machine your permission covers (see
+[Self-hosting](#self-hosting)).
+
+For a quicker edit-and-run loop without Docker, `cargo run -p pvxwiki-mcp` works too. It reads
+the environment, not `.env`, so set at least `PVXWIKI_ALLOWED_HOSTS=localhost` and
+`PVXWIKI_DATA_DIR=./data` (an existing directory).
 
 The workspace has six crates:
 
