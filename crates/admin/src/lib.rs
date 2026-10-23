@@ -12,7 +12,7 @@ use axum::Router;
 use axum::extract::{Request, State};
 use axum::http::{HeaderValue, StatusCode, header};
 use axum::middleware::{self, Next};
-use axum::response::{IntoResponse, Redirect, Response};
+use axum::response::{IntoResponse, Response};
 use axum::routing::{get, post};
 use pvxwiki_scraper::Runner;
 use pvxwiki_store::SqliteStore;
@@ -55,10 +55,11 @@ pub fn router(state: AdminState) -> Router {
         .route("/runs", post(handlers::run_now))
         .route("/assets/htmx.min.js", get(htmx))
         .route("/assets/admin.css", get(css));
+    // Served under the prefix and at the root: some proxies (Coolify's Traefik) strip `/admin`
+    // before forwarding, while the page's links always carry it.
     Router::new()
-        .nest(BASE_PATH, pages)
-        // The bare port lands on the page too.
-        .route("/", get(|| async { Redirect::to(BASE_PATH) }))
+        .nest(BASE_PATH, pages.clone())
+        .merge(pages)
         .with_state(state)
         .layer(RequestBodyLimitLayer::new(MAX_BODY_BYTES))
         // 503, not 408: the server was slow, and 408 invites clients to resend a POST.
@@ -254,15 +255,22 @@ mod tests {
     }
 
     #[tokio::test]
-    async fn the_bare_port_redirects_to_the_page() {
+    async fn the_page_also_works_behind_a_proxy_that_strips_the_prefix() {
         let dir = tempfile::tempdir().unwrap();
+        let app = router(state(&dir));
 
-        let res = router(state(&dir))
-            .oneshot(get("/", "localhost"))
-            .await
-            .unwrap();
-
-        assert!(res.status().is_redirection(), "{}", res.status());
-        assert_eq!(res.headers()[header::LOCATION], "/admin");
+        // Coolify's Traefik strips `/admin` before forwarding; the page's own links keep it.
+        for (path, needle) in [
+            ("/", "Run history"),
+            ("/status", r#"data-state="off""#),
+            ("/assets/admin.css", ".shell"),
+        ] {
+            let res = app.clone().oneshot(get(path, "localhost")).await.unwrap();
+            assert_eq!(res.status(), StatusCode::OK, "{path}");
+            let body = axum::body::to_bytes(res.into_body(), usize::MAX)
+                .await
+                .unwrap();
+            assert!(String::from_utf8_lossy(&body).contains(needle), "{path}");
+        }
     }
 }
