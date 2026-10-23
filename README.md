@@ -99,7 +99,7 @@ answers with a block (HTTP 403 or a challenge page), the scraper stops until you
 container. Check the logs before restarting.
 
 The server listens on `127.0.0.1:8080`. To serve it publicly over HTTPS with automatic
-certificates, set `PVXWIKI_DOMAIN` in `.env` and start the bundled Caddy:
+certificates, set `PVXWIKI_MCP_DOMAIN` in `.env` and start the bundled Caddy:
 
 ```bash
 docker compose --profile https up -d
@@ -107,6 +107,14 @@ docker compose --profile https up -d
 
 Already running a reverse proxy (Traefik, Pangolin, nginx)? Skip the profile, point the proxy at
 port 8080 and put its address in `PVXWIKI_TRUSTED_PROXIES`.
+
+### Coolify
+
+Use the Docker Compose build pack with `/deploy/compose.coolify.yaml`. It has no Caddy: Coolify's
+proxy does TLS and routing. Set `PVXWIKI_ALLOWED_HOSTS`, `PVXWIKI_CONTACT` and
+`PVXWIKI_TRUSTED_PROXIES` in Coolify, and in the service's domains enter
+`https://<your domain>:8080` for MCP. Add `https://<your domain>:8081/admin` for the admin page only
+once a login is in front of it. The port tells Coolify which container port each path goes to.
 
 ### Admin page
 
@@ -121,7 +129,7 @@ its own:
 
 - Same machine: `http://localhost:8081/admin`
 - Remote server: `ssh -L 8081:localhost:8081 you@your-server`, then `http://localhost:8081/admin`
-- Bundled Caddy (`PVXWIKI_CADDY_ADMIN=on`, basic auth): `https://<PVXWIKI_DOMAIN>/admin`
+- Bundled Caddy (`PVXWIKI_CADDY_ADMIN=on`, basic auth): `https://<PVXWIKI_MCP_DOMAIN>/admin`
 - Your own proxy: route `/admin` on your domain to port 8081, behind your SSO
 
 Behind a proxy, list the admin host name in `PVXWIKI_ALLOWED_HOSTS`; other host names get HTTP 421.
@@ -141,7 +149,7 @@ one.
 | `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. Without it the scraper is off and the server only serves what the database already holds. |
 | `PVXWIKI_TRUSTED_PROXIES` | empty | IPs or CIDR ranges whose `X-Forwarded-For` header is trusted. |
 | `PVXWIKI_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8080 is published on. |
-| `PVXWIKI_DOMAIN` | | Public domain for the `https` profile. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
+| `PVXWIKI_MCP_DOMAIN` | | Public domain of your instance (MCP at `/mcp`, admin page at `/admin`). Read only by the bundled Caddy. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
 | `PVXWIKI_DATA_DIR` | `/data` | Where the SQLite database lives. |
 | `PVXWIKI_LISTEN` | `0.0.0.0:8080` | Address the server binds inside the container. |
 | `PVXWIKI_ADMIN_LISTEN` | `0.0.0.0:8081` | Address the admin page binds inside the container. Outside a container it defaults to `127.0.0.1:8081`. |

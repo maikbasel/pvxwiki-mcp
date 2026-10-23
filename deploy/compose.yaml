@@ -1,8 +1,8 @@
 # Run: cp .env.example .env, edit .env, then `docker compose up -d`.
-# HTTPS with Caddy: set PVXWIKI_DOMAIN and list the same name in PVXWIKI_ALLOWED_HOSTS (Caddy
+# HTTPS with Caddy: set PVXWIKI_MCP_DOMAIN and list the same name in PVXWIKI_ALLOWED_HOSTS (Caddy
 # forwards the public Host header), set PVXWIKI_TRUSTED_PROXIES=172.31.250.10/32 (Caddy only),
 # then `docker compose --profile https up -d`.
-# Admin page at https://$PVXWIKI_DOMAIN/admin behind Caddy basic auth: set PVXWIKI_CADDY_ADMIN=on,
+# Admin page at https://$PVXWIKI_MCP_DOMAIN/admin behind Caddy basic auth: set PVXWIKI_CADDY_ADMIN=on,
 # PVXWIKI_ADMIN_USER and PVXWIKI_ADMIN_PASSWORD_HASH (from `docker run --rm caddy:2.10 caddy
 # hash-password`, in single quotes in .env so compose keeps the `$` signs). For the admin page
 # alone, set PVXWIKI_CADDY_MCP=off.
@@ -49,7 +49,7 @@ services:
     profiles: ["https"]
     restart: unless-stopped
     environment:
-      PVXWIKI_DOMAIN: ${PVXWIKI_DOMAIN:-}
+      PVXWIKI_MCP_DOMAIN: ${PVXWIKI_MCP_DOMAIN:-}
       PVXWIKI_CADDY_MCP: ${PVXWIKI_CADDY_MCP:-on}
       PVXWIKI_CADDY_ADMIN: ${PVXWIKI_CADDY_ADMIN:-off}
       PVXWIKI_ADMIN_USER: ${PVXWIKI_ADMIN_USER:-}
