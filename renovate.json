@@ -36,6 +36,12 @@
       "automerge": true
     },
     {
+      "description": "Merge non-major Docker image updates (Rust build image, distroless, Caddy) once CI is green",
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pinDigest"],
+      "automerge": true
+    },
+    {
       "description": "Group git hook repos; merge once CI is green",
       "matchManagers": ["pre-commit"],
       "groupName": "pre-commit hooks",
