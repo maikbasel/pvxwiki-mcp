@@ -163,6 +163,20 @@ cargo clippy --all-targets -- -D warnings
 cargo deny check
 ```
 
+### Run it locally
+
+```bash
+mkdir -p data
+PVXWIKI_ALLOWED_HOSTS=localhost PVXWIKI_DATA_DIR=./data PVXWIKI_LOG_FORMAT=pretty \
+  cargo run -p pvxwiki-mcp
+```
+
+The MCP server listens on `http://localhost:8080/mcp` and the admin page on
+`http://localhost:8081`. Without `PVXWIKI_CONTACT` the scraper stays off and nothing calls the
+wiki: the admin page says so, and the tools answer "index not built yet". Setting
+`PVXWIKI_CONTACT` starts a real run against Fandom at once, so only do that from a machine your
+permission covers (see [Self-hosting](#self-hosting)).
+
 The workspace has six crates:
 
 - `crates/parser`: wikitext to typed builds, no I/O.
