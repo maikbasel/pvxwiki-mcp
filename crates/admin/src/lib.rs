@@ -12,7 +12,7 @@ use axum::Router;
 use axum::extract::{Request, State};
 use axum::http::{HeaderValue, StatusCode, header};
 use axum::middleware::{self, Next};
-use axum::response::{IntoResponse, Response};
+use axum::response::{IntoResponse, Redirect, Response};
 use axum::routing::{get, post};
 use pvxwiki_scraper::Runner;
 use pvxwiki_store::SqliteStore;
@@ -20,6 +20,10 @@ use tower_http::limit::RequestBodyLimitLayer;
 use tower_http::set_header::SetResponseHeaderLayer;
 use tower_http::timeout::TimeoutLayer;
 use tower_http::trace::TraceLayer;
+
+/// Everything the admin page serves lives under this path, so a proxy can route it from the same
+/// domain as `/mcp` to this listener.
+pub const BASE_PATH: &str = "/admin";
 
 /// The admin page sends no request bodies; `POST /runs` is empty.
 pub const MAX_BODY_BYTES: usize = 1024;
@@ -43,14 +47,18 @@ pub struct AdminState {
 
 pub fn router(state: AdminState) -> Router {
     let hosts = Arc::new(state.allowed_hosts.clone());
-    Router::new()
+    let pages = Router::new()
         .route("/", get(handlers::index))
         .route("/status", get(handlers::status))
         .route("/history", get(handlers::history))
         .route("/issues", get(handlers::issues))
         .route("/runs", post(handlers::run_now))
         .route("/assets/htmx.min.js", get(htmx))
-        .route("/assets/pico.min.css", get(pico))
+        .route("/assets/pico.min.css", get(pico));
+    Router::new()
+        .nest(BASE_PATH, pages)
+        // The bare port lands on the page too.
+        .route("/", get(|| async { Redirect::to(BASE_PATH) }))
         .with_state(state)
         .layer(RequestBodyLimitLayer::new(MAX_BODY_BYTES))
         // 503, not 408: the server was slow, and 408 invites clients to resend a POST.
@@ -142,11 +150,11 @@ mod tests {
 
         let js = app
             .clone()
-            .oneshot(get("/assets/htmx.min.js", "localhost:8081"))
+            .oneshot(get("/admin/assets/htmx.min.js", "localhost:8081"))
             .await
             .unwrap();
         let css = app
-            .oneshot(get("/assets/pico.min.css", "localhost:8081"))
+            .oneshot(get("/admin/assets/pico.min.css", "localhost:8081"))
             .await
             .unwrap();
 
@@ -161,7 +169,7 @@ mod tests {
         let dir = tempfile::tempdir().unwrap();
 
         let res = router(state(&dir))
-            .oneshot(get("/assets/htmx.min.js", "evil.example"))
+            .oneshot(get("/admin/assets/htmx.min.js", "evil.example"))
             .await
             .unwrap();
 
@@ -169,7 +177,7 @@ mod tests {
     }
 
     fn post_runs(site: &'static str) -> Request<Body> {
-        Request::post("/runs")
+        Request::post("/admin/runs")
             .header(header::HOST, "localhost")
             .header("hx-request", "true")
             .header("sec-fetch-site", site)
@@ -207,10 +215,10 @@ mod tests {
         let app = router(state(&dir));
 
         for (path, needle) in [
-            ("/", "Run history"),
-            ("/status", r#"data-state="off""#),
-            ("/history", "Run history"),
-            ("/issues?kind=timed_out", r#"data-kind="timed_out""#),
+            ("/admin", "Run history"),
+            ("/admin/status", r#"data-state="off""#),
+            ("/admin/history", "Run history"),
+            ("/admin/issues?kind=timed_out", r#"data-kind="timed_out""#),
         ] {
             let res = app.clone().oneshot(get(path, "localhost")).await.unwrap();
             assert_eq!(res.status(), StatusCode::OK, "{path}");
@@ -234,7 +242,7 @@ mod tests {
         let dir = tempfile::tempdir().unwrap();
 
         let res = router(state(&dir))
-            .oneshot(get("/", "localhost"))
+            .oneshot(get("/admin", "localhost"))
             .await
             .unwrap();
 
@@ -243,5 +251,18 @@ mod tests {
             res.headers()[header::CONTENT_SECURITY_POLICY],
             "frame-ancestors 'none'"
         );
+    }
+
+    #[tokio::test]
+    async fn the_bare_port_redirects_to_the_page() {
+        let dir = tempfile::tempdir().unwrap();
+
+        let res = router(state(&dir))
+            .oneshot(get("/", "localhost"))
+            .await
+            .unwrap();
+
+        assert!(res.status().is_redirection(), "{}", res.status());
+        assert_eq!(res.headers()[header::LOCATION], "/admin");
     }
 }

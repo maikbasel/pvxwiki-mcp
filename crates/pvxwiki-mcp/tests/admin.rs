@@ -111,7 +111,7 @@ async fn start_both(
 }
 
 async fn post_run(addr: SocketAddr, headers: &[(&str, &str)]) -> reqwest::Response {
-    let mut request = reqwest::Client::new().post(format!("http://{addr}/runs"));
+    let mut request = reqwest::Client::new().post(format!("http://{addr}/admin/runs"));
     for (name, value) in headers {
         request = request.header(*name, *value);
     }
@@ -122,7 +122,7 @@ const SAME_ORIGIN_HTMX: [(&str, &str); 2] =
     [("HX-Request", "true"), ("Sec-Fetch-Site", "same-origin")];
 
 async fn page(addr: SocketAddr) -> String {
-    reqwest::get(format!("http://{addr}/"))
+    reqwest::get(format!("http://{addr}/admin"))
         .await
         .unwrap()
         .text()
@@ -227,7 +227,7 @@ async fn unknown_host_is_refused() {
     let wiki = fake_wiki().await;
     let (admin, _dir) = start(Some(CONTACT), &wiki).await;
     let response = reqwest::Client::new()
-        .get(format!("http://{admin}/"))
+        .get(format!("http://{admin}/admin"))
         .header("Host", "evil.example")
         .send()
         .await
@@ -245,7 +245,7 @@ async fn admin_is_not_served_on_the_mcp_port() {
 }
 
 async fn page_status(addr: SocketAddr) -> u16 {
-    reqwest::get(format!("http://{addr}/"))
+    reqwest::get(format!("http://{addr}/admin"))
         .await
         .unwrap()
         .status()

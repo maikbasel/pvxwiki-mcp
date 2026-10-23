@@ -1,3 +1,5 @@
-# Sites are switched on and off in .env; see the caddy/ files.
-import caddy/mcp-{$PVXWIKI_CADDY_MCP:on}.caddy
-import caddy/admin-{$PVXWIKI_CADDY_ADMIN:off}.caddy
+# One site: the admin page under /admin, MCP everything else. Each part is switched in .env.
+{$PVXWIKI_DOMAIN} {
+	import caddy/admin-{$PVXWIKI_CADDY_ADMIN:off}.caddy
+	import caddy/mcp-{$PVXWIKI_CADDY_MCP:on}.caddy
+}

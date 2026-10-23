@@ -70,6 +70,10 @@ The page shows:
   their own SSO proxy (the maintainer uses Pangolin) leave Caddy off and protect it there.
 - **Separate listener.** The admin page is served on its own port (8081 inside the container), not
   under the MCP port, so a proxy that forwards the public MCP port never exposes it by accident.
+- **Served under `/admin`** on that listener (changed during review): most operators have one
+  domain, so the proxy routes `https://<domain>/admin` to 8081 and everything else to 8080. A proxy
+  without the `/admin` rule sends it to the MCP port, which answers 404. The bundled Caddy is one
+  site with both routes, each switched on or off.
 - **Published on 127.0.0.1 by default**, through its own variable `PVXWIKI_ADMIN_PUBLISH_ADDR`
   (default `127.0.0.1`), independent of `PVXWIKI_PUBLISH_ADDR`. Opening the MCP port to the world
   must not open the admin port.
@@ -126,7 +130,6 @@ The page shows:
 - Page layout and styling (a single page with minimal CSS is enough), poll interval of the progress
   refresh, exact table shape and the JSON or column layout of kept titles per run.
 - How the scraper reports progress to the runner (a callback, a `watch` channel, shared state).
-- Whether the Caddy admin site is a path on `PVXWIKI_DOMAIN` or its own host name, and how the
-  compose profile is named or split, as long as the MCP-only HTTPS setup still works without admin
-  credentials and an operator can run Caddy for the admin page alone.
+- How the compose profile is named or split, as long as the MCP-only HTTPS setup still works
+  without admin credentials and an operator can run Caddy for the admin page alone.
 - `maud`, `htmx` and Pico versions, within the licence policy (`cargo deny`); htmx is 0BSD.

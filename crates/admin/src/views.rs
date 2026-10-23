@@ -1,6 +1,8 @@
 //! The admin page as maud markup. Pure functions of the data they are given.
 
 use maud::{DOCTYPE, Markup, html};
+
+use crate::BASE_PATH;
 use pvxwiki_scraper::{Phase, RunRefused, RunnerStatus, ScraperState};
 use pvxwiki_store::{ARCHIVE_NAMESPACE, IssuePage, ParseFailure, RunRecord};
 
@@ -37,8 +39,8 @@ pub(crate) fn page(status: Markup, history: Markup, attention: Markup) -> Markup
                 meta name="viewport" content="width=device-width, initial-scale=1";
                 meta name="htmx-config" content=(HTMX_CONFIG);
                 title { "pvxwiki-mcp admin" }
-                link rel="stylesheet" href="/assets/pico.min.css";
-                script src="/assets/htmx.min.js" {}
+                link rel="stylesheet" href={ (BASE_PATH) "/assets/pico.min.css" };
+                script src={ (BASE_PATH) "/assets/htmx.min.js" } {}
             }
             body {
                 main.container {
@@ -66,7 +68,7 @@ pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64
         ScraperState::Blocked { .. } => ("blocked", Some(RunRefused::Blocked)),
     };
     html! {
-        article #status data-state=(name) hx-get="/status" hx-trigger=(PROGRESS_POLL) hx-swap="outerHTML" {
+        article #status data-state=(name) hx-get={ (BASE_PATH) "/status" } hx-trigger=(PROGRESS_POLL) hx-swap="outerHTML" {
             header { strong { "Scraper: " (name) } }
             @match &status.state {
                 ScraperState::Off => p { "The scraper is off because PVXWIKI_CONTACT is not set. The index is not updated." },
@@ -107,7 +109,7 @@ pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64
                 "."
             }
             footer {
-                button hx-post="/runs" hx-target="#status" hx-swap="outerHTML" disabled[refused.is_some()] {
+                button hx-post={ (BASE_PATH) "/runs" } hx-target="#status" hx-swap="outerHTML" disabled[refused.is_some()] {
                     "Run now"
                 }
                 @if let Some(reason) = refused {
@@ -121,7 +123,7 @@ pub(crate) fn status_view(status: &RunnerStatus, counts: &[(i64, u64)], now: i64
 /// Newest runs first. `now` in unix seconds.
 pub(crate) fn history(runs: &[RunRecord], now: i64) -> Markup {
     html! {
-        section #history hx-get="/history" hx-trigger=(HISTORY_POLL) hx-swap="outerHTML" {
+        section #history hx-get={ (BASE_PATH) "/history" } hx-trigger=(HISTORY_POLL) hx-swap="outerHTML" {
             h2 { "Run history" }
             @if runs.is_empty() {
                 p { "No runs yet." }
@@ -237,7 +239,7 @@ pub(crate) fn attention(
                     ul {
                         @for (name, count) in issue_counts {
                             li {
-                                a href={ "?kind=" (name) } hx-get={ "/issues?kind=" (name) }
+                                a href={ "?kind=" (name) } hx-get={ (BASE_PATH) "/issues?kind=" (name) }
                                     hx-target="#issues" hx-swap="outerHTML"
                                     aria-current=[(name == kind).then_some("true")] {
                                     (name) " (" (count) ")"
@@ -366,7 +368,7 @@ mod tests {
         let idle = render(ScraperState::Idle);
         assert!(idle.contains(r#"data-state="idle""#), "{idle}");
         assert!(!idle.contains("disabled"), "{idle}");
-        assert!(idle.contains(r#"hx-post="/runs""#), "{idle}");
+        assert!(idle.contains(r#"hx-post="/admin/runs""#), "{idle}");
     }
 
     #[test]
