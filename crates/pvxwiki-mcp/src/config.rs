@@ -9,6 +9,12 @@ pub const DEFAULT_PORT: u16 = 8080;
 /// Every interface, so the container port mapping reaches it.
 pub const DEFAULT_LISTEN: SocketAddr =
     SocketAddr::new(IpAddr::V4(Ipv4Addr::UNSPECIFIED), DEFAULT_PORT);
+/// The admin page's port; compose publishes it on 127.0.0.1 only by default.
+pub const DEFAULT_ADMIN_PORT: u16 = 8081;
+/// Loopback: the page has no login of its own. The image sets `PVXWIKI_ADMIN_LISTEN` to every
+/// interface so compose's port mapping reaches it.
+pub const DEFAULT_ADMIN_LISTEN: SocketAddr =
+    SocketAddr::new(IpAddr::V4(Ipv4Addr::LOCALHOST), DEFAULT_ADMIN_PORT);
 pub const DEFAULT_DATA_DIR: &str = "/data";
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -20,6 +26,8 @@ pub enum LogFormat {
 #[derive(Debug, Clone)]
 pub struct Config {
     pub listen: SocketAddr,
+    /// The admin page's own listener (`PVXWIKI_ADMIN_LISTEN`).
+    pub admin_listen: SocketAddr,
     pub data_dir: PathBuf,
     pub allowed_hosts: Vec<String>,
     pub trusted_proxies: ProxyList,
@@ -54,6 +62,11 @@ impl Config {
         }
         Ok(Self {
             listen: listen(get("PVXWIKI_LISTEN").as_deref())?,
+            admin_listen: socket_addr(
+                "PVXWIKI_ADMIN_LISTEN",
+                get("PVXWIKI_ADMIN_LISTEN").as_deref(),
+                DEFAULT_ADMIN_LISTEN,
+            )?,
             data_dir: PathBuf::from(
                 get("PVXWIKI_DATA_DIR").unwrap_or_else(|| DEFAULT_DATA_DIR.into()),
             ),
@@ -73,12 +86,20 @@ impl Config {
 
 /// `PVXWIKI_LISTEN`, or the default. Also read by `healthcheck`, which needs nothing else.
 pub fn listen(value: Option<&str>) -> Result<SocketAddr, ConfigError> {
+    socket_addr("PVXWIKI_LISTEN", value, DEFAULT_LISTEN)
+}
+
+fn socket_addr(
+    var: &'static str,
+    value: Option<&str>,
+    default: SocketAddr,
+) -> Result<SocketAddr, ConfigError> {
     match value.map(str::trim) {
-        None | Some("") => Ok(DEFAULT_LISTEN),
+        None | Some("") => Ok(default),
         Some(value) => value
             .parse()
             .map_err(|e: std::net::AddrParseError| ConfigError::Invalid {
-                var: "PVXWIKI_LISTEN",
+                var,
                 reason: e.to_string(),
             }),
     }
@@ -127,6 +148,8 @@ mod tests {
         let config =
             Config::from_lookup(lookup(&[("PVXWIKI_ALLOWED_HOSTS", "mcp.example.org")])).unwrap();
         assert_eq!(config.listen.to_string(), "0.0.0.0:8080");
+        // Loopback outside a container; the image sets 0.0.0.0:8081 for the port mapping.
+        assert_eq!(config.admin_listen.to_string(), "127.0.0.1:8081");
         assert_eq!(config.data_dir, std::path::PathBuf::from(DEFAULT_DATA_DIR));
         assert_eq!(config.allowed_hosts, ["mcp.example.org"]);
         assert!(config.trusted_proxies.is_empty());
@@ -146,6 +169,7 @@ mod tests {
     fn invalid_values_name_the_variable() {
         for (key, value) in [
             ("PVXWIKI_LISTEN", "nope"),
+            ("PVXWIKI_ADMIN_LISTEN", "nope"),
             ("PVXWIKI_TRUSTED_PROXIES", "10.0.0.0/99"),
             ("PVXWIKI_LOG_FORMAT", "xml"),
         ] {
@@ -160,6 +184,7 @@ mod tests {
         let config = Config::from_lookup(lookup(&[
             ("PVXWIKI_ALLOWED_HOSTS", "a.example, b.example"),
             ("PVXWIKI_LISTEN", "127.0.0.1:9000"),
+            ("PVXWIKI_ADMIN_LISTEN", "127.0.0.1:9001"),
             ("PVXWIKI_DATA_DIR", "/tmp/x"),
             ("PVXWIKI_TRUSTED_PROXIES", "10.0.0.5,172.31.250.0/24"),
             ("PVXWIKI_LOG_FORMAT", "pretty"),
@@ -168,6 +193,7 @@ mod tests {
         .unwrap();
         assert_eq!(config.allowed_hosts, ["a.example", "b.example"]);
         assert_eq!(config.listen.port(), 9000);
+        assert_eq!(config.admin_listen.port(), 9001);
         assert!(
             config
                 .trusted_proxies

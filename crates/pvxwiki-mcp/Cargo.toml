@@ -12,6 +12,7 @@ publish.workspace = true
 pvxwiki-store.workspace = true
 pvxwiki-server.workspace = true
 pvxwiki-scraper.workspace = true
+pvxwiki-admin.workspace = true
 axum.workspace = true
 tokio.workspace = true
 tracing.workspace = true
@@ -22,6 +23,7 @@ thiserror.workspace = true
 pvxwiki-parser.workspace = true
 rmcp = { workspace = true, features = ["client", "transport-streamable-http-client-reqwest"] }
 serde_json.workspace = true
+reqwest.workspace = true
 tempfile.workspace = true
 wiremock.workspace = true
 

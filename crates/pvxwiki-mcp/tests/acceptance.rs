@@ -73,6 +73,7 @@ fn seed(dir: &Path) {
 fn config(addr: SocketAddr, dir: &Path) -> Config {
     Config {
         listen: addr,
+        admin_listen: "127.0.0.1:0".parse().unwrap(),
         data_dir: dir.to_path_buf(),
         allowed_hosts: vec!["127.0.0.1".into()],
         trusted_proxies: ProxyList::default(),
@@ -113,6 +114,7 @@ async fn serve(dir: &Path, limits: Limits) -> SocketAddr {
         pvxwiki_mcp::run(
             config,
             listener,
+            tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap(),
             limits,
             no_schedule(),
             std::future::pending(),
@@ -172,6 +174,7 @@ async fn shutdown_signal_stops_the_server_cleanly() {
     let server = tokio::spawn(pvxwiki_mcp::run(
         config(addr, dir.path()),
         listener,
+        tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap(),
         Limits::default(),
         no_schedule(),
         async {
@@ -440,6 +443,7 @@ async fn the_server_fills_its_index_from_the_wiki() {
     tokio::spawn(pvxwiki_mcp::run(
         config,
         listener,
+        tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap(),
         // The test polls until the first run lands; the rate limit is not under test here.
         Limits {
             per_second: NonZeroU32::new(1000).unwrap(),

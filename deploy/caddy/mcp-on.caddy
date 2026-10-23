@@ -1,0 +1,3 @@
+handle {
+	reverse_proxy pvxwiki-mcp:8080
+}

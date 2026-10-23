@@ -4,7 +4,7 @@
 use std::collections::HashMap;
 use std::time::Duration;
 
-use pvxwiki_scraper::{ApiClient, Pacing, RunReport, run};
+use pvxwiki_scraper::{ApiClient, Pacing, Phase, Progress, RunReport, run};
 use pvxwiki_store::{NewPage, SqliteStore};
 use serde_json::{Value, json};
 use wiremock::matchers::{method, query_param};
@@ -99,7 +99,7 @@ async fn writes_changed_pages_and_removes_pages_gone_from_the_wiki() {
     )
     .await;
 
-    let report = run(&mut api(&wiki).await, &store).await.unwrap();
+    let report = run(&mut api(&wiki).await, &store, &|_| {}).await.unwrap();
 
     assert_eq!(
         report,
@@ -129,7 +129,7 @@ async fn a_revision_that_fails_to_parse_keeps_the_stored_copy() {
     listing(&wiki, &[("Build:A", 2)]).await;
     contents(&wiki, &[("Build:A", 2, &"{{".repeat(300))]).await;
 
-    let report = run(&mut api(&wiki).await, &store).await.unwrap();
+    let report = run(&mut api(&wiki).await, &store, &|_| {}).await.unwrap();
 
     assert_eq!(
         report,
@@ -144,6 +144,14 @@ async fn a_revision_that_fails_to_parse_keeps_the_stored_copy() {
         store.revisions().unwrap(),
         HashMap::from([("Build:A".into(), 1)])
     );
+    let (failures, _) = store.parse_failures().await.unwrap();
+    assert_eq!(
+        failures
+            .iter()
+            .map(|f| (f.title.as_str(), f.stored_revision, f.failed_revision))
+            .collect::<Vec<_>>(),
+        [("Build:A", 1, 2)]
+    );
 }
 
 #[tokio::test]
@@ -154,7 +162,7 @@ async fn a_new_page_that_fails_to_parse_is_stored_as_raw_text() {
     listing(&wiki, &[("Build:A", 2)]).await;
     contents(&wiki, &[("Build:A", 2, &"{{".repeat(300))]).await;
 
-    let report = run(&mut api(&wiki).await, &store).await.unwrap();
+    let report = run(&mut api(&wiki).await, &store, &|_| {}).await.unwrap();
 
     assert_eq!(report.updated, 1);
     assert_eq!(
@@ -180,11 +188,39 @@ async fn a_failed_listing_removes_nothing() {
         .mount(&wiki)
         .await;
 
-    let result = run(&mut api(&wiki).await, &store).await;
+    let result = run(&mut api(&wiki).await, &store, &|_| {}).await;
 
     assert!(result.is_err(), "{result:?}");
     assert_eq!(
         store.revisions().unwrap(),
         HashMap::from([("Build:A".into(), 1)])
+    );
+}
+
+#[tokio::test]
+async fn reports_listing_then_fetching_progress() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = SqliteStore::open(dir.path()).unwrap();
+    let wiki = MockServer::start().await;
+    listing(&wiki, &[("Build:A", 1), ("Build:B", 2)]).await;
+    contents(&wiki, &[("Build:A", 1, "a"), ("Build:B", 2, "b")]).await;
+    let seen = std::sync::Mutex::new(Vec::new());
+
+    run(&mut api(&wiki).await, &store, &|p| {
+        seen.lock().unwrap().push(p)
+    })
+    .await
+    .unwrap();
+
+    let progress = |phase, done, total| Progress { phase, done, total };
+    assert_eq!(
+        seen.into_inner().unwrap(),
+        [
+            progress(Phase::Listing, 0, 2),
+            progress(Phase::Listing, 1, 2),
+            progress(Phase::Listing, 2, 2),
+            progress(Phase::Fetching, 0, 2),
+            progress(Phase::Fetching, 2, 2),
+        ]
     );
 }

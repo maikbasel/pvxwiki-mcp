@@ -7,7 +7,7 @@ use pvxwiki_parser::{IssueKind, ParsedPage};
 use pvxwiki_store::{ARCHIVE_NAMESPACE, NewPage, SqliteStore};
 
 use crate::changes::BATCH_SIZE;
-use crate::{ApiClient, ScrapeError, diff};
+use crate::{ApiClient, Phase, Progress, ScrapeError, diff};
 
 /// Namespaces holding build pages: current builds (100) and archived ones.
 const NAMESPACES: [i64; 2] = [100, ARCHIVE_NAMESPACE];
@@ -28,11 +28,24 @@ pub struct RunReport {
 /// Removals happen only after every namespace was listed in full, so an aborted run never
 /// deletes a page.
 #[tracing::instrument(skip_all, fields(run = unix_now()))]
-pub async fn run(client: &mut ApiClient, store: &SqliteStore) -> Result<RunReport, ScrapeError> {
+pub async fn run(
+    client: &mut ApiClient,
+    store: &SqliteStore,
+    progress: &(dyn Fn(Progress) + Sync),
+) -> Result<RunReport, ScrapeError> {
     tracing::info!("scrape run started");
     let mut wiki = HashMap::new();
-    for namespace in NAMESPACES {
+    let report_listing = |done| {
+        progress(Progress {
+            phase: Phase::Listing,
+            done,
+            total: NAMESPACES.len(),
+        });
+    };
+    report_listing(0);
+    for (listed, namespace) in NAMESPACES.into_iter().enumerate() {
         wiki.extend(client.revisions(namespace).await?);
+        report_listing(listed + 1);
     }
     let stored = store.revisions()?;
     let changes = diff(&wiki, &stored);
@@ -40,6 +53,15 @@ pub async fn run(client: &mut ApiClient, store: &SqliteStore) -> Result<RunRepor
         checked: wiki.len(),
         ..RunReport::default()
     };
+    let report_fetching = |done| {
+        progress(Progress {
+            phase: Phase::Fetching,
+            done,
+            total: changes.fetch.len(),
+        });
+    };
+    report_fetching(0);
+    let mut fetched = 0;
     for titles in changes.fetch.chunks(BATCH_SIZE) {
         for page in client.contents(titles).await? {
             let parsed = pvxwiki_parser::parse(&page.wikitext);
@@ -49,6 +71,7 @@ pub async fn run(client: &mut ApiClient, store: &SqliteStore) -> Result<RunRepor
                     revision = page.revision,
                     "new revision failed to parse; keeping the stored copy"
                 );
+                store.record_parse_failure(&page.title, page.revision, unix_now())?;
                 report.kept += 1;
                 continue;
             }
@@ -61,6 +84,8 @@ pub async fn run(client: &mut ApiClient, store: &SqliteStore) -> Result<RunRepor
             })?;
             report.updated += 1;
         }
+        fetched += titles.len();
+        report_fetching(fetched);
     }
     for title in &changes.gone {
         store.delete_page(title)?;
@@ -83,7 +108,7 @@ fn failed_entirely(page: &ParsedPage) -> bool {
         .any(|i| matches!(i.kind, IssueKind::TooDeeplyNested | IssueKind::TimedOut))
 }
 
-fn unix_now() -> i64 {
+pub(crate) fn unix_now() -> i64 {
     SystemTime::now()
         .duration_since(UNIX_EPOCH)
         .map_or(0, |d| i64::try_from(d.as_secs()).unwrap_or(i64::MAX))

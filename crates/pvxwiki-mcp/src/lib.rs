@@ -5,13 +5,12 @@ pub mod config;
 use std::io::IsTerminal;
 use std::net::SocketAddr;
 use std::sync::Arc;
-use std::time::Duration;
 
 use config::{Config, LogFormat};
-use pvxwiki_scraper::{ApiClient, ScrapeError};
+use pvxwiki_admin::AdminState;
+use pvxwiki_scraper::{ApiClient, Runner, ScrapeError};
 use pvxwiki_server::{HttpConfig, Limits};
 use pvxwiki_store::SqliteStore;
-use tokio::time::MissedTickBehavior;
 use tracing_subscriber::EnvFilter;
 use tracing_subscriber::fmt::format::FmtSpan;
 
@@ -69,33 +68,48 @@ pub fn init_tracing(format: LogFormat) {
     };
 }
 
-/// Serves until `shutdown` completes, then stops accepting and lets in-flight requests finish.
+/// Serves the MCP and admin listeners until `shutdown` completes, then stops accepting on both
+/// and lets in-flight requests finish. The scraper runs beside them when a contact is set.
 pub async fn run(
     config: Config,
     listener: tokio::net::TcpListener,
+    admin_listener: tokio::net::TcpListener,
     limits: Limits,
     schedule: Schedule,
     shutdown: impl Future<Output = ()> + Send + 'static,
 ) -> Result<(), RunError> {
     let store = Arc::new(SqliteStore::open(&config.data_dir)?);
-    match &config.contact {
-        Some(contact) => {
-            let client = ApiClient::new(&schedule.endpoint, contact, schedule.pacing)?;
-            tokio::spawn(scrape_forever(store.clone(), client, schedule.interval));
+    let client = match &config.contact {
+        Some(contact) => Some(ApiClient::new(
+            &schedule.endpoint,
+            contact,
+            schedule.pacing,
+        )?),
+        None => {
+            tracing::warn!(
+                "PVXWIKI_CONTACT is not set; the scraper is off and the index is not updated"
+            );
+            None
         }
-        None => tracing::warn!(
-            "PVXWIKI_CONTACT is not set; the scraper is off and the index is not updated"
-        ),
-    }
+    };
+    let runner = Runner::new(store.clone(), client, schedule.interval);
+    tokio::spawn(runner.clone().run_forever());
+
     let limiter = pvxwiki_server::limiter(limits);
     pvxwiki_server::spawn_limiter_gc(limiter.clone());
     let http = HttpConfig {
         allowed_hosts: config.allowed_hosts.clone(),
         trusted_proxies: config.trusted_proxies.clone(),
     };
-    let app = pvxwiki_server::router(store, &http, limiter);
+    let app = pvxwiki_server::router(store.clone(), &http, limiter);
+    let admin = pvxwiki_admin::router(AdminState {
+        runner,
+        store,
+        allowed_hosts: config.allowed_hosts.clone(),
+    });
     tracing::info!(
         listen = %listener.local_addr()?,
+        admin_listen = %admin_listener.local_addr()?,
         data_dir = %config.data_dir.display(),
         allowed_hosts = ?config.allowed_hosts,
         trusted_proxies = ?config.trusted_proxies,
@@ -103,40 +117,24 @@ pub async fn run(
         contact = ?config.contact,
         "server started"
     );
-    axum::serve(
+    // One signal stops both listeners.
+    let (stop, stopped) = tokio::sync::watch::channel(());
+    tokio::spawn(async move {
+        shutdown.await;
+        let _ = stop.send(());
+    });
+    let until_stopped = |mut rx: tokio::sync::watch::Receiver<()>| async move {
+        let _ = rx.changed().await;
+    };
+    let mcp = axum::serve(
         listener,
         app.into_make_service_with_connect_info::<SocketAddr>(),
     )
-    .with_graceful_shutdown(shutdown)
-    .await?;
+    .with_graceful_shutdown(until_stopped(stopped.clone()));
+    let admin = axum::serve(admin_listener, admin).with_graceful_shutdown(until_stopped(stopped));
+    tokio::try_join!(mcp.into_future(), admin.into_future())?;
     tracing::info!("server stopped");
     Ok(())
-}
-
-/// One scrape run per `interval`, the first at once. Runs until the process stops; every write is
-/// one transaction, so stopping mid-run leaves no half-written page.
-async fn scrape_forever(store: Arc<SqliteStore>, mut client: ApiClient, interval: Duration) {
-    let mut ticker = tokio::time::interval(interval);
-    ticker.set_missed_tick_behavior(MissedTickBehavior::Delay);
-    loop {
-        ticker.tick().await;
-        match pvxwiki_scraper::run(&mut client, &store).await {
-            Ok(_) => {}
-            // Retrying through a block is forbidden (`.claude/rules/scraping.md`).
-            Err(err @ (ScrapeError::Blocked { .. } | ScrapeError::NotJson { .. })) => {
-                tracing::warn!(
-                    error = ?err,
-                    "the wiki blocked the scraper; no further runs until restart"
-                );
-                return;
-            }
-            Err(err) => tracing::warn!(
-                error = ?err,
-                next_run_in_s = interval.as_secs(),
-                "scrape run failed; the stored index stays as it was"
-            ),
-        }
-    }
 }
 
 /// Completes on SIGTERM or Ctrl-C. As PID 1 in a container nothing else handles SIGTERM, so
@@ -168,42 +166,4 @@ pub async fn shutdown_signal() {
         () = terminate => {}
     }
     tracing::info!("shutdown signal received; finishing in-flight requests");
-}
-
-#[cfg(test)]
-mod tests {
-    use wiremock::matchers::method;
-    use wiremock::{Mock, MockServer, ResponseTemplate};
-
-    use super::*;
-
-    #[tokio::test]
-    async fn a_blocked_scraper_stops_instead_of_trying_again() {
-        let wiki = MockServer::start().await;
-        Mock::given(method("GET"))
-            .respond_with(ResponseTemplate::new(403))
-            .mount(&wiki)
-            .await;
-        let dir = tempfile::tempdir().unwrap();
-        let store = Arc::new(SqliteStore::open(dir.path()).unwrap());
-        let pacing = pvxwiki_scraper::Pacing {
-            min_delay: Duration::from_millis(1),
-            ..pvxwiki_scraper::Pacing::FANDOM
-        };
-        let client = ApiClient::new(
-            &format!("{}/api.php", wiki.uri()),
-            "ops@example.org",
-            pacing,
-        )
-        .unwrap();
-
-        tokio::time::timeout(
-            Duration::from_secs(2),
-            scrape_forever(store, client, Duration::from_millis(10)),
-        )
-        .await
-        .expect("the loop must end after a 403");
-
-        assert_eq!(wiki.received_requests().await.unwrap().len(), 1);
-    }
 }

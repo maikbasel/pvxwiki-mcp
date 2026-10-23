@@ -193,8 +193,10 @@ impl crate::BuildStore for SqliteStore {
     }
 }
 
-/// Deletes `title`'s page row (child rows cascade) and its FTS rows, which cannot cascade.
+/// Deletes `title`'s page row (child rows cascade), its FTS rows, which cannot cascade, and its
+/// recorded parse failure: a new copy or a deletion settles it.
 fn remove(tx: &rusqlite::Transaction<'_>, title: &str) -> Result<(), StoreError> {
+    tx.execute("DELETE FROM parse_failures WHERE title = ?1", [title])?;
     let old: Option<i64> = tx
         .query_row("SELECT id FROM pages WHERE title = ?1", [title], |r| {
             r.get(0)
@@ -282,7 +284,7 @@ mod tests {
         let version: i64 = writer
             .pragma_query_value(None, "user_version", |r| r.get(0))
             .unwrap();
-        assert_eq!(version, 1);
+        assert_eq!(version, 2);
         let mode: String = writer
             .pragma_query_value(None, "journal_mode", |r| r.get(0))
             .unwrap();

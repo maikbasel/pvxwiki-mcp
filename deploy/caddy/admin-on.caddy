@@ -1,0 +1,7 @@
+@admin path /admin /admin/*
+handle @admin {
+	basic_auth {
+		{$PVXWIKI_ADMIN_USER} {$PVXWIKI_ADMIN_PASSWORD_HASH}
+	}
+	reverse_proxy pvxwiki-mcp:8081
+}

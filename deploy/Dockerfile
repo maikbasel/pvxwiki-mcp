@@ -19,7 +19,9 @@ COPY --from=builder /app/target/release/pvxwiki-mcp /usr/local/bin/pvxwiki-mcp
 # Owned by the nonroot user (65532) so a fresh named volume is writable.
 COPY --from=builder --chown=65532:65532 /out/data /data
 ENV PVXWIKI_DATA_DIR=/data
-EXPOSE 8080
+# Every interface inside the container; compose publishes 8081 on 127.0.0.1 only.
+ENV PVXWIKI_ADMIN_LISTEN=0.0.0.0:8081
+EXPOSE 8080 8081
 VOLUME ["/data"]
 ENTRYPOINT ["/usr/local/bin/pvxwiki-mcp"]
 CMD ["serve"]

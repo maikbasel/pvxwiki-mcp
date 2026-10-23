@@ -1,0 +1,151 @@
+/* pvxwiki-mcp admin. One stylesheet, no framework; colours follow the system theme. */
+
+:root {
+  --bg: #f4f6f9;
+  --panel: #ffffff;
+  --raised: #eef1f5;
+  --line: #dfe3ea;
+  --text: #1b2130;
+  --muted: #5d6678;
+  --gold: #d6a73a;
+  --gold-ink: #2a1f05;
+  --link: #2f6fb3;
+  --finished: #2f9a6a;
+  --running: #3b86d6;
+  --failed: #c98418;
+  --blocked: #d0453d;
+  --interrupted: #8a93a3;
+  --radius: 6px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161a21;
+    --panel: #1e232c;
+    --raised: #262c37;
+    --line: #323a47;
+    --text: #e7e9ee;
+    --muted: #9aa3b3;
+    --link: #7fb4ee;
+    --finished: #3fb27f;
+    --running: #4c9be8;
+    --failed: #e3a13b;
+    --blocked: #e5534b;
+    --interrupted: #7d8696;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+a { color: var(--link); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+.shell { max-width: 1120px; margin: 0 auto; padding: 24px 20px 64px; }
+
+/* Header */
+.top { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.brand { display: flex; align-items: baseline; gap: 10px; }
+.brand h1 { margin: 0; font-size: 24px; letter-spacing: -0.01em; }
+.brand span { color: var(--muted); font-size: 18px; }
+.top a { font-size: 13px; }
+
+/* Panels */
+.panel, .block { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+.panel { padding: 20px; margin-bottom: 24px; }
+.block { padding: 20px; margin-bottom: 24px; }
+h2 { margin: 0; font-size: 18px; }
+h3 { margin: 0 0 8px; font-size: 15px; }
+.block-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.muted, .reason { color: var(--muted); font-size: 13px; }
+.empty { color: var(--muted); margin: 0; }
+
+/* Status */
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.state { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.state strong { font-size: 18px; }
+.state p { margin: 0; color: var(--muted); }
+.dot { width: 12px; height: 12px; border-radius: 50%; flex: none; background: var(--interrupted); }
+.dot.idle { background: var(--finished); }
+.dot.running { background: var(--running); }
+.dot.blocked { background: var(--blocked); }
+.action { display: flex; align-items: center; gap: 12px; }
+
+.btn {
+  font: inherit; font-weight: 600;
+  padding: 8px 18px; border-radius: var(--radius); border: 1px solid transparent;
+  background: var(--gold); color: var(--gold-ink); cursor: pointer;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn[disabled] { background: var(--raised); color: var(--muted); border-color: var(--line); cursor: not-allowed; filter: none; }
+
+.progress { margin-top: 16px; }
+.progress progress {
+  width: 100%; height: 8px; appearance: none; border: 0; border-radius: 4px;
+  background: var(--raised); overflow: hidden;
+}
+.progress progress::-webkit-progress-bar { background: var(--raised); }
+.progress progress::-webkit-progress-value { background: var(--running); }
+.progress progress::-moz-progress-bar { background: var(--running); }
+.progress p { margin: 6px 0 0; }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 18px 0 0; }
+.facts div { background: var(--raised); border-radius: var(--radius); padding: 10px 14px; }
+.facts dt { color: var(--muted); font-size: 13px; }
+.facts dd { margin: 2px 0 0; font-size: 15px; font-weight: 600; }
+
+/* The run strip: one slot per run, oldest on the left. */
+.strip { display: flex; gap: 3px; list-style: none; margin: 0 0 18px; padding: 0; overflow-x: auto; }
+.strip li { flex: none; width: 10px; height: 28px; border-radius: 2px; background: var(--interrupted); }
+.strip .finished { background: var(--finished); }
+.strip .running { background: var(--running); }
+.strip .failed { background: var(--failed); }
+.strip .blocked { background: var(--blocked); }
+@media (prefers-reduced-motion: no-preference) {
+  .strip .running { animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: 0.45; } }
+}
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-weight: 600; color: var(--muted); font-size: 13px; padding: 6px 10px; border-bottom: 1px solid var(--line); }
+td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; white-space: nowrap; }
+tbody tr:last-child td { border-bottom: 0; }
+td.num, th.num { text-align: right; }
+td .error { display: block; color: var(--muted); font-size: 13px; max-width: 48ch; white-space: normal; }
+.columns td:first-child { white-space: normal; }
+
+.outcome { display: inline-flex; align-items: center; gap: 6px; }
+.outcome::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--interrupted); }
+.outcome.finished::before { background: var(--finished); }
+.outcome.running::before { background: var(--running); }
+.outcome.failed::before { background: var(--failed); }
+.outcome.blocked::before { background: var(--blocked); }
+
+/* Attention */
+.columns { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.columns > div > p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 12px; padding: 0; }
+.chips a {
+  display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 13px;
+  border: 1px solid var(--line); color: var(--text); text-decoration: none;
+}
+.chips a[aria-current="true"] { border-color: var(--gold); background: var(--raised); }
+.pages { list-style: none; margin: 0; padding: 0; font-size: 14px; }
+.pages li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.pages li:last-child { border-bottom: 0; }
+.more { color: var(--muted); font-size: 13px; margin: 8px 0 0; }
+
+@media (max-width: 560px) {
+  .shell { padding: 16px 12px 48px; }
+  .panel, .block { padding: 16px; }
+}
