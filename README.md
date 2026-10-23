@@ -127,6 +127,11 @@ Coolify's proxy must also pass the client IP on: in Servers, Proxy, add
 `--entrypoints.http.forwardedHeaders.trustedIPs=<that address>` (and the same for `https`) to the
 Traefik command, then restart the proxy.
 
+Deploys are manual: GitHub, Actions, **Deploy to Coolify**, Run workflow. The workflow redeploys the
+Coolify resource from `master` and waits up to 10 minutes for it to come up. It reads, from the
+`production` environment, the variables `COOLIFY_DOMAIN` (your Coolify host) and
+`COOLIFY_RESOURCE_UUID`, and the secret `COOLIFY_TOKEN` (a Coolify API token with deploy permission).
+
 ### Admin page
 
 The admin page shows the scraper's state and live progress, when the next run starts, the run
