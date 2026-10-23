@@ -49,18 +49,17 @@ next to the page `url` and `revision`.
 
 ## Connect a client
 
-The server speaks MCP over streamable HTTP at `/mcp`. There is no public instance yet, so connect
-to one you run.
+The server speaks MCP over streamable HTTP at `/mcp`. A public instance runs at
+`https://pvx-mcp.maikbasel.com/mcp`. It has no login; each client is rate limited, and the index is
+refreshed from the wiki every 6 hours.
 
-> [!IMPORTANT]
-> Replace `<your-instance>` in the examples below with your server's address: your domain behind a
-> proxy (`https://pvxwiki.example.org/mcp`), or `http://localhost:8080/mcp` for a server on the
-> same machine ([Run it locally](#run-it-locally)).
+To use your own instance instead, replace the URL with its address: your domain behind a proxy, or
+`http://localhost:8080/mcp` for a server on the same machine ([Run it locally](#run-it-locally)).
 
 **Claude Code**
 
 ```bash
-claude mcp add --transport http pvxwiki https://<your-instance>/mcp
+claude mcp add --transport http pvxwiki https://pvx-mcp.maikbasel.com/mcp
 ```
 
 **Clients with a JSON config** (Claude Desktop, Cursor, VS Code and others; the key names vary
@@ -71,7 +70,7 @@ slightly between clients)
   "mcpServers": {
     "pvxwiki": {
       "type": "http",
-      "url": "https://<your-instance>/mcp"
+      "url": "https://pvx-mcp.maikbasel.com/mcp"
     }
   }
 }
