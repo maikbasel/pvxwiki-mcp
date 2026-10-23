@@ -1,0 +1,47 @@
+name: Deploy to Coolify
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why this deploy is happening (shown in run summary)"
+        required: false
+        default: "manual deploy"
+
+concurrency:
+  group: deploy-coolify
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Trigger Coolify Redeploy
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 15
+    steps:
+      - name: Log reason
+        env:
+          REASON: ${{ inputs.reason }}
+          ACTOR: ${{ github.actor }}
+          SHA: ${{ github.sha }}
+        run: |
+          {
+            echo "### Coolify deploy"
+            echo ""
+            echo "- **Actor:** $ACTOR"
+            echo "- **Commit:** \`$SHA\`"
+            echo "- **Reason:** $REASON"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy to Coolify
+        uses: ChristopheCVB/coolify-deploy-action@7a4f6f7839df283eba6801e96732aa002690418a # v3.1.0
+        with:
+          domain: ${{ vars.COOLIFY_DOMAIN }}
+          token: ${{ secrets.COOLIFY_TOKEN }}
+          uuid: ${{ vars.COOLIFY_RESOURCE_UUID }}
+          waitForDeploy: true
+          timeout: 600
+          force: false
