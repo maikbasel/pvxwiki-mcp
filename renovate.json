@@ -10,16 +10,19 @@
   "schedule": ["before 6am on monday"],
   "labels": ["dependencies"],
   "configMigration": true,
+  "platformAutomerge": false,
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on monday"]
+    "schedule": ["before 6am on monday"],
+    "automerge": true
   },
   "packageRules": [
     {
-      "description": "Group Rust minor and patch updates",
+      "description": "Group Rust minor and patch updates; merge once CI is green",
       "matchManagers": ["cargo"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "rust dependencies"
+      "groupName": "rust dependencies",
+      "automerge": true
     },
     {
       "description": "Group GitHub Actions",
@@ -27,9 +30,16 @@
       "groupName": "github actions"
     },
     {
-      "description": "Group git hook repos",
+      "description": "Merge non-major GitHub Actions updates and digest pins once CI is green",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "digest", "pinDigest"],
+      "automerge": true
+    },
+    {
+      "description": "Group git hook repos; merge once CI is green",
       "matchManagers": ["pre-commit"],
-      "groupName": "pre-commit hooks"
+      "groupName": "pre-commit hooks",
+      "automerge": true
     }
   ]
 }
