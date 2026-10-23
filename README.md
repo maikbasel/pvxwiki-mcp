@@ -116,19 +116,28 @@ stays) and pages stored with parse issues. A **Run now** button starts a run at 
 scheduled one. It is disabled while a run is going, when `PVXWIKI_CONTACT` is unset, and after the
 wiki blocked the scraper (restart the container once you know why).
 
-It listens on port 8081, published on `127.0.0.1` only. The service has no login of its own, so put
-one in front before you expose it:
+It listens on port 8081, published on `127.0.0.1` only. The service has no login of its own. How
+you open it depends on where the server runs:
 
-- **Bundled Caddy:** set `PVXWIKI_CADDY_ADMIN=on`, `PVXWIKI_ADMIN_DOMAIN`, `PVXWIKI_ADMIN_USER` and
-  `PVXWIKI_ADMIN_PASSWORD_HASH` (create it with `docker run --rm caddy:2.10 caddy hash-password`),
-  then start the `https` profile. Put the hash in single quotes in `.env`
+- **Same machine** (for example [Run it locally](#run-it-locally)): open `http://localhost:8081`.
+- **A remote server, not exposed:** forward the port over SSH, then open `http://localhost:8081`
+  on your machine. Nothing else is needed.
+
+  ```bash
+  ssh -L 8081:localhost:8081 you@your-server
+  ```
+
+- **From anywhere, behind the bundled Caddy:** set `PVXWIKI_CADDY_ADMIN=on`, `PVXWIKI_ADMIN_DOMAIN`,
+  `PVXWIKI_ADMIN_USER` and `PVXWIKI_ADMIN_PASSWORD_HASH`, then start the `https` profile and open
+  `https://<PVXWIKI_ADMIN_DOMAIN>`; the browser asks for that user and password. Create the hash
+  with `docker run --rm caddy:2.10 caddy hash-password` and put it in single quotes in `.env`
   (`PVXWIKI_ADMIN_PASSWORD_HASH='$2a$14$...'`): compose reads `$` in unquoted or double-quoted
-  values as a variable, and every login then fails. Set `PVXWIKI_CADDY_MCP=off` if Caddy should serve only the admin
-  page.
-- **Your own proxy** (Pangolin, Authelia, Cloudflare Access): add a second resource for port 8081
-  behind your SSO.
+  values as a variable, and every login then fails. Set `PVXWIKI_CADDY_MCP=off` if Caddy should
+  serve only the admin page.
+- **From anywhere, behind your own proxy** (Pangolin, Authelia, Cloudflare Access): add a second
+  resource for port 8081 behind your SSO and open its URL.
 
-Either way, list the admin host name in `PVXWIKI_ALLOWED_HOSTS`; other host names get HTTP 421.
+Behind a proxy, list the admin host name in `PVXWIKI_ALLOWED_HOSTS`; other host names get HTTP 421.
 
 The service has no authentication. Its abuse limits are a per-client rate limit, a concurrency cap,
 a request size limit and request timeouts. For a private instance, put authentication in your
