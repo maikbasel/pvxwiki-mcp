@@ -45,7 +45,7 @@ services:
       - pvxwiki
 
   caddy:
-    image: caddy:2.10
+    image: caddy:2.11
     profiles: ["https"]
     restart: unless-stopped
     environment:
