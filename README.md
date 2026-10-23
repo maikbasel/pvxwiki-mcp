@@ -116,26 +116,12 @@ stays) and pages stored with parse issues. A **Run now** button starts a run at 
 scheduled one. It is disabled while a run is going, when `PVXWIKI_CONTACT` is unset, and after the
 wiki blocked the scraper (restart the container once you know why).
 
-It listens on port 8081, published on `127.0.0.1` only. The service has no login of its own. How
-you open it depends on where the server runs:
+It listens on port 8081, published on `127.0.0.1` only, and has no login of its own:
 
-- **Same machine** (for example [Run it locally](#run-it-locally)): open `http://localhost:8081`.
-- **A remote server, not exposed:** forward the port over SSH, then open `http://localhost:8081`
-  on your machine. Nothing else is needed.
-
-  ```bash
-  ssh -L 8081:localhost:8081 you@your-server
-  ```
-
-- **From anywhere, behind the bundled Caddy:** set `PVXWIKI_CADDY_ADMIN=on`, `PVXWIKI_ADMIN_DOMAIN`,
-  `PVXWIKI_ADMIN_USER` and `PVXWIKI_ADMIN_PASSWORD_HASH`, then start the `https` profile and open
-  `https://<PVXWIKI_ADMIN_DOMAIN>`; the browser asks for that user and password. Create the hash
-  with `docker run --rm caddy:2.10 caddy hash-password` and put it in single quotes in `.env`
-  (`PVXWIKI_ADMIN_PASSWORD_HASH='$2a$14$...'`): compose reads `$` in unquoted or double-quoted
-  values as a variable, and every login then fails. Set `PVXWIKI_CADDY_MCP=off` if Caddy should
-  serve only the admin page.
-- **From anywhere, behind your own proxy** (Pangolin, Authelia, Cloudflare Access): add a second
-  resource for port 8081 behind your SSO and open its URL.
+- Same machine: `http://localhost:8081`
+- Remote server: `ssh -L 8081:localhost:8081 you@your-server`, then `http://localhost:8081`
+- Bundled Caddy (`PVXWIKI_CADDY_ADMIN=on`, basic auth): `https://<PVXWIKI_ADMIN_DOMAIN>`
+- Your own proxy: a resource for port 8081 behind your SSO
 
 Behind a proxy, list the admin host name in `PVXWIKI_ALLOWED_HOSTS`; other host names get HTTP 421.
 
@@ -163,7 +149,7 @@ one.
 | `PVXWIKI_CADDY_ADMIN` | `off` | `on` makes the bundled Caddy serve the admin page with basic auth. |
 | `PVXWIKI_ADMIN_DOMAIN` | | Public domain of the admin page for the bundled Caddy. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
 | `PVXWIKI_ADMIN_USER` | | Basic-auth user for the admin page. |
-| `PVXWIKI_ADMIN_PASSWORD_HASH` | | Bcrypt hash of that user's password, from `caddy hash-password`. |
+| `PVXWIKI_ADMIN_PASSWORD_HASH` | | Bcrypt hash of that user's password, from `docker run --rm caddy:2.10 caddy hash-password`. Put it in single quotes, or compose mangles the `$` signs. |
 | `PVXWIKI_LOG_FORMAT` | `json` | `json` or `pretty`. |
 | `RUST_LOG` | `info,rmcp=warn` | Log filter. |
 
