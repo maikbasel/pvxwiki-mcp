@@ -24,8 +24,8 @@ services:
       PVXWIKI_ALLOWED_HOSTS: ${PVXWIKI_ALLOWED_HOSTS:?set it to your domain}
       # The email address Fandom's permission was granted to; sent in the scraper's User-Agent.
       PVXWIKI_CONTACT: ${PVXWIKI_CONTACT:?set it to your contact email}
-      # Subnet of Coolify's proxy network, so the rate limit sees real client IPs:
-      # docker network inspect coolify -f '{{range .IPAM.Config}}{{.Subnet}}{{end}}'
+      # Every proxy hop in front of the app, so the rate limit sees real client IPs: the subnet of
+      # this app's network and the address traffic reaches Coolify's proxy from. See the README.
       PVXWIKI_TRUSTED_PROXIES: ${PVXWIKI_TRUSTED_PROXIES:-}
       RUST_LOG: ${RUST_LOG:-info,rmcp=warn}
     ports:

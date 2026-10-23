@@ -115,6 +115,18 @@ proxy does TLS and routing. Set `PVXWIKI_ALLOWED_HOSTS`, `PVXWIKI_CONTACT` and
 `https://<your domain>:8080` for MCP. Add `https://<your domain>:8081/admin` for the admin page only
 once a login is in front of it. The port tells Coolify which container port each path goes to.
 
+For `PVXWIKI_TRUSTED_PROXIES`, list the subnet of the app's network (Coolify's proxy reaches the app
+from there) and the address your traffic reaches Coolify's proxy from: with a tunnel client such as
+Pangolin's newt on the host, the gateway of the `coolify` network. On the server:
+
+```bash
+docker network inspect coolify <app uuid> -f '{{.Name}} {{range .IPAM.Config}}{{.Subnet}} gw {{.Gateway}}{{end}}'
+```
+
+Coolify's proxy must also pass the client IP on: in Servers, Proxy, add
+`--entrypoints.http.forwardedHeaders.trustedIPs=<that address>` (and the same for `https`) to the
+Traefik command, then restart the proxy.
+
 ### Admin page
 
 The admin page shows the scraper's state and live progress, when the next run starts, the run
@@ -146,7 +158,7 @@ one.
 |----------|---------|-------------|
 | `PVXWIKI_ALLOWED_HOSTS` | required | Comma-separated host names clients use to reach the server (the `Host` header). |
 | `PVXWIKI_CONTACT` | | Contact for the scraper's User-Agent: an email address Fandom can reach you at. Without it the scraper is off and the server only serves what the database already holds. |
-| `PVXWIKI_TRUSTED_PROXIES` | empty | IPs or CIDR ranges whose `X-Forwarded-For` header is trusted. |
+| `PVXWIKI_TRUSTED_PROXIES` | empty | The proxies in front of the server, as IPs or CIDR ranges. The rate limit is per client IP; behind a proxy the server only sees the proxy, so without this every user shares one limit. From the listed addresses it reads the client IP out of `X-Forwarded-For`; from anyone else it ignores that header. List every hop between the internet and the server. |
 | `PVXWIKI_PUBLISH_ADDR` | `127.0.0.1` | Interface port 8080 is published on. |
 | `PVXWIKI_MCP_DOMAIN` | | Public domain of your instance (MCP at `/mcp`, admin page at `/admin`). Read only by the bundled Caddy. Also list it in `PVXWIKI_ALLOWED_HOSTS`. |
 | `PVXWIKI_DATA_DIR` | `/data` | Where the SQLite database lives. |
