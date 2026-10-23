@@ -166,12 +166,13 @@ cargo deny check
 ### Run it locally
 
 ```bash
+cp deploy/.env.example deploy/.env    # then edit; the same file docker compose reads
 mkdir -p data
-PVXWIKI_ALLOWED_HOSTS=localhost PVXWIKI_DATA_DIR=./data PVXWIKI_LOG_FORMAT=pretty \
-  cargo run -p pvxwiki-mcp
+set -a; . deploy/.env; set +a         # the binary reads the environment, not the file
+PVXWIKI_DATA_DIR=./data PVXWIKI_LOG_FORMAT=pretty cargo run -p pvxwiki-mcp
 ```
 
-The MCP server listens on `http://localhost:8080/mcp` and the admin page on
+`PVXWIKI_ALLOWED_HOSTS` must include `localhost`. The MCP server listens on `http://localhost:8080/mcp` and the admin page on
 `http://localhost:8081`. Without `PVXWIKI_CONTACT` the scraper stays off and nothing calls the
 wiki: the admin page says so, and the tools answer "index not built yet". Setting
 `PVXWIKI_CONTACT` starts a real run against Fandom at once, so only do that from a machine your
