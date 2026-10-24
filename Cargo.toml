@@ -19,7 +19,7 @@ parse-wiki-text-2 = "0.2.0"
 tracing = "0.1.44"
 insta = "1.49"
 # rmcp's 3.x line has frequent breaking changes: pinned exactly.
-rmcp = { version = "=3.5.1", default-features = false }
+rmcp = { version = "=3.7.0", default-features = false }
 schemars = "1"
 axum = "0.8"
 maud = { version = "0.27", features = ["axum"] }
