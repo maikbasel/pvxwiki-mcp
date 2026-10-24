@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # Build: docker build -f deploy/Dockerfile -t pvxwiki-mcp .
-FROM rust:1.96.1-slim-trixie AS chef
+FROM rust:1.99.1-slim-trixie AS chef
 RUN cargo install cargo-chef --locked --version 0.1.78
 WORKDIR /app
 
