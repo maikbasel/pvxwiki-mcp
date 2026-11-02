@@ -37,7 +37,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Deploy to Coolify
-        uses: ChristopheCVB/coolify-deploy-action@7a4f6f7839df283eba6801e96732aa002690418a # v3.1.0
+        uses: ChristopheCVB/coolify-deploy-action@f60eef0230e2f409f0a15868d3f6708958cae593 # v4.0.0
         with:
           domain: ${{ vars.COOLIFY_DOMAIN }}
           token: ${{ secrets.COOLIFY_TOKEN }}
