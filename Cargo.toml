@@ -19,14 +19,14 @@ parse-wiki-text-2 = "0.2.0"
 tracing = "0.1.44"
 insta = "1.49"
 # rmcp's 3.x line has frequent breaking changes: pinned exactly.
-rmcp = { version = "=3.7.0", default-features = false }
+rmcp = { version = "=3.10.0", default-features = false }
 schemars = "1"
 axum = "0.8"
 maud = { version = "0.27", features = ["axum"] }
 tower = { version = "0.5", features = ["limit", "load-shed", "timeout", "util"] }
 tower-http = { version = "0.7", features = ["limit", "set-header", "timeout", "trace"] }
 governor = "0.10"
-rusqlite = { version = "0.40", features = ["bundled", "hooks"] }
+rusqlite = { version = "0.42", features = ["bundled", "hooks"] }
 deadpool-sqlite = "0.14"
 rusqlite_migration = { version = "2.6", features = ["from-directory"] }
 include_dir = "0.7"
